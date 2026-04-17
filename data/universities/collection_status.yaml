@@ -1,0 +1,308 @@
+# University Collection Status
+# Centralized tracking of exploration and sync progress for all universities.
+# This is the single entry point for the orchestrator's decision logic.
+# Per-URL details remain in each university's crawl_state.json.
+
+version: 1
+
+countries:
+  de:
+    universities:
+      - slug: bauhaus-universitaet-weimar
+        explored: true
+        last_explored: "2026-04-17"
+        next_explore: "2026-07-17"
+        last_synced: "2026-04-17"
+        sync_mode: site_explorer
+        next_sync: "2026-04-24"
+        field_fill_rate: 0.92
+        programs_explored: 1
+        programs_total: 1
+        errors: []
+        needs_reexplore: false
+
+      - slug: hfg-schwaebisch-gmuend
+        explored: false
+        last_explored: null
+        next_explore: null
+        last_synced: null
+        sync_mode: null
+        next_sync: null
+        field_fill_rate: 0.0
+        programs_explored: 0
+        programs_total: 1
+        errors: []
+        needs_reexplore: false
+
+      - slug: bergische-universitaet-wuppertal
+        explored: false
+        last_explored: null
+        next_explore: null
+        last_synced: null
+        sync_mode: null
+        next_sync: null
+        field_fill_rate: 0.0
+        programs_explored: 0
+        programs_total: 1
+        errors: []
+        needs_reexplore: false
+
+      - slug: hfg-offenbach
+        explored: false
+        last_explored: null
+        next_explore: null
+        last_synced: null
+        sync_mode: null
+        next_sync: null
+        field_fill_rate: 0.0
+        programs_explored: 0
+        programs_total: 1
+        errors: []
+        needs_reexplore: false
+
+      - slug: muthesius-kunsthochschule
+        explored: false
+        last_explored: null
+        next_explore: null
+        last_synced: null
+        sync_mode: null
+        next_sync: null
+        field_fill_rate: 0.0
+        programs_explored: 0
+        programs_total: 2
+        errors: []
+        needs_reexplore: false
+
+      - slug: hs-magdeburg-stendal
+        explored: false
+        last_explored: null
+        next_explore: null
+        last_synced: null
+        sync_mode: null
+        next_sync: null
+        field_fill_rate: 0.0
+        programs_explored: 0
+        programs_total: 2
+        errors: []
+        needs_reexplore: false
+
+      - slug: fh-potsdam
+        explored: false
+        last_explored: null
+        next_explore: null
+        last_synced: null
+        sync_mode: null
+        next_sync: null
+        field_fill_rate: 0.0
+        programs_explored: 0
+        programs_total: 1
+        errors: []
+        needs_reexplore: false
+
+      - slug: kh-berlin-weissensee
+        explored: false
+        last_explored: null
+        next_explore: null
+        last_synced: null
+        sync_mode: null
+        next_sync: null
+        field_fill_rate: 0.0
+        programs_explored: 0
+        programs_total: 1
+        errors: []
+        needs_reexplore: false
+
+      - slug: hawk-hildesheim
+        explored: false
+        last_explored: null
+        next_explore: null
+        last_synced: null
+        sync_mode: null
+        next_sync: null
+        field_fill_rate: 0.0
+        programs_explored: 0
+        programs_total: 1
+        errors: []
+        needs_reexplore: false
+
+      - slug: hs-darmstadt
+        explored: false
+        last_explored: null
+        next_explore: null
+        last_synced: null
+        sync_mode: null
+        next_sync: null
+        field_fill_rate: 0.0
+        programs_explored: 0
+        programs_total: 1
+        errors: []
+        needs_reexplore: false
+
+      - slug: htw-berlin
+        explored: false
+        last_explored: null
+        next_explore: null
+        last_synced: null
+        sync_mode: null
+        next_sync: null
+        field_fill_rate: 0.0
+        programs_explored: 0
+        programs_total: 1
+        errors: []
+        needs_reexplore: false
+
+      - slug: htw-dresden
+        explored: false
+        last_explored: null
+        next_explore: null
+        last_synced: null
+        sync_mode: null
+        next_sync: null
+        field_fill_rate: 0.0
+        programs_explored: 0
+        programs_total: 1
+        errors: []
+        needs_reexplore: false
+
+      - slug: udk-berlin
+        explored: false
+        last_explored: null
+        next_explore: null
+        last_synced: null
+        sync_mode: null
+        next_sync: null
+        field_fill_rate: 0.0
+        programs_explored: 0
+        programs_total: 1
+        errors: []
+        needs_reexplore: false
+
+      - slug: tu-udk-berlin
+        explored: false
+        last_explored: null
+        next_explore: null
+        last_synced: null
+        sync_mode: null
+        next_sync: null
+        field_fill_rate: 0.0
+        programs_explored: 0
+        programs_total: 1
+        errors: []
+        needs_reexplore: false
+
+      - slug: kunsthochschule-kassel
+        explored: false
+        last_explored: null
+        next_explore: null
+        last_synced: null
+        sync_mode: null
+        next_sync: null
+        field_fill_rate: 0.0
+        programs_explored: 0
+        programs_total: 1
+        errors: []
+        needs_reexplore: false
+
+      - slug: hfg-karlsruhe
+        explored: false
+        last_explored: null
+        next_explore: null
+        last_synced: null
+        sync_mode: null
+        next_sync: null
+        field_fill_rate: 0.0
+        programs_explored: 0
+        programs_total: 1
+        errors: []
+        needs_reexplore: false
+
+      - slug: folkwang-uni
+        explored: false
+        last_explored: null
+        next_explore: null
+        last_synced: null
+        sync_mode: null
+        next_sync: null
+        field_fill_rate: 0.0
+        programs_explored: 0
+        programs_total: 1
+        errors: []
+        needs_reexplore: false
+
+      - slug: abk-stuttgart
+        explored: false
+        last_explored: null
+        next_explore: null
+        last_synced: null
+        sync_mode: null
+        next_sync: null
+        field_fill_rate: 0.0
+        programs_explored: 0
+        programs_total: 1
+        errors: []
+        needs_reexplore: false
+
+      - slug: hfk-bremen
+        explored: false
+        last_explored: null
+        next_explore: null
+        last_synced: null
+        sync_mode: null
+        next_sync: null
+        field_fill_rate: 0.0
+        programs_explored: 0
+        programs_total: 1
+        errors: []
+        needs_reexplore: false
+
+      - slug: hbksaar
+        explored: false
+        last_explored: null
+        next_explore: null
+        last_synced: null
+        sync_mode: null
+        next_sync: null
+        field_fill_rate: 0.0
+        programs_explored: 0
+        programs_total: 1
+        errors: []
+        needs_reexplore: false
+
+      - slug: burg-halle
+        explored: false
+        last_explored: null
+        next_explore: null
+        last_synced: null
+        sync_mode: null
+        next_sync: null
+        field_fill_rate: 0.0
+        programs_explored: 0
+        programs_total: 1
+        errors: []
+        needs_reexplore: false
+
+      - slug: hbk-braunschweig
+        explored: false
+        last_explored: null
+        next_explore: null
+        last_synced: null
+        sync_mode: null
+        next_sync: null
+        field_fill_rate: 0.0
+        programs_explored: 0
+        programs_total: 1
+        errors: []
+        needs_reexplore: false
+
+      - slug: hs-muenchen
+        explored: false
+        last_explored: null
+        next_explore: null
+        last_synced: null
+        sync_mode: null
+        next_sync: null
+        field_fill_rate: 0.0
+        programs_explored: 0
+        programs_total: 1
+        errors: []
+        needs_reexplore: false

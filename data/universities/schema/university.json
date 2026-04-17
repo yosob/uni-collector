@@ -1,0 +1,100 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "University",
+  "description": "German university/institution data schema (medium depth)",
+  "type": "object",
+  "properties": {
+    "name_de": {
+      "type": "string",
+      "description": "Official German name"
+    },
+    "name_en": {
+      "type": "string",
+      "description": "English name"
+    },
+    "name_cn": {
+      "type": "string",
+      "description": "Chinese name"
+    },
+    "slug": {
+      "type": "string",
+      "description": "URL-safe identifier, e.g. bauhaus-universitaet-weimar"
+    },
+    "url": {
+      "type": "string",
+      "format": "uri",
+      "description": "Official website URL"
+    },
+    "country": {
+      "type": "string",
+      "description": "ISO 3166-1 alpha-2 country code",
+      "default": "de"
+    },
+    "city": {
+      "type": "string",
+      "description": "City name"
+    },
+    "state": {
+      "type": "string",
+      "description": "Federal state (Bundesland)"
+    },
+    "type": {
+      "type": "string",
+      "enum": ["universitaet", "fachhochschule", "kunsthochschule", "musikhochschule", "other"],
+      "description": "Institution type"
+    },
+    "founded_year": {
+      "type": "integer",
+      "description": "Year founded"
+    },
+    "student_count": {
+      "type": "integer",
+      "description": "Approximate number of students"
+    },
+    "languages": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "Languages of instruction, e.g. [\"de\", \"en\"]"
+    },
+    "tuition": {
+      "type": "object",
+      "properties": {
+        "tuition_free": { "type": "boolean" },
+        "semester_fee_eur": { "type": "number" },
+        "notes": { "type": "string" }
+      },
+      "description": "Tuition information"
+    },
+    "application_deadlines": {
+      "type": "object",
+      "properties": {
+        "winter_semester": { "type": "string", "description": "e.g. 'July 15'" },
+        "summer_semester": { "type": "string", "description": "e.g. 'January 15'" },
+        "notes": { "type": "string" }
+      },
+      "description": "General application deadlines"
+    },
+    "application_portal": {
+      "type": "string",
+      "description": "URL or name of application portal, e.g. uni-assist, direct"
+    },
+    "overview": {
+      "type": "string",
+      "description": "Brief overview paragraph"
+    },
+    "programs": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "List of program slugs under this university"
+    },
+    "last_crawled": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "source_urls": {
+      "type": "array",
+      "items": { "type": "string", "format": "uri" }
+    }
+  },
+  "required": ["name_de", "name_en", "slug", "url", "country"]
+}

@@ -1,0 +1,511 @@
+# University Collection Configuration
+# Add target universities and their programs here
+
+version: 1
+
+defaults:
+  language: de
+  crawl_interval_days: 7
+  depth: medium          # shallow | medium | deep
+  focus_areas:
+    - industrial design
+    - product design
+    - art
+    - design
+
+crawl_settings:
+  respect_robots_txt: true
+  delay_between_requests_ms: 2000
+  max_pages_per_session: 50
+  user_agent: "UniResearchBot/1.0 (Academic Research)"
+
+universities:
+  # === MVP Target ===
+  - slug: bauhaus-universitaet-weimar
+    name_en: Bauhaus-Universitat Weimar
+    name_de: Bauhaus-Universitat Weimar
+    url: https://www.uni-weimar.de
+    country: de
+    city: Weimar
+    state: Thuringia
+    type: universitaet
+    focus: true
+    programs:
+      - slug: product-design
+        name_en: Product Design (Industrial Design)
+        name_de: Produktdesign
+        url: https://www.uni-weimar.de/en/architecture-and-urbanism/chairs/product-design/
+        degree: ma
+        focus: true
+        start_urls:
+          - url: https://www.uni-weimar.de/en/architecture-and-urbanism/chairs/product-design/
+            type: program_overview
+          - url: https://www.uni-weimar.de/en/architecture-and-urbanism/chairs/
+            type: faculty_list
+          - url: https://www.uni-weimar.de/en/study/degree-programs/
+            type: program_list
+        link_patterns:
+          - pattern: "/en/architecture-and-urbanism/chairs/product-design/"
+            follow: true
+          - pattern: "/en/architecture-and-urbanism/people/"
+            type: person_page
+
+  # === Active Collection ===
+
+  - slug: hfg-schwaebisch-gmuend
+    name_en: HfG Schwäbisch Gemünd
+    name_de: Hochschule für Gestaltung Schwäbisch Gmünd
+    url: https://www.hfg-gmuend.de
+    country: de
+    city: Schwäbisch Gmünd
+    state: Baden-Württemberg
+    type: fachhochschule
+    focus: false
+    programs:
+      - slug: strategische-gestaltung
+        name_en: Strategic Design
+        name_de: Strategische Gestaltung
+        url: https://www.hfg-gmuend.de/bewerben/bewerbung-ma
+        degree: ma
+        focus: false
+        start_urls:
+          - url: https://www.hfg-gmuend.de/bewerben/bewerbung-ma
+            type: application_page
+
+  - slug: bergische-universitaet-wuppertal
+    name_en: Bergische Universität Wuppertal
+    name_de: Bergische Universität Wuppertal
+    url: https://www.uni-wuppertal.de
+    country: de
+    city: Wuppertal
+    state: North Rhine-Westphalia
+    type: universitaet
+    focus: false
+    programs:
+      - slug: strategische-produkt-innovationsentwicklung
+        name_en: Strategic Product and Innovation Development
+        name_de: Strategische Produkt- und Innovationsentwicklung
+        url: https://www.uni-wuppertal.de/de/studium/studiengaenge/detail/ma-strategische-produkt-und-innovationsentwicklung-ein-fach-studiengaenge/
+        degree: ma
+        focus: false
+        start_urls:
+          - url: https://www.uni-wuppertal.de/de/studium/studiengaenge/detail/ma-strategische-produkt-und-innovationsentwicklung-ein-fach-studiengaenge/
+            type: program_overview
+
+  - slug: hfg-offenbach
+    name_en: HfG Offenbach University of Art and Design
+    name_de: Hochschule für Gestaltung Offenbach am Main
+    url: https://www.hfg-offenbach.de
+    country: de
+    city: Offenbach am Main
+    state: Hesse
+    type: kunsthochschule
+    focus: false
+    programs:
+      - slug: produkt-prozessgestaltung
+        name_en: Product and Process Design
+        name_de: Produkt- und Prozessgestaltung
+        url: https://www.hfg-offenbach.de/en/pages/design#about
+        degree: ma
+        focus: false
+        start_urls:
+          - url: https://www.hfg-offenbach.de/en/pages/design
+            type: program_overview
+
+  - slug: muthesius-kunsthochschule
+    name_en: Muthesius University of Fine Arts and Design
+    name_de: Muthesius Kunsthochschule
+    url: https://www.muthesius-kunsthochschule.de
+    country: de
+    city: Kiel
+    state: Schleswig-Holstein
+    type: kunsthochschule
+    focus: false
+    programs:
+      - slug: industrial-design-medical-design
+        name_en: Industrial Design / Medical Design
+        name_de: Industrial Design / Medical Design
+        url: https://en.muthesius-kunsthochschule.de/the-application-documents/
+        degree: ma
+        focus: false
+        start_urls:
+          - url: https://en.muthesius-kunsthochschule.de/the-application-documents/
+            type: application_page
+      - slug: industrial-design-interface-design
+        name_en: Industrial Design / Interface Design
+        name_de: Industrial Design / Interface Design
+        url: https://en.muthesius-kunsthochschule.de/the-application-documents/
+        degree: ma
+        focus: false
+        start_urls:
+          - url: https://en.muthesius-kunsthochschule.de/the-application-documents/
+            type: application_page
+
+  - slug: hs-magdeburg-stendal
+    name_en: Magdeburg-Stendal University of Applied Sciences
+    name_de: Hochschule Magdeburg-Stendal
+    url: https://www.hs-magdeburg.de
+    country: de
+    city: Magdeburg
+    state: Saxony-Anhalt
+    type: fachhochschule
+    focus: false
+    programs:
+      - slug: engineering-design
+        name_en: Engineering Design
+        name_de: Engineering Design
+        url: https://studieren.h2.de/studiengaenge/master/engineering-design
+        degree: ma
+        focus: false
+        start_urls:
+          - url: https://studieren.h2.de/studiengaenge/master/engineering-design
+            type: program_overview
+      - slug: interaction-design
+        name_en: Interaction Design
+        name_de: Interaction Design
+        url: https://studieren.h2.de/studiengaenge/master/interaction-design
+        degree: ma
+        focus: false
+        start_urls:
+          - url: https://studieren.h2.de/studiengaenge/master/interaction-design
+            type: program_overview
+
+  - slug: fh-potsdam
+    name_en: University of Applied Sciences Potsdam
+    name_de: Fachhochschule Potsdam
+    url: https://www.fh-potsdam.de
+    country: de
+    city: Potsdam
+    state: Brandenburg
+    type: fachhochschule
+    focus: false
+    programs:
+      - slug: design-ma
+        name_en: Design (Master)
+        name_de: Design
+        url: https://www.fh-potsdam.de/studium-weiterbildung/studiengaenge/design-m
+        degree: ma
+        focus: false
+        start_urls:
+          - url: https://www.fh-potsdam.de/studium-weiterbildung/studiengaenge/design-m
+            type: program_overview
+
+  - slug: kh-berlin-weissensee
+    name_en: Weißensee School of Art and Design Berlin
+    name_de: Kunsthochschule Berlin-Weißensee
+    url: https://kh-berlin.de
+    country: de
+    city: Berlin
+    state: Berlin
+    type: kunsthochschule
+    focus: false
+    programs:
+      - slug: produkt-design
+        name_en: Product Design
+        name_de: Produkt-Design
+        url: https://kh-berlin.de/studium/studienbewerbung/master-produkt-design
+        degree: ma
+        focus: false
+        start_urls:
+          - url: https://kh-berlin.de/studium/studienbewerbung/master-produkt-design
+            type: application_page
+
+  - slug: hawk-hildesheim
+    name_en: HAWK University of Applied Sciences and Arts
+    name_de: HAWK Hochschule für angewandte Wissenschaft und Kunst
+    url: https://www.hawk.de
+    country: de
+    city: Hildesheim
+    state: Lower Saxony
+    type: fachhochschule
+    focus: false
+    programs:
+      - slug: gestaltung
+        name_en: Design
+        name_de: Gestaltung
+        url: https://www.hawk.de/de/studium/studiengaenge/ma-gestaltung-hildesheim/bewerbung
+        degree: ma
+        focus: false
+        start_urls:
+          - url: https://www.hawk.de/de/studium/studiengaenge/ma-gestaltung-hildesheim/bewerbung
+            type: application_page
+
+  - slug: hs-darmstadt
+    name_en: University of Applied Sciences Darmstadt
+    name_de: Hochschule Darmstadt
+    url: https://www.h-da.de
+    country: de
+    city: Darmstadt
+    state: Hesse
+    type: fachhochschule
+    focus: false
+    programs:
+      - slug: industriedesign
+        name_en: Industrial Design
+        name_de: Industriedesign
+        url: https://design.h-da.de/bewerben
+        degree: diplom
+        focus: false
+        start_urls:
+          - url: https://design.h-da.de/bewerben
+            type: application_page
+
+  - slug: htw-berlin
+    name_en: HTW Berlin - University of Applied Sciences
+    name_de: Hochschule für Technik und Wirtschaft Berlin
+    url: https://www.htw-berlin.de
+    country: de
+    city: Berlin
+    state: Berlin
+    type: fachhochschule
+    focus: false
+    programs:
+      - slug: system-design
+        name_en: System Design
+        name_de: System Design
+        url: https://systemdesign.htw-berlin.de/bewerbung/
+        degree: ma
+        focus: false
+        start_urls:
+          - url: https://systemdesign.htw-berlin.de/bewerbung/
+            type: application_page
+
+  - slug: htw-dresden
+    name_en: HTW Dresden - University of Applied Sciences
+    name_de: Hochschule für Technik und Wirtschaft Dresden
+    url: https://www.htw-dresden.de
+    country: de
+    city: Dresden
+    state: Saxony
+    type: fachhochschule
+    focus: false
+    programs:
+      - slug: design-products-interactions
+        name_en: Design: Products and Interactions
+        name_de: Design: Products and Interactions
+        url: https://www.htw-dresden.de/hochschule/fakultaeten/design/bewerbung
+        degree: ma
+        focus: false
+        start_urls:
+          - url: https://www.htw-dresden.de/hochschule/fakultaeten/design/bewerbung
+            type: application_page
+
+  - slug: udk-berlin
+    name_en: Berlin University of the Arts (UdK)
+    name_de: Universität der Künste Berlin
+    url: https://www.udk-berlin.de
+    country: de
+    city: Berlin
+    state: Berlin
+    type: kunsthochschule
+    focus: false
+    programs:
+      - slug: design-mode-produkt
+        name_en: Design (Fashion and Product)
+        name_de: Design (Mode und Produkt)
+        url: https://www.udk-berlin.de/bewerbung/bewerbungsguide/design-mode-und-produkt-master/
+        degree: ma
+        focus: false
+        start_urls:
+          - url: https://www.udk-berlin.de/bewerbung/bewerbungsguide/design-mode-und-produkt-master/
+            type: application_page
+
+  - slug: tu-udk-berlin
+    name_en: TU Berlin & UdK Berlin (Joint Program)
+    name_de: TU Berlin & UdK Berlin
+    url: https://www.newpractice.net
+    country: de
+    city: Berlin
+    state: Berlin
+    type: universitaet
+    focus: false
+    programs:
+      - slug: design-computation
+        name_en: Design & Computation
+        name_de: Design & Computation
+        url: https://www.newpractice.net/application
+        degree: ma
+        focus: false
+        start_urls:
+          - url: https://www.newpractice.net/application
+            type: application_page
+
+  - slug: kunsthochschule-kassel
+    name_en: Kunsthochschule Kassel
+    name_de: Kunsthochschule Kassel
+    url: https://kunsthochschulekassel.de
+    country: de
+    city: Kassel
+    state: Hesse
+    type: kunsthochschule
+    focus: false
+    programs:
+      - slug: produktdesign
+        name_en: Product Design
+        name_de: Produktdesign
+        url: https://kunsthochschulekassel.de/bewerbung/studieninteressierte.html
+        degree: diplom
+        focus: false
+        start_urls:
+          - url: https://kunsthochschulekassel.de/bewerbung/studieninteressierte.html
+            type: application_page
+
+  - slug: hfg-karlsruhe
+    name_en: Karlsruhe University of Arts and Design
+    name_de: Staatliche Hochschule für Gestaltung Karlsruhe
+    url: https://hfg-karlsruhe.de
+    country: de
+    city: Karlsruhe
+    state: Baden-Württemberg
+    type: kunsthochschule
+    focus: false
+    programs:
+      - slug: produktdesign
+        name_en: Product Design
+        name_de: Produktdesign
+        url: https://hfg-karlsruhe.de/studium/bewerbung/
+        degree: diplom
+        focus: false
+        start_urls:
+          - url: https://hfg-karlsruhe.de/studium/bewerbung/
+            type: application_page
+
+  - slug: folkwang-uni
+    name_en: Folkwang University of the Arts
+    name_de: Folkwang Universität der Künste
+    url: https://www.folkwang-uni.de
+    country: de
+    city: Essen
+    state: North Rhine-Westphalia
+    type: kunsthochschule
+    focus: false
+    programs:
+      - slug: design-futures
+        name_en: Design Futures
+        name_de: Design Futures
+        url: https://www.folkwang-uni.de/home/gestaltung/studiengaenge/design-futures-ma/basisinfos-bewerbung
+        degree: ma
+        focus: false
+        start_urls:
+          - url: https://www.folkwang-uni.de/home/gestaltung/studiengaenge/design-futures-ma/basisinfos-bewerbung
+            type: application_page
+
+  - slug: abk-stuttgart
+    name_en: Stuttgart State Academy of Art and Design
+    name_de: Staatliche Akademie der Bildenden Künste Stuttgart
+    url: https://www.abk-stuttgart.de
+    country: de
+    city: Stuttgart
+    state: Baden-Württemberg
+    type: kunsthochschule
+    focus: false
+    programs:
+      - slug: industrial-design
+        name_en: Industrial Design
+        name_de: Industrial Design
+        url: https://www.abk-stuttgart.de/bewerbung/aufnahmeverfahren/
+        degree: diplom
+        focus: false
+        start_urls:
+          - url: https://www.abk-stuttgart.de/bewerbung/aufnahmeverfahren/
+            type: application_page
+
+  - slug: hfk-bremen
+    name_en: University of the Arts Bremen
+    name_de: Hochschule für Künste Bremen
+    url: https://www.hfk-bremen.de
+    country: de
+    city: Bremen
+    state: Bremen
+    type: kunsthochschule
+    focus: false
+    programs:
+      - slug: integriertes-design
+        name_en: Integrated Design
+        name_de: Integriertes Design
+        url: https://www.hfk-bremen.de/de/bewerbung/bewerbung-im-integriertes-design-m-a/
+        degree: ma
+        focus: false
+        start_urls:
+          - url: https://www.hfk-bremen.de/de/bewerbung/bewerbung-im-integriertes-design-m-a/
+            type: application_page
+
+  - slug: hbksaar
+    name_en: Saar University of Fine Arts
+    name_de: Hochschule der Bildenden Künste Saar
+    url: https://www.hbksaar.de
+    country: de
+    city: Saarbrücken
+    state: Saarland
+    type: kunsthochschule
+    focus: false
+    programs:
+      - slug: produkt-design
+        name_en: Product Design
+        name_de: Produkt-Design
+        url: https://www.hbksaar.de/bewerbung-informationen
+        degree: ma
+        focus: false
+        start_urls:
+          - url: https://www.hbksaar.de/bewerbung-informationen
+            type: application_page
+
+  - slug: burg-halle
+    name_en: Burg Giebichenstein University of Art and Design Halle
+    name_de: Burg Giebichenstein Kunsthochschule Halle
+    url: https://www.burg-halle.de
+    country: de
+    city: Halle (Saale)
+    state: Saxony-Anhalt
+    type: kunsthochschule
+    focus: false
+    programs:
+      - slug: industrial-design
+        name_en: Industrial Design
+        name_de: Industrial Design
+        url: https://www.burg-halle.de/design/industrial-design-ma
+        degree: ma
+        focus: false
+        start_urls:
+          - url: https://www.burg-halle.de/design/industrial-design-ma
+            type: program_overview
+
+  - slug: hbk-braunschweig
+    name_en: Braunschweig University of Art
+    name_de: Hochschule für Bildende Künste Braunschweig
+    url: https://www.hbk-bs.de
+    country: de
+    city: Braunschweig
+    state: Lower Saxony
+    type: kunsthochschule
+    focus: false
+    programs:
+      - slug: transformation-design
+        name_en: Transformation Design
+        name_de: Transformation Design
+        url: https://www.hbk-bs.de/studium/bewerben/transformation-design/
+        degree: ma
+        focus: false
+        start_urls:
+          - url: https://www.hbk-bs.de/studium/bewerben/transformation-design/
+            type: application_page
+
+  - slug: hs-muenchen
+    name_en: Munich University of Applied Sciences
+    name_de: Hochschule München
+    url: https://www.hm.edu
+    country: de
+    city: Munich
+    state: Bavaria
+    type: fachhochschule
+    focus: false
+    programs:
+      - slug: angewandte-designforschung
+        name_en: Applied Design Research
+        name_de: Angewandte Designforschung
+        url: https://hm.edu/search/courses/index.de.html
+        degree: ma
+        focus: false
+        start_urls:
+          - url: https://hm.edu/search/courses/index.de.html?facet.filter.Abschlussart_value=Master&sorting=_AtoZ
+            type: program_list

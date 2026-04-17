@@ -1,0 +1,134 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Program",
+  "description": "University program data schema (medium depth - Phase 1)",
+  "type": "object",
+  "properties": {
+    "name_de": {
+      "type": "string",
+      "description": "German program name, e.g. Produktdesign"
+    },
+    "name_en": {
+      "type": "string",
+      "description": "English program name, e.g. Industrial Design"
+    },
+    "name_cn": {
+      "type": "string",
+      "description": "Chinese program name"
+    },
+    "slug": {
+      "type": "string",
+      "description": "URL-safe identifier, e.g. industrial-design"
+    },
+    "degree": {
+      "type": "string",
+      "enum": ["ba", "ma", "diplom", "phd", "state_exam", "other"],
+      "description": "Degree type"
+    },
+    "degree_title": {
+      "type": "string",
+      "description": "Full degree title, e.g. Bachelor of Arts (B.A.)"
+    },
+    "language": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "Languages of instruction, e.g. [\"de\", \"en\"]"
+    },
+    "duration_semesters": {
+      "type": "integer",
+      "description": "Standard duration in semesters"
+    },
+    "start_semester": {
+      "type": "string",
+      "description": "When the program starts, e.g. 'Winter semester' or 'Winter and summer'"
+    },
+    "url": {
+      "type": "string",
+      "format": "uri",
+      "description": "Program page URL"
+    },
+    "department": {
+      "type": "string",
+      "description": "Faculty/Department name"
+    },
+    "faculty_url": {
+      "type": "string",
+      "format": "uri",
+      "description": "Faculty page URL"
+    },
+    "focus_areas": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "Key focus areas, e.g. ['product design', 'UX', 'sustainability']"
+    },
+    "admission_requirements": {
+      "type": "string",
+      "description": "Summary of admission requirements"
+    },
+    "language_requirements": {
+      "type": "object",
+      "properties": {
+        "german": { "type": "string", "description": "e.g. DSH-2, TestDaF 4x4" },
+        "english": { "type": "string", "description": "e.g. IELTS 6.5, TOEFL 80" }
+      }
+    },
+    "portfolio_required": {
+      "type": "boolean",
+      "description": "Whether a portfolio/mappe is required"
+    },
+    "portfolio_details": {
+      "type": "string",
+      "description": "Portfolio requirements details"
+    },
+    "application_process": {
+      "type": "string",
+      "description": "How to apply - steps and portal info"
+    },
+    "application_deadlines": {
+      "type": "object",
+      "properties": {
+        "winter_semester": { "type": "string" },
+        "summer_semester": { "type": "string" },
+        "notes": { "type": "string" }
+      }
+    },
+    "curriculum_summary": {
+      "type": "string",
+      "description": "Summary of key modules and curriculum structure"
+    },
+    "tuition": {
+      "type": "object",
+      "properties": {
+        "tuition_free": { "type": "boolean" },
+        "semester_fee_eur": { "type": "number" },
+        "notes": { "type": "string" }
+      }
+    },
+    "scholarship_info": {
+      "type": "string",
+      "description": "Available scholarships or funding info (Phase 2 deep field)"
+    },
+    "contact": {
+      "type": "object",
+      "properties": {
+        "name": { "type": "string" },
+        "email": { "type": "string", "format": "email" },
+        "phone": { "type": "string" },
+        "office_hours": { "type": "string" }
+      }
+    },
+    "num_places": {
+      "type": "integer",
+      "description": "Number of available places (if known)"
+    },
+    "last_crawled": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "source_urls": {
+      "type": "array",
+      "items": { "type": "string", "format": "uri" }
+    }
+  },
+  "required": ["name_de", "name_en", "slug", "degree", "url"]
+}
