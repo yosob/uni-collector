@@ -25,7 +25,13 @@ python -m nanobot agent -w ../uni-collector
 重新扫描 udk-berlin
 ```
 
-LLM 会从院校根 URL 出发自由探索，生成 site_map.md、university_profile.md，并填充专业详细信息。单次建议处理 1 所院校。
+LLM 从院校根 URL 出发，采用**专业穷举策略**：
+1. 找到专业汇总页（Übersicht der Studiengänge / Degree Programs）
+2. 提取全部专业列表（包括本科/硕士/博士/师范等所有学位级别）
+3. 逐一访问每个专业的概述页、申请页、课程页等子页面
+4. 生成 site_map.md、university_profile.md，并填充专业详细信息
+
+单次建议处理 1 所院校。页面预算按专业数量计算（每专业 3-5 页 + 共享页面 10-15 页）。
 
 ### 日常更新（smart-extractor）
 
@@ -77,9 +83,9 @@ LLM 会从院校根 URL 出发自由探索，生成 site_map.md、university_pro
 
 | 阶段 | Skill | 成本 | 说明 |
 |------|-------|------|------|
-| 首次探索 | site-explorer | 高 | LLM 从根 URL 自由探索 |
+| 首次探索 | site-explorer | 高 | LLM 从根 URL 穷举探索，逐一访问每个专业 |
 | 日常更新 | smart-extractor | 低 | 按 site_map 提取已知 URL |
-| 定期刷新 | site-explorer | 高 | 重新探索，更新 site_map |
+| 定期刷新 | site-explorer | 高 | 重新探索，发现新增专业，更新 site_map |
 
 ### 何时触发 LLM 重新探索
 
@@ -97,9 +103,9 @@ LLM 会从院校根 URL 出发自由探索，生成 site_map.md、university_pro
 
 # 2. 首次深度爬取
 深度爬取 UdK Berlin
-  → site-explorer 探索网站
+  → site-explorer 探索网站（穷举策略：找到所有专业并逐一访问）
   → 生成 site_map.md + university_profile.md
-  → 填充 _index.md 专业详情
+  → 填充 _index.md 专业详情（本科/硕士/博士全覆盖）
 
 # 3. 日常更新
 更新 UdK Berlin 数据

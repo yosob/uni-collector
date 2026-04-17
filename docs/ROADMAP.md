@@ -13,12 +13,13 @@ uni-collector 是一个基于 nanobot 框架的德国高校数据采集 Agent，
 | 专业方向 | 工业设计、产品设计、交互设计、视觉传达、纯艺术 |
 | 数据存储 | Markdown + YAML frontmatter + Git |
 | 深度爬取策略 | LLM 探索 → site_map 固化 → 日常按 map 提取 |
-| LLM 探索方式 | 从根 URL 自由探索，skill 提示词引导，无硬限制 |
+| LLM 探索方式 | 从根 URL 探索，专业穷举策略（找到汇总页 → 逐一访问每个专业） |
 | 固化方式 | site_map.md（URL 架构）+ university_profile.md（摘要） |
 | 日常更新 | 按 site_map 已知 URL → LLM 提取（不探索） |
 | LLM 刷新触发 | 提取失败（立即）+ 申请季前（4/11月）+ 平时错峰 |
 | 刷新策略 | 按列表顺序、每天 1-2 所、错峰、不联动 |
-| 停止条件 | TODO: 暂由 LLM 决定，后续研究 |
+| 停止条件 | ✅ 专业穷举：汇总页中所有专业都已访问，且 P0 字段已提取 |
+| 探索策略 | 专业穷举：找到 Übersicht → 提取全部专业 → 逐一访问 |
 | 运行模式 | 先 CLI，逐步扩展到 Cron 定时 + Channel 触发 |
 | LLM 后端 | 智谱 GLM（通过 OpenAI 兼容 API） |
 
@@ -45,7 +46,7 @@ uni-collector 是一个基于 nanobot 框架的德国高校数据采集 Agent，
 
 **目标**: 深度爬取各院校专业详情 ✅ 设计，部分完成
 
-- ✅ `site-explorer` — LLM 深度探索 + exploration-guide
+- ✅ `site-explorer` — LLM 深度探索 + exploration-guide + 专业穷举策略
 - ✅ `smart-extractor` — 按 site_map 日常提取
 - ✅ `uni-collector` 编排器增加 5 种模式
 - ✅ Bauhaus-Weimar 试点深爬（site_map + profile + 全字段填充）
@@ -56,9 +57,9 @@ uni-collector 是一个基于 nanobot 框架的德国高校数据采集 Agent，
 
 **深度爬取策略**:
 ```
-首次: site-explorer (LLM 探索) → site_map.md + university_profile.md + 填充数据
+首次: site-explorer (LLM 穷举探索) → 找到 Übersicht → 逐一访问每个专业 → site_map.md + university_profile.md
 日常: smart-extractor (按 map 提取) → 更新变更字段
-刷新: 定期重跑 site-explorer → 发现新增内容
+刷新: 定期重跑 site-explorer → 发现新增专业，更新 site_map
 ```
 
 **刷新调度**:
@@ -93,4 +94,5 @@ uni-collector 是一个基于 nanobot 框架的德国高校数据采集 Agent，
 3. **增量追踪** — crawl_state.json 记录爬取状态和下次检查时间
 4. **混合爬虫** — web_fetch 优先，JS 重页面回退 Playwright browser
 5. **探索-固化-更新循环** — LLM 探索一次，site_map 固化，日常按 map 提取
-6. **停止条件 TBD** — 当前由 LLM 自行判断，后续需研究精确条件
+6. **专业穷举策略** — 找到专业汇总页后必须逐一访问每个专业，不遗漏
+7. **全学位覆盖** — BA/MA/BFA/MFA/Diplom/PhD/Dr./Staatsexamen 均为收集目标

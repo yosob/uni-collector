@@ -22,8 +22,8 @@
     },
     "degree": {
       "type": "string",
-      "enum": ["ba", "ma", "diplom", "phd", "state_exam", "other"],
-      "description": "Degree type"
+      "enum": ["ba", "ma", "bfa", "mfa", "diplom", "phd", "dr", "staatsexamen", "other"],
+      "description": "Degree type: ba=Bachelor of Arts, ma=Master of Arts, bfa=Bachelor of Fine Arts, mfa=Master of Fine Arts, diplom=Diplom, phd=Doctor of Philosophy, dr=Doctor (Dr. phil., Dr.-Ing.), staatsexamen=State Examination, other"
     },
     "degree_title": {
       "type": "string",
