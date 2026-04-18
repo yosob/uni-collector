@@ -252,3 +252,58 @@ uni-collector/                    # 本项目（数据和技能包）
 ```
 
 nanobot 是运行时引擎，uni-collector 是数据和技能包。两者通过 filesystem 解耦，互不侵入。
+
+## 子代理批次调度
+
+### 问题
+
+nanobot 的 subagent announce 机制是"单向通知"——subagent 完成后注入 system message，LLM 摘要完就结束 turn。在多院校批量探索场景中，B01 完成后 B02 不会自动启动。
+
+### 三层保障机制
+
+```
+┌─────────────────────────────────────────────────────┐
+│ Layer 1: subagent_announce.md（即时触发，0 延迟）      │
+│   subagent 完成 → announce 注入主线程                  │
+│   → LLM 检查任务追踪文件 → spawn 下一批               │
+├─────────────────────────────────────────────────────┤
+│ Layer 2: HEARTBEAT.md（兜底，最多 30 分钟延迟）        │
+│   heartbeat tick → LLM 读取 HEARTBEAT.md              │
+│   → 检查追踪文件 → 如果批次停滞则推进                  │
+├─────────────────────────────────────────────────────┤
+│ Layer 3: 启动恢复                                     │
+│   nanobot 重启 → heartbeat 读取 HEARTBEAT.md           │
+│   → 恢复中断的批次                                    │
+└─────────────────────────────────────────────────────┘
+```
+
+### LLM 自管理追踪文件
+
+LLM 在发起批量任务时自行创建任务追踪文件（格式和位置由 LLM 决定），记录每个院校的探索状态。`uni-collector/SKILL.md` 中的批次调度规范要求 LLM：
+
+1. 创建追踪文件（记录 pending/running/completed/failed 状态）
+2. 写入 `HEARTBEAT.md` 做兜底检查
+3. 每批最多 2 个 subagent（受 `maxConcurrentSubagents` 限制）
+
+**不预定义追踪文件格式**——LLM 根据任务上下文自行组织。
+
+### 相关改动
+
+| 文件 | 改动 |
+|---|---|
+| `nanobot/templates/agent/subagent_announce.md` | 新增"检查追踪文件并继续推进"指令 |
+| `uni-collector/skills/uni-collector/SKILL.md` | 新增"批次调度规范"章节 |
+
+## nanobot 近期修复
+
+### 子代理配置对齐（2026-04-18）
+
+- `max_iterations` 从硬编码 15 改为继承主 agent 配置（默认 200）
+- `fail_on_tool_error` 从 `True` 改为 `False`
+- 子代理并发限制（`maxConcurrentSubagents`，默认 2）
+
+### LLM API 连接稳定性（2026-04-18）
+
+- `trust_env=False` 绕过 macOS 系统代理，LLM API 直连
+- 多层 streaming 超时保护
+- CLI 路径 `llmApiTimeout` 配置修复（之前 `api_timeout=None`）

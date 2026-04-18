@@ -62,6 +62,19 @@ LLM 从院校根 URL 出发，采用**专业穷举策略**：
 
 手动指定一个 URL 进行提取。
 
+### 批量探索（多院校 subagent）
+
+```
+全量探索所有未探索的德国院校
+批量爬取 B01 到 B12
+```
+
+LLM 会自动：
+1. 创建任务追踪文件（记录每所院校状态）
+2. 写入 HEARTBEAT.md（heartbeat 兜底检查）
+3. 每批 spawn 2 个 subagent（受并发限制）
+4. subagent 完成后自动推进下一批（三层保障：announce → heartbeat → 启动恢复）
+
 ### 初始化/校验
 
 ```
