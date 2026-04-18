@@ -68,6 +68,17 @@ always: true
    - 未到期 → 跳过
 3. 按列表顺序处理，请求间等待 2 秒
 
+#### 全量更新前置步骤（强制重爬）
+
+当用户请求中包含 **"全量"、"完整"、"完全"** 等关键词，并指定了目标范围时：
+
+1. **先重置状态**：执行脚本将目标学校的 collection_status 归零（不删除数据文件）
+   - 指定学校：`python3 skills/data-organizer/scripts/reset_status.py --slugs <slug1>,<slug2>`
+   - 所有学校：`python3 skills/data-organizer/scripts/reset_status.py --all`
+   - 指定国家：`python3 skills/data-organizer/scripts/reset_status.py --country de`
+2. **再正常调度**：状态归零后，所有目标学校变为 `explored: false`，按正常的 site-explorer 批次调度流程执行
+3. site-explorer 会覆盖写入数据，旧数据在重跑期间作为 fallback
+
 ## 批次调度规范
 
 当使用 subagent 执行多院校任务时，必须：
@@ -98,6 +109,7 @@ always: true
 收到请求 → 判断场景:
   ├─ 涉及新院校发现 → 情况 C (university-scout)
   ├─ 指定单个 URL → 情况 E (page-extractor)
+  ├─ 含"全量/完整/完全"关键词 → 先执行 reset_status.py 归零，再走下方逻辑
   ├─ 指定院校 → 在 collection_status.yaml 中查找:
   │    ├─ explored: false → 情况 A (site-explorer, 首次探索)
   │    ├─ needs_reexplore: true → 情况 A (site-explorer, 强制重扫)

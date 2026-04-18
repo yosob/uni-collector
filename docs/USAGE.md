@@ -33,6 +33,18 @@ LLM 从院校根 URL 出发，采用**专业穷举策略**：
 
 单次建议处理 1 所院校。页面预算按专业数量计算（每专业 3-5 页 + 共享页面 10-15 页）。
 
+### 全量更新（强制重爬）
+
+当需要对已探索的学校做完整重新爬取时：
+
+```
+全量更新 hawk-hildesheim
+完整爬取 hfg-karlsruhe, hfk-bremen
+完全更新所有德国院校
+```
+
+触发词："全量"、"完整"、"完全"。LLM 会先调用 `reset_status.py` 将目标学校的 `collection_status.yaml` 状态归零，再启动 site-explorer 完整重跑。旧数据不会被删除，site-explorer 会覆盖写入。
+
 ### 日常更新（smart-extractor）
 
 当 site_map 已存在，需要增量更新时：
@@ -140,6 +152,21 @@ LLM 会自动：
 
 ```bash
 python3 skills/data-organizer/scripts/init_university.py --slug <slug> --country de
+```
+
+### reset_status.py
+
+重置指定学校的 `collection_status.yaml` 状态字段为初始值（不删除数据文件），用于全量更新前强制归零。
+
+```bash
+# 重置指定学校
+python3 skills/data-organizer/scripts/reset_status.py --slugs hawk-hildesheim,hfk-bremen
+
+# 重置指定国家的所有学校
+python3 skills/data-organizer/scripts/reset_status.py --country de
+
+# 重置全部学校
+python3 skills/data-organizer/scripts/reset_status.py --all
 ```
 
 ### validate_data.py
