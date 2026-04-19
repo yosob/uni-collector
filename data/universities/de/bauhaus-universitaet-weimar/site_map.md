@@ -1,73 +1,80 @@
-# Bauhaus-Universität Weimar - Site Map
+# Site Map: Bauhaus-Universität Weimar
 
-> Generated: 2026-04-17
-> All URLs under https://www.uni-weimar.de unless noted.
+**Exploration Date:** 2026-04-18
+**Root URL:** https://www.uni-weimar.de
+**Design Faculty:** Fakultät Kunst und Gestaltung
 
-## University Overview
+## Website Structure
 
-| URL | Description |
-|-----|-------------|
-| `/` | University homepage |
-| `/de/universitaet/` | University overview (DE) |
-| `/en/university/` | University overview (EN) |
-| `/de/universitaet/struktur/` | University structure / organization |
-| `/de/universitaet/profil/` | University profile |
+### University Level
+- Homepage: https://www.uni-weimar.de
+- Universität Overview: https://www.uni-weimar.de/de/universitaet/start/
+- Studium (Studies): https://www.uni-weimar.de/de/universitaet/studium/
+- Studienangebote (Study Programmes): https://www.uni-weimar.de/de/universitaet/studium/studienangebote/
 
-## Faculties
+### Faculty: Kunst und Gestaltung (Art and Design)
+- Faculty Start: https://www.uni-weimar.de/de/kunst-und-gestaltung/start/
+- Studium (Studies): https://www.uni-weimar.de/de/kunst-und-gestaltung/studium/
+- Übersicht der Studiengänge: https://www.uni-weimar.de/de/kunst-und-gestaltung/studium/uebersicht-der-studiengaenge/
+- Lehrgebiete und Personen: https://www.uni-weimar.de/de/kunst-und-gestaltung/struktur/lehrgebiete-personen/
+- Informationen für Studienbewerber*innen: https://www.uni-weimar.de/de/kunst-und-gestaltung/studium/informationen-fuer-studienbewerberinnen/
+- Bewerbung und Zulassung: https://www.uni-weimar.de/de/kunst-und-gestaltung/studium/informationen-fuer-studienbewerberinnen/bewerbung-und-zulassung/
+- Profil/Über die Fakultät: https://www.uni-weimar.de/de/kunst-und-gestaltung/profil/ueber-die-fakultaet/
+- Weimarer Modell: https://www.uni-weimar.de/de/kunst-und-gestaltung/profil/das-weimarer-modell/
 
-| URL | Description |
-|-----|-------------|
-| `/de/architektur/` | Faculty of Architecture and Urbanism |
-| `/de/bauingenieurwesen/` | Faculty of Civil Engineering |
-| `/de/kunst-und-gestaltung/` | Faculty of Art and Design |
-| `/de/medien/` | Faculty of Media |
+### Programs (Design/Art Related)
 
-## Product Design Program
+#### 1. Freie Kunst (Fine Art) — Diplom
+- Overview: https://www.uni-weimar.de/de/kunst-und-gestaltung/studium/freie-kunst/
+- Professuren: https://www.uni-weimar.de/de/kunst-und-gestaltung/struktur/lehrgebiete-personen/freie-kunst-diplom-kunst-im-oeffentlichen-raum-mfa/
 
-| URL | Description |
-|-----|-------------|
-| `/de/kunst-und-gestaltung/studium/produktdesign/` | Product Design overview (BA + MA, DE) -- most comprehensive page |
-| `/de/kunst-und-gestaltung/studium/produktdesign/produktdesign-ma/` | Product Design Master's program details (DE) |
-| `/en/art-and-design/studies/product-design/` | Product Design overview (EN) |
+#### 2. Kunst im öffentlichen Raum (Public Art and New Artistic Strategies) — M.F.A.
+- Professur: https://www.uni-weimar.de/de/kunst-und-gestaltung/professuren/public-art-and-new-artistic-strategies/
+- Personen: https://www.uni-weimar.de/de/kunst-und-gestaltung/professuren/public-art-and-new-artistic-strategies/personen/
+- Lehre: https://www.uni-weimar.de/de/kunst-und-gestaltung/professuren/public-art-and-new-artistic-strategies/lehre/
 
-## Application & Admissions
+#### 3. Lehramt an Gymnasien Kunst (Fine Art Education) — Staatsexamen
+- Overview: https://www.uni-weimar.de/de/kunst-und-gestaltung/studium/lehramt-an-gymnasien-kunst/
 
-| URL | Description |
-|-----|-------------|
-| `/de/studium/bewerbung/` | Application overview (DE) |
-| `/en/studies/application/` | Application overview (EN) |
-| `/de/studium/bewerbung/masterstudium/` | Master's application info (DE) |
-| `https://www.uni-weimar.de/de/studium/bewerbung/nc-frei-master/` | Admission-free Master's programs (DE) |
+#### 4. Medienkunst/Mediengestaltung (Media Art and Design) — B.F.A.
+- Overview: https://www.uni-weimar.de/de/kunst-und-gestaltung/studium/medienkunstmediengestaltung/
+- B.F.A. Detail: https://www.uni-weimar.de/de/kunst-und-gestaltung/studium/medienkunstmediengestaltung/medienkunstmediengestaltung-bfa/
 
-## Fees & Semester Contribution
+#### 5. Medienkunst (Media Art) — M.F.A.
+- M.F.A. Detail: https://www.uni-weimar.de/de/kunst-und-gestaltung/studium/medienkunstmediengestaltung/medienkunstmediengestaltung-mfa/
 
-| URL | Description |
-|-----|-------------|
-| `/de/studium/organisation/semesterbeitrag/` | Semester contribution info (DE) |
-| `/en/studies/organisation/semester-fee/` | Semester fee info (EN) |
+#### 6. Produktdesign (Product Design) — B.A.
+- Overview: https://www.uni-weimar.de/de/kunst-und-gestaltung/studium/produktdesign/
+- B.A. Detail: https://www.uni-weimar.de/de/kunst-und-gestaltung/studium/produktdesign/produktdesign-ba/
 
-## Degree Programs Listing
+#### 7. Produktdesign (Product Design) — M.A.
+- M.A. Detail: https://www.uni-weimar.de/de/kunst-und-gestaltung/studium/produktdesign/produktdesign-ma/
 
-| URL | Description |
-|-----|-------------|
-| `/de/studium/studiengaenge/` | All degree programs listing (DE) |
+#### 8. Visuelle Kommunikation (Visual Communication) — B.A.
+- Overview: https://www.uni-weimar.de/de/kunst-und-gestaltung/studium/visuelle-kommunikation/
+- B.A. Detail: https://www.uni-weimar.de/de/kunst-und-gestaltung/studium/visuelle-kommunikation/visuelle-kommunikation-ba/
 
-## Faculty / Professors (Product Design)
+#### 9. Visuelle Kommunikation (Visual Communication) — M.A.
+- M.A. Detail: https://www.uni-weimar.de/de/kunst-und-gestaltung/studium/visuelle-kommunikation/visuelle-kommunikation-ma/
 
-| URL | Description |
-|-----|-------------|
-| `/de/kunst-und-gestaltung/studium/produktdesign/professuren/` | Professorships in Product Design |
-| `/en/art-and-design/studies/product-design/professorships/` | Professorships in Product Design (EN) |
+### Application Pages
+- Application Overview (EN): https://www.uni-weimar.de/en/art-and-design/studies/information-for-students-applicants/application/
+- Bauhaus.CampusPortal: https://elearning.uni-weimar.de/campusportal/
 
-## Contact & Service
+### Professor/Chair Pages
+- Visuelle Kommunikation: https://www.uni-weimar.de/de/kunst-und-gestaltung/struktur/lehrgebiete-personen/visuelle-kommunikation/
+- Produktdesign: https://www.uni-weimar.de/de/kunst-und-gestaltung/struktur/lehrgebiete-personen/produktdesign/
+- Medienkunst/Mediengestaltung: https://www.uni-weimar.de/de/kunst-und-gestaltung/struktur/lehrgebiete-personen/medienkunstmediengestaltung/
+- Freie Kunst: https://www.uni-weimar.de/de/kunst-und-gestaltung/struktur/lehrgebiete-personen/freie-kunst-diplom-kunst-im-oeffentlichen-raum-mfa/
+- Public Art: https://www.uni-weimar.de/de/kunst-und-gestaltung/professuren/public-art-and-new-artistic-strategies/
 
-| URL | Description |
-|-----|-------------|
-| `/de/kunst-und-gestaltung/studium/studienberatung/` | Academic advising - Faculty of Art and Design |
+### Other Faculties (non-design, not collected)
+- Fakultät Architektur und Urbanistik: https://www.uni-weimar.de/de/architektur-und-urbanistik/start/
+- Fakultät Bau und Umwelt: https://www.uni-weimar.de/de/bau-und-umwelt/start/
+- Fakultät Medien: https://www.uni-weimar.de/de/medien/start/
 
-## External Resources
-
-| URL | Description |
-|-----|-------------|
-| `https://www.uni-assist.de` | uni-assist portal (for non-EU applicants) |
-| Bauhaus.CampusPortal | Digital application portal (accessed via university application pages) |
+## Notes
+- Website is heavily JavaScript-based; content extraction via web_fetch is limited to navigation structure
+- Many detailed program pages render content dynamically via JS
+- The English pages often have the same structure but at /en/ paths
+- All programs in the Faculty of Art and Design follow the "Weimarer Modell" (Weimar Model)

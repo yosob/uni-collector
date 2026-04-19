@@ -7,15 +7,14 @@ degree: "ma"
 degree_title: "Master of Arts (M.A.)"
 language:
   - "de"
-duration_semesters: 2
+duration_semesters: 4
 start_semester: "Winter semester"
-url: "https://www.uni-weimar.de/de/kunst-und-gestaltung/studium/produktdesign/"
+url: "https://www.uni-weimar.de/de/kunst-und-gestaltung/studium/produktdesign/produktdesign-ma/"
 department: "Fakultät Kunst und Gestaltung / Faculty of Art and Design"
 focus_areas:
   - "industrial design"
-  - "design & management"
-  - "emerging technologies & design"
   - "transformation design"
+  - "emerging technologies & design"
   - "design theory & research"
   - "sustainable product cultures"
 admission_requirements: "First academic degree (Bachelor or Diplom) in design or related field with above-average grades; successful artistic aptitude test (Eignungsprüfung) including portfolio review and interview."
@@ -30,7 +29,7 @@ application_deadlines:
   summer_semester: null
   notes: "Application only for winter semester. Registration opens February 1 each year."
 application_portal: "Bauhaus.CampusPortal"
-curriculum_summary: "Project-based study following the 'Weimarer Modell' (Weimar Model). Emphasizes open interdisciplinary project work across artistic and scientific disciplines. Students develop individual design positions through collaboration with professors across six professorships: Industrial Design, Design & Management, Emerging Technologies & Design, Transformation Design, Design Theory & Research, and Sustainable Product Cultures."
+curriculum_summary: "Project-based study following the 'Weimarer Modell' (Weimar Model). Emphasizes open interdisciplinary project work across artistic and scientific disciplines. Students develop individual design positions through collaboration with professors across multiple professorships: Industrial Design, Transformatives Design, Emerging Technologies and Design, and others. The program focuses on developing sustainable product cultures and advanced design research."
 tuition:
   tuition_free: true
   semester_fee_eur: 200
@@ -47,30 +46,27 @@ additional_contacts:
 professors:
   - name: "Prof. Gerrit Babtist"
     chair: "Industrial Design"
-  - name: "Prof. Thomas Pearce"
-    chair: "Design & Management"
   - name: "Prof. Martin Kuban"
-    chair: "Emerging Technologies & Design"
+    chair: "Transformatives Design"
   - name: "Prof. Andreas Mühlenberend"
     chair: "Transformation Design"
-  - name: "Prof. Jan Willmann"
-    chair: "Design Theory & Research"
-last_crawled: "2026-04-17"
+  - name: "Jun.-Prof. Dr. Thomas Pearce"
+    chair: "Emerging Technologies and Design"
+last_crawled: "2026-04-18"
 source_urls:
   - "https://www.uni-weimar.de/de/kunst-und-gestaltung/studium/produktdesign/"
   - "https://www.uni-weimar.de/de/kunst-und-gestaltung/studium/produktdesign/produktdesign-ma/"
-  - "https://www.uni-weimar.de/en/art-and-design/studies/product-design/"
-  - "https://www.uni-weimar.de/de/studium/bewerbung/"
-  - "https://www.uni-weimar.de/en/studies/application/"
+  - "https://www.uni-weimar.de/en/art-and-design/studies/produktdesign-product-design/"
+  - "https://www.uni-weimar.de/de/kunst-und-gestaltung/struktur/lehrgebiete-personen/produktdesign/"
 ---
 
-# Product Design (Produktdesign)
+# Product Design M.A. (Produktdesign)
 
 ## Program Overview
 
-The Master of Arts in Product Design at Bauhaus-Universität Weimar is a 2-semester program offered by the Faculty of Art and Design (Fakultät Kunst und Gestaltung). The full program designation is "Product Design / Sustainable Product Cultures."
+The Master of Arts in Product Design at Bauhaus-Universität Weimar is a 4-semester program offered by the Faculty of Art and Design (Fakultät Kunst und Gestaltung). The program focuses on developing sustainable product cultures and advanced design research.
 
-The program follows the **Weimarer Modell** (Weimar Model), a project-based study approach that emphasizes interdisciplinary collaboration, individual artistic development, and the integration of design theory with practical studio work. Students work across six professorships covering industrial design, design management, emerging technologies, transformation design, design theory, and sustainable product cultures.
+The program follows the **Weimarer Modell** (Weimar Model), a project-based study approach that emphasizes interdisciplinary collaboration, individual artistic development, and the integration of design theory with practical studio work. Students work across multiple professorships covering industrial design, transformation design, and emerging technologies.
 
 ## Admission
 

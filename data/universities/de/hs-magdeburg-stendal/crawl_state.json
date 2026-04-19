@@ -1,7 +1,32 @@
 {
   "university_slug": "hs-magdeburg-stendal",
-  "last_full_crawl": null,
-  "pages": {},
+  "last_full_crawl": "2026-04-19T04:15:00Z",
+  "crawl_version": "2.0",
+  "root_url": "https://www.h2.de",
+  "pages": {
+    "https://www.h2.de/": { "status": "crawled", "timestamp": "2026-04-19T04:04:00Z" },
+    "https://www.h2.de/studium/bachelor/industrial-design.html": { "status": "crawled", "timestamp": "2026-04-19T04:05:00Z" },
+    "https://www.h2.de/studium/master/engineering-design.html": { "status": "crawled", "timestamp": "2026-04-19T04:06:00Z" },
+    "https://studieren.h2.de/studiengaenge/bachelor/industrial-design": { "status": "crawled", "timestamp": "2026-04-19T04:07:00Z" },
+    "https://studieren.h2.de/studiengaenge/master/engineering-design": { "status": "crawled", "timestamp": "2026-04-19T04:08:00Z" },
+    "https://studieren.h2.de/studiengaenge/master/interaction-design": { "status": "crawled", "timestamp": "2026-04-19T04:09:00Z" },
+    "https://www.h2.de/hochschule/fachbereiche/iwid/fachbereich.html": { "status": "crawled", "timestamp": "2026-04-19T04:10:00Z" },
+    "https://www.h2.de/hochschule/fachbereiche/iwid/studiengaenge.html": { "status": "crawled", "timestamp": "2026-04-19T04:11:00Z" },
+    "https://www.h2.de/hochschule/fachbereiche/iwid/leitung-und-gremien.html": { "status": "crawled", "timestamp": "2026-04-19T04:12:00Z" },
+    "https://www.h2.de/hochschule/fachbereiche.html": { "status": "crawled", "timestamp": "2026-04-19T04:12:00Z" },
+    "https://www.h2.de/studium/bachelor.html": { "status": "crawled", "timestamp": "2026-04-19T04:13:00Z" },
+    "https://www.h2.de/studium/bewerbung-und-immatrikulation.html": { "status": "crawled", "timestamp": "2026-04-19T04:13:00Z" }
+  },
   "pending_urls": [],
-  "errors": []
+  "errors": [],
+  "sync_summary": {
+    "programs_total": 3,
+    "programs_crawled": 3,
+    "programs_pending": 0,
+    "programs": {
+      "industrial-design": { "degree": "B.A.", "level": "bachelor", "status": "crawled" },
+      "engineering-design": { "degree": "M.A.", "level": "master", "status": "crawled" },
+      "interaction-design": { "degree": "M.A.", "level": "master", "status": "crawled" }
+    }
+  }
 }

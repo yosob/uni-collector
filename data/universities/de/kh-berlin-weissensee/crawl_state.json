@@ -1,7 +1,42 @@
 {
   "university_slug": "kh-berlin-weissensee",
-  "last_full_crawl": null,
-  "pages": {},
+  "last_full_crawl": "2026-04-19T04:35:00Z",
+  "crawl_type": "deep_exploration",
+  "root_url": "https://kh-berlin.de",
+  "pages": {
+    "https://kh-berlin.de": { "status": "crawled", "timestamp": "2026-04-19T04:35:00Z" },
+    "https://kh-berlin.de/studium/studiengaenge.html": { "status": "crawled", "timestamp": "2026-04-19T04:36:00Z" },
+    "https://kh-berlin.de/studium": { "status": "crawled", "timestamp": "2026-04-19T04:36:00Z" },
+    "https://kh-berlin.de/hochschule/profil/fachgebiete": { "status": "crawled", "timestamp": "2026-04-19T04:37:00Z" },
+    "https://kh-berlin.de/hochschule/profil/fachgebiete/ba/ma-produkt-design": { "status": "crawled", "timestamp": "2026-04-19T04:38:00Z" },
+    "https://kh-berlin.de/hochschule/profil/fachgebiete/ba/ma-mode-design": { "status": "crawled", "timestamp": "2026-04-19T04:38:00Z" },
+    "https://kh-berlin.de/hochschule/profil/fachgebiete/ba/ma-textil-und-material-design": { "status": "crawled", "timestamp": "2026-04-19T04:38:00Z" },
+    "https://kh-berlin.de/hochschule/profil/fachgebiete/ba/ma-visuelle-kommunikation": { "status": "crawled", "timestamp": "2026-04-19T04:39:00Z" },
+    "https://kh-berlin.de/hochschule/profil/fachgebiete/malerei": { "status": "crawled", "timestamp": "2026-04-19T04:39:00Z" },
+    "https://kh-berlin.de/hochschule/profil/fachgebiete/bildhauerei": { "status": "crawled", "timestamp": "2026-04-19T04:39:00Z" },
+    "https://kh-berlin.de/hochschule/profil/fachgebiete/buehnen-und-kostuembild": { "status": "crawled", "timestamp": "2026-04-19T04:39:00Z" },
+    "https://kh-berlin.de/hochschule/profil/fachgebiete/ma-kunsttherapie": { "status": "crawled", "timestamp": "2026-04-19T04:40:00Z" },
+    "https://kh-berlin.de/hochschule/profil/fachgebiete/ma-raumstrategien": { "status": "crawled", "timestamp": "2026-04-19T04:40:00Z" },
+    "https://kh-berlin.de/hochschule/profil/fachgebiete/theorie-und-geschichte": { "status": "crawled", "timestamp": "2026-04-19T04:40:00Z" },
+    "https://kh-berlin.de/hochschule/profil/fachgebiete/kuenstlerische-grundlagen": { "status": "crawled", "timestamp": "2026-04-19T04:40:00Z" },
+    "https://kh-berlin.de/hochschule/einrichtungen/werkstaetten": { "status": "crawled", "timestamp": "2026-04-19T04:41:00Z" },
+    "https://kh-berlin.de/hochschule/standorte/hauptstandort-kunsthochschule-berlin": { "status": "crawled", "timestamp": "2026-04-19T04:41:00Z" }
+  },
   "pending_urls": [],
-  "errors": []
+  "errors": [],
+  "sync_summary": {
+    "programs_total": 9,
+    "programs_crawled": 9,
+    "programs_pending": 0,
+    "degree_programs_total": 13,
+    "workshops_total": 25,
+    "research_labs_total": 11
+  },
+  "data_quality": {
+    "has_complete_program_list": true,
+    "has_application_deadlines": "partial",
+    "has_faculty_list": false,
+    "has_detailed_curriculum": false,
+    "has_portfolio_requirements": "partial"
+  }
 }

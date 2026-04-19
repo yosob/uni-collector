@@ -1,7 +1,75 @@
 {
   "university_slug": "htw-dresden",
-  "last_full_crawl": null,
-  "pages": {},
+  "last_full_crawl": "2026-04-19T05:40:00Z",
+  "pages": {
+    "https://www.htw-dresden.de": {
+      "status": "crawled",
+      "timestamp": "2026-04-19T05:37:00Z"
+    },
+    "https://www.htw-dresden.de/hochschule/fakultaeten/design": {
+      "status": "crawled",
+      "timestamp": "2026-04-19T05:38:00Z"
+    },
+    "https://www.htw-dresden.de/studium/vor-dem-studium/studienangebot": {
+      "status": "crawled",
+      "timestamp": "2026-04-19T05:38:00Z"
+    },
+    "https://www.htw-dresden.de/studium/vor-dem-studium/studienangebot/bachelor-produkt-und-kommunikationsdesign": {
+      "status": "crawled",
+      "timestamp": "2026-04-19T05:39:00Z"
+    },
+    "https://www.htw-dresden.de/studium/vor-dem-studium/studienangebot/master-design-products-and-interactions": {
+      "status": "crawled",
+      "timestamp": "2026-04-19T05:39:00Z"
+    },
+    "https://www.htw-dresden.de/hochschule/fakultaeten/design/studium-bachelor": {
+      "status": "crawled",
+      "timestamp": "2026-04-19T05:39:00Z"
+    },
+    "https://www.htw-dresden.de/hochschule/fakultaeten/design/studium-master": {
+      "status": "crawled",
+      "timestamp": "2026-04-19T05:39:00Z"
+    },
+    "https://www.htw-dresden.de/hochschule/fakultaeten/design/personen": {
+      "status": "crawled",
+      "timestamp": "2026-04-19T05:39:00Z"
+    },
+    "https://www.htw-dresden.de/hochschule/fakultaeten/design/bewerbung": {
+      "status": "crawled",
+      "timestamp": "2026-04-19T05:39:00Z"
+    },
+    "https://www.htw-dresden.de/hochschule/fakultaeten/design/forschung": {
+      "status": "crawled",
+      "timestamp": "2026-04-19T05:39:00Z"
+    },
+    "https://germandesigngraduates.com/hochschule/hochschule-fuer-technik-und-wirtschaft-dresden/": {
+      "status": "crawled",
+      "timestamp": "2026-04-19T05:39:00Z"
+    },
+    "https://www.mygermanuniversity.com/de/universities/HTW-Dresden-University-of-Applied-Sciences/subject/design": {
+      "status": "crawled",
+      "timestamp": "2026-04-19T05:40:00Z"
+    }
+  },
   "pending_urls": [],
-  "errors": []
+  "errors": [],
+  "sync_summary": {
+    "programs_total": 2,
+    "programs_crawled": 2,
+    "programs_pending": 0,
+    "programs": [
+      {
+        "slug": "design-produkt-und-kommunikation-ba",
+        "name": "Design: Produkt und Kommunikation B.A.",
+        "degree": "ba",
+        "status": "crawled"
+      },
+      {
+        "slug": "design-products-interactions-ma",
+        "name": "Design: Products and Interactions M.A.",
+        "degree": "ma",
+        "status": "crawled"
+      }
+    ]
+  }
 }

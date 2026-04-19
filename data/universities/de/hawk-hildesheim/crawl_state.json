@@ -1,7 +1,145 @@
 {
   "university_slug": "hawk-hildesheim",
-  "last_full_crawl": null,
-  "pages": {},
-  "pending_urls": [],
-  "errors": []
+  "crawl_type": "deep_explore",
+  "crawl_date": "2026-04-19T05:05:00+08:00",
+  "status": "completed",
+  "programs_found": 2,
+  "kompetenzfelder_found": 9,
+  "programs": [
+    {
+      "slug": "ba-gestaltung",
+      "name_de": "Gestaltung",
+      "name_en": "Design",
+      "degree": "ba",
+      "pages_crawled": [
+        "https://www.hawk.de/de/studium/studiengaenge/ba-gestaltung-hildesheim",
+        "https://www.hawk.de/de/studium/studiengaenge/ba-gestaltung-hildesheim/bewerbung",
+        "https://www.hawk.de/de/studium/studiengaenge/ba-gestaltung-hildesheim/studienverlauf-und-inhalte",
+        "https://www.hawk.de/de/studium/studiengaenge/ba-gestaltung-hildesheim/kompetenzfelder",
+        "https://www.hawk.de/de/studium/studiengaenge/ba-gestaltung-hildesheim/kompetenzfelder/advertising-design",
+        "https://www.hawk.de/de/studium/studiengaenge/ba-gestaltung-hildesheim/kompetenzfelder/branding-design",
+        "https://www.hawk.de/de/studium/studiengaenge/ba-gestaltung-hildesheim/kompetenzfelder/digital-environments",
+        "https://www.hawk.de/de/studium/studiengaenge/ba-gestaltung-hildesheim/kompetenzfelder/farbdesign",
+        "https://www.hawk.de/de/studium/studiengaenge/ba-gestaltung-hildesheim/kompetenzfelder/grafikdesign",
+        "https://www.hawk.de/de/studium/studiengaenge/ba-gestaltung-hildesheim/kompetenzfelder/innenarchitektur",
+        "https://www.hawk.de/de/studium/studiengaenge/ba-gestaltung-hildesheim/kompetenzfelder/lighting-design",
+        "https://www.hawk.de/de/studium/studiengaenge/ba-gestaltung-hildesheim/kompetenzfelder/metallgestaltung",
+        "https://www.hawk.de/de/studium/studiengaenge/ba-gestaltung-hildesheim/kompetenzfelder/produktdesign",
+        "https://www.hawk.de/de/studium/studiengaenge/ba-gestaltung-hildesheim/download-und-service",
+        "https://www.hawk.de/de/studium/studiengaenge/ba-gestaltung-hildesheim/kontakt-und-anfahrt",
+        "https://www.hawk.de/en/studies/courses-of-study/ba-design-hildesheim"
+      ],
+      "pages_failed": [],
+      "status": "completed",
+      "fields_filled": [
+        "name_de", "name_en", "slug", "degree", "degree_title", "language",
+        "duration_semesters", "start_semester", "url", "department", "faculty_url",
+        "focus_areas", "admission_requirements", "language_requirements",
+        "portfolio_required", "portfolio_details", "application_process",
+        "application_deadlines", "curriculum_summary", "tuition", "contact",
+        "last_crawled", "source_urls"
+      ]
+    },
+    {
+      "slug": "ma-gestaltung",
+      "name_de": "Gestaltung",
+      "name_en": "Design",
+      "degree": "ma",
+      "pages_crawled": [
+        "https://www.hawk.de/de/studium/studiengaenge/ma-gestaltung-hildesheim",
+        "https://www.hawk.de/de/studium/studiengaenge/ma-gestaltung-hildesheim/bewerbung",
+        "https://www.hawk.de/de/studium/studiengaenge/ma-gestaltung-hildesheim/studienverlauf-und-inhalte",
+        "https://www.hawk.de/en/studies/courses-of-study/ma-design-hildesheim"
+      ],
+      "pages_failed": [],
+      "status": "completed",
+      "fields_filled": [
+        "name_de", "name_en", "slug", "degree", "degree_title", "language",
+        "duration_semesters", "start_semester", "url", "department", "faculty_url",
+        "focus_areas", "admission_requirements", "language_requirements",
+        "portfolio_required", "portfolio_details", "application_process",
+        "application_deadlines", "curriculum_summary", "tuition", "contact",
+        "last_crawled", "source_urls"
+      ]
+    }
+  ],
+  "kompetenzfelder": [
+    {
+      "slug": "advertising-design",
+      "name_de": "Advertising Design",
+      "name_en": "Advertising Design",
+      "url": "https://www.hawk.de/de/studium/studiengaenge/ba-gestaltung-hildesheim/kompetenzfelder/advertising-design",
+      "status": "completed"
+    },
+    {
+      "slug": "branding-design",
+      "name_de": "Branding Design",
+      "name_en": "Branding Design",
+      "url": "https://www.hawk.de/de/studium/studiengaenge/ba-gestaltung-hildesheim/kompetenzfelder/branding-design",
+      "status": "completed"
+    },
+    {
+      "slug": "digital-environments",
+      "name_de": "Digital Environments",
+      "name_en": "Digital Environments",
+      "url": "https://www.hawk.de/de/studium/studiengaenge/ba-gestaltung-hildesheim/kompetenzfelder/digital-environments",
+      "status": "completed"
+    },
+    {
+      "slug": "farbdesign",
+      "name_de": "Colour Design / Farbdesign",
+      "name_en": "Colour Design",
+      "url": "https://www.hawk.de/de/studium/studiengaenge/ba-gestaltung-hildesheim/kompetenzfelder/farbdesign",
+      "status": "completed"
+    },
+    {
+      "slug": "grafikdesign",
+      "name_de": "Graphic Design / Grafikdesign",
+      "name_en": "Graphic Design",
+      "url": "https://www.hawk.de/de/studium/studiengaenge/ba-gestaltung-hildesheim/kompetenzfelder/grafikdesign",
+      "status": "completed"
+    },
+    {
+      "slug": "innenarchitektur",
+      "name_de": "Interior Architecture / Innenarchitektur",
+      "name_en": "Interior Architecture",
+      "url": "https://www.hawk.de/de/studium/studiengaenge/ba-gestaltung-hildesheim/kompetenzfelder/innenarchitektur",
+      "status": "completed"
+    },
+    {
+      "slug": "lighting-design",
+      "name_de": "Lighting Design / Lichtdesign",
+      "name_en": "Lighting Design",
+      "url": "https://www.hawk.de/de/studium/studiengaenge/ba-gestaltung-hildesheim/kompetenzfelder/lighting-design",
+      "status": "completed"
+    },
+    {
+      "slug": "metallgestaltung",
+      "name_de": "Metal Design & Jewellery / Metallgestaltung & Schmuck",
+      "name_en": "Metal Design & Jewellery",
+      "url": "https://www.hawk.de/de/studium/studiengaenge/ba-gestaltung-hildesheim/kompetenzfelder/metallgestaltung",
+      "status": "completed"
+    },
+    {
+      "slug": "produktgestaltung",
+      "name_de": "Product Design / Produktdesign",
+      "name_en": "Product Design",
+      "url": "https://www.hawk.de/de/studium/studiengaenge/ba-gestaltung-hildesheim/kompetenzfelder/produktdesign",
+      "status": "completed"
+    }
+  ],
+  "additional_pages_crawled": [
+    "https://www.hawk.de",
+    "https://www.hawk.de/de/studium/studiengaenge",
+    "https://www.hawk.de/de/hochschule/fakultaeten/gestaltung",
+    "https://www.hawk.de/de/hochschule/fakultaeten/gestaltung/werkstaetten",
+    "https://www.hawk.de/de/hochschule/organisation-und-personen/zentrale-einrichtungen/immatrikulationsamt/semesterbeitrag"
+  ],
+  "pages_total_crawled": 30,
+  "pages_failed": 1,
+  "pages_failed_urls": [
+    "https://www.hawk.de/de/studium/studiengaenge/ba-konservierung-und-restaurierung-hildesheim"
+  ],
+  "errors": [],
+  "notes": "Deep crawl completed. All 9 Kompetenzfelder individually visited and documented. BA Konservierung und Restaurierung URL returned 404; program exists under Fakultät Bauen und Erhalten, not design/art. Only 2 Gestaltung programs found under Fakultät Gestaltung. 16 Werkstätten documented. Faculty Werkstätten overview page crawled."
 }

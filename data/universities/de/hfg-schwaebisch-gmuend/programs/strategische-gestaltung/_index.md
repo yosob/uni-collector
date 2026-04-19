@@ -3,42 +3,12 @@ slug: "strategische-gestaltung"
 name_de: "Strategische Gestaltung"
 name_en: "Strategic Design"
 degree: "ma"
-degree_title: null
-language:
-  - "de"
-  - "en"
-duration_semesters: null
-start_semester: null
-department: null
-url: "https://www.hfg-gmuend.de/bewerben/bewerbung-ma"
-focus_areas: null
-admission_requirements: null
-language_requirements:
-  german: null
-  english: null
-portfolio_required: null
-portfolio_details: null
-application_process: null
-application_deadlines:
-  winter_semester: null
-  summer_semester: null
-  notes: null
-curriculum_summary: null
-tuition:
-  tuition_free: true
-  semester_fee_eur: null
-  notes: null
-contact:
-  name: null
-  email: null
-  phone: null
-  office_hours: null
-num_places: null
-last_crawled: null
-source_urls:
-  - "https://www.hfg-gmuend.de/bewerben/bewerbung-ma"
+degree_title: "Master of Arts"
+redirect_to: "strategische-gestaltung-ma"
+note: "This entry is a duplicate. See strategische-gestaltung-ma for the complete data."
+url: "https://www.hfg-gmuend.de/studium/strategische-gestaltung"
 ---
 
-# Strategic Design (Strategische Gestaltung)
+# Strategic Design → siehe strategische-gestaltung-ma
 
-> Data to be populated by crawling.
+> Dieser Eintrag ist ein Duplikat. Die vollständigen Daten befinden sich unter [strategische-gestaltung-ma](../strategische-gestaltung-ma/_index.md).

@@ -1,34 +1,59 @@
 ---
-slug: "hbk-braunschweig"
+slug: hbk-braunschweig
 name_de: "Hochschule für Bildende Künste Braunschweig"
 name_en: "Braunschweig University of Art"
-name_cn: "布伦瑞克造型艺术学院"
-url: "https://www.hbk-bs.de"
-country: "de"
-city: "Braunschweig"
-state: "Lower Saxony"
-type: "kunsthochschule"
-founded_year: null
-student_count: null
+url: https://www.hbk-bs.de
+country: de
+city: Braunschweig
+state: Niedersachsen
+type: kunsthochschule
+founded_year: 1963
+student_count: 1200
 languages:
-  - "de"
-  - "en"
+  - de
 tuition:
   tuition_free: true
-  semester_fee_eur: null
-  notes: null
+  semester_fee_eur: 380
+  notes: "Semesterbeitrag inkl. Semesterticket"
+application_portal: "https://studium.hbk-bs.de"
 application_deadlines:
-  winter_semester: null
+  winter_semester: "15. März"
   summer_semester: null
-  notes: null
-application_portal: null
+  notes: "Bewerbung nur zum Wintersemester möglich"
+overview: "Die HBK Braunschweig ist eine der größten Kunsthochschulen Deutschlands mit ca. 1.200 Studierenden. Breites Spektrum an künstlerischen, gestalterischen und wissenschaftlichen Studiengängen mit enger Verbindung von freier Kunst, Design und Forschung."
 programs:
-  - "transformation-design"
-last_crawled: "2026-04-17"
+  - visuelle-kommunikation
+  - transformation-design
+  - freie-kunst
+  - design-digitale-gesellschaft
+  - kunstwissenschaft
+  - medienwissenschaften
+last_crawled: "2026-04-19"
 source_urls:
-  - "https://www.hbk-bs.de"
+  - https://www.hbk-bs.de
+  - https://studium.hbk-bs.de
 ---
 
-# Braunschweig University of Art
+# Hochschule für Bildende Künste Braunschweig (HBK)
 
-The Hochschule fur Bildende Kunste Braunschweig (HBK Braunschweig) is an art university in Braunschweig, Lower Saxony, offering programs in fine art (Diplom), visual communication (Visuelle Kommunikation), and a cooperative degree in performing arts (Darstellendes Spiel) run jointly with Leibniz Universitat Hannover for over 25 years. The school hosts a "Montagehalle" exhibition space and organizes annual events including the "Rundgang" open studios and the "Kunstmarkt" art fair.
+## Quick Facts
+- **Typ:** Kunsthochschule (Art University)
+- **Ort:** Braunschweig, Niedersachsen
+- **Studierende:** ca. 1.200
+- **Studiengänge (getrackt):** 6
+- **Semesterbeitrag:** ca. 380 EUR (inkl. Semesterticket)
+- **Bewerbungsportal:** https://studium.hbk-bs.de
+- **Bewerbungsfrist:** 15. März (WS)
+
+## Tracked Programs
+1. **Visuelle Kommunikation** (B.A.) — Institut für Visuelle Kommunikation
+2. **Design in der digitalen Gesellschaft** (B.A.) — Institut für Designforschung
+3. **Freie Kunst** (Diplom) — Institut Freie Kunst
+4. **Kunstwissenschaft** (B.A. / M.A.) — Institut für Kunstwissenschaft
+5. **Medienwissenschaften** (B.A. / M.A.) — Institut für Medienwissenschaft
+6. **Transformation Design** (M.A.) — Institut für Designforschung
+
+## See Also
+- [site_map.md](site_map.md) — Full URL inventory
+- [university_profile.md](university_profile.md) — Detailed university profile
+- [programs/](programs/) — Individual program data files

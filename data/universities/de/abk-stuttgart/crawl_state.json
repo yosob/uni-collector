@@ -1,7 +1,116 @@
 {
   "university_slug": "abk-stuttgart",
-  "last_full_crawl": null,
-  "pages": {},
-  "pending_urls": [],
-  "errors": []
+  "last_explored": "2026-04-19T07:12:00Z",
+  "last_sync": "2026-04-19T07:12:00Z",
+  "explore_version": "2.0",
+  "pages_crawled": 18,
+  "status": "completed",
+  "outputs": {
+    "site_map": true,
+    "university_profile": true,
+    "programs": {
+      "architektur": {
+        "last_crawled": "2026-04-19T07:12:00Z",
+        "status": "completed",
+        "degree": "B.A. / M.A.",
+        "url": "https://www.abk-stuttgart.de/studienangebot/architektur/"
+      },
+      "industrial-design": {
+        "last_crawled": "2026-04-18T04:55:00Z",
+        "status": "completed",
+        "degree": "Diplom",
+        "url": "https://www.abk-stuttgart.de/studienangebot/industrial-design/"
+      },
+      "kommunikationsdesign": {
+        "last_crawled": "2026-04-19T07:12:00Z",
+        "status": "completed",
+        "degree": "Diplom",
+        "url": "https://www.abk-stuttgart.de/studienangebot/kommunikationsdesign/"
+      },
+      "textildesign": {
+        "last_crawled": "2026-04-19T07:12:00Z",
+        "status": "completed",
+        "degree": "Diplom",
+        "url": "https://www.abk-stuttgart.de/studienangebot/textildesign/"
+      },
+      "bildende-kunst": {
+        "last_crawled": "2026-04-19T07:12:00Z",
+        "status": "completed",
+        "degree": "Diplom",
+        "url": "https://www.abk-stuttgart.de/studienangebot/bildende-kunst/"
+      },
+      "buehnen-und-kostuembild": {
+        "last_crawled": "2026-04-19T07:12:00Z",
+        "status": "completed",
+        "degree": "Diplom",
+        "url": "https://www.abk-stuttgart.de/studienangebot/buehnen-und-kostuembild/"
+      },
+      "kuenstlerisches-lehramt-mit-bildender-kunst": {
+        "last_crawled": "2026-04-19T07:12:00Z",
+        "status": "completed",
+        "degree": "B.F.A. / M.Ed.",
+        "url": "https://www.abk-stuttgart.de/studienangebot/kuenstlerisches-lehramt-mit-bildender-kunst/"
+      },
+      "intermediales-gestalten": {
+        "last_crawled": "2026-04-19T07:12:00Z",
+        "status": "completed",
+        "degree": "B.F.A. / M.Ed.",
+        "url": "https://www.abk-stuttgart.de/studienangebot/intermediales-gestalten/"
+      },
+      "koerper-theorie-und-poetik-des-performativen": {
+        "last_crawled": "2026-04-19T07:12:00Z",
+        "status": "completed",
+        "degree": "M.F.A.",
+        "url": "https://www.abk-stuttgart.de/studienangebot/koerper-theorie-und-poetik-des-performativen/"
+      },
+      "gemaelde-und-skulpturenrestaurierung": {
+        "last_crawled": "2026-04-19T07:12:00Z",
+        "status": "completed",
+        "degree": "B.A. / M.A.",
+        "url": "https://www.abk-stuttgart.de/studienangebot/gemaelde-und-skulpturenrestaurierung/"
+      },
+      "medienrestaurierung": {
+        "last_crawled": "2026-04-19T07:12:00Z",
+        "status": "completed",
+        "degree": "B.A. / M.A.",
+        "url": "https://www.abk-stuttgart.de/studienangebot/medienrestaurierung/"
+      },
+      "objektrestaurierung": {
+        "last_crawled": "2026-04-19T07:12:00Z",
+        "status": "completed",
+        "degree": "B.A. / M.A.",
+        "url": "https://www.abk-stuttgart.de/studienangebot/objektrestaurierung/"
+      },
+      "papierrestaurierung": {
+        "last_crawled": "2026-04-19T07:12:00Z",
+        "status": "completed",
+        "degree": "B.A. / M.A.",
+        "url": "https://www.abk-stuttgart.de/studienangebot/papierrestaurierung/"
+      },
+      "wandmalereirestaurierung": {
+        "last_crawled": "2026-04-19T07:12:00Z",
+        "status": "completed",
+        "degree": "B.A. / M.A.",
+        "url": "https://www.abk-stuttgart.de/studienangebot/wandmalereirestaurierung/"
+      },
+      "meisterschuelerin": {
+        "last_crawled": "2026-04-19T07:12:00Z",
+        "status": "completed",
+        "degree": "Meisterschüler*in",
+        "url": "https://www.abk-stuttgart.de/studienangebot/meisterschuelerin/"
+      }
+    },
+    "application_info": {
+      "main": {
+        "last_crawled": "2026-04-18T04:55:00Z",
+        "url": "https://www.abk-stuttgart.de/bewerbung/aufnahmeverfahren/"
+      },
+      "fees": {
+        "last_crawled": "2026-04-19T07:12:00Z",
+        "url": "https://www.abk-stuttgart.de/studium/gebuehren/"
+      }
+    }
+  },
+  "next_explore": "2026-10-19T00:00:00Z",
+  "next_sync": "2026-05-19T00:00:00Z"
 }

@@ -1,7 +1,103 @@
 {
   "university_slug": "hs-darmstadt",
-  "last_full_crawl": null,
-  "pages": {},
-  "pending_urls": [],
-  "errors": []
+  "university_name": "Hochschule Darmstadt — Fachbereich Gestaltung",
+  "root_url": "https://design.h-da.de",
+  "crawl_type": "deep_exploration",
+  "status": "completed",
+  "started_at": "2026-04-17T00:00:00Z",
+  "completed_at": "2026-04-19T05:30:00Z",
+  "pages_explored": 12,
+  "urls_discovered": 50,
+  "programs_found": 3,
+  "programs": [
+    {
+      "slug": "industriedesign-diplom",
+      "name": "Industriedesign",
+      "degree": "Diplom (FH)",
+      "url": "https://design.h-da.de/industriedesign",
+      "status": "complete",
+      "last_crawled": "2026-04-19"
+    },
+    {
+      "slug": "kommunikationsdesign-diplom",
+      "name": "Kommunikationsdesign",
+      "degree": "Diplom (FH)",
+      "url": "https://design.h-da.de/kommunikationsdesign",
+      "status": "complete",
+      "last_crawled": "2026-04-19"
+    },
+    {
+      "slug": "fotografie-diplom",
+      "name": "Fotografie (Schwerpunkt Kommunikationsdesign)",
+      "degree": "Diplom (FH)",
+      "url": "https://design.h-da.de/fotografie",
+      "status": "complete",
+      "last_crawled": "2026-04-19"
+    }
+  ],
+  "pages_detail": [
+    {
+      "url": "https://design.h-da.de",
+      "title": "Fachbereich Gestaltung",
+      "explored": true
+    },
+    {
+      "url": "https://design.h-da.de/profil",
+      "title": "Profil",
+      "explored": true
+    },
+    {
+      "url": "https://design.h-da.de/industriedesign",
+      "title": "Industriedesign",
+      "explored": true
+    },
+    {
+      "url": "https://design.h-da.de/kommunikationsdesign",
+      "title": "Kommunikationsdesign",
+      "explored": true
+    },
+    {
+      "url": "https://design.h-da.de/fotografie",
+      "title": "Fotografie",
+      "explored": true
+    },
+    {
+      "url": "https://design.h-da.de/bewerben",
+      "title": "Bewerben",
+      "explored": true
+    },
+    {
+      "url": "https://design.h-da.de/fachbereich/menschen",
+      "title": "Menschen",
+      "explored": true
+    },
+    {
+      "url": "https://design.h-da.de/organisation",
+      "title": "Organisation",
+      "explored": true
+    },
+    {
+      "url": "https://design.h-da.de/studium/internationales",
+      "title": "Internationales",
+      "explored": true
+    },
+    {
+      "url": "https://design.h-da.de/theinert",
+      "title": "Prof. Justus Theinert",
+      "explored": true
+    },
+    {
+      "url": "https://design.h-da.de/schwenk",
+      "title": "Prof. Hagen Schwenk",
+      "explored": true
+    },
+    {
+      "url": "https://design.h-da.de/hinsch",
+      "title": "Prof. Robin Hinsch",
+      "explored": true
+    }
+  ],
+  "professors_found": 20,
+  "workshops_found": 8,
+  "research_institutes": 4
 }

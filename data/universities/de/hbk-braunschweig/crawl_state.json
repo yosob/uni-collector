@@ -1,7 +1,93 @@
 {
   "university_slug": "hbk-braunschweig",
-  "last_full_crawl": null,
-  "pages": {},
-  "pending_urls": [],
-  "errors": []
+  "university_name": "Hochschule für Bildende Künste Braunschweig",
+  "root_url": "https://www.hbk-bs.de",
+  "portal_url": "https://studium.hbk-bs.de",
+  "last_explored": "2026-04-19",
+  "exploration_depth": "deep",
+  "pages_crawled": [
+    "https://www.hbk-bs.de",
+    "https://www.hbk-bs.de/studium/",
+    "https://www.hbk-bs.de/studium/studienangebot/",
+    "https://www.hbk-bs.de/studium/studienangebot/visuelle-kommunikation/",
+    "https://www.hbk-bs.de/studium/studienangebot/transformation-design/",
+    "https://www.hbk-bs.de/studium/studienangebot/freie-kunst/",
+    "https://www.hbk-bs.de/studium/studienangebot/design-in-der-digitalen-gesellschaft/",
+    "https://www.hbk-bs.de/studium/studienangebot/kunstwissenschaft/",
+    "https://www.hbk-bs.de/studium/studienangebot/medienwissenschaften/",
+    "https://www.hbk-bs.de/studium/bewerben/",
+    "https://www.hbk-bs.de/institute/",
+    "https://www.hbk-bs.de/einrichtungen/werkstaetten/",
+    "https://studium.hbk-bs.de/studiengaenge/",
+    "https://studium.hbk-bs.de/studiengaenge/visuelle-kommunikation-ba/",
+    "https://studium.hbk-bs.de/studiengaenge/transformation-design-ma/",
+    "https://studium.hbk-bs.de/studiengaenge/freie-kunst-diplom/",
+    "https://studium.hbk-bs.de/studiengaenge/design-in-der-digitalen-gesellschaft-ba/",
+    "https://studium.hbk-bs.de/studiengaenge/kunstwissenschaft-ba/",
+    "https://studium.hbk-bs.de/studiengaenge/kunstwissenschaft-ma/",
+    "https://studium.hbk-bs.de/studiengaenge/medienwissenschaften-ba/",
+    "https://studium.hbk-bs.de/studiengaenge/medienwissenschaften-ma/"
+  ],
+  "programs_discovered": {
+    "tracked": [
+      {
+        "slug": "visuelle-kommunikation",
+        "name_de": "Visuelle Kommunikation",
+        "degree": "B.A.",
+        "status": "complete"
+      },
+      {
+        "slug": "transformation-design",
+        "name_de": "Transformation Design",
+        "degree": "M.A.",
+        "status": "complete"
+      },
+      {
+        "slug": "freie-kunst",
+        "name_de": "Freie Kunst",
+        "degree": "Diplom",
+        "status": "complete"
+      },
+      {
+        "slug": "design-digitale-gesellschaft",
+        "name_de": "Design in der digitalen Gesellschaft",
+        "degree": "B.A.",
+        "status": "complete"
+      },
+      {
+        "slug": "kunstwissenschaft",
+        "name_de": "Kunstwissenschaft",
+        "degree": "B.A. / M.A.",
+        "status": "complete"
+      },
+      {
+        "slug": "medienwissenschaften",
+        "name_de": "Medienwissenschaften",
+        "degree": "B.A. / M.A.",
+        "status": "complete"
+      }
+    ],
+    "untracked": [
+      {
+        "slug": "kunstpaedagogik",
+        "name_de": "Kunstpädagogik",
+        "degree": "B.A. / M.Ed.",
+        "reason": "Art education / teaching degree"
+      },
+      {
+        "slug": "kunst-in-der-sonderpaedagogik",
+        "name_de": "Kunst in der Sonderpädagogik",
+        "degree": "B.A. / M.Ed.",
+        "reason": "Special education art / teaching degree"
+      },
+      {
+        "slug": "darstellendes-spiel",
+        "name_de": "Darstellendes Spiel",
+        "degree": "B.A. / M.Ed.",
+        "reason": "Performing arts / teaching degree"
+      }
+    ]
+  },
+  "crawl_errors": [],
+  "notes": "Website navigation-heavy; most detailed info from studium.hbk-bs.de portal. Added medienwissenschaften as new tracked program."
 }

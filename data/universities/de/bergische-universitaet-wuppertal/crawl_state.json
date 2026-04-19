@@ -1,7 +1,56 @@
 {
   "university_slug": "bergische-universitaet-wuppertal",
-  "last_full_crawl": null,
-  "pages": {},
+  "last_full_crawl": "2026-04-17T17:45:00Z",
+  "pages": {
+    "https://www.uni-wuppertal.de/": {
+      "last_crawled": "2026-04-17T17:45:00Z",
+      "status": "success",
+      "content_type": "homepage"
+    },
+    "http://www.fk8.uni-wuppertal.de/": {
+      "last_crawled": "2026-04-17T17:45:00Z",
+      "status": "success",
+      "content_type": "faculty_homepage"
+    },
+    "https://uwid.uni-wuppertal.de/studium/bachelor/studienverlauf": {
+      "last_crawled": "2026-04-17T17:45:00Z",
+      "status": "success",
+      "content_type": "program"
+    },
+    "https://uwid.uni-wuppertal.de/studium/bachelor/bewerbung": {
+      "last_crawled": "2026-04-17T17:45:00Z",
+      "status": "success",
+      "content_type": "admission"
+    },
+    "https://mr.uni-wuppertal.de/mr": {
+      "last_crawled": "2026-04-17T17:45:00Z",
+      "status": "success",
+      "content_type": "department_overview"
+    },
+    "https://mr.uni-wuppertal.de/pid": {
+      "last_crawled": "2026-04-17T17:45:00Z",
+      "status": "success",
+      "content_type": "program"
+    },
+    "http://www.kunst.uni-wuppertal.de/": {
+      "last_crawled": "2026-04-17T17:45:00Z",
+      "status": "success",
+      "content_type": "department"
+    }
+  },
   "pending_urls": [],
-  "errors": []
+  "errors": [],
+  "sync_summary": {
+    "programs_added": [
+      "industrial-design-ba",
+      "mediendesign-und-designtechnik",
+      "design-audiovisueller-medien",
+      "design-interaktiver-medien",
+      "farbtechnik-raumgestaltung-oberflaechentechnik",
+      "public-interest-design-ma"
+    ],
+    "programs_updated": [],
+    "programs_total": 7,
+    "last_sync": "2026-04-17T17:45:00Z"
+  }
 }

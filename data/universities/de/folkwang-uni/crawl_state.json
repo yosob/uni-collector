@@ -1,7 +1,134 @@
 {
   "university_slug": "folkwang-uni",
-  "last_full_crawl": null,
-  "pages": {},
+  "last_full_crawl": "2026-04-19T07:13:00Z",
+  "crawl_type": "deep_exploration",
+  "scope": "gestaltung_and_wissenschaft",
+  "pages": {
+    "https://www.folkwang-uni.de/": {
+      "status": "crawled",
+      "timestamp": "2026-04-19T07:13:00Z",
+      "purpose": "homepage_navigation"
+    },
+    "https://www.folkwang-uni.de/home/gestaltung/studiengaenge/": {
+      "status": "crawled",
+      "timestamp": "2026-04-19T07:13:00Z",
+      "purpose": "program_overview"
+    },
+    "https://www.folkwang-uni.de/home/gestaltung/studiengaenge/fotografie-ba/": {
+      "status": "crawled",
+      "timestamp": "2026-04-19T07:13:00Z",
+      "purpose": "program_main",
+      "program_slug": "fotografie-ba"
+    },
+    "https://www.folkwang-uni.de/home/gestaltung/studiengaenge/fotografie-ba/basisinfos-bewerbung/": {
+      "status": "crawled",
+      "timestamp": "2026-04-19T07:13:00Z",
+      "purpose": "program_bewerbung",
+      "program_slug": "fotografie-ba"
+    },
+    "https://www.folkwang-uni.de/home/gestaltung/studiengaenge/intermediale-gestaltung-ba/": {
+      "status": "crawled",
+      "timestamp": "2026-04-19T07:13:00Z",
+      "purpose": "program_main",
+      "program_slug": "intermediale-gestaltung-ba"
+    },
+    "https://www.folkwang-uni.de/home/gestaltung/studiengaenge/intermediale-gestaltung-ba/basisinfos-bewerbung/": {
+      "status": "crawled",
+      "timestamp": "2026-04-19T07:13:00Z",
+      "purpose": "program_bewerbung",
+      "program_slug": "intermediale-gestaltung-ba"
+    },
+    "https://www.folkwang-uni.de/home/gestaltung/studiengaenge/product-design-ba/": {
+      "status": "crawled",
+      "timestamp": "2026-04-19T07:13:00Z",
+      "purpose": "program_main",
+      "program_slug": "product-design-ba"
+    },
+    "https://www.folkwang-uni.de/home/gestaltung/studiengaenge/product-design-ba/basisinfos-bewerbung/": {
+      "status": "crawled",
+      "timestamp": "2026-04-19T07:13:00Z",
+      "purpose": "program_bewerbung",
+      "program_slug": "product-design-ba"
+    },
+    "https://www.folkwang-uni.de/home/gestaltung/studiengaenge/photography-studies-and-practice-ma/": {
+      "status": "crawled",
+      "timestamp": "2026-04-19T07:13:00Z",
+      "purpose": "program_main",
+      "program_slug": "photography-studies-and-practice-ma"
+    },
+    "https://www.folkwang-uni.de/home/gestaltung/studiengaenge/photography-studies-and-practice-ma/basisinfos-bewerbung/": {
+      "status": "crawled",
+      "timestamp": "2026-04-19T07:13:00Z",
+      "purpose": "program_bewerbung",
+      "program_slug": "photography-studies-and-practice-ma"
+    },
+    "https://www.folkwang-uni.de/home/gestaltung/studiengaenge/photography-studies-and-research-ma/": {
+      "status": "crawled",
+      "timestamp": "2026-04-19T07:13:00Z",
+      "purpose": "program_main",
+      "program_slug": "photography-studies-and-research-ma"
+    },
+    "https://www.folkwang-uni.de/home/gestaltung/studiengaenge/photography-studies-and-research-ma/basisinfos-bewerbung/": {
+      "status": "crawled",
+      "timestamp": "2026-04-19T07:13:00Z",
+      "purpose": "program_bewerbung",
+      "program_slug": "photography-studies-and-research-ma"
+    },
+    "https://www.folkwang-uni.de/home/gestaltung/studiengaenge/design-futures-ma/": {
+      "status": "crawled",
+      "timestamp": "2026-04-19T07:13:00Z",
+      "purpose": "program_main",
+      "program_slug": "design-futures-ma"
+    },
+    "https://www.folkwang-uni.de/home/gestaltung/studiengaenge/design-futures-ma/basisinfos-bewerbung/": {
+      "status": "crawled",
+      "timestamp": "2026-04-19T07:13:00Z",
+      "purpose": "program_bewerbung",
+      "program_slug": "design-futures-ma"
+    },
+    "https://www.folkwang-uni.de/home/gestaltung/studiengaenge/intermedia-design-ma/": {
+      "status": "crawled",
+      "timestamp": "2026-04-19T07:13:00Z",
+      "purpose": "program_main",
+      "program_slug": "intermedia-design-ma"
+    },
+    "https://www.folkwang-uni.de/home/gestaltung/studiengaenge/intermedia-design-ma/basisinfos-bewerbung/": {
+      "status": "crawled",
+      "timestamp": "2026-04-19T07:13:00Z",
+      "purpose": "program_bewerbung",
+      "program_slug": "intermedia-design-ma"
+    },
+    "https://www.folkwang-uni.de/home/wissenschaft/institut-fuer-kunst-und-designwissenschaft/kunst-und-designwissenschaft-ma/": {
+      "status": "crawled",
+      "timestamp": "2026-04-19T07:13:00Z",
+      "purpose": "program_main",
+      "program_slug": "kunst-und-designwissenschaft-ma"
+    },
+    "https://www.folkwang-uni.de/home/wissenschaft/institut-fuer-kunst-und-designwissenschaft/kunst-und-designwissenschaft-ma/basisinfos-bewerbung/": {
+      "status": "crawled",
+      "timestamp": "2026-04-19T07:13:00Z",
+      "purpose": "program_bewerbung",
+      "program_slug": "kunst-und-designwissenschaft-ma"
+    }
+  },
   "pending_urls": [],
-  "errors": []
+  "errors": [],
+  "sync_summary": {
+    "programs_total": 8,
+    "programs_crawled": 8,
+    "programs_pending": 0,
+    "pages_crawled": 17,
+    "pages_pending": 0,
+    "legacy_directories_removed": [
+      "art-and-design-ba",
+      "design-futures",
+      "design-ma",
+      "fotografie-bfa",
+      "industrial-design-ba",
+      "industrial-design-bfa",
+      "industrial-design",
+      "kommunikationsdesign-ba",
+      "photography-ba"
+    ]
+  }
 }

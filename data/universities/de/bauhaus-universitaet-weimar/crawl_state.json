@@ -1,7 +1,90 @@
 {
-  "university_slug": "bauhaus-universitaet-weimar",
-  "last_full_crawl": null,
-  "pages": {},
-  "pending_urls": [],
-  "errors": []
+  "university": "bauhaus-universitaet-weimar",
+  "last_explored": "2026-04-18",
+  "next_explore": "2026-07-18",
+  "last_synced": "2026-04-18",
+  "sync_mode": "site_explorer",
+  "next_sync": "2026-04-25",
+  "programs_explored": 9,
+  "programs_total": 9,
+  "programs": {
+    "freie-kunst-diplom": {
+      "status": "explored",
+      "last_crawled": "2026-04-18",
+      "pages_visited": [
+        "https://www.uni-weimar.de/de/kunst-und-gestaltung/studium/freie-kunst/",
+        "https://www.uni-weimar.de/de/kunst-und-gestaltung/struktur/lehrgebiete-personen/freie-kunst-diplom-kunst-im-oeffentlichen-raum-mfa/"
+      ]
+    },
+    "kunst-im-oeffentlichen-raum-mfa": {
+      "status": "explored",
+      "last_crawled": "2026-04-18",
+      "pages_visited": [
+        "https://www.uni-weimar.de/de/kunst-und-gestaltung/professuren/public-art-and-new-artistic-strategies/"
+      ]
+    },
+    "lehramt-kunst-gymnasium": {
+      "status": "explored",
+      "last_crawled": "2026-04-18",
+      "pages_visited": [
+        "https://www.uni-weimar.de/de/kunst-und-gestaltung/studium/lehramt-an-gymnasien-kunst/"
+      ]
+    },
+    "medienkunst-mediengestaltung-bfa": {
+      "status": "explored",
+      "last_crawled": "2026-04-18",
+      "pages_visited": [
+        "https://www.uni-weimar.de/de/kunst-und-gestaltung/studium/medienkunstmediengestaltung/",
+        "https://www.uni-weimar.de/de/kunst-und-gestaltung/studium/medienkunstmediengestaltung/medienkunstmediengestaltung-bfa/",
+        "https://www.uni-weimar.de/en/art-and-design/studies/media-art-and-design/"
+      ]
+    },
+    "medienkunst-mfa": {
+      "status": "explored",
+      "last_crawled": "2026-04-18",
+      "pages_visited": [
+        "https://www.uni-weimar.de/de/kunst-und-gestaltung/studium/medienkunstmediengestaltung/medienkunstmediengestaltung-mfa/"
+      ]
+    },
+    "product-design-ba": {
+      "status": "explored",
+      "last_crawled": "2026-04-18",
+      "pages_visited": [
+        "https://www.uni-weimar.de/de/kunst-und-gestaltung/studium/produktdesign/produktdesign-ba/",
+        "https://www.uni-weimar.de/de/kunst-und-gestaltung/struktur/lehrgebiete-personen/produktdesign/"
+      ]
+    },
+    "product-design": {
+      "status": "updated",
+      "last_crawled": "2026-04-18",
+      "pages_visited": [
+        "https://www.uni-weimar.de/de/kunst-und-gestaltung/studium/produktdesign/",
+        "https://www.uni-weimar.de/de/kunst-und-gestaltung/studium/produktdesign/produktdesign-ma/",
+        "https://www.uni-weimar.de/de/kunst-und-gestaltung/struktur/lehrgebiete-personen/produktdesign/"
+      ]
+    },
+    "visual-communication-ba": {
+      "status": "updated",
+      "last_crawled": "2026-04-18",
+      "pages_visited": [
+        "https://www.uni-weimar.de/de/kunst-und-gestaltung/studium/visuelle-kommunikation/visuelle-kommunikation-ba/",
+        "https://www.uni-weimar.de/de/kunst-und-gestaltung/struktur/lehrgebiete-personen/visuelle-kommunikation/"
+      ]
+    },
+    "visual-communication-ma": {
+      "status": "updated",
+      "last_crawled": "2026-04-18",
+      "pages_visited": [
+        "https://www.uni-weimar.de/de/kunst-und-gestaltung/studium/visuelle-kommunikation/visuelle-kommunikation-ma/",
+        "https://www.uni-weimar.de/de/kunst-und-gestaltung/struktur/lehrgebiete-personen/visuelle-kommunikation/"
+      ]
+    }
+  },
+  "site_pages": {
+    "university_homepage": "https://www.uni-weimar.de",
+    "faculty_overview": "https://www.uni-weimar.de/de/kunst-und-gestaltung/start/",
+    "programs_overview": "https://www.uni-weimar.de/de/kunst-und-gestaltung/studium/uebersicht-der-studiengaenge/",
+    "application_info": "https://www.uni-weimar.de/en/art-and-design/studies/information-for-students-applicants/application/",
+    "professors_overview": "https://www.uni-weimar.de/de/kunst-und-gestaltung/struktur/lehrgebiete-personen/"
+  }
 }

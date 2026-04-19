@@ -1,7 +1,78 @@
 {
   "university_slug": "hfk-bremen",
-  "last_full_crawl": null,
-  "pages": {},
+  "last_full_crawl": "2026-04-18T20:50:00Z",
+  "pages": {
+    "https://www.hfk-bremen.de": {
+      "status": "crawled",
+      "timestamp": "2026-04-18T20:38:00Z",
+      "extracted_entities": ["university:hfk-bremen"]
+    },
+    "https://www.hfk-bremen.de/de/studium/kunst-und-design": {
+      "status": "crawled",
+      "timestamp": "2026-04-18T20:39:00Z",
+      "extracted_entities": ["program:integrated-design", "program:integriertes-design", "program:digital-media", "program:digital-media-ma", "program:freie-kunst"]
+    },
+    "https://www.hfk-bremen.de/de/studium/kunst-und-design/integrated-design-b-a/2": {
+      "status": "crawled",
+      "timestamp": "2026-04-18T20:40:00Z",
+      "extracted_entities": ["program:integrated-design"]
+    },
+    "https://www.hfk-bremen.de/de/studium/kunst-und-design/integriertes-design-m-a/3": {
+      "status": "crawled",
+      "timestamp": "2026-04-18T20:41:00Z",
+      "extracted_entities": ["program:integriertes-design"]
+    },
+    "https://www.hfk-bremen.de/en/study/kunst-und-design/digital-media-b-a/4": {
+      "status": "crawled",
+      "timestamp": "2026-04-18T20:42:00Z",
+      "extracted_entities": ["program:digital-media"]
+    },
+    "https://www.hfk-bremen.de/de/studium/kunst-und-design/digital-media-m-a/5": {
+      "status": "crawled",
+      "timestamp": "2026-04-18T20:43:00Z",
+      "extracted_entities": ["program:digital-media-ma"]
+    },
+    "https://www.hfk-bremen.de/de/studium/kunst-und-design/freie-kunst-diplom/6": {
+      "status": "crawled",
+      "timestamp": "2026-04-18T20:44:00Z",
+      "extracted_entities": ["program:freie-kunst"]
+    },
+    "https://www.hfk-bremen.de/de/bewerbung/bewerbung-im-integriertes-design-b-a/7": {
+      "status": "crawled",
+      "timestamp": "2026-04-18T20:45:00Z",
+      "extracted_entities": ["application:integrated-design"]
+    },
+    "https://www.hfk-bremen.de/de/bewerbung/bewerbung-im-integriertes-design-m-a/8": {
+      "status": "crawled",
+      "timestamp": "2026-04-18T20:45:30Z",
+      "extracted_entities": ["application:integriertes-design"]
+    },
+    "https://www.hfk-bremen.de/en/application/applying-for-the-study-programme-digital-media-b-a/2": {
+      "status": "crawled",
+      "timestamp": "2026-04-18T20:46:00Z",
+      "extracted_entities": ["application:digital-media"]
+    },
+    "https://www.hfk-bremen.de/en/application/applying-for-the-study-programme-digital-media-m-a/3": {
+      "status": "crawled",
+      "timestamp": "2026-04-18T20:46:30Z",
+      "extracted_entities": ["application:digital-media-ma"]
+    },
+    "https://www.hfk-bremen.de/de/bewerbung/bewerbung-im-freie-kunst-diplom/4": {
+      "status": "crawled",
+      "timestamp": "2026-04-18T20:47:00Z",
+      "extracted_entities": ["application:freie-kunst"]
+    },
+    "https://www.hfk-bremen.de/de/ueber-die-hochschule/kurzportrait": {
+      "status": "crawled",
+      "timestamp": "2026-04-18T20:48:00Z",
+      "extracted_entities": ["university:hfk-bremen"]
+    }
+  },
   "pending_urls": [],
-  "errors": []
+  "errors": [],
+  "sync_summary": {
+    "programs_total": 5,
+    "programs_crawled": 5,
+    "programs_pending": 0
+  }
 }

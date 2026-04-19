@@ -1,7 +1,100 @@
 {
   "university_slug": "hbksaar",
-  "last_full_crawl": null,
-  "pages": {},
+  "last_full_crawl": "2026-04-19T07:43:00Z",
+  "scan_mode": "llm",
+  "last_llm_scan": "2026-04-19T07:43:00Z",
+  "next_llm_scan": "2026-07-19T07:43:00Z",
+  "pages": {
+    "https://www.hbksaar.de": {
+      "last_crawled": "2026-04-19T07:43:00Z",
+      "status": "success",
+      "page_type": "university_overview",
+      "extracted_fields": ["name", "url", "type", "navigation"]
+    },
+    "https://www.hbksaar.de/studium": {
+      "last_crawled": "2026-04-19T07:43:00Z",
+      "status": "success",
+      "page_type": "program_listing",
+      "extracted_fields": ["programs"]
+    },
+    "https://www.hbksaar.de/studiengaenge/freie-kunst": {
+      "last_crawled": "2026-04-19T07:43:00Z",
+      "status": "success",
+      "page_type": "program_overview",
+      "extracted_fields": ["name_de", "name_en", "degree", "language", "duration_semesters", "focus_areas", "professors"]
+    },
+    "https://www.hbksaar.de/studiengaenge/kommunikationsdesign": {
+      "last_crawled": "2026-04-19T07:43:00Z",
+      "status": "success",
+      "page_type": "program_overview",
+      "extracted_fields": ["name_de", "name_en", "degree", "language", "duration_semesters", "focus_areas", "professors"]
+    },
+    "https://www.hbksaar.de/studiengaenge/produktdesign": {
+      "last_crawled": "2026-04-19T07:43:00Z",
+      "status": "success",
+      "page_type": "program_overview",
+      "extracted_fields": ["name_de", "name_en", "degree", "language", "duration_semesters", "focus_areas", "professors"]
+    },
+    "https://www.hbksaar.de/studiengaenge/media-art-design": {
+      "last_crawled": "2026-04-19T07:43:00Z",
+      "status": "success",
+      "page_type": "program_overview",
+      "extracted_fields": ["name_de", "name_en", "degree", "language", "duration_semesters", "focus_areas", "professors"]
+    },
+    "https://www.hbksaar.de/studiengaenge/kunsterziehung": {
+      "last_crawled": "2026-04-19T07:43:00Z",
+      "status": "success",
+      "page_type": "program_overview",
+      "extracted_fields": ["name_de", "name_en", "degree", "language", "duration_semesters", "focus_areas", "professors"]
+    },
+    "https://www.hbksaar.de/studiengaenge/master-studiengaenge": {
+      "last_crawled": "2026-04-19T07:43:00Z",
+      "status": "success",
+      "page_type": "program_overview",
+      "extracted_fields": ["master_programs"]
+    },
+    "https://www.hbksaar.de/bewerbung-informationen": {
+      "last_crawled": "2026-04-19T07:43:00Z",
+      "status": "success",
+      "page_type": "application_page",
+      "extracted_fields": ["deadlines", "requirements", "process", "portfolio"]
+    },
+    "https://www.hbksaar.de/personen/lehrende": {
+      "last_crawled": "2026-04-19T07:43:00Z",
+      "status": "success",
+      "page_type": "faculty_list",
+      "extracted_fields": ["professors"]
+    },
+    "https://www.hbksaar.de/grundlagen": {
+      "last_crawled": "2026-04-19T07:43:00Z",
+      "status": "success",
+      "page_type": "curriculum",
+      "extracted_fields": ["grundlagen_info"]
+    },
+    "https://www.hbksaar.de/studiengaenge/promotion": {
+      "last_crawled": "2026-04-19T07:43:00Z",
+      "status": "success",
+      "page_type": "program_overview",
+      "extracted_fields": ["admission_requirements"]
+    },
+    "https://www.hbksaar.de/hochschule/werkstaetten-studios": {
+      "last_crawled": "2026-04-19T07:43:00Z",
+      "status": "success",
+      "page_type": "facilities",
+      "extracted_fields": ["workshops"]
+    },
+    "https://io.hbksaar.de/english-information/study-path-and-application": {
+      "last_crawled": "2026-04-19T07:43:00Z",
+      "status": "success",
+      "page_type": "application_page",
+      "extracted_fields": ["degree_options", "application_info"]
+    }
+  },
   "pending_urls": [],
-  "errors": []
+  "errors": [],
+  "sync_summary": {
+    "programs_total": 14,
+    "programs_crawled": 14,
+    "programs_pending": 0
+  }
 }

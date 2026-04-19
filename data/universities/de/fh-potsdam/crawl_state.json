@@ -1,7 +1,94 @@
 {
-  "university_slug": "fh-potsdam",
-  "last_full_crawl": null,
-  "pages": {},
-  "pending_urls": [],
-  "errors": []
+  "university": "fh-potsdam",
+  "root_url": "https://www.fh-potsdam.de",
+  "crawl_type": "deep_exploration",
+  "crawl_date": "2026-04-19",
+  "status": "completed",
+  "pages_visited": {
+    "root": {
+      "url": "https://www.fh-potsdam.de",
+      "status": "completed",
+      "date": "2026-04-19"
+    },
+    "studiengaenge_overview": {
+      "url": "https://www.fh-potsdam.de/studium-weiterbildung/studiengaenge/",
+      "status": "completed",
+      "date": "2026-04-19"
+    },
+    "fachbereich_design": {
+      "url": "https://www.fh-potsdam.de/studium-weiterbildung/fachbereiche/fachbereich-design/",
+      "status": "completed",
+      "date": "2026-04-19"
+    },
+    "fachbereich_stadt_bau_kultur": {
+      "url": "https://www.fh-potsdam.de/studium-weiterbildung/fachbereiche/fachbereich-stadt-bau-kultur/",
+      "status": "completed",
+      "date": "2026-04-19"
+    }
+  },
+  "programs": {
+    "kommunikationsdesign-ba": {
+      "url": "https://www.fh-potsdam.de/studium-weiterbildung/studiengaenge/kommunikationsdesign-ba",
+      "status": "completed",
+      "date": "2026-04-19"
+    },
+    "interfacedesign-ba": {
+      "url": "https://www.fh-potsdam.de/studium-weiterbildung/studiengaenge/interfacedesign-ba",
+      "status": "completed",
+      "date": "2026-04-19"
+    },
+    "produktdesign-ba": {
+      "url": "https://www.fh-potsdam.de/studium-weiterbildung/studiengaenge/produktdesign-ba",
+      "status": "completed",
+      "date": "2026-04-19"
+    },
+    "design-ma": {
+      "url": "https://www.fh-potsdam.de/studium-weiterbildung/studiengaenge/design-m",
+      "status": "completed",
+      "date": "2026-04-19"
+    },
+    "europaeische-medienwissenschaft-ba": {
+      "url": "https://www.fh-potsdam.de/studium-weiterbildung/studiengaenge/europaeische-medienwissenschaft-ba",
+      "status": "completed",
+      "date": "2026-04-19"
+    },
+    "europaeische-medienwissenschaft-ma": {
+      "url": "https://www.fh-potsdam.de/studium-weiterbildung/studiengaenge/europaeische-medienwissenschaft-ma",
+      "status": "completed",
+      "date": "2026-04-19"
+    },
+    "konservierung-und-restaurierung-ba": {
+      "url": "https://www.fh-potsdam.de/studium-weiterbildung/studiengaenge/konservierung-und-restaurierung-ba",
+      "status": "completed",
+      "date": "2026-04-19"
+    },
+    "konservierung-und-restaurierung-ma": {
+      "url": "https://www.fh-potsdam.de/studium-weiterbildung/studiengaenge/konservierung-und-restaurierung-ma",
+      "status": "completed",
+      "date": "2026-04-19"
+    },
+    "kulturarbeit-ba": {
+      "url": "https://www.fh-potsdam.de/studium-weiterbildung/studiengaenge/kulturarbeit-ba",
+      "status": "completed",
+      "date": "2026-04-19"
+    },
+    "urbane-zukunft-ma": {
+      "url": "https://www.fh-potsdam.de/studium-weiterbildung/studiengaenge/urbane-zukunft-ma",
+      "status": "completed",
+      "date": "2026-04-19"
+    }
+  },
+  "stats": {
+    "total_programs": 10,
+    "design_programs": 6,
+    "art_culture_programs": 4,
+    "bachelor": 6,
+    "master": 4,
+    "cooperation_programs": 2
+  },
+  "next_crawl": {
+    "type": "incremental",
+    "suggested_date": "2026-07-19",
+    "note": "Check for program changes before Wintersemester 2026/27"
+  }
 }

@@ -1,7 +1,153 @@
 {
-  "university_slug": "burg-halle",
-  "last_full_crawl": null,
-  "pages": {},
-  "pending_urls": [],
-  "errors": []
+  "university": "burg-halle",
+  "university_name": "Burg Giebichenstein Kunsthochschule Halle",
+  "root_url": "https://www.burg-halle.de",
+  "status": "explored",
+  "last_explored": "2026-04-19",
+  "last_crawled": "2026-04-19",
+  "exploration_version": 2,
+  "faculty_structure": {
+    "design": {
+      "name_de": "Fachbereich Design",
+      "campus": "Neuwerk 7",
+      "programs_ba": [
+        "kommunikationsdesign",
+        "innenarchitektur",
+        "mode-und-textildesign",
+        "multimedia-vr-design",
+        "keramik-und-glasdesign",
+        "spiel-und-lerndesign"
+      ],
+      "programs_ma": [
+        "industrial-design",
+        "multimedia-design-ma",
+        "conceptual-textile-design",
+        "design-studies-ma",
+        "interior-architecture-ma",
+        "furniture-and-interior-design-ma"
+      ]
+    },
+    "kunst": {
+      "name_de": "Fachbereich Kunst",
+      "campus": "Kröllwitzer Str. 2 / Unterburg Giebichenstein",
+      "programs_diplom": [
+        "malerei",
+        "grafik",
+        "malerei-glas",
+        "buchkunst",
+        "textile-kuenste",
+        "bildhauerei-figur",
+        "bildhauerei-materialitaet-und-raum",
+        "keramik",
+        "schmuck",
+        "zeitbasierte-kuenste"
+      ],
+      "programs_staatsexamen": [
+        "kunst-lehramt"
+      ],
+      "programs_ma": [
+        "kunstwissenschaften"
+      ],
+      "programs_postgraduate": [
+        "meisterschuelerinnenstudium",
+        "aufbaustudium"
+      ]
+    }
+  },
+  "total_programs": 25,
+  "programs_discovered": [
+    "kommunikationsdesign",
+    "innenarchitektur",
+    "mode-und-textildesign",
+    "multimedia-vr-design",
+    "keramik-und-glasdesign",
+    "spiel-und-lerndesign",
+    "industrial-design",
+    "multimedia-design-ma",
+    "conceptual-textile-design",
+    "design-studies-ma",
+    "interior-architecture-ma",
+    "furniture-and-interior-design-ma",
+    "malerei",
+    "grafik",
+    "malerei-glas",
+    "buchkunst",
+    "textile-kuenste",
+    "bildhauerei-figur",
+    "bildhauerei-materialitaet-und-raum",
+    "keramik",
+    "schmuck",
+    "zeitbasierte-kuenste",
+    "kunst-lehramt",
+    "kunstwissenschaften"
+  ],
+  "url_map": {
+    "kommunikationsdesign": "https://www.burg-halle.de/design/kommunikationsdesign",
+    "innenarchitektur": "https://www.burg-halle.de/design/innenarchitektur",
+    "mode-und-textildesign": "https://www.burg-halle.de/design/mode-und-textildesign",
+    "multimedia-vr-design": "https://www.burg-halle.de/design/multimedia-vr-design",
+    "keramik-und-glasdesign": "https://www.burg-halle.de/design/keramik-und-glasdesign",
+    "spiel-und-lerndesign": "https://www.burg-halle.de/design/spiel-und-lerndesign",
+    "industrial-design": "https://www.burg-halle.de/design/industrial-design-ma",
+    "multimedia-design-ma": "https://www.burg-halle.de/design/multimedia-design-ma",
+    "conceptual-textile-design": "https://www.burg-halle.de/design/conceptual-textile-design-ma",
+    "design-studies-ma": "https://www.burg-halle.de/design/design-studies-ma",
+    "interior-architecture-ma": "https://www.burg-halle.de/design/interior-architecture-ma",
+    "furniture-and-interior-design-ma": "https://www.burg-halle.de/design/furniture-and-interior-design-ma",
+    "malerei": "https://www.burg-halle.de/kunst/malerei",
+    "grafik": "https://www.burg-halle.de/kunst/grafik",
+    "malerei-glas": "https://www.burg-halle.de/kunst/malereiglas",
+    "buchkunst": "https://www.burg-halle.de/kunst/buchkunst",
+    "textile-kuenste": "https://www.burg-halle.de/kunst/textile-kuenste",
+    "bildhauerei-figur": "https://www.burg-halle.de/kunst/bildhauerei-figur",
+    "bildhauerei-materialitaet-und-raum": "https://www.burg-halle.de/kunst/bildhauerei-materialitaet-und-raum",
+    "keramik": "https://www.burg-halle.de/kunst/keramik",
+    "schmuck": "https://www.burg-halle.de/kunst/schmuck",
+    "zeitbasierte-kuenste": "https://www.burg-halle.de/kunst/zeitbasierte-kuenste",
+    "kunst-lehramt": "https://www.burg-halle.de/kunst/kunst-lehramt",
+    "kunstwissenschaften": "https://www.burg-halle.de/kunst/kunstwissenschaften"
+  },
+  "site_structure_notes": [
+    "/design/ root URL redirects to homepage",
+    "/kunst/ is the Art Faculty overview page",
+    "Keramik- und Glasdesign and Spiel- und Lerndesign are Studienrichtungen within Industrial Design BA",
+    "Interior Architecture MA and Furniture and Interior Design MA are specializations within Innenarchitektur department",
+    "Art faculty programs at Kröllwitzer Str. 2 campus (castle location)",
+    "Design faculty programs at Neuwerk 7 campus",
+    "Kunst (Lehramt) requires dual enrollment at BURG and MLU Halle-Wittenberg"
+  ],
+  "pages_crawled": [
+    "https://www.burg-halle.de",
+    "https://www.burg-halle.de/kunst/",
+    "https://www.burg-halle.de/kunst/malerei",
+    "https://www.burg-halle.de/kunst/grafik",
+    "https://www.burg-halle.de/kunst/malereiglas",
+    "https://www.burg-halle.de/kunst/buchkunst",
+    "https://www.burg-halle.de/kunst/textile-kuenste",
+    "https://www.burg-halle.de/kunst/bildhauerei-figur",
+    "https://www.burg-halle.de/kunst/bildhauerei-materialitaet-und-raum",
+    "https://www.burg-halle.de/kunst/keramik",
+    "https://www.burg-halle.de/kunst/schmuck",
+    "https://www.burg-halle.de/kunst/zeitbasierte-kuenste",
+    "https://www.burg-halle.de/kunst/kunst-lehramt",
+    "https://www.burg-halle.de/kunst/kunstwissenschaften",
+    "https://www.burg-halle.de/design/kommunikationsdesign",
+    "https://www.burg-halle.de/design/innenarchitektur",
+    "https://www.burg-halle.de/design/multimedia-vr-design",
+    "https://www.burg-halle.de/design/keramik-und-glasdesign",
+    "https://www.burg-halle.de/design/spiel-und-lerndesign",
+    "https://www.burg-halle.de/design/industrial-design-ma",
+    "https://www.burg-halle.de/design/multimedia-design-ma",
+    "https://www.burg-halle.de/design/conceptual-textile-design-ma",
+    "https://www.burg-halle.de/design/design-studies-ma",
+    "https://www.burg-halle.de/design/interior-architecture-ma",
+    "https://www.burg-halle.de/design/furniture-and-interior-design-ma",
+    "https://www.burg-halle.de/bewerben/"
+  ],
+  "notes": [
+    "Mode- und Textildesign BA page (/design/mode-und-textildesign) redirects to homepage",
+    "Industrial Design BA does not have a dedicated page (/design/industrial-design returns 404)",
+    "/design/textildesign is a Studienrichtung within Mode- und Textildesign BA",
+    "2 additional postgraduate programs found: Meisterschüler*innenstudium, Aufbaustudium (not tracked as separate programs)"
+  ]
 }

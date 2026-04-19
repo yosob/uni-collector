@@ -1,97 +1,74 @@
-# Bauhaus-Universität Weimar - University Profile
+# University Profile: Bauhaus-Universität Weimar
 
-> Generated: 2026-04-17 by uni-collector
+**Last Updated:** 2026-04-18
+
+## Basic Information
+
+| Field | Value |
+|-------|-------|
+| Name (DE) | Bauhaus-Universität Weimar |
+| Name (EN) | Bauhaus-Universität Weimar |
+| URL | https://www.uni-weimar.de |
+| City | Weimar |
+| State | Thuringia (Thüringen) |
+| Country | Germany |
+| Type | Universität (Public) |
+| Founded | 1860 (as Großherzogliche Kunstschule) |
+| Students | ~4,000 |
 
 ## Overview
 
-**Bauhaus-Universität Weimar** is a public university located in Weimar, Thuringia, Germany. With roots tracing back to the 1860 Great Ducal Art School and the later Bauhaus movement (1919), it carries a deep legacy in art, architecture, and design education. The university operates with four faculties: Architecture and Urbanism, Civil Engineering, Art and Design, and Media.
+The Bauhaus-Universität Weimar is a public university with approximately 4,000 students. Its roots trace back to the 1860 Great Ducal Art School (Großherzogliche Kunstschule). The university is deeply connected to the legacy of the Bauhaus movement (1919–1933), which was founded in Weimar by Walter Gropius.
 
-- **Website:** https://www.uni-weimar.de
-- **City:** Weimar, Thuringia, Germany
-- **Type:** Public university (Universität)
-- **Languages of instruction:** German and English (program-dependent)
-- **Tuition:** No tuition fees; semester contribution applies
+Today the university comprises four faculties:
+1. **Fakultät Architektur und Urbanistik** (Faculty of Architecture and Urbanism)
+2. **Fakultät Bauingenieurwesen** (Faculty of Civil Engineering)
+3. **Fakultät Kunst und Gestaltung** (Faculty of Art and Design)
+4. **Fakultät Medien** (Faculty of Media)
 
 ## Faculty of Art and Design (Fakultät Kunst und Gestaltung)
 
-The Faculty of Art and Design is home to the Product Design program and carries forward the Bauhaus tradition of combining artistic practice with academic inquiry. It offers programs in Visual Communication, Product Design, Art Education, and Media Art/Design.
+The Faculty of Art and Design is the primary focus of our data collection. It offers programs in:
 
-## Product Design Program (Produktdesign)
+- **Freie Kunst** (Fine Art) — Diplom (10 semesters)
+- **Kunst im öffentlichen Raum** (Public Art and New Artistic Strategies) — M.F.A. (4 semesters)
+- **Lehramt an Gymnasien Kunst** (Teaching Degree – Art) — Staatsexamen (9 semesters)
+- **Medienkunst/Mediengestaltung** (Media Art and Design) — B.F.A. (8 semesters) / M.F.A. (2–4 semesters)
+- **Produktdesign** (Product Design) — B.A. (6 semesters) / M.A. (4 semesters)
+- **Visuelle Kommunikation** (Visual Communication) — B.A. (8 semesters) / M.A. (2 semesters)
 
-### Bachelor of Arts (B.A.)
-- **Duration:** 6 semesters (Regelstudienzeit)
-- **Start:** Winter semester only
-- **Language:** German
-- **Degree:** Bachelor of Arts (B.A.)
+### Teaching Approach: Weimarer Modell
 
-### Master of Arts (M.A.)
-- **Duration:** 2 semesters (Regelstudienzeit)
-- **Start:** Winter semester only
-- **Language:** German (some English)
-- **Degree:** Master of Arts (M.A.)
-- **Full designation:** Product Design / Sustainable Product Cultures
-- **Department:** Faculty of Art and Design (Fakultät Kunst und Gestaltung)
+All programs in the Faculty follow the "Weimarer Modell" (Weimar Model) — a project-based, interdisciplinary study system that:
+- Emphasizes open project work across artistic and scientific disciplines
+- Encourages individual artistic development
+- Promotes collaboration between different professorships
+- Integrates theory with practice
 
-#### Study Approach: "Weimarer Modell"
-The program follows the "Weimarer Modell" (Weimar Model), a project-based study system emphasizing:
-- Open, interdisciplinary project work
-- Collaboration across artistic and scientific disciplines
-- Individual artistic development alongside academic research
-- Strong emphasis on design theory and methodology
+## Application System
 
-#### Focus Areas
-1. **Industrial Design** -- product and industrial design fundamentals
-2. **Design & Management** -- strategic design, design management
-3. **Emerging Technologies & Design** -- digital fabrication, new technologies
-4. **Transformation Design** -- social and systemic design transformation
-5. **Design Theory & Research** -- design history, theory, research methods
-6. **Sustainable Product Cultures** -- sustainability-focused design practice
-
-#### Professors / Professorships
-- **Prof. Gerrit Babtist** -- Industrial Design (academic advising for Product Design MA)
-- **Prof. Thomas Pearce** -- Design & Management
-- **Prof. Martin Kuban** -- Emerging Technologies & Design
-- **Prof. Andreas Mühlenberend** -- Transformation Design
-- **Prof. Jan Willmann** -- Design Theory & Research
-
-### Admission Requirements (Master's)
-1. First academic degree (Bachelor or Diplom) in design or a closely related field
-2. Above-average academic performance
-3. Successful completion of an artistic aptitude test (Eignungsprüfung), which includes:
-   - Submission of a portfolio with own design/artistic work
-   - An aptitude interview with the selection commission
-
-### Application Process
 - **Portal:** Bauhaus.CampusPortal (digital application)
-- **Registration opens:** February 1
-- **Application deadline:** March 31 (for the following winter semester)
-- **Required documents:**
-  - Higher education entrance qualification (Abitur or equivalent)
-  - Curriculum vitae (CV)
-  - Motivation letter (approximately 1 A4 page)
-  - Portfolio with own design/artistic work
-  - Copy of first academic degree (Bachelor/Diplom) in design
-  - Valid identification (ID or passport)
-  - Passport photo
+- **Aptitude Test (Eignungsprüfung):** Required for all art/design programs
+- **Typical Process:** Registration (Feb 2–Mar 31) → Homework/Portfolio → Pre-selection → Interview
+- **Language Requirement:** German C1 (DSH-2 or TestDaF TDN 4)
 
-### Language Requirements
-- **German:** DSH-2 or TestDaF TDN 4 (CEFR C1 level)
-- **English:** Not formally required for this program
+## Fees
 
-### Fees
-- **Tuition:** None (tuition-free)
-- **Semester contribution:** approximately 200 EUR (includes semester ticket, student services, etc.)
+- **Tuition:** Free (no tuition fees)
+- **Semester Contribution:** ~200 EUR per semester (includes semester ticket for public transport and student services)
 
-### Contact
-- **Administrative contact:** Caroline Gottwald-Lieder
-  - Email: caroline.gottwald-lieder@uni-weimar.de
-  - Phone: +49 3643 58 31 97
-- **Academic advising:** Prof. Gerrit Babtist
-  - Email: gerrit.babtist@uni-weimar.de
-  - Phone: +49 3643 58 32 18
+## Design/Art Program Summary
 
-## Key Source URLs
-- Product Design overview: https://www.uni-weimar.de/de/kunst-und-gestaltung/studium/produktdesign/
-- Product Design MA details: https://www.uni-weimar.de/de/kunst-und-gestaltung/studium/produktdesign/produktdesign-ma/
-- Application info: https://www.uni-weimar.de/de/studium/bewerbung/
-- Semester fee info: https://www.uni-weimar.de/de/studium/organisation/semesterbeitrag/
+| Program | Degree | Duration | Start |
+|---------|--------|----------|-------|
+| Freie Kunst | Diplom | 10 sem. | WS |
+| Kunst im öffentlichen Raum | M.F.A. | 4 sem. | WS |
+| Lehramt an Gymnasien Kunst | Staatsexamen | 9 sem. | WS |
+| Medienkunst/Mediengestaltung | B.F.A. | 8 sem. | WS |
+| Medienkunst | M.F.A. | 2–4 sem. | WS |
+| Produktdesign | B.A. | 6 sem. | WS |
+| Produktdesign | M.A. | 4 sem. | WS |
+| Visuelle Kommunikation | B.A. | 8 sem. | WS |
+| Visuelle Kommunikation | M.A. | 2 sem. | WS |
+
+WS = Winter Semester only

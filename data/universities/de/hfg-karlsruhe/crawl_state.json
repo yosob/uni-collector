@@ -1,7 +1,91 @@
 {
-  "university_slug": "hfg-karlsruhe",
-  "last_full_crawl": null,
-  "pages": {},
-  "pending_urls": [],
-  "errors": []
+  "university": "hfg-karlsruhe",
+  "name": "Staatliche Hochschule für Gestaltung Karlsruhe",
+  "base_url": "https://hfg-karlsruhe.de",
+  "last_explored": "2026-04-19",
+  "exploration_status": "complete",
+  "exploration_depth": "deep",
+  "pages_crawled": 9,
+  "programs_found": 5,
+  "programs": [
+    {
+      "name": "Medienkunst",
+      "slug": "medienkunst",
+      "degree": "Diplom",
+      "degree_type": "praktisch",
+      "url": "https://hfg-karlsruhe.de/studium/fachgruppen-und-studiengange/medienkunst/",
+      "status": "complete",
+      "last_updated": "2026-04-19"
+    },
+    {
+      "name": "Produktdesign",
+      "slug": "produktdesign",
+      "degree": "Diplom",
+      "degree_type": "praktisch",
+      "url": "https://hfg-karlsruhe.de/studium/fachgruppen-und-studiengange/produktdesign/",
+      "status": "complete",
+      "last_updated": "2026-04-19"
+    },
+    {
+      "name": "Kommunikationsdesign",
+      "slug": "kommunikationsdesign",
+      "degree": "Diplom",
+      "degree_type": "praktisch",
+      "url": "https://hfg-karlsruhe.de/studium/fachgruppen-und-studiengange/kommunikationsdesign/",
+      "status": "complete",
+      "last_updated": "2026-04-19"
+    },
+    {
+      "name": "Ausstellungsdesign und Szenografie",
+      "slug": "ausstellungsdesign-szenografie",
+      "degree": "Diplom",
+      "degree_type": "praktisch",
+      "url": "https://hfg-karlsruhe.de/studium/fachgruppen-und-studiengange/ausstellungsdesign-und-szenografie/",
+      "status": "complete",
+      "last_updated": "2026-04-19"
+    },
+    {
+      "name": "Kunstwissenschaft und Medienphilosophie",
+      "slug": "kunstwissenschaft-medienphilosophie",
+      "degree": "Magister",
+      "degree_type": "theoretisch",
+      "url": "https://hfg-karlsruhe.de/studium/fachgruppen-und-studiengange/kunstwissenschaft-und-medienphilosophie/",
+      "status": "complete",
+      "last_updated": "2026-04-19"
+    }
+  ],
+  "urls_explored": {
+    "main": {
+      "/": { "status": "crawled", "date": "2026-04-19" },
+      "/hochschule/": { "status": "crawled", "date": "2026-04-19" },
+      "/studium/fachgruppen-und-studiengange/": { "status": "crawled", "date": "2026-04-19" },
+      "/studium/bewerbung/": { "status": "crawled", "date": "2026-04-19" }
+    },
+    "programs": {
+      "/studium/fachgruppen-und-studiengange/medienkunst/": { "status": "crawled", "date": "2026-04-19" },
+      "/studium/fachgruppen-und-studiengange/produktdesign/": { "status": "crawled", "date": "2026-04-19" },
+      "/studium/fachgruppen-und-studiengange/kommunikationsdesign/": { "status": "crawled", "date": "2026-04-19" },
+      "/studium/fachgruppen-und-studiengange/ausstellungsdesign-und-szenografie/": { "status": "crawled", "date": "2026-04-19" },
+      "/studium/fachgruppen-und-studiengange/kunstwissenschaft-und-medienphilosophie/": { "status": "crawled", "date": "2026-04-19" }
+    },
+    "not_yet_crawled": [
+      "/hochschule/geschichte/",
+      "/hochschule/lehre/",
+      "/hochschule/organe-und-gremien/",
+      "/hochschule/kooperationen/",
+      "/studium/bewerbung/bewerbungsverfahren/",
+      "/studium/bewerbung/zulassung-und-eignungspruefung/",
+      "/studium/bewerbung/immatrikulation/",
+      "/forschung-und-entwicklung/",
+      "/international/",
+      "/studium/fachgruppen-und-studiengange/medienkunst/moving-images/"
+    ]
+  },
+  "data_quality": {
+    "programs_complete": true,
+    "professors_listed": true,
+    "application_info": true,
+    "degree_info": true,
+    "contact_info": true
+  }
 }

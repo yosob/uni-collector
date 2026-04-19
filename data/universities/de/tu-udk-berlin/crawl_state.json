@@ -1,7 +1,14 @@
 {
   "university_slug": "tu-udk-berlin",
-  "last_full_crawl": null,
-  "pages": {},
+  "last_full_crawl": "2026-04-17T19:55:00Z",
+  "pages": {
+    "https://www.newpractice.net": { "status": "crawled", "timestamp": "2026-04-17T19:53:00Z" }
+  },
   "pending_urls": [],
-  "errors": []
+  "errors": [],
+  "sync_summary": {
+    "programs_total": 1,
+    "programs_crawled": 1,
+    "programs_pending": 0
+  }
 }

@@ -1,7 +1,63 @@
 {
-  "university_slug": "hfg-offenbach",
-  "last_full_crawl": null,
-  "pages": {},
-  "pending_urls": [],
-  "errors": []
+  "university": "hfg-offenbach",
+  "last_crawl": "2026-04-19T02:30:00+08:00",
+  "crawl_type": "deep",
+  "status": "completed",
+  "root_url": "https://www.hfg-offenbach.de",
+  "pages_crawled": 30,
+  "pages_discovered": 60,
+  "programs_found": 7,
+  "programs_completed": 7,
+  "errors": [],
+  "pages": {
+    "crawled": [
+      {"url": "https://www.hfg-offenbach.de", "status": 200, "type": "homepage"},
+      {"url": "https://www.hfg-offenbach.de/de/pages/studium", "status": 200, "type": "overview"},
+      {"url": "https://www.hfg-offenbach.de/de/pages/bachelor-und-masterstudium-design", "status": 200, "type": "program"},
+      {"url": "https://www.hfg-offenbach.de/de/pages/bachelor-und-masterstudium-kunst", "status": 200, "type": "program"},
+      {"url": "https://www.hfg-offenbach.de/de/pages/aufbaustudium", "status": 200, "type": "program"},
+      {"url": "https://www.hfg-offenbach.de/de/pages/promotion", "status": 200, "type": "program"},
+      {"url": "https://www.hfg-offenbach.de/de/pages/diplom-laeuft-aus", "status": 200, "type": "program"},
+      {"url": "https://www.hfg-offenbach.de/de/pages/hochschule", "status": 200, "type": "info"},
+      {"url": "https://www.hfg-offenbach.de/de/pages/praesidium", "status": 200, "type": "info"},
+      {"url": "https://www.hfg-offenbach.de/de/pages/professor-innen", "status": 200, "type": "info"},
+      {"url": "https://www.hfg-offenbach.de/de/pages/kontakt", "status": 200, "type": "info"},
+      {"url": "https://www.hfg-offenbach.de/de/pages/studium-im-fachbereich-design", "status": 200, "type": "info"},
+      {"url": "https://www.hfg-offenbach.de/de/pages/studienziele", "status": 200, "type": "info"},
+      {"url": "https://www.hfg-offenbach.de/de/pages/studienziele-1", "status": 200, "type": "info"},
+      {"url": "https://www.hfg-offenbach.de/de/pages/pruefungen-und-ordnungen", "status": 200, "type": "info"},
+      {"url": "https://www.hfg-offenbach.de/de/pages/handpraktikum", "status": 200, "type": "info"},
+      {"url": "https://www.hfg-offenbach.de/de/pages/bewerbung-und-studienberatung", "status": 200, "type": "info"},
+      {"url": "https://www.hfg-offenbach.de/de/pages/malerei", "status": 200, "type": "lehrgebiet"},
+      {"url": "https://www.hfg-offenbach.de/de/pages/bildhauerei", "status": 200, "type": "lehrgebiet"},
+      {"url": "https://www.hfg-offenbach.de/de/pages/elektronische-medien", "status": 200, "type": "lehrgebiet"},
+      {"url": "https://www.hfg-offenbach.de/de/pages/fotografie", "status": 200, "type": "lehrgebiet"},
+      {"url": "https://www.hfg-offenbach.de/de/pages/design", "status": 200, "type": "department"},
+      {"url": "https://www.hfg-offenbach.de/de/pages/kunst-1", "status": 200, "type": "department"},
+      {"url": "https://www.hfg-offenbach.de/de/pages/kuenstlerische-lehrgebiete", "status": 200, "type": "lehrgebiet_overview"},
+      {"url": "https://www.hfg-offenbach.de/de/pages/gestalterische-lehrgebiete", "status": 200, "type": "lehrgebiet_overview"},
+      {"url": "https://www.hfg-offenbach.de/de/pages/theoretische-lehrgebiete", "status": 200, "type": "lehrgebiet_overview"},
+      {"url": "https://www.hfg-offenbach.de/de/pages/industrial-design", "status": 200, "type": "lehrgebiet"},
+      {"url": "https://www.hfg-offenbach.de/de/pages/integrierendes-design", "status": 200, "type": "lehrgebiet"},
+      {"url": "https://www.hfg-offenbach.de/de/pages/materialdesign-1", "status": 200, "type": "lehrgebiet"},
+      {"url": "https://www.hfg-offenbach.de/de/pages/designtheorie", "status": 200, "type": "lehrgebiet"},
+      {"url": "https://hfg-jetzt.de/de/", "status": 200, "type": "portal"},
+      {"url": "https://hfg-jetzt.de/de/kunst/", "status": 200, "type": "portal"},
+      {"url": "https://hfg-jetzt.de/de/design/", "status": 200, "type": "portal"},
+      {"url": "https://hfg-jetzt.de/de/allgemeine-informationen-zur-bewerbung/", "status": 200, "type": "portal"}
+    ],
+    "skipped": [
+      {"url": "https://www.hfg-offenbach.de/de/pages/promotionsstudium", "status": 404, "reason": "URL does not exist"},
+      {"url": "https://www.hfg-offenbach.de/de/pages/immatrikulationsamt", "status": 404, "reason": "URL does not exist"}
+    ]
+  },
+  "programs": {
+    "produkt-prozessgestaltung-ba": {"status": "completed", "last_updated": "2026-04-19"},
+    "produkt-prozessgestaltung-ma": {"status": "completed", "last_updated": "2026-04-19"},
+    "kunst-bfa": {"status": "completed", "last_updated": "2026-04-19"},
+    "kunst-mfa": {"status": "completed", "last_updated": "2026-04-19"},
+    "diplom": {"status": "completed", "last_updated": "2026-04-19"},
+    "postgraduiertenstudium": {"status": "completed", "last_updated": "2026-04-19"},
+    "promotion": {"status": "completed", "last_updated": "2026-04-19"}
+  }
 }

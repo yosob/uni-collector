@@ -2,33 +2,75 @@
 slug: "hawk-hildesheim"
 name_de: "HAWK Hochschule für angewandte Wissenschaft und Kunst"
 name_en: "HAWK University of Applied Sciences and Arts"
-name_cn: "HAWK 应用科学与艺术大学"
-url: "https://www.hawk.de"
-country: "de"
+name_cn: "希尔德斯海姆应用科学与艺术大学"
+type: "Fachhochschule"
 city: "Hildesheim"
-state: "Lower Saxony"
-type: "fachhochschule"
-founded_year: null
-student_count: 6450
-languages:
-  - "de"
-  - "en"
-tuition:
-  tuition_free: true
-  semester_fee_eur: null
-  notes: null
-application_deadlines:
-  winter_semester: null
-  summer_semester: null
-  notes: null
-application_portal: null
-programs:
-  - "gestaltung"
-last_crawled: "2026-04-17"
-source_urls:
-  - "https://www.hawk.de"
+state: "Niedersachsen (Lower Saxony)"
+country: "DE"
+url: "https://www.hawk.de"
+design_faculty: "Fakultät Gestaltung"
+design_faculty_url: "https://www.hawk.de/de/hochschule/fakultaeten/gestaltung"
+design_faculty_address: "Renatastraße 11, 31134 Hildesheim"
+other_locations:
+  - "Holzminden"
+  - "Göttingen"
+programs_count: 2
+kompetenzfelder_count: 9
+werkstaetten_count: 16
 ---
 
-# HAWK University of Applied Sciences and Arts
+# HAWK Hochschule für angewandte Wissenschaft und Kunst
 
-Die HAWK Hochschule für angewandte Wissenschaft und Kunst hat rund 6.450 Studierende verteilt auf drei Standorte in Hildesheim, Holzminden und Göttingen. Sie bietet 48 Studiengänge in sechs Fakultäten, darunter Bauen und Erhalten, Gestaltung, Soziale Arbeit und Gesundheit sowie Ingenieurwissenschaften. Die HAWK zeichnet sich durch ihre praxisnahe Ausbildung und enge Kooperationen mit regionalen und überregionalen Partnern aus.
+Die HAWK ist eine Hochschule für angewandte Wissenschaften und Kunst mit drei Standorten in Niedersachsen. Die **Fakultät Gestaltung** am Standort Hildesheim bietet ein einzigartiges interdisziplinäres Designstudium mit neun Kompetenzfeldern an.
+
+## Studiengänge (Design)
+
+| Studiengang | Abschluss | Semester | ECTS |
+|-------------|-----------|----------|------|
+| Gestaltung | B.A. | 6 | 180 |
+| Gestaltung | M.A. | 4 | 120 |
+
+## Kompetenzfelder (9)
+
+1. Advertising Design (Werbegestaltung)
+2. Branding Design (Markengestaltung)
+3. Digital Environments (Digitale Umgebungen)
+4. Colour Design / Farbdesign
+5. Graphic Design / Grafikdesign
+6. Interior Architecture / Innenarchitektur
+7. Lighting Design / Lichtdesign
+8. Metal Design & Jewellery / Metallgestaltung & Schmuck
+9. Product Design / Produktdesign
+
+## Besonderheiten
+
+- **Interdisziplinäres Konzept:** Ein Semester Grundlehre, danach Wahl des Kompetenzfelds mit Möglichkeit zur interdisziplinären Kombination
+- **16 Werkstätten und Labore:** Hervorragende handwerkliche und technische Ausstattung
+- **ADC Kreativranking:** Regelmäßig Platz 1 als kreativste deutsche Hochschule
+- **Einzigartige Spezialisierungen:** Lighting Design und Metallgestaltung & Schmuck sind in Deutschland selten
+- **Keine Studiengebühren:** Lediglich Semesterbeitrag (~€431.80 inkl. Semesterticket)
+
+## Kontakt
+
+**Fakultät Gestaltung**
+Renatastraße 11, 31134 Hildesheim
+Tel: +49 5121 881-0
+
+## Daten-Übersicht
+
+- [Site Map](site_map.md)
+- [University Profile](university_profile.md)
+- [Collection Status](collection_status.yaml)
+- [Crawl State](crawl_state.json)
+- [BA Gestaltung](programs/ba-gestaltung/_index.md)
+- [MA Gestaltung](programs/ma-gestaltung/_index.md)
+- [Gestaltung (Übersicht)](programs/gestaltung/_index.md)
+- [Kompetenzfelder: Advertising Design](programs/advertising-design/_index.md)
+- [Kompetenzfelder: Branding Design](programs/branding-design/_index.md)
+- [Kompetenzfelder: Digital Environments](programs/digital-environments/_index.md)
+- [Kompetenzfelder: Farbdesign](programs/farbdesign/_index.md)
+- [Kompetenzfelder: Grafikdesign](programs/grafikdesign/_index.md)
+- [Kompetenzfelder: Innenarchitektur](programs/innenarchitektur/_index.md)
+- [Kompetenzfelder: Lighting Design](programs/lighting-design/_index.md)
+- [Kompetenzfelder: Metallgestaltung](programs/metallgestaltung/_index.md)
+- [Kompetenzfelder: Produktdesign](programs/produktgestaltung/_index.md)

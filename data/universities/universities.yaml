@@ -220,10 +220,16 @@ universities:
     type: fachhochschule
     focus: false
     programs:
-      - slug: gestaltung
-        name_en: Design
-        name_de: Gestaltung
-        url: https://www.hawk.de/de/studium/studiengaenge/ma-gestaltung-hildesheim/bewerbung
+      - slug: ba-gestaltung
+        name_en: Design (Bachelor)
+        name_de: Gestaltung (Bachelor)
+        url: https://www.hawk.de/de/studium/studiengaenge/ba-gestaltung-hildesheim
+        degree: ba
+        focus: false
+      - slug: ma-gestaltung
+        name_en: Design (Master)
+        name_de: Gestaltung (Master)
+        url: https://www.hawk.de/de/studium/studiengaenge/ma-gestaltung-hildesheim
         degree: ma
         focus: false
         start_urls:
@@ -280,13 +286,30 @@ universities:
     type: fachhochschule
     focus: false
     programs:
-      - slug: design-products-interactions
+      - slug: design-produkt-und-kommunikation-ba
+        name_en: Design: Product and Communication
+        name_de: Design: Produkt und Kommunikation
+        url: https://www.htw-dresden.de/studium/vor-dem-studium/studienangebot/bachelor-produkt-und-kommunikationsdesign
+        degree: ba
+        focus: false
+        start_urls:
+          - url: https://www.htw-dresden.de/studium/vor-dem-studium/studienangebot/bachelor-produkt-und-kommunikationsdesign
+            type: program_overview
+          - url: https://www.htw-dresden.de/hochschule/fakultaeten/design/studium-bachelor
+            type: faculty_page
+          - url: https://www.htw-dresden.de/hochschule/fakultaeten/design/bewerbung
+            type: application_page
+      - slug: design-products-interactions-ma
         name_en: Design: Products and Interactions
         name_de: Design: Products and Interactions
-        url: https://www.htw-dresden.de/hochschule/fakultaeten/design/bewerbung
+        url: https://www.htw-dresden.de/studium/vor-dem-studium/studienangebot/master-design-products-and-interactions
         degree: ma
         focus: false
         start_urls:
+          - url: https://www.htw-dresden.de/studium/vor-dem-studium/studienangebot/master-design-products-and-interactions
+            type: program_overview
+          - url: https://www.htw-dresden.de/hochschule/fakultaeten/design/studium-master
+            type: faculty_page
           - url: https://www.htw-dresden.de/hochschule/fakultaeten/design/bewerbung
             type: application_page
 
@@ -420,14 +443,60 @@ universities:
     type: kunsthochschule
     focus: false
     programs:
-      - slug: integriertes-design
+      - slug: integrated-design
         name_en: Integrated Design
         name_de: Integriertes Design
-        url: https://www.hfk-bremen.de/de/bewerbung/bewerbung-im-integriertes-design-m-a/
+        url: https://www.hfk-bremen.de/de/studium/kunst-und-design/integrated-design-b-a/2
+        degree: ba
+        focus: false
+        start_urls:
+          - url: https://www.hfk-bremen.de/de/studium/kunst-und-design/integrated-design-b-a/2
+            type: program_page
+          - url: https://www.hfk-bremen.de/de/bewerbung/bewerbung-im-integriertes-design-b-a/7
+            type: application_page
+      - slug: integriertes-design
+        name_en: Integrated Design (MA)
+        name_de: Integriertes Design (M.A.)
+        url: https://www.hfk-bremen.de/de/studium/kunst-und-design/integriertes-design-m-a/3
         degree: ma
         focus: false
         start_urls:
-          - url: https://www.hfk-bremen.de/de/bewerbung/bewerbung-im-integriertes-design-m-a/
+          - url: https://www.hfk-bremen.de/de/studium/kunst-und-design/integriertes-design-m-a/3
+            type: program_page
+          - url: https://www.hfk-bremen.de/de/bewerbung/bewerbung-im-integriertes-design-m-a/8
+            type: application_page
+      - slug: digital-media
+        name_en: Digital Media
+        name_de: Digitale Medien
+        url: https://www.hfk-bremen.de/en/study/kunst-und-design/digital-media-b-a/4
+        degree: ba
+        focus: false
+        start_urls:
+          - url: https://www.hfk-bremen.de/en/study/kunst-und-design/digital-media-b-a/4
+            type: program_page
+          - url: https://www.hfk-bremen.de/en/application/applying-for-the-study-programme-digital-media-b-a/2
+            type: application_page
+      - slug: digital-media-ma
+        name_en: Digital Media (MA)
+        name_de: Digital Media (M.A.)
+        url: https://www.hfk-bremen.de/de/studium/kunst-und-design/digital-media-m-a/5
+        degree: ma
+        focus: false
+        start_urls:
+          - url: https://www.hfk-bremen.de/de/studium/kunst-und-design/digital-media-m-a/5
+            type: program_page
+          - url: https://www.hfk-bremen.de/en/application/applying-for-the-study-programme-digital-media-m-a/3
+            type: application_page
+      - slug: freie-kunst
+        name_en: Fine Arts
+        name_de: Freie Kunst
+        url: https://www.hfk-bremen.de/de/studium/kunst-und-design/freie-kunst-diplom/6
+        degree: diplom
+        focus: false
+        start_urls:
+          - url: https://www.hfk-bremen.de/de/studium/kunst-und-design/freie-kunst-diplom/6
+            type: program_page
+          - url: https://www.hfk-bremen.de/de/bewerbung/bewerbung-im-freie-kunst-diplom/4
             type: application_page
 
   - slug: hbksaar
@@ -440,15 +509,132 @@ universities:
     type: kunsthochschule
     focus: false
     programs:
-      - slug: produkt-design
+      - slug: freie-kunst
+        name_en: Fine Art
+        name_de: Freie Kunst
+        url: https://www.hbksaar.de/studiengaenge/freie-kunst
+        degree: ba_diplom
+        focus: false
+        start_urls:
+          - url: https://www.hbksaar.de/studiengaenge/freie-kunst
+            type: program_overview
+      - slug: kommunikationsdesign
+        name_en: Communication Design
+        name_de: Kommunikationsdesign
+        url: https://www.hbksaar.de/studiengaenge/kommunikationsdesign
+        degree: ba_diplom
+        focus: false
+        start_urls:
+          - url: https://www.hbksaar.de/studiengaenge/kommunikationsdesign
+            type: program_overview
+      - slug: produktdesign
         name_en: Product Design
-        name_de: Produkt-Design
-        url: https://www.hbksaar.de/bewerbung-informationen
+        name_de: Produktdesign
+        url: https://www.hbksaar.de/studiengaenge/produktdesign
+        degree: ba_diplom
+        focus: false
+        start_urls:
+          - url: https://www.hbksaar.de/studiengaenge/produktdesign
+            type: program_overview
+      - slug: media-art-design
+        name_en: Media Art and Design
+        name_de: Media Art & Design
+        url: https://www.hbksaar.de/studiengaenge/media-art-design
+        degree: ba_diplom
+        focus: false
+        start_urls:
+          - url: https://www.hbksaar.de/studiengaenge/media-art-design
+            type: program_overview
+      - slug: kunsterziehung
+        name_en: Art Education (Lehramt)
+        name_de: Kunsterziehung
+        url: https://www.hbksaar.de/studiengaenge/kunsterziehung
+        degree: staatsexamen
+        focus: false
+        start_urls:
+          - url: https://www.hbksaar.de/studiengaenge/kunsterziehung
+            type: program_overview
+      - slug: master-freie-kunst
+        name_en: Master Fine Art
+        name_de: Master Freie Kunst
+        url: https://www.hbksaar.de/studiengaenge/master-studiengaenge
+        degree: mfa
+        focus: false
+        start_urls:
+          - url: https://www.hbksaar.de/studiengaenge/master-studiengaenge
+            type: program_overview
+      - slug: master-kommunikationsdesign
+        name_en: Master Communication Design
+        name_de: Master Kommunikationsdesign
+        url: https://www.hbksaar.de/studiengaenge/master-studiengaenge
         degree: ma
         focus: false
         start_urls:
-          - url: https://www.hbksaar.de/bewerbung-informationen
-            type: application_page
+          - url: https://www.hbksaar.de/studiengaenge/master-studiengaenge
+            type: program_overview
+      - slug: master-produktdesign
+        name_en: Master Product Design
+        name_de: Master Produktdesign
+        url: https://www.hbksaar.de/studiengaenge/master-studiengaenge
+        degree: ma
+        focus: false
+        start_urls:
+          - url: https://www.hbksaar.de/studiengaenge/master-studiengaenge
+            type: program_overview
+      - slug: master-media-art-design
+        name_en: Master Media Art and Design
+        name_de: Master Media Art & Design
+        url: https://www.hbksaar.de/studiengaenge/master-studiengaenge
+        degree: ma
+        focus: false
+        start_urls:
+          - url: https://www.hbksaar.de/studiengaenge/master-studiengaenge
+            type: program_overview
+      - slug: master-experimental-media
+        name_en: Master Experimental Media
+        name_de: Master Experimental Media
+        url: https://www.xmlab.org
+        degree: ma
+        focus: false
+        start_urls:
+          - url: https://www.xmlab.org
+            type: program_overview
+      - slug: master-kuratieren
+        name_en: Master Curating and Exhibition Studies
+        name_de: Master Kuratieren/Ausstellungswesen
+        url: https://www.hbksaar.de/studiengaenge/master-studiengaenge
+        degree: ma
+        focus: false
+        start_urls:
+          - url: https://www.hbksaar.de/studiengaenge/master-studiengaenge
+            type: program_overview
+      - slug: master-museumspaedagogik
+        name_en: Master Museum Education
+        name_de: Master Museumspädagogik
+        url: https://www.hbksaar.de/studiengaenge/master-studiengaenge
+        degree: ma
+        focus: false
+        start_urls:
+          - url: https://www.hbksaar.de/studiengaenge/master-studiengaenge
+            type: program_overview
+      - slug: master-public-art
+        name_en: Master Public Art and Public Design
+        name_de: Master Public Art/Public Design
+        url: https://www.hbksaar.de/studiengaenge/master-studiengaenge
+        degree: ma
+        focus: false
+        start_urls:
+          - url: https://www.hbksaar.de/studiengaenge/master-studiengaenge
+            type: program_overview
+      - slug: master-quereinstieg-lehramt
+        name_en: Master Career Changer Teaching Art
+        name_de: Master Quereinstieg Lehramt Bildende Kunst
+        url: https://www.hbksaar.de/studiengaenge/master-studiengaenge
+        degree: med
+        focus: false
+        start_urls:
+          - url: https://www.hbksaar.de/studiengaenge/master-studiengaenge
+            type: program_overview
 
   - slug: burg-halle
     name_en: Burg Giebichenstein University of Art and Design Halle
@@ -480,15 +666,51 @@ universities:
     type: kunsthochschule
     focus: false
     programs:
+      - slug: visuelle-kommunikation
+        name_en: Visual Communication
+        name_de: Visuelle Kommunikation
+        url: https://www.hbk-bs.de/studium/studienangebot/visuelle-kommunikation/
+        degree: ba
+        focus: false
+        start_urls:
+          - url: https://www.hbk-bs.de/studium/studienangebot/visuelle-kommunikation/
+            type: program_overview
       - slug: transformation-design
         name_en: Transformation Design
         name_de: Transformation Design
-        url: https://www.hbk-bs.de/studium/bewerben/transformation-design/
+        url: https://www.hbk-bs.de/studium/studienangebot/transformation-design/
         degree: ma
         focus: false
         start_urls:
-          - url: https://www.hbk-bs.de/studium/bewerben/transformation-design/
-            type: application_page
+          - url: https://www.hbk-bs.de/studium/studienangebot/transformation-design/
+            type: program_overview
+      - slug: freie-kunst
+        name_en: Fine Art
+        name_de: Freie Kunst
+        url: https://www.hbk-bs.de/studium/studienangebot/freie-kunst/
+        degree: diplom
+        focus: false
+        start_urls:
+          - url: https://www.hbk-bs.de/studium/studienangebot/freie-kunst/
+            type: program_overview
+      - slug: design-digitale-gesellschaft
+        name_en: Design in Digital Society
+        name_de: Design in der digitalen Gesellschaft
+        url: https://www.hbk-bs.de/studium/studienangebot/design-in-der-digitalen-gesellschaft/
+        degree: ba
+        focus: false
+        start_urls:
+          - url: https://www.hbk-bs.de/studium/studienangebot/design-in-der-digitalen-gesellschaft/
+            type: program_overview
+      - slug: kunstwissenschaft
+        name_en: Art History
+        name_de: Kunstwissenschaft
+        url: https://www.hbk-bs.de/studium/studienangebot/kunstwissenschaft/
+        degree: ba-ma
+        focus: false
+        start_urls:
+          - url: https://www.hbk-bs.de/studium/studienangebot/kunstwissenschaft/
+            type: program_overview
 
   - slug: hs-muenchen
     name_en: Munich University of Applied Sciences
@@ -500,12 +722,27 @@ universities:
     type: fachhochschule
     focus: false
     programs:
-      - slug: angewandte-designforschung
-        name_en: Applied Design Research
-        name_de: Angewandte Designforschung
-        url: https://hm.edu/search/courses/index.de.html
+      - slug: design-ba
+        name_en: Design (Bachelor)
+        name_de: Design (Bachelor)
+        url: https://design.hm.edu/studieninteressierte/bachelorstudiengaenge/design_bachelor/index.de.html
+        degree: ba
+        focus: true
+      - slug: informatik-design-ba
+        name_en: Computer Science and Design (Bachelor)
+        name_de: Informatik und Design (Bachelor)
+        url: https://design.hm.edu/studieninteressierte/bachelorstudiengaenge/informatik_und_design_bachelor/index.de.html
+        degree: ba
+        focus: true
+      - slug: angewandte-designforschung-ma
+        name_en: Applied Design Research (Master)
+        name_de: Angewandte Designforschung (Master)
+        url: https://design.hm.edu/studieninteressierte/masterstudiengaenge/angewandte_designforschung/index.de.html
         degree: ma
-        focus: false
-        start_urls:
-          - url: https://hm.edu/search/courses/index.de.html?facet.filter.Abschlussart_value=Master&sorting=_AtoZ
-            type: program_list
+        focus: true
+      - slug: entrepreneurship-digital-transformation-ma
+        name_en: Entrepreneurship and Digital Transformation (Master)
+        name_de: Entrepreneurship and Digital Transformation (Master)
+        url: https://design.hm.edu/studieninteressierte/masterstudiengaenge/entrepreneurship_and_digital_transformation/index.de.html
+        degree: ma
+        focus: true

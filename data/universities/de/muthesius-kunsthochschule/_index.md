@@ -1,35 +1,40 @@
 ---
-slug: "muthesius-kunsthochschule"
+slug: muthesius-kunsthochschule
 name_de: "Muthesius Kunsthochschule"
+name: "Muthesius Kunsthochschule"
 name_en: "Muthesius University of Fine Arts and Design"
-name_cn: "基尔穆特修斯艺术学院"
 url: "https://www.muthesius-kunsthochschule.de"
-country: "de"
 city: "Kiel"
 state: "Schleswig-Holstein"
+country: "de"
 type: "kunsthochschule"
-founded_year: null
-student_count: null
-languages:
-  - "de"
-  - "en"
-tuition:
-  tuition_free: true
-  semester_fee_eur: null
-  notes: null
-application_deadlines:
-  winter_semester: null
-  summer_semester: null
-  notes: null
-application_portal: null
-programs:
-  - "industrial-design-medical-design"
-  - "industrial-design-interface-design"
-last_crawled: "2026-04-17"
-source_urls:
-  - "https://www.muthesius-kunsthochschule.de"
+founded: 1907
+website: "https://www.muthesius-kunsthochschule.de"
+address: "Lorentzendamm 6–10, 24103 Kiel"
+phone: "+49 431 5198-0"
+email: "info@muthesius.de"
+president: "Prof. Dr. Arne Zerbst"
+students: 550
+semester_fee: null
+languages: ["Deutsch", "Englisch"]
+programs_count: 12
+source_url: "https://www.muthesius-kunsthochschule.de"
+international_memberships: ["Cumulus", "ELIA"]
 ---
 
-# Muthesius University of Fine Arts and Design
+## Muthesius Kunsthochschule
 
-The Muthesius University of Fine Arts and Design is a public art university located in Kiel, Schleswig-Holstein. It offers programs in fine arts, industrial design (with specializations in medical design and interface design), and communication design. The university focuses on interdisciplinary artistic and design research in a studio-based learning environment.
+Die Muthesius Kunsthochschule in Kiel ist die einzige Kunsthochschule des Landes Schleswig-Holstein und die nördlichste Kunsthochschule Deutschlands. Sie bietet Bachelor- und Masterstudiengänge in Freier Kunst, Kunst Lehramt, Kommunikationsdesign, Industriedesign und Raumstrategien an.
+
+### Fachbereiche
+- Freie Kunst und Keramik
+- Kommunikationsdesign
+- Industriedesign
+- Raumstrategien
+- Institut für Kunst- und Medienwissenschaften
+- Zentrum für Medien
+
+### Studiengänge
+12 Programme: 5 Bachelor + 7 Master
+
+Siehe [university_profile.md](university_profile.md) und [site_map.md](site_map.md) für Details.

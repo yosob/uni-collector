@@ -1,7 +1,104 @@
 {
   "university_slug": "hs-muenchen",
-  "last_full_crawl": null,
-  "pages": {},
-  "pending_urls": [],
-  "errors": []
+  "university_name": "Hochschule München",
+  "last_explored": "2026-04-19",
+  "explore_version": 2,
+  "status": "complete",
+  "root_urls": [
+    "https://design.hm.edu",
+    "https://www.hm.edu",
+    "https://mucdai.hm.edu"
+  ],
+  "pages_crawled": {
+    "faculty": [
+      {"url": "https://design.hm.edu/index.de.html", "title": "FK12 设计学院首页", "crawled": "2026-04-19"},
+      {"url": "https://design.hm.edu/fakultaet/ueberuns/index.de.html", "title": "关于我们", "crawled": "2026-04-19"},
+      {"url": "https://design.hm.edu/fakultaet/personen/index.de.html", "title": "人员列表", "crawled": "2026-04-19"},
+      {"url": "https://design.hm.edu/fakultaet/werkstaetten/index.de.html", "title": "工作坊", "crawled": "2026-04-19"},
+      {"url": "https://design.hm.edu/fakultaet/gebaeude/index.de.html", "title": "建筑", "crawled": "2026-04-19"}
+    ],
+    "programs_bachelor": [
+      {"url": "https://design.hm.edu/studieninteressierte/bachelorstudiengaenge/uebersicht.de.html", "title": "本科专业总览", "crawled": "2026-04-19"},
+      {"url": "https://design.hm.edu/studieninteressierte/bachelorstudiengaenge/design_bachelor/index.de.html", "title": "BA Design", "crawled": "2026-04-19"},
+      {"url": "https://design.hm.edu/studiengange_de/studiengang_detail_619.de.html", "title": "BA Design Studiengang Detail", "crawled": "2026-04-19"},
+      {"url": "https://design.hm.edu/studieninteressierte/bachelorstudiengaenge/informatik_und_design_bachelor/index.de.html", "title": "BA Informatik und Design", "crawled": "2026-04-19"},
+      {"url": "https://design.hm.edu/studiengange_de/studiengang_detail_2294.de.html", "title": "BA Informatik und Design Studiengang Detail", "crawled": "2026-04-19"},
+      {"url": "https://mucdai.hm.edu/studierende/bachelor_informatik_und_design_1/index.de.html", "title": "BA Informatik und Design (MUC.DAI)", "crawled": "2026-04-19"}
+    ],
+    "programs_master": [
+      {"url": "https://design.hm.edu/studieninteressierte/masterstudiengaenge/uebersicht.de.html", "title": "硕士专业总览", "crawled": "2026-04-19"},
+      {"url": "https://design.hm.edu/studieninteressierte/masterstudiengaenge/angewandte_designforschung/index.de.html", "title": "MA Angewandte Designforschung", "crawled": "2026-04-19"},
+      {"url": "https://design.hm.edu/studiengange_de/studiengang_detail_1216.de.html", "title": "MA Angewandte Designforschung Studiengang Detail", "crawled": "2026-04-19"},
+      {"url": "https://design.hm.edu/studieninteressierte/masterstudiengaenge/entrepreneurship_and_digital_transformation/index.de.html", "title": "MA EDT 学院页", "crawled": "2026-04-19"},
+      {"url": "https://www.sce.de/curriculare-programme/deep-dive-master-entrepreneurship-digital-transformation.html", "title": "MA EDT (SCE)", "crawled": "2026-04-19"},
+      {"url": "https://hm.edu/en/course_offerings/deepdive/index.en.html", "title": "MA EDT (hm.edu)", "crawled": "2026-04-19"}
+    ],
+    "application": [
+      {"url": "https://design.hm.edu/studieninteressierte/bewerbung_ba/index.de.html", "title": "本科申请指南", "crawled": "2026-04-19"},
+      {"url": "https://design.hm.edu/studieninteressierte/bewerbung_ma/index.de.html", "title": "硕士申请指南", "crawled": "2026-04-19"},
+      {"url": "https://hm.edu/studium_1/bewerbung/master_bewerbung/index.de.html", "title": "HM 硕士申请总页", "crawled": "2026-04-19"}
+    ],
+    "research": [
+      {"url": "https://design.hm.edu/forschung_entwicklung/designforschung/index.de.html", "title": "设计研究", "crawled": "2026-04-19"},
+      {"url": "https://design.hm.edu/forschung_entwicklung/designkulturen_institut/index.de.html", "title": "Designkulturen Institut (dci)", "crawled": "2026-04-19"}
+    ]
+  },
+  "programs_discovered": [
+    {
+      "slug": "design-ba",
+      "name_de": "Design (Bachelor)",
+      "name_en": "Design (Bachelor)",
+      "degree": "B.A.",
+      "duration_semesters": 7,
+      "ects": 210,
+      "language": "de",
+      "start_semester": "winter",
+      "faculty": "FK12 Design",
+      "status": "complete"
+    },
+    {
+      "slug": "informatik-design-ba",
+      "name_de": "Informatik und Design (Bachelor)",
+      "name_en": "Computer Science and Design (Bachelor)",
+      "degree": "B.Sc.",
+      "duration_semesters": 7,
+      "ects": 210,
+      "language": "de",
+      "start_semester": "winter",
+      "faculty": "FK07 + FK12",
+      "status": "complete"
+    },
+    {
+      "slug": "angewandte-designforschung-ma",
+      "name_de": "Angewandte Designforschung (Master)",
+      "name_en": "Applied Design Research (Master)",
+      "degree": "M.A.",
+      "duration_semesters": 3,
+      "ects": 90,
+      "language": "de",
+      "start_semester": "summer",
+      "faculty": "FK12 Design",
+      "status": "complete"
+    },
+    {
+      "slug": "entrepreneurship-digital-transformation-ma",
+      "name_de": "Entrepreneurship and Digital Transformation (Master)",
+      "name_en": "Entrepreneurship and Digital Transformation (Master)",
+      "degree": "M.A.",
+      "duration_semesters": 3,
+      "ects": 90,
+      "language": "en",
+      "start_semester": "winter",
+      "faculty": "SCE + Multi-Fakultät",
+      "status": "complete"
+    }
+  ],
+  "crawl_stats": {
+    "total_pages_crawled": 21,
+    "total_programs": 4,
+    "programs_bachelor": 2,
+    "programs_master": 2,
+    "pages_with_errors": 0,
+    "notes": "全量深度探索完成。发现并记录了全部4个设计相关专业。移除了旧的重复目录 angewandte-designforschung。新增了 entrepreneurship-digital-transformation-ma。修正了 MA Angewandte Designforschung 的入学学期信息（实际为夏季学期）。"
+  }
 }

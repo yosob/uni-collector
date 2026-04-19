@@ -1,0 +1,57 @@
+university_slug: "hawk-hildesheim"
+university_name: "HAWK Hochschule für angewandte Wissenschaft und Kunst"
+status: "completed"
+last_deep_crawl: "2026-04-19"
+programs:
+  - slug: "ba-gestaltung"
+    name: "Gestaltung (B.A.)"
+    status: "completed"
+    data_completeness: 95
+    notes: "Full data including all 9 Kompetenzfelder"
+  - slug: "ma-gestaltung"
+    name: "Gestaltung (M.A.)"
+    status: "completed"
+    data_completeness: 90
+    notes: "Full data, curriculum details documented"
+kompetenzfelder:
+  - slug: "advertising-design"
+    name: "Advertising Design"
+    status: "completed"
+  - slug: "branding-design"
+    name: "Branding Design"
+    status: "completed"
+  - slug: "digital-environments"
+    name: "Digital Environments"
+    status: "completed"
+  - slug: "farbdesign"
+    name: "Colour Design / Farbdesign"
+    status: "completed"
+  - slug: "grafikdesign"
+    name: "Graphic Design / Grafikdesign"
+    status: "completed"
+  - slug: "innenarchitektur"
+    name: "Interior Architecture / Innenarchitektur"
+    status: "completed"
+  - slug: "lighting-design"
+    name: "Lighting Design / Lichtdesign"
+    status: "completed"
+  - slug: "metallgestaltung"
+    name: "Metal Design & Jewellery / Metallgestaltung"
+    status: "completed"
+  - slug: "produktgestaltung"
+    name: "Product Design / Produktdesign"
+    status: "completed"
+pages_crawled: 30
+pages_failed: 1
+werkstaetten: 16
+data_quality:
+  has_all_programs: true
+  has_all_kompetenzfelder: true
+  has_admission_info: true
+  has_curriculum_info: true
+  has_contact_info: true
+  has_tuition_info: true
+  has_workshops: true
+  missing_fields:
+    - "professor email addresses (not published on website)"
+    - "exact number of study places (num_places)"

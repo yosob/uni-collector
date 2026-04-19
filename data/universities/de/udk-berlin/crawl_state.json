@@ -1,7 +1,38 @@
 {
   "university_slug": "udk-berlin",
-  "last_full_crawl": null,
-  "pages": {},
+  "last_full_crawl": "2026-04-19T06:10:00Z",
+  "pages": {
+    "https://www.udk-berlin.de": { "status": "crawled", "timestamp": "2026-04-19T06:08:00Z" },
+    "https://www.udk-berlin.de/universitaet/fakultaet-gestaltung/studiengaenge/": { "status": "crawled", "timestamp": "2026-04-19T06:08:00Z" },
+    "https://www.udk-berlin.de/bewerbung/bewerbungsguide/": { "status": "crawled", "timestamp": "2026-04-19T06:08:00Z" },
+    "https://www.udk-berlin.de/studium/architektur/": { "status": "crawled", "timestamp": "2026-04-19T06:09:00Z" },
+    "https://www.udk-berlin.de/studium/design-produktdesign-modedesign/": { "status": "crawled", "timestamp": "2026-04-19T06:09:00Z" },
+    "https://www.udk-berlin.de/studium/visuelle-kommunikation/": { "status": "crawled", "timestamp": "2026-04-19T06:09:00Z" },
+    "https://www.udk-berlin.de/studium/gesellschafts-und-wirtschaftskommunikation/": { "status": "crawled", "timestamp": "2026-04-19T06:09:00Z" },
+    "https://www.udk-berlin.de/studium/kunst-und-medien/": { "status": "crawled", "timestamp": "2026-04-19T06:09:00Z" },
+    "https://www.udk-berlin.de/studium/design-and-computation/": { "status": "crawled", "timestamp": "2026-04-19T06:09:00Z" },
+    "https://www.udk-berlin.de/bewerbung/bewerbungsguide/architektur-bachelor/": { "status": "crawled", "timestamp": "2026-04-19T06:10:00Z" },
+    "https://www.udk-berlin.de/bewerbung/bewerbungsguide/architektur-master/": { "status": "crawled", "timestamp": "2026-04-19T06:10:00Z" },
+    "https://www.udk-berlin.de/bewerbung/bewerbungsguide/design-mode-und-produkt-bachelor/": { "status": "crawled", "timestamp": "2026-04-19T06:10:00Z" },
+    "https://www.udk-berlin.de/bewerbung/bewerbungsguide/design-mode-und-produkt-master/": { "status": "crawled", "timestamp": "2026-04-19T06:10:00Z" },
+    "https://www.udk-berlin.de/bewerbung/bewerbungsguide/visuelle-kommunikation-bachelor/": { "status": "crawled", "timestamp": "2026-04-19T06:10:00Z" },
+    "https://www.udk-berlin.de/bewerbung/bewerbungsguide/visuelle-kommunikation-master/": { "status": "crawled", "timestamp": "2026-04-19T06:10:00Z" },
+    "https://www.udk-berlin.de/bewerbung/bewerbungsguide/buehnenbild-bachelor/": { "status": "crawled", "timestamp": "2026-04-19T06:10:00Z" },
+    "https://www.udk-berlin.de/bewerbung/bewerbungsguide/buehnenbild-master/": { "status": "crawled", "timestamp": "2026-04-19T06:10:00Z" },
+    "https://www.udk-berlin.de/bewerbung/bewerbungsguide/kostuembild-bachelor/": { "status": "crawled", "timestamp": "2026-04-19T06:10:00Z" },
+    "https://www.udk-berlin.de/bewerbung/bewerbungsguide/kostuembild-master/": { "status": "crawled", "timestamp": "2026-04-19T06:10:00Z" },
+    "https://www.udk-berlin.de/bewerbung/bewerbungsguide/gesellschafts-und-wirtschaftskommunikation-gwk-bachelor/": { "status": "crawled", "timestamp": "2026-04-19T06:10:00Z" },
+    "https://www.udk-berlin.de/bewerbung/bewerbungsguide/gesellschafts-und-wirtschaftskommunikation-gwk-master/": { "status": "crawled", "timestamp": "2026-04-19T06:10:00Z" },
+    "https://www.udk-berlin.de/bewerbung/bewerbungsguide/art-in-context-master/": { "status": "crawled", "timestamp": "2026-04-19T06:10:00Z" },
+    "https://www.udk-berlin.de/bewerbung/bewerbungsguide/design-and-computation-master/": { "status": "crawled", "timestamp": "2026-04-19T06:10:00Z" },
+    "https://www.udk-berlin.de/bewerbung/bewerbungsguide/kunst-und-medien-absolventin/": { "status": "crawled", "timestamp": "2026-04-19T06:10:00Z" },
+    "https://www.udk-berlin.de/bewerbung/bewerbungsguide/kunst-und-medien-meisterschuelerin/": { "status": "crawled", "timestamp": "2026-04-19T06:10:00Z" }
+  },
   "pending_urls": [],
-  "errors": []
+  "errors": [],
+  "sync_summary": {
+    "programs_total": 16,
+    "programs_crawled": 16,
+    "programs_pending": 0
+  }
 }

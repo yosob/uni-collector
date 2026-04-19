@@ -3,42 +3,16 @@ slug: "industriedesign"
 name_de: "Industriedesign"
 name_en: "Industrial Design"
 degree: "diplom"
-degree_title: null
+degree_title: "Diplom (FH)"
 language:
   - "de"
-  - "en"
-duration_semesters: null
-start_semester: null
-department: null
-url: "https://design.h-da.de/bewerben"
-focus_areas: null
-admission_requirements: null
-language_requirements:
-  german: null
-  english: null
-portfolio_required: null
-portfolio_details: null
-application_process: null
-application_deadlines:
-  winter_semester: null
-  summer_semester: null
-  notes: null
-curriculum_summary: null
-tuition:
-  tuition_free: true
-  semester_fee_eur: null
-  notes: null
-contact:
-  name: null
-  email: null
-  phone: null
-  office_hours: null
-num_places: null
-last_crawled: null
-source_urls:
-  - "https://design.h-da.de/bewerben"
+duration_semesters: 8
+start_semester: "winter"
+department: "Fachbereich Gestaltung"
+url: "https://design.h-da.de/industriedesign"
+redirect: "industriedesign-diplom"
 ---
 
-# Industrial Design (Industriedesign)
+# Industrial Design — siehe industriedesign-diplom
 
-> Data to be populated by crawling.
+Dieser Eintrag ist ein Alias. Die vollständigen Daten finden sich unter [industriedesign-diplom](../industriedesign-diplom/_index.md).

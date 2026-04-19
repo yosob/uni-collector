@@ -1,7 +1,60 @@
 {
   "university_slug": "hfg-schwaebisch-gmuend",
-  "last_full_crawl": null,
-  "pages": {},
-  "pending_urls": [],
-  "errors": []
+  "last_explored": "2026-04-19T01:30:00Z",
+  "last_sync": "2026-04-19T01:30:00Z",
+  "explore_version": "2.0",
+  "pages_crawled": 18,
+  "status": "completed",
+  "outputs": {
+    "site_map": true,
+    "university_profile": true,
+    "programs": {
+      "interaktionsgestaltung-ba": {
+        "last_crawled": "2026-04-19T01:30:00Z",
+        "status": "completed",
+        "url": "https://www.hfg-gmuend.de/studium/interaktionsgestaltung"
+      },
+      "kommunikationsgestaltung-ba": {
+        "last_crawled": "2026-04-19T01:30:00Z",
+        "status": "completed",
+        "url": "https://www.hfg-gmuend.de/studium/kommunikationsgestaltung"
+      },
+      "produktgestaltung-ba": {
+        "last_crawled": "2026-04-19T01:30:00Z",
+        "status": "completed",
+        "url": "https://www.hfg-gmuend.de/studium/produktgestaltung"
+      },
+      "strategische-gestaltung-ma": {
+        "last_crawled": "2026-04-19T01:30:00Z",
+        "status": "completed",
+        "url": "https://www.hfg-gmuend.de/studium/strategische-gestaltung"
+      }
+    },
+    "phased_out_programs": {
+      "digital-product-design-and-development-ba": {
+        "status": "läuft aus",
+        "url": "https://www.hfg-gmuend.de/studium/digital-product-design-and-development"
+      }
+    },
+    "application_info": {
+      "ba": {
+        "last_crawled": "2026-04-19T01:30:00Z",
+        "url": "https://www.hfg-gmuend.de/bewerben/bewerbung-ba",
+        "period_ws": "15.05.–15.07.",
+        "period_ss": "15.11.–15.01."
+      },
+      "ma": {
+        "last_crawled": "2026-04-19T01:30:00Z",
+        "url": "https://www.hfg-gmuend.de/studium/strategische-gestaltung",
+        "period_ws": "15.05.–15.07."
+      }
+    },
+    "professors": {
+      "last_crawled": "2026-04-19T01:30:00Z",
+      "url": "https://www.hfg-gmuend.de/hochschule/professoren",
+      "count": 25
+    }
+  },
+  "next_explore": "2026-07-19T00:00:00Z",
+  "next_sync": "2026-04-26T00:00:00Z"
 }

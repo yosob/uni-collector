@@ -1,7 +1,14 @@
 {
   "university_slug": "kunsthochschule-kassel",
-  "last_full_crawl": null,
-  "pages": {},
+  "last_full_crawl": "2026-04-17T19:50:00Z",
+  "pages": {
+    "https://www.kunsthochschule-kassel.de": { "status": "crawled", "timestamp": "2026-04-17T19:48:00Z" }
+  },
   "pending_urls": [],
-  "errors": []
+  "errors": [],
+  "sync_summary": {
+    "programs_total": 4,
+    "programs_crawled": 4,
+    "programs_pending": 0
+  }
 }

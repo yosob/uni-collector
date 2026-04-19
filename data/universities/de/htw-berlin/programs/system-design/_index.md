@@ -1,44 +1,35 @@
 ---
-slug: "system-design"
-name_de: "System Design"
-name_en: "System Design"
-degree: "ma"
-degree_title: null
+name_de: System Design / Game Design
+name_en: System Design / Game Design
+name_cn: 系统设计/游戏设计
+slug: system-design
+degree: ma
+degree_title: Master of Arts (M.A.)
 language:
-  - "de"
-  - "en"
-duration_semesters: null
-start_semester: null
-department: null
-url: "https://systemdesign.htw-berlin.de/bewerbung/"
-focus_areas: null
-admission_requirements: null
-language_requirements:
-  german: null
-  english: null
-portfolio_required: null
-portfolio_details: null
-application_process: null
-application_deadlines:
-  winter_semester: null
-  summer_semester: null
-  notes: null
-curriculum_summary: null
+  - de
+  - en
+duration_semesters: 3
+start_semester: Sommersemester
+url: https://gamedesign.htw-berlin.de/master/
+department: Fachbereich 5 — School of Culture and Design
+faculty_url: https://www.f5.htw-berlin.de/
+focus_areas:
+  - Games
+  - Playable Environments
+  - Game Thinking
+  - eXtended Realities
+admission_requirements: Eignungsprüfung mit Exposé und Portfolio
+portfolio_required: true
 tuition:
   tuition_free: true
-  semester_fee_eur: null
-  notes: null
-contact:
-  name: null
-  email: null
-  phone: null
-  office_hours: null
-num_places: null
-last_crawled: null
+  semester_fee_eur: 300
+last_crawled: "2026-04-19T05:40:00Z"
 source_urls:
-  - "https://systemdesign.htw-berlin.de/bewerbung/"
+  - https://gamedesign.htw-berlin.de/master/
+redirect: system-design-ma
 ---
 
-# System Design (System Design)
+# System Design (MA)
 
-> Data to be populated by crawling.
+> **Note:** This program directory has been renamed to `system-design-ma` for consistency.
+> See [System Design / Game Design (MA)](../system-design-ma/_index.md) for the full and updated data.

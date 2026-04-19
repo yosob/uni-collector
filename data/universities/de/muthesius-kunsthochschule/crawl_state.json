@@ -1,7 +1,178 @@
 {
   "university_slug": "muthesius-kunsthochschule",
-  "last_full_crawl": null,
-  "pages": {},
-  "pending_urls": [],
-  "errors": []
+  "university_name": "Muthesius Kunsthochschule",
+  "root_url": "https://muthesius-kunsthochschule.de",
+  "english_url": "https://en.muthesius-kunsthochschule.de",
+  "exploration_status": "completed",
+  "exploration_date": "2026-04-19",
+  "last_exploration_type": "deep_exploration",
+  "programs_discovered": 12,
+  "programs_documented": 12,
+  "pages_crawled": 35,
+  "urls_discovered": [
+    "https://muthesius-kunsthochschule.de/",
+    "https://muthesius-kunsthochschule.de/der-weg-ins-studium/",
+    "https://muthesius-kunsthochschule.de/bewerbungsablauf/",
+    "https://muthesius-kunsthochschule.de/termine/",
+    "https://muthesius-kunsthochschule.de/die-mappe/",
+    "https://muthesius-kunsthochschule.de/die-bewerbung/",
+    "https://muthesius-kunsthochschule.de/studieren/",
+    "https://muthesius-kunsthochschule.de/studienangebote-abschluesse/",
+    "https://muthesius-kunsthochschule.de/kunst/",
+    "https://muthesius-kunsthochschule.de/kunst/kuenstlerische-grundlehre/",
+    "https://muthesius-kunsthochschule.de/kunst/malerei/",
+    "https://muthesius-kunsthochschule.de/kunst/bildhauerei/",
+    "https://muthesius-kunsthochschule.de/kunst/freie-kunst-und-keramik/",
+    "https://muthesius-kunsthochschule.de/kunst/medienkunst/",
+    "https://muthesius-kunsthochschule.de/kunst/time-based-media/",
+    "https://muthesius-kunsthochschule.de/kunst/freie-zeichnung-und-druckgrafik/",
+    "https://muthesius-kunsthochschule.de/kunst/interdisziplinaere-kuenstlerische-praxis/",
+    "https://muthesius-kunsthochschule.de/kunst/kunst-auf-lehramt-gymnasien/",
+    "https://muthesius-kunsthochschule.de/kommunikationsdesign/",
+    "https://muthesius-kunsthochschule.de/industriedesign/",
+    "https://muthesius-kunsthochschule.de/raumstrategien/",
+    "https://muthesius-kunsthochschule.de/raumstrategien/szenografie-interior-design/",
+    "https://muthesius-kunsthochschule.de/doppelfach-master-kunst-fuer-lehramt-an-gymnasien/",
+    "https://muthesius-kunsthochschule.de/forschung-und-projekte/",
+    "https://muthesius-kunsthochschule.de/materiallabor/",
+    "https://industriedesign-ba.muthesius-kunsthochschule.de/",
+    "https://interface.muthesius-kunsthochschule.de/",
+    "https://medical-design.muthesius-kunsthochschule.de/",
+    "https://szenografie-interior-design.muthesius-kunsthochschule.de/",
+    "https://spatial-strategies.muthesius-kunsthochschule.de/",
+    "https://fotografie.muthesius-kunsthochschule.de/",
+    "https://keramik.muthesius-kunsthochschule.de/",
+    "https://interaktive-medien.muthesius-kunsthochschule.de/",
+    "https://schriftgestaltung.muthesius-kunsthochschule.de/",
+    "https://time-based-media.muthesius-kunsthochschule.de/",
+    "https://materiallabor.muthesius-kunsthochschule.de/",
+    "https://forschung-und-projekte.muthesius-kunsthochschule.de/",
+    "https://fernweh.muthesius-kunsthochschule.de/",
+    "https://en.muthesius-kunsthochschule.de/",
+    "https://bewerben.muthesius-kunsthochschule.de/"
+  ],
+  "programs": [
+    {
+      "slug": "freie-kunst-bfa",
+      "name": "Freie Kunst",
+      "degree": "B.F.A.",
+      "level": "bachelor",
+      "url": "https://muthesius-kunsthochschule.de/kunst/",
+      "status": "documented"
+    },
+    {
+      "slug": "kommunikationsdesign-ba",
+      "name": "Kommunikationsdesign",
+      "degree": "B.A.",
+      "level": "bachelor",
+      "url": "https://muthesius-kunsthochschule.de/kommunikationsdesign/",
+      "status": "documented"
+    },
+    {
+      "slug": "industriedesign-ba",
+      "name": "Industriedesign",
+      "degree": "B.A.",
+      "level": "bachelor",
+      "url": "https://industriedesign-ba.muthesius-kunsthochschule.de/",
+      "status": "documented"
+    },
+    {
+      "slug": "szenografie-interior-design-ba",
+      "name": "Szenografie / Interior Design",
+      "degree": "B.A.",
+      "level": "bachelor",
+      "url": "https://szenografie-interior-design.muthesius-kunsthochschule.de/",
+      "status": "documented"
+    },
+    {
+      "slug": "kunst-lehramt-gymnasien-ba",
+      "name": "Kunst Lehramt an Gymnasien (Zwei Fächer)",
+      "degree": "B.A.",
+      "level": "bachelor",
+      "url": "https://muthesius-kunsthochschule.de/kunst/kunst-auf-lehramt-gymnasien/",
+      "status": "documented"
+    },
+    {
+      "slug": "freie-kunst-mfa",
+      "name": "Freie Kunst",
+      "degree": "M.F.A.",
+      "level": "master",
+      "url": "https://muthesius-kunsthochschule.de/kunst/",
+      "status": "documented"
+    },
+    {
+      "slug": "kommunikationsdesign-ma",
+      "name": "Kommunikationsdesign",
+      "degree": "M.A.",
+      "level": "master",
+      "url": "https://muthesius-kunsthochschule.de/kommunikationsdesign/",
+      "status": "documented"
+    },
+    {
+      "slug": "industrial-design-interface-design",
+      "name": "Interface Design",
+      "degree": "M.A.",
+      "level": "master",
+      "url": "https://interface.muthesius-kunsthochschule.de/",
+      "status": "documented"
+    },
+    {
+      "slug": "industrial-design-medical-design",
+      "name": "Medical Design",
+      "degree": "M.A.",
+      "level": "master",
+      "url": "https://medical-design.muthesius-kunsthochschule.de/",
+      "status": "documented"
+    },
+    {
+      "slug": "raumstrategien-ma",
+      "name": "Raumstrategien / Spatial Strategies",
+      "degree": "M.A.",
+      "level": "master",
+      "url": "https://spatial-strategies.muthesius-kunsthochschule.de/",
+      "status": "documented"
+    },
+    {
+      "slug": "kunst-lehramt-gymnasien-med",
+      "name": "Kunst Lehramt an Gymnasien",
+      "degree": "M.Ed.",
+      "level": "master",
+      "url": "https://muthesius-kunsthochschule.de/kunst/kunst-auf-lehramt-gymnasien/",
+      "status": "documented",
+      "note": "NEW ab WS 26/27"
+    },
+    {
+      "slug": "doppelfach-master-kunst-lehramt",
+      "name": "Doppelfach-Master Kunst Lehramt Gymnasien",
+      "degree": "M.Ed.",
+      "level": "master",
+      "url": "https://muthesius-kunsthochschule.de/doppelfach-master-kunst-fuer-lehramt-an-gymnasien/",
+      "status": "documented",
+      "note": "NEW ab WS 26/27"
+    }
+  ],
+  "crawl_history": [
+    {
+      "date": "2025-01-12",
+      "type": "initial_exploration",
+      "programs_found": 12,
+      "status": "completed"
+    },
+    {
+      "date": "2026-04-19",
+      "type": "deep_exploration",
+      "programs_found": 12,
+      "pages_crawled": 35,
+      "status": "completed",
+      "updates": [
+        "Verified all 12 programs still active",
+        "Confirmed new M.Ed. Art Education starting WS 26/27",
+        "Updated subdomain list (added materiallabor)",
+        "Verified application deadlines",
+        "Updated president info (Ehrenprofessur)",
+        "Enriched site_map with complete URL inventory",
+        "Updated university_profile with current details"
+      ]
+    }
+  ]
 }

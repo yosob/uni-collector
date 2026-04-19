@@ -1,34 +1,65 @@
 ---
-slug: "htw-berlin"
-name_de: "Hochschule für Technik und Wirtschaft Berlin"
-name_en: "HTW Berlin - University of Applied Sciences"
-name_cn: "柏林应用技术大学"
-url: "https://www.htw-berlin.de"
-country: "de"
-city: "Berlin"
-state: "Berlin"
-type: "fachhochschule"
+name_de: Hochschule für Technik und Wirtschaft Berlin
+name_en: HTW Berlin – University of Applied Sciences
+name_cn: 柏林技术与经济应用技术大学
+slug: htw-berlin
+url: https://www.htw-berlin.de
+country: de
+city: Berlin
+state: Berlin
+type: fachhochschule
 founded_year: 1994
-student_count: 14500
+student_count: 14000
 languages:
-  - "de"
-  - "en"
+  - de
+  - en
 tuition:
   tuition_free: true
-  semester_fee_eur: null
-  notes: null
-application_deadlines:
-  winter_semester: null
-  summer_semester: null
-  notes: null
-application_portal: null
+  semester_fee_eur: 300
+  notes: Standard for German public universities
+overview: Die Hochschule für Technik und Wirtschaft Berlin (HTW Berlin) ist die größte Fachhochschule Berlins. Der Fachbereich 5 — School of Culture and Design bietet ein breites Spektrum an gestalterischen und kulturwissenschaftlichen Studiengängen am historischen Campus Wilhelminenhof in Oberschöneweide.
 programs:
-  - "system-design"
-last_crawled: "2026-04-17"
+  - kommunikationsdesign-ba
+  - game-design-ba
+  - industrial-design-ba
+  - modedesign-ba
+  - bekleidungstechnik-ba
+  - konservierung-restaurierung-ba
+  - museologie-ba
+  - system-design-ma
+  - game-design-ma
+  - public-design-ma
+  - modedesign-ma
+  - museumsmanagement-ma
+  - konservierung-restaurierung-ma
+  - angewandte-landschaftsarchaeologie-ma
+  - bekleidungstechnik-ma
+last_crawled: "2026-04-19T05:40:00Z"
 source_urls:
-  - "https://www.htw-berlin.de"
+  - https://www.htw-berlin.de
+  - https://www.f5.htw-berlin.de/
 ---
 
-# HTW Berlin - University of Applied Sciences
+# HTW Berlin
 
-Founded in 1994, the Hochschule fur Technik und Wirtschaft Berlin (HTW Berlin) is the largest University of Applied Sciences in Berlin with around 14,500 students. It offers 80 bachelor's, master's, and MBA programs across fields including business, engineering, computer science, design, culture, health, energy and environment, law, and building and real estate. The university is consistently top-ranked in German university rankings, having earned multiple first-place finishes in the WirtschaftsWoche FH-Ranking and the StudyCheck Award.
+Die Hochschule für Technik und Wirtschaft Berlin (HTW Berlin) ist die größte Fachhochschule Berlins. Der Fachbereich 5 — School of Culture and Design bietet ein breites Spektrum an gestalterischen und kulturwissenschaftlichen Studiengängen am historischen Campus Wilhelminenhof in Oberschöneweide.
+
+## Studiengänge (Design & Kultur)
+
+### Bachelor (7)
+- Kommunikationsdesign → https://kd.htw-berlin.de/
+- Game Design → https://gamedesign.htw-berlin.de/
+- Industrial Design → https://id.htw-berlin.de/
+- Modedesign → https://md-bachelor.htw-berlin.de/
+- Bekleidungstechnik/Konfektion → https://btk-bachelor.htw-berlin.de/
+- Konservierung und Restaurierung/Grabungstechnik → https://krg.htw-berlin.de/
+- Museologie → https://museologie.htw-berlin.de/
+
+### Master (7)
+- System Design / Game Design (MA) → https://gamedesign.htw-berlin.de/master/
+- Public Design (MA) → https://public-design.htw-berlin.de/
+- Modedesign (MA) → https://md-master.htw-berlin.de/
+- Museumsmanagement und -kommunikation (MA) → https://mmk.htw-berlin.de/
+- Konservierung und Restaurierung (MA) → https://kr.htw-berlin.de/
+- Angewandte Landschafts- und Feldarchäologie (MA) → https://la.htw-berlin.de/
+- Bekleidungstechnik/Konfektion (MA) → https://btk-master.htw-berlin.de/
