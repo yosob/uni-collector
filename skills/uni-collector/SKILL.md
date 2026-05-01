@@ -55,7 +55,7 @@ always: true
 9. 运行 data-organizer 校验：
    `exec("python3 skills/data-organizer/scripts/validate_data.py --university <slug>")`
 10. 使用 data-organizer 生成 `university_profile.md`
-11. 更新 `collection_status.yaml` 中该院校的记录
+11. 运行 `python3 skills/data-organizer/scripts/validate_data.py --fill-rate --university <slug>` 获取填充率，更新 `collection_status.yaml` 中该院校的记录
 12. 汇报最终结果（包括失败的专业列表，如有）
 13. 如果全部完成，清理 HEARTBEAT.md
 
@@ -100,8 +100,14 @@ always: true
    - 指定学校：`python3 skills/data-organizer/scripts/reset_status.py --slugs <slug1>,<slug2>`
    - 所有学校：`python3 skills/data-organizer/scripts/reset_status.py --all`
    - 指定国家：`python3 skills/data-organizer/scripts/reset_status.py --country de`
-2. **再正常调度**：状态归零后，所有目标学校变为 `explored: false`，按正常的 site-explorer 批次调度流程执行
-3. site-explorer 会覆盖写入数据，旧数据在重跑期间作为 fallback
+2. **再正常调度**：状态归零后，所有目标学校变为 `explored: false`，按正常的三阶段批次调度流程执行
+3. site-explorer 会覆盖生成 site_map.md，smart-extractor 会覆盖写入数据文件，旧数据在重跑期间作为 fallback
+
+### 情况 E: 手动单页面提取
+
+当用户提供一个具体 URL 说 "提取这个页面的信息"：
+
+读取 `skills/page-extractor/SKILL.md` 并执行，处理单个 URL。
 
 ## 批次调度规范
 
@@ -129,12 +135,6 @@ always: true
    - 单个院校的 Phase 2 最多并行 2 个 per-program subagent
 
 4. **恢复机制**：如果 nanobot 重启，heartbeat 会自动读取 HEARTBEAT.md，从当前阶段恢复
-
-### 情况 E: 手动单页面提取
-
-当用户提供一个具体 URL 说 "提取这个页面的信息"：
-
-读取 `skills/page-extractor/SKILL.md` 并执行，处理单个 URL。
 
 ## 判断逻辑
 

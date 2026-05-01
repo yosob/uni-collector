@@ -14,8 +14,11 @@ description: "按站点地图进行数据提取并探索新子页面。当需要
 
 ## 输入
 
-- 院校 slug（如 `hfg-offenbach`）
+- 院校 slug（如 `hfg-offenbach`）— 处理该院校全部专业
+- 或指定专业名称（如 "Medienkunst BFA"）— 只处理该专业
 - 或"全部院校"（批量提取，只处理到期的院校）
+
+**处理范围由 task 描述决定**：subagent 的 task 指定了院校和专业名称时，只处理该专业的 URL；只指定院校时，处理 site_map.md 中该院校的全部 URL。
 
 ## 工作流
 

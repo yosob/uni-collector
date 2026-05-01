@@ -143,7 +143,27 @@ exec("python3 skills/data-organizer/scripts/validate_data.py --university <slug>
 - 如果某专业数据不完整，在对应条目下标注"部分数据缺失"
 - 按学位级别分组：本科 → 硕士 → 博士
 
-### Step 7: 保存原始内容（提取失败时）
+### Step 7: 更新全局状态
+
+在三阶段流程的校验阶段完成后，更新 `data/universities/collection_status.yaml` 中对应院校的记录：
+
+```yaml
+- slug: {slug}
+  explored: true
+  last_explored: "{今天日期}"
+  next_explore: "{今天 + 3个月}"
+  last_synced: "{今天日期}"
+  sync_mode: site_explorer
+  next_sync: "{今天 + 7天}"
+  field_fill_rate: {运行 validate_data.py --fill-rate 获取}
+  programs_explored: {实际探索的专业数}
+  programs_total: {site_map.md 中的总专业数}
+  needs_reexplore: false
+```
+
+只更新该院校的字段，不修改其他院校的记录。
+
+### Step 8: 保存原始内容（提取失败时）
 
 如果数据提取失败，保存原始页面内容供后续手动审查：
 

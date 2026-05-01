@@ -12,11 +12,11 @@ uni-collector/                         # 独立 Git 仓库
 ├── skills/                            # nanobot skills（6 个）
 │   ├── uni-collector/                 # 管线编排器
 │   │   └── SKILL.md
-│   ├── site-explorer/                 # LLM 深度探索
+│   ├── site-explorer/                 # 站点发现 + sitemap 生成
 │   │   ├── SKILL.md
 │   │   └── references/
 │   │       └── exploration-guide.md   # 探索指南（信息优先级、页面识别规则）
-│   ├── smart-extractor/               # 按 site_map 日常提取
+│   ├── smart-extractor/               # 数据提取 + 新页面探索
 │   │   └── SKILL.md
 │   ├── university-scout/              # 院校发现
 │   │   ├── SKILL.md
@@ -27,7 +27,7 @@ uni-collector/                         # 独立 Git 仓库
 │   │   └── references/
 │   │       ├── extraction-prompts.md
 │   │       └── page-type-classification.md
-│   └── data-organizer/                # 数据保存校验
+│   └── data-organizer/                # 数据保存校验 + profile 生成
 │       ├── SKILL.md
 │       ├── references/
 │       │   └── schema-guide.md
@@ -43,8 +43,8 @@ uni-collector/                         # 独立 Git 仓库
 │       │   └── program.json
 │       └── de/{slug}/                 # 每所院校
 │           ├── _index.md              # 院校数据
-│           ├── site_map.md            # 站点地图（探索产出）
-│           ├── university_profile.md  # 信息摘要（探索产出）
+│           ├── site_map.md            # 站点地图（site-explorer 产出，smart-extractor 可补充）
+│           ├── university_profile.md  # 信息摘要（data-organizer 产出）
 │           ├── crawl_state.json       # 爬取状态
 │           └── programs/{slug}/
 │               └── _index.md          # 专业数据
@@ -266,7 +266,7 @@ data/universities/de/{slug}/
 }
 ```
 
-新增字段：
+字段说明：
 - `scan_mode`: 当前扫描模式（`llm` / `rule`）
 - `last_llm_scan`: 上次 LLM 深度扫描时间
 - `next_llm_scan`: 下次建议 LLM 扫描时间
