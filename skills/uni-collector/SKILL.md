@@ -16,10 +16,10 @@ always: true
 
 | Skill | 职责 | 何时使用 |
 |-------|------|---------|
-| `site-explorer` | 站点发现 + sitemap 生成（中深度发现 URL） | 首次深爬、定期重扫、site_map 缺失 |
+| `site-explorer` | 站点发现 + sitemap 生成（递归发现 URL） | 首次深爬、定期重扫、site_map 缺失 |
 | `smart-extractor` | 按 site_map 提取数据 + 发现新子页面 | 增量更新、per-program 提取 |
 | `university-scout` | 搜索发现新院校 | 寻找新学校 |
-| `data-organizer` | 保存数据、更新状态、校验、生成 profile | 所有场景中保存数据 |
+| `data-organizer` | 保存数据、更新状态、校验、多语言翻译、生成 profile | 所有场景中保存数据 |
 | `page-extractor` | 单页面手动提取 | 手动指定 URL 提取 |
 
 **使用方式**：用 `read_file` 读取对应 `skills/{name}/SKILL.md`，按其中的工作流执行。
@@ -50,14 +50,19 @@ always: true
    - 如果全部处理完 → 进入 Phase 3
 8. 更新 HEARTBEAT.md 记录当前进度（已完成/待处理专业列表）
 
-#### Phase 3: 校验与摘要
+#### Phase 3: 校验、翻译与摘要
 
-9. 运行 data-organizer 校验：
-   `exec("python3 skills/data-organizer/scripts/validate_data.py --university <slug>")`
-10. 使用 data-organizer 生成 `university_profile.md`
-11. 运行 `python3 skills/data-organizer/scripts/validate_data.py --fill-rate --university <slug>` 获取填充率，更新 `collection_status.yaml` 中该院校的记录
-12. 汇报最终结果（包括失败的专业列表，如有）
-13. 如果全部完成，清理 HEARTBEAT.md
+9. 使用 data-organizer 生成多语言版本：
+   - 读取 smart-extractor 保存的 `_index.md`（院校级 + 专业级）
+   - 翻译为 `_index_EN.md` / `_index_ZH.md`（德国院校额外生成 `_index_DE.md`）
+   - 删除原始 `_index.md`
+10. 运行 data-organizer 校验：
+    `exec("python3 skills/data-organizer/scripts/validate_data.py --university <slug>")`
+11. 使用 data-organizer 生成多语言 profile：
+    `university_profile_EN.md` / `university_profile_ZH.md` / `university_profile_DE.md`
+12. 运行 `python3 skills/data-organizer/scripts/validate_data.py --fill-rate --university <slug>` 获取填充率，更新 `collection_status.yaml` 中该院校的记录
+13. 汇报最终结果（包括失败的专业列表，如有）
+14. 如果全部完成，清理 HEARTBEAT.md
 
 ### 情况 B: 日常增量更新
 
@@ -70,6 +75,7 @@ always: true
    - 发现未在 site_map 中记录的新子页面，补充到 site_map.md
    - 保存并更新状态
 3. 如果提取失败率 > 50%，建议用户运行情况 A（重新探索）
+4. 日常更新完成后，使用 data-organizer 将 `_index.md` 翻译为多语言版本（`_index_EN.md` / `_index_ZH.md` / `_index_DE.md`）
 
 ### 情况 C: 发现新院校
 
@@ -120,7 +126,7 @@ always: true
    阶段: Phase {1|2|3}
    已完成专业: {列表}
    待处理专业: {列表}
-   全部完成后: 运行 data-organizer 校验 + 生成 profile + 更新 collection_status
+   全部完成后: 运行 data-organizer 翻译多语言版本 + 校验 + 生成多语言 profile + 更新 collection_status
    ```
 
 2. **阶段推进逻辑**（收到 subagent announce 后）：
@@ -149,7 +155,8 @@ always: true
   │    ├─ explored: false → 情况 A (site-explorer + smart-extractor × N, 首次探索)
   │    ├─ needs_reexplore: true → 情况 A (site-explorer + smart-extractor × N, 强制重扫)
   │    ├─ explored: true + next_explore 已过期 → 情况 A (site-explorer + smart-extractor × N, 定期重扫)
-  │    └─ explored: true + 未到期 → 情况 B (smart-extractor, 日常更新)
+  │    ├─ explored: true + next_sync 已过期 → 情况 B (smart-extractor, 日常更新)
+  │    └─ explored: true + 未到期 → 跳过
   ├─ "更新全部" → 情况 D (遍历 collection_status.yaml 逐个串行处理)
   └─ 不确定 → 询问用户
 ```

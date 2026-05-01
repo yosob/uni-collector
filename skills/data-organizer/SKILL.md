@@ -1,19 +1,25 @@
 ---
 name: data-organizer
-description: "保存、校验和管理高校数据文件。当需要将结构化数据写入磁盘、初始化新院校目录、校验已收集数据、更新爬取状态和交叉引用时使用。触发词：保存数据、校验数据、初始化院校、更新索引、写入数据文件、检查数据质量"
+description: "保存、校验和管理高校数据文件，生成多语言版本。当需要将结构化数据写入磁盘、初始化新院校目录、校验已收集数据、翻译多语言版本、生成 profile 时使用。触发词：保存数据、校验数据、初始化院校、更新索引、写入数据文件、翻译数据、检查数据质量"
 ---
 
 # 数据组织与校验
 
-负责将提取的结构化数据持久化到文件系统，维护爬取状态，并校验数据完整性。
+负责将提取的结构化数据持久化到文件系统，生成多语言版本，维护爬取状态，并校验数据完整性。
 
 ## 数据位置
 
-- 院校数据: `data/universities/{country}/{slug}/_index.md`
-- 专业数据: `data/universities/{country}/{slug}/programs/{prog-slug}/_index.md`
+- 院校数据: `data/universities/{country}/{slug}/_index_EN.md` / `_index_ZH.md` / `_index_DE.md`
+- 专业数据: `data/universities/{country}/{slug}/programs/{prog-slug}/_index_EN.md` / `_index_ZH.md` / `_index_DE.md`
+- 摘要文档: `data/universities/{country}/{slug}/university_profile_EN.md` / `_ZH.md` / `_DE.md`
 - 爬取状态: `data/universities/{country}/{slug}/crawl_state.json`
 - Schema: `data/universities/schema/*.json`
 - 配置: `data/universities/universities.yaml`
+
+**多语言规则**：
+- 所有院校生成 EN（英文）和 ZH（中文）版本
+- 德国院校（country=de）额外生成 DE（德文）版本
+- 无后缀的 `_index.md` 是翻译前的中间产物，翻译完成后删除
 
 ## 工作流
 
@@ -33,7 +39,7 @@ exec("python3 skills/data-organizer/scripts/init_university.py --slug <slug> --c
 
 ### Step 2: 保存院校数据
 
-将院校数据写入 `data/universities/{country}/{slug}/_index.md`。
+将院校数据写入 `data/universities/{country}/{slug}/_index.md`（中间产物，后续翻译步骤会生成语言版本）。
 
 格式：Markdown + YAML frontmatter。
 
@@ -68,21 +74,62 @@ source_urls:
 
 ### Step 3: 保存专业数据
 
-将专业数据写入 `data/universities/{country}/{slug}/programs/{prog-slug}/_index.md`。
+将专业数据写入 `data/universities/{country}/{slug}/programs/{prog-slug}/_index.md`（中间产物，后续翻译步骤会生成语言版本）。
 
 如果 program 目录不存在，先创建：
 ```bash
 exec("mkdir -p data/universities/{country}/{slug}/programs/{prog-slug}")
 ```
 
+### Step 3.5: 生成多语言版本
+
+将 `smart-extractor` 保存的 `_index.md` 翻译为多语言版本。对每个 `_index.md` 文件（院校级和专业级）：
+
+1. 读取原始 `_index.md`
+2. 生成 `_index_EN.md`（英文版）
+3. 生成 `_index_ZH.md`（中文版）
+4. 对于德国院校（country=de），生成 `_index_DE.md`（德文版）
+5. 删除原始 `_index.md`（无后缀版本）
+
+**翻译原则**：
+
+不翻译的字段（原样保留）：
+- `slug`, `url`, `source_urls`（标识符和链接）
+- `degree`（枚举：ba/ma/diplom 等）
+- `country`, `type`（枚举）
+- `duration_semesters`, `student_count`, `founded_year`（数字）
+- `portfolio_required`（布尔）
+- `programs`（slug 数组）
+- `last_crawled`（时间戳）
+
+翻译的字段（文本值翻译为目标语言）：
+- `name_de`/`name_en`/`name_cn` → 在 EN 文件中主要用 `name_en`，ZH 文件中用 `name_cn`，DE 文件中用 `name_de`
+- `city`, `state`（地名）
+- `overview`（概述）
+- `focus_areas`（方向/重点）
+- `admission_requirements`, `language_requirements`（要求描述）
+- `portfolio_details`, `application_process`（流程描述）
+- `application_deadlines.notes`, `tuition.notes`（备注说明）
+- `curriculum_summary`（课程摘要）
+- `scholarship_info`（奖学金信息）
+- `contact` 中的文本字段
+- Markdown body（全文翻译）
+
+**YAML frontmatter 字段名保持英文不变**，只翻译字段值。
+
+**对院校级数据**：翻译 `data/universities/{country}/{slug}/_index.md`
+**对专业级数据**：遍历 `data/universities/{country}/{slug}/programs/*/_index.md` 逐一翻译
+
 ### Step 4: 更新交叉引用
 
 保存数据后维护引用完整性：
 
-- 保存专业后：确保院校 `_index.md` 的 `programs:` 数组包含该专业 slug
+- 保存专业后：确保院校 `_index_EN.md` 的 `programs:` 数组包含该专业 slug（其他语言版本同步更新）
 - 保存院校后：确保 `universities.yaml` 中有对应条目
 
 ### Step 5: 更新爬取状态
+
+**此步骤已由 smart-extractor 在提取阶段完成**，data-organizer 通常不需要单独更新 `crawl_state.json`。仅在特殊情况下（如手动保存数据后需要同步状态）使用。
 
 更新 `data/universities/{country}/{slug}/crawl_state.json`：
 
@@ -117,18 +164,28 @@ exec("python3 skills/data-organizer/scripts/validate_data.py --university <slug>
 ```
 
 校验内容：
-- `_index.md` 中 university Schema 的 required 字段
-- 每个 program `_index.md` 中 program Schema 的 required 字段
+- `_index_EN.md` 中 university Schema 的 required 字段（以 EN 版本为主）
+- 每个 program `_index_EN.md` 中 program Schema 的 required 字段
+- `_index_ZH.md`（和 `_index_DE.md`）是否存在且结构完整
 - `crawl_state.json` 是否存在
 
-### Step 6.5: 生成 university_profile.md
+### Step 6.5: 生成多语言 university_profile
 
-校验通过后，汇总该院校所有已提取的专业数据，生成人类可读的摘要文档。
-写入 `data/universities/de/{slug}/university_profile.md`。
+校验通过后，汇总该院校所有已提取的专业数据，生成多语言摘要文档。
+
+生成文件：
+- `data/universities/de/{slug}/university_profile_EN.md`（英文）
+- `data/universities/de/{slug}/university_profile_ZH.md`（中文）
+- `data/universities/de/{slug}/university_profile_DE.md`（德文，仅德国院校）
+
+每种语言从对应语言的 `_index` 文件读取数据：
+- EN 版从 `_index_EN.md` 和 `programs/*/_index_EN.md` 汇总
+- ZH 版从 `_index_ZH.md` 和 `programs/*/_index_ZH.md` 汇总
+- DE 版从 `_index_DE.md` 和 `programs/*/_index_DE.md` 汇总
 
 内容包括：
-- **学校概况**（从 `_index.md` 提取）：院校名称、城市、类型、网址
-- **设计/艺术相关专业**（按学位级别分组，从 `programs/*/_index.md` 汇总）：
+- **学校概况**：院校名称、城市、类型、网址
+- **设计/艺术相关专业**（按学位级别分组）：
   - 专业名称、学位、学制、语言
   - 方向/重点领域
   - 录取要求摘要
@@ -140,7 +197,7 @@ exec("python3 skills/data-organizer/scripts/validate_data.py --university <slug>
 
 规则：
 - 只包含已成功提取到数据的专业，跳过提取失败的专业
-- 如果某专业数据不完整，在对应条目下标注"部分数据缺失"
+- 如果某专业某个语言版本不存在，用 EN 版补充并标注
 - 按学位级别分组：本科 → 硕士 → 博士
 
 ### Step 7: 更新全局状态

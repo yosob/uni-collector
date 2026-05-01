@@ -94,7 +94,7 @@ web_fetch(url=<url>)
 
 ### Step 6: 保存数据
 
-将提取到的数据更新到对应的 `_index.md` 文件：
+将提取到的数据更新到对应的 `_index.md` 文件（中间产物，后续由 `data-organizer` 翻译为多语言版本）：
 - `data/universities/de/{slug}/_index.md`
 - `data/universities/de/{slug}/programs/{prog}/_index.md`
 
@@ -102,6 +102,7 @@ web_fetch(url=<url>)
 - 只更新非 null 的新值
 - 不覆盖已有的有效数据（除非新值更完整）
 - `last_crawled` 更新为当前时间
+- 多语言版本（`_index_EN.md` / `_index_ZH.md` / `_index_DE.md`）由 `data-organizer` 统一生成
 
 ### Step 7: 更新爬取状态
 
@@ -122,6 +123,8 @@ web_fetch(url=<url>)
 ```
 
 ### Step 9: 更新全局状态
+
+**仅在独立执行（日常更新）时执行此步骤**。在三阶段流程中作为 subagent 被调用时，全局状态由 data-organizer 在 Phase 3 统一更新，跳过此步骤。
 
 更新 `data/universities/collection_status.yaml` 中对应院校的记录：
 
