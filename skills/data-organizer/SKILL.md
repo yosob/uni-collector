@@ -121,6 +121,28 @@ exec("python3 skills/data-organizer/scripts/validate_data.py --university <slug>
 - 每个 program `_index.md` 中 program Schema 的 required 字段
 - `crawl_state.json` 是否存在
 
+### Step 6.5: 生成 university_profile.md
+
+校验通过后，汇总该院校所有已提取的专业数据，生成人类可读的摘要文档。
+写入 `data/universities/de/{slug}/university_profile.md`。
+
+内容包括：
+- **学校概况**（从 `_index.md` 提取）：院校名称、城市、类型、网址
+- **设计/艺术相关专业**（按学位级别分组，从 `programs/*/_index.md` 汇总）：
+  - 专业名称、学位、学制、语言
+  - 方向/重点领域
+  - 录取要求摘要
+  - 申请截止日期
+  - 作品集要求
+  - 专业链接
+- **如何申请**：申请流程摘要（通过什么平台、材料清单、时间线）
+- **联系方式**：联系人信息
+
+规则：
+- 只包含已成功提取到数据的专业，跳过提取失败的专业
+- 如果某专业数据不完整，在对应条目下标注"部分数据缺失"
+- 按学位级别分组：本科 → 硕士 → 博士
+
 ### Step 7: 保存原始内容（提取失败时）
 
 如果数据提取失败，保存原始页面内容供后续手动审查：

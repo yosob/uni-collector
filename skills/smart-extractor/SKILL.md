@@ -1,16 +1,16 @@
 ---
 name: smart-extractor
-description: "按站点地图进行日常数据提取。当需要增量更新已有院校的专业数据、按已知 URL 列表批量提取信息、或执行非 LLM 探索的常规爬取时使用。触发词：日常爬取、增量更新、按地图提取、更新专业数据、常规爬取"
+description: "按站点地图进行数据提取并探索新子页面。当需要增量更新已有院校的专业数据、按已知 URL 列表批量提取信息、或执行非 LLM 探索的常规爬取时使用。触发词：日常爬取、增量更新、按地图提取、更新专业数据、常规爬取、提取数据"
 ---
 
 # 智能数据提取器
 
-按 site_map.md 中记录的 URL 架构进行数据提取。不探索新页面，只从已知 URL 提取结构化数据。
+按 site_map.md 中记录的 URL 架构进行数据提取，同时检查页面中是否有 site_map 未记录的子页面。发现新子页面后补充到 site_map.md 并提取数据。
 
-## 与 site-explorer 的区别
+## 与 site-explorer 的分工
 
-- `site-explorer`: LLM 自由探索，发现新页面和新信息（贵，慢）
-- `smart-extractor`: 按 site_map 已知 URL 提取数据（便宜，快）
+- `site-explorer`: 发现网站结构，生成 site_map.md（只发现 URL，不提取数据）
+- `smart-extractor`: 按 site_map 提取数据 + 发现遗漏的子页面（提取数据 + 补充 site_map）
 
 ## 输入
 
@@ -50,16 +50,32 @@ web_fetch(url=<url>)
 
 如果 web_fetch 失败或内容不完整，尝试 browser 工具。
 
-**b) LLM 提取结构化数据**:
+**b) 检查未发现的子页面**:
+
+对比当前页面中的链接与 site_map.md 中已记录的 URL。如果发现新的相关子页面（申请、课程、教授、作品集等），记录下来，这些新页面也要执行数据提取。
+
+判断规则：链接指向同一院校域名，且页面内容与以下主题相关：
+- 申请/录取 (Bewerbung/Application/Zulassung)
+- 课程/教学计划 (Curriculum/Module/Studienverlaufsplan)
+- 教授/教师 (Professuren/People/Lehrende)
+- 作品集/考试 (Portfolio/Mappe/Eignungsprüfung)
+- 学费/资助 (Gebühren/Stipendium)
+
+**c) LLM 提取结构化数据**:
 
 根据 site_map 中标注的页面类型，使用对应的提取模板，从页面内容中提取数据。
 
 - 已知页面类型 → 使用对应模板
 - 未知页面类型 → 使用 program_overview 作为默认模板
 
-**c) 记录结果**:
+**d) 记录结果**:
 - 提取成功：记录提取到的字段列表
 - 提取失败：记录失败的字段和原因
+
+**e) 更新 site_map.md**（如有新发现）:
+- 如果发现了 site_map.md 中未记录的子页面，将新 URL 追加到对应专业的 section
+- 标注页面类型和可提取字段
+- 更新 site_map.md 顶部的 "最后探索" 日期
 
 请求间等待 2 秒。
 
@@ -128,6 +144,6 @@ web_fetch(url=<url>)
 
 ## 依赖
 
-- `data/universities/de/{slug}/site_map.md` — 必须存在（由 site-explorer 生成）
+- `data/universities/de/{slug}/site_map.md` — 必须存在（由 site-explorer 生成，本 skill 可补充新发现的 URL）
 - `skills/page-extractor/references/extraction-prompts.md` — 提取模板
 - `data/universities/schema/*.json` — Schema 定义
