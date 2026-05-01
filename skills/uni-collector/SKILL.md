@@ -55,9 +55,11 @@ always: true
 9. 使用 data-organizer 生成多语言版本：
    - 读取 smart-extractor 保存的 `_index.md`（院校级 + 专业级）
    - 翻译为 `_index_EN.md` / `_index_ZH.md`（德国院校额外生成 `_index_DE.md`）
+   - tags 字段从词汇表查找对应语言版本，不自由翻译
    - 删除原始 `_index.md`
-10. 运行 data-organizer 校验：
-    `exec("python3 skills/data-organizer/scripts/validate_data.py --university <slug>")`
+10. 运行 data-organizer 聚合 tags + 校验：
+    `exec("python3 skills/data-organizer/scripts/aggregate_tags.py --university <slug>")` → 聚合 program tags 到 university 级别
+    `exec("python3 skills/data-organizer/scripts/validate_data.py --university <slug>")` → 校验数据完整性
 11. 使用 data-organizer 生成多语言 profile：
     `university_profile_EN.md` / `university_profile_ZH.md` / `university_profile_DE.md`
 12. 运行 `python3 skills/data-organizer/scripts/validate_data.py --fill-rate --university <slug>` 获取填充率，更新 `collection_status.yaml` 中该院校的记录

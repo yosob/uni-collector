@@ -33,14 +33,16 @@ uni-collector/                         # 独立 Git 仓库
 │       │   └── schema-guide.md
 │       └── scripts/
 │           ├── init_university.py
-│           └── validate_data.py
+│           ├── validate_data.py
+│           └── aggregate_tags.py
 ├── data/                              # 收集到的数据（23 所院校）
 │   └── universities/
 │       ├── universities.yaml          # 院校配置
 │       ├── collection_status.yaml     # 集中状态管理（编排器决策入口）
-│       ├── schema/                    # JSON Schema
+│       ├── schema/                    # JSON Schema + Tag 词汇表
 │       │   ├── university.json
-│       │   └── program.json
+│       │   ├── program.json
+│       │   └── tags.yaml              # Tag 受控词汇表（中英文映射）
 │       └── de/{slug}/                 # 每所院校
 │           ├── _index_EN.md          # 院校数据 - 英文版
 │           ├── _index_ZH.md          # 院校数据 - 中文版
@@ -68,18 +70,18 @@ nanobot 的 skill 是 Markdown 文件（`SKILL.md`），通过自然语言指导
 |-------|------|---------|
 | `uni-collector` | 管线编排器，判断场景、协调多阶段流程 | 所有请求的入口 |
 | `site-explorer` | 站点发现 + sitemap 生成（递归发现） | 首次深爬、定期重扫 |
-| `smart-extractor` | 数据提取 + 新页面探索 | 增量更新、per-program 提取 |
+| `smart-extractor` | 数据提取 + 新页面探索 + tag 分配 | 增量更新、per-program 提取 |
 | `university-scout` | web_search 发现新院校 | 寻找新学校 |
 | `page-extractor` | 单页面手动提取 | 手动指定 URL |
-| `data-organizer` | 保存数据、校验、初始化目录、多语言翻译、生成 profile | 所有场景中保存数据 |
+| `data-organizer` | 保存数据、校验、初始化目录、多语言翻译、tags 聚合、生成 profile | 所有场景中保存数据 |
 
 ### 数据流
 
 ```
 首次探索（多阶段流程）:
   Phase 1: site-explorer → 递归发现 → 生成 site_map.md（URL 架构）
-  Phase 2: smart-extractor × N → 每个专业提取数据 + 探索新子页面 → 保存 _index.md（中间产物）
-  Phase 3: data-organizer → 翻译多语言版本 + 校验数据 + 生成多语言 profile
+  Phase 2: smart-extractor × N → 每个专业提取数据 + 分配 tags + 探索新子页面 → 保存 _index.md（中间产物）
+  Phase 3: data-organizer → 翻译多语言版本（含 tags 词汇表查找）+ 聚合 tags + 校验数据 + 生成多语言 profile
 
 日常更新:
   smart-extractor → 读 site_map → web_fetch 已知 URL → LLM 提取 + 发现新页面 → 更新 _index.md（中间产物）
@@ -100,8 +102,9 @@ nanobot 的 skill 是 Markdown 文件（`SKILL.md`），通过自然语言指导
 └─────────────┘     └─────────────┘     └─────────────┘
   递归发现            读 site_map         翻译多语言版本
   生成 site_map      提取结构化数据       校验数据完整性
-  递归访问子页面      探索新子页面        生成多语言 profile
-  记录 URL 架构       更新 site_map       更新全局状态
+  递归访问子页面      分配 tags           生成多语言 profile
+  记录 URL 架构       探索新子页面        聚合 tags 到院校级
+                      更新 site_map       更新全局状态
 ```
 
 ### 首次探索（三阶段流程）
@@ -119,12 +122,14 @@ nanobot 的 skill 是 Markdown 文件（`SKILL.md`），通过自然语言指导
 - **入口**: site_map.md 中每个专业的 URL 列表
 - **方式**: 每个专业 spawn 一个 subagent，web_fetch 已知 URL → LLM 提取结构化数据
 - **额外行为**: 检查页面中是否有 site_map 未记录的子页面，发现后提取数据并更新 site_map
-- **产出**: 保存 `_index.md` 数据文件（中间产物，Phase 3 翻译为多语言版本后删除） + 更新 `crawl_state.json`
+- **产出**: 保存 `_index.md` 数据文件（中间产物，含 tags 字段，Phase 3 翻译为多语言版本后删除） + 更新 `crawl_state.json`
+- **tag 分配**: 处理完一个专业的所有 URL 后，从 `tags.yaml` 词汇表分配 tag（宽松匹配，中文）
 - **并发**: 遵守 maxConcurrentSubagents 限制（最多 2 个并行）
 - **失败处理**: 单个专业失败标记为 failed，跳过继续处理剩余专业
 
 **Phase 3: 校验、翻译与摘要（data-organizer）**
-- **翻译**: 将 `_index.md`（中间产物）翻译为 `_index_EN.md` / `_index_ZH.md` / `_index_DE.md`（德国院校），删除原始 `_index.md`
+- **翻译**: 将 `_index.md`（中间产物）翻译为 `_index_EN.md` / `_index_ZH.md` / `_index_DE.md`（德国院校），删除原始 `_index.md`。tags 字段从 `tags.yaml` 词汇表查找对应语言版本，不自由翻译
+- **聚合 tags**: 运行 `aggregate_tags.py` 将所有 program 的 tags 去重聚合到 university 级别
 - **校验**: 运行 validate_data.py 检查数据完整性
 - **产出**: 生成多语言 `university_profile_EN.md` / `_ZH.md` / `_DE.md`（人可读摘要）
 - **状态更新**: 更新 `collection_status.yaml`
@@ -205,7 +210,7 @@ countries:
 |-------|---------|
 | `site-explorer` | explored, last_explored, next_explore, programs_total（发现阶段产出） |
 | `smart-extractor` | last_synced, sync_mode, next_sync, field_fill_rate, programs_explored, needs_reexplore |
-| `data-organizer` | 新增院校记录（init_university.py）、翻译多语言版本、生成多语言 profile（校验阶段） |
+| `data-organizer` | 新增院校记录（init_university.py）、翻译多语言版本、tags 词汇表查找翻译、聚合 tags 到院校级（aggregate_tags.py）、生成多语言 profile（校验阶段） |
 
 `crawl_state.json` 仍保留，用于 skill 内部的 URL 级细粒度追踪。编排器不直接读取 `crawl_state.json`。
 
@@ -248,6 +253,7 @@ data/universities/de/{slug}/
 - YAML 字段名保持英文不变，只翻译字段值
 - 语言无关字段（slug, degree 枚举, url, 数字）在各语言版本中相同
 - 文本字段（name, city, overview, focus_areas 等）翻译为对应语言
+- `tags` 字段使用受控词汇表（`tags.yaml`），按语言查找对应版本：ZH 文件用中文 tag，EN 文件用英文 tag
 - Markdown body 全文翻译
 
 ### site_map.md
@@ -266,6 +272,45 @@ data/universities/de/{slug}/
 - 关键链接和联系方式
 
 **注意**：需要所有专业的数据提取并翻译完成后才能生成。
+
+### tags（Tag 标签系统）
+
+`tags` 字段使用受控词汇表，定义在 `data/universities/schema/tags.yaml`（中英文映射，共 21 个 tag）。
+
+**Program 级别**：
+- 由 smart-extractor 在 Phase 2 提取数据时，LLM 根据专业内容综合判断分配
+- 宽松匹配，尽可能多打 tag
+- 中间产物 `_index.md` 使用中文 tag，翻译时从词汇表查找对应语言版本
+
+**University 级别**：
+- 由 `aggregate_tags.py` 脚本自动聚合所有 program 的 tags 去重生成
+- 不需要 LLM 判断，纯机械操作
+
+**Tag 词汇表**（`tags.yaml`）：
+
+| 中文 | English |
+|------|---------|
+| 建筑学 | Architecture |
+| 工业设计 | Industrial Design |
+| 产品设计 | Product Design |
+| 交互设计 | Interaction Design |
+| 人机交互 | Human-Computer Interaction |
+| 视觉传达 | Visual Communication |
+| 新媒体 | New Media |
+| 舞台设计 | Stage Design |
+| 设计战略 | Design Strategy |
+| 公共设计 | Public Design |
+| 空间设计 | Spatial Design |
+| 家具设计 | Furniture Design |
+| 数字媒体 | Digital Media |
+| 游戏设计 | Game Design |
+| 可持续设计 | Sustainable Design |
+| 思辨设计 | Speculative Design |
+| 时尚设计 | Fashion Design |
+| 服装设计 | Clothing Design |
+| 珠宝设计 | Jewelry Design |
+| 数字产品设计 | Digital Product Design |
+| 集成设计 | Integrated Design |
 
 ### crawl_state.json
 
@@ -333,7 +378,7 @@ nanobot 的 subagent announce 机制是"单向通知"——subagent 完成后注
   │   失败的专业标记为 failed，跳过继续
   │   HEARTBEAT.md 记录进度（已完成/待处理列表）
   │
-  └─ Phase 3: data-organizer → 翻译多语言版本 + 校验 + 生成多语言 profile
+  └─ Phase 3: data-organizer → 翻译多语言版本（含 tags 查找）+ 聚合 tags + 校验 + 生成多语言 profile
       更新 collection_status.yaml
 ```
 

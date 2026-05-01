@@ -102,6 +102,10 @@ exec("mkdir -p data/universities/{country}/{slug}/programs/{prog-slug}")
 - `programs`（slug 数组）
 - `last_crawled`（时间戳）
 
+词汇表查找的字段（从 `data/universities/schema/tags.yaml` 查找对应语言版本）：
+- `tags`（受控词汇表标签）：ZH 文件用中文 tag，EN 文件用英文 tag，DE 文件用英文 tag（暂不德语化）
+- `_index.md` 中间产物使用中文 tag，翻译时按词汇表查找替换，不得自由翻译
+
 翻译的字段（文本值翻译为目标语言）：
 - `name_de`/`name_en`/`name_cn` → 在 EN 文件中主要用 `name_en`，ZH 文件中用 `name_cn`，DE 文件中用 `name_de`
 - `city`, `state`（地名）
@@ -126,6 +130,10 @@ exec("mkdir -p data/universities/{country}/{slug}/programs/{prog-slug}")
 
 - 保存专业后：确保院校 `_index_EN.md` 的 `programs:` 数组包含该专业 slug（其他语言版本同步更新）
 - 保存院校后：确保 `universities.yaml` 中有对应条目
+- 翻译完所有 program 的 tags 后：运行 `aggregate_tags.py` 聚合 program tags 到 university 级别
+  ```bash
+  exec("python3 skills/data-organizer/scripts/aggregate_tags.py --university <slug>")
+  ```
 
 ### Step 5: 更新爬取状态
 

@@ -21,6 +21,7 @@ Detailed guide for filling each field in the data schemas.
 | `tuition` | No | object | Fee info | see below |
 | `application_deadlines` | No | object | Deadlines | see below |
 | `overview` | No | string | Brief description | 2-3 sentences |
+| `tags` | No | array | Aggregated tags (auto-generated) | ["产品设计", "工业设计"] |
 
 ## Program Schema Fields
 
@@ -37,6 +38,7 @@ Detailed guide for filling each field in the data schemas.
 | `url` | Yes | URI | Program page URL | "https://..." |
 | `department` | No | string | Faculty name | "Faculty of Art and Design" |
 | `focus_areas` | No | array | Key areas | ["product design", "UX"] |
+| `tags` | No | array | Classification tags (from tags.yaml) | ["产品设计", "交互设计"] |
 | `admission_requirements` | No | string | Requirements summary | Free text |
 | `language_requirements` | No | object | Language levels | {"german": "DSH-2"} |
 | `portfolio_required` | No | boolean | Portfolio needed? | true |
@@ -93,3 +95,16 @@ contact:
 | `kunsthochschule` | University of art/design |
 | `musikhochschule` | University of music |
 | `other` | Other institution type |
+
+## Tags
+
+`tags` 使用受控词汇表，定义在 `data/universities/schema/tags.yaml`。每个 tag 有中文和英文版本。
+
+**Program 级别**：由 LLM 在提取时根据专业内容分配，宽松匹配，尽可能多打。数据文件中存储中文 tag，翻译时从词汇表查找对应语言。
+
+**University 级别**：由 `aggregate_tags.py` 脚本自动聚合所有 program 的 tags 去重生成，不需要 LLM 判断。
+
+**规则**：
+- 不得自创 tag，只能从词汇表中选择
+- tag 字符串必须与词汇表完全匹配
+- 一个专业可以有多个 tag

@@ -61,6 +61,11 @@
       "items": { "type": "string" },
       "description": "Key focus areas, e.g. ['product design', 'UX', 'sustainability']"
     },
+    "tags": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "Standard classification tags from the controlled vocabulary (see tags.yaml). Assigned generously based on program content."
+    },
     "admission_requirements": {
       "type": "string",
       "description": "Summary of admission requirements"

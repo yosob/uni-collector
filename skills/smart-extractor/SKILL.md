@@ -35,6 +35,10 @@ description: "按站点地图进行数据提取并探索新子页面。当需要
 
 读取 `skills/page-extractor/references/extraction-prompts.md` 获取各页面类型的数据提取模板。
 
+### Step 2.5: 读取 Tag 词汇表
+
+读取 `data/universities/schema/tags.yaml` 获取标准分类标签词汇表（中英文映射）。提取数据时需要根据专业内容分配 tag。
+
 ### Step 3: 读取爬取状态
 
 读取 `data/universities/de/{slug}/crawl_state.json` 判断哪些 URL 需要更新：
@@ -70,6 +74,13 @@ web_fetch(url=<url>)
 
 - 已知页面类型 → 使用对应模板
 - 未知页面类型 → 使用 program_overview 作为默认模板
+
+**Tag 分配**：在处理完一个专业的所有 URL、准备保存数据前，根据积累的全部信息（专业名称、focus_areas、课程内容、方向描述等）综合判断，从 `tags.yaml` 词汇表中选择合适的 tag：
+
+- **宽松匹配**：只要专业内容与某个 tag 有一定关联就应该打上，宁可多打不要漏打
+- **严格匹配**：tag 字符串必须与 `tags.yaml` 中的 `zh` 值完全一致，不得自创 tag
+- 在中间产物 `_index.md` 中使用**中文 tag**
+- 示例：一个 "Mediendesign" 专业可能同时打上 `["数字媒体", "视觉传达", "交互设计"]`
 
 **d) 记录结果**:
 - 提取成功：记录提取到的字段列表
@@ -153,3 +164,4 @@ web_fetch(url=<url>)
 - `data/universities/de/{slug}/site_map.md` — 必须存在（由 site-explorer 生成，本 skill 可补充新发现的 URL）
 - `skills/page-extractor/references/extraction-prompts.md` — 提取模板
 - `data/universities/schema/*.json` — Schema 定义
+- `data/universities/schema/tags.yaml` — Tag 受控词汇表
