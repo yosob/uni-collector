@@ -1,7 +1,7 @@
 {
   "university_slug": "hfg-schwaebisch-gmuend",
   "last_explored": "2026-04-19T01:30:00Z",
-  "last_sync": "2026-04-19T01:30:00Z",
+  "last_sync": "2026-05-02T04:41:00Z",
   "explore_version": "2.0",
   "pages_crawled": 18,
   "status": "completed",
@@ -10,51 +10,132 @@
     "university_profile": true,
     "programs": {
       "interaktionsgestaltung-ba": {
-        "last_crawled": "2026-04-19T01:30:00Z",
+        "last_crawled": "2026-05-02T03:03:00Z",
         "status": "completed",
-        "url": "https://www.hfg-gmuend.de/studium/interaktionsgestaltung"
+        "url": "https://www.hfg-gmuend.de/studium/interaktionsgestaltung",
+        "source_urls": [
+          "https://www.hfg-gmuend.de/studium/interaktionsgestaltung",
+          "https://www.hfg-gmuend.de/en/studium/interaction-design",
+          "https://ig.hfg-gmuend.de/",
+          "https://www.hfg-gmuend.de/bewerben/bewerbung-ba",
+          "https://www.hfg-gmuend.de/hochschule/professoren",
+          "https://www.hfg-gmuend.de/en/people/david-oswald"
+        ],
+        "professors_updated": true,
+        "application_deadlines_corrected": true
       },
       "kommunikationsgestaltung-ba": {
-        "last_crawled": "2026-04-19T01:30:00Z",
+        "last_crawled": "2026-05-02T03:35:00Z",
         "status": "completed",
-        "url": "https://www.hfg-gmuend.de/studium/kommunikationsgestaltung"
+        "url": "https://www.hfg-gmuend.de/studium/kommunikationsgestaltung",
+        "source_urls": [
+          "https://www.hfg-gmuend.de/studium/kommunikationsgestaltung",
+          "https://www.hfg-gmuend.de/en/studium/communication-design",
+          "https://www.hfg-gmuend.de/bewerben/bewerbung-ba",
+          "https://www.hfg-gmuend.de/personen/andreas-pollok",
+          "https://www.hfg-gmuend.de/hochschule/professoren"
+        ],
+        "professors_updated": true,
+        "application_deadlines_corrected": true,
+        "professors_extracted": [
+          "Prof. Andreas Pollok (Studiengangsleitung)",
+          "Prof. Michael Götte",
+          "Prof. Marc Guntow",
+          "Prof. Ulf Harr (stv. Studiengangsleitung)",
+          "Prof. Dr. Dagmar Rinker"
+        ]
       },
       "produktgestaltung-ba": {
-        "last_crawled": "2026-04-19T01:30:00Z",
+        "last_crawled": "2026-05-02T04:09:00Z",
         "status": "completed",
-        "url": "https://www.hfg-gmuend.de/studium/produktgestaltung"
+        "url": "https://www.hfg-gmuend.de/studium/produktgestaltung",
+        "source_urls": [
+          "https://www.hfg-gmuend.de/studium/produktgestaltung",
+          "https://www.hfg-gmuend.de/en/studium/product-design",
+          "https://www.hfg-gmuend.de/bewerben/bewerbung-ba",
+          "https://www.hfg-gmuend.de/hochschule/professoren",
+          "https://portfolio.hfg-gmuend.de/projekte/studiengang:pg"
+        ],
+        "professors_updated": true,
+        "application_deadlines_corrected": true,
+        "professors_extracted": [
+          "Prof. Dr. habil. Jürgen Held (Studiengangsleitung)",
+          "Prof. Matthias Held",
+          "Prof. Leif Huff",
+          "Prof. Gerhard Reichert",
+          "Prof. Gabriele N. Reichert",
+          "Prof. Dr. Susanne Schade"
+        ]
       },
       "strategische-gestaltung-ma": {
-        "last_crawled": "2026-04-19T01:30:00Z",
+        "last_crawled": "2026-05-02T04:41:00Z",
         "status": "completed",
-        "url": "https://www.hfg-gmuend.de/studium/strategische-gestaltung"
+        "url": "https://www.hfg-gmuend.de/studium/strategische-gestaltung",
+        "source_urls": [
+          "https://www.hfg-gmuend.de/studium/strategische-gestaltung",
+          "https://www.hfg-gmuend.de/en/studium/strategic-design",
+          "https://www.hfg-gmuend.de/bewerben/bewerbung-ma",
+          "https://www.hfg-gmuend.de/bewerben/faq-ma",
+          "https://www.hfg-gmuend.de/hochschule/professoren",
+          "https://www.hfg-gmuend.de/personen/susanne-schade"
+        ],
+        "professors_updated": true,
+        "application_deadlines_corrected": true,
+        "professors_extracted": [
+          "Prof. Dr. Susanne Schade (Studiengangsleiterin)",
+          "Prof. Dr. Julia Duwe (Strategic Transformation Design)"
+        ]
       }
     },
     "phased_out_programs": {
       "digital-product-design-and-development-ba": {
         "status": "läuft aus",
-        "url": "https://www.hfg-gmuend.de/studium/digital-product-design-and-development"
+        "url": "https://www.hfg-gmuend.de/studium/digital-product-design-and-development",
+        "last_crawled": "2026-05-02T05:12:00Z",
+        "crawl_status": "completed",
+        "slug": "digital-product-design-ba",
+        "source_urls": [
+          "https://www.hfg-gmuend.de/studium/digital-product-design-and-development",
+          "https://www.hfg-gmuend.de/en/studium/digital-product-design-and-development",
+          "https://www.hfg-gmuend.de/hochschule/professoren",
+          "https://portfolio.hfg-gmuend.de/s-2626/projekte/studiengang:iot"
+        ],
+        "professors_updated": true,
+        "professors_extracted": [
+          "Prof. Jens Döring (Studiengangsleiter)"
+        ],
+        "successor_program": {
+          "name": "Digital Product Design and Development (B.Eng.)",
+          "university": "Hochschule Aalen",
+          "url": "https://www.hs-aalen.de/de/courses/66"
+        },
+        "notes": "Program discontinued (läuft aus). No new admissions. Portfolio at s-2323/dp returns 404; active at s-2626/iot."
       }
     },
     "application_info": {
       "ba": {
-        "last_crawled": "2026-04-19T01:30:00Z",
+        "last_crawled": "2026-05-02T03:03:00Z",
         "url": "https://www.hfg-gmuend.de/bewerben/bewerbung-ba",
-        "period_ws": "15.05.–15.07.",
-        "period_ss": "15.11.–15.01."
+        "period_ws": "Anfang April bis 15. Mai (Ausschlussfrist)",
+        "period_ss": "Anfang Oktober bis 15. November (Ausschlussfrist)",
+        "portal": "https://me.hfg-gmuend.de/",
+        "eignungspruefung_ws_2026_27": "03.06.2026"
       },
       "ma": {
-        "last_crawled": "2026-04-19T01:30:00Z",
-        "url": "https://www.hfg-gmuend.de/studium/strategische-gestaltung",
-        "period_ws": "15.05.–15.07."
+        "last_crawled": "2026-05-02T04:41:00Z",
+        "url": "https://www.hfg-gmuend.de/bewerben/bewerbung-ma",
+        "period_ws": "Anfang April bis 15. Mai (Ausschlussfrist)",
+        "period_ss": "Anfang Oktober bis 15. November (Ausschlussfrist)",
+        "portal": "https://me.hfg-gmuend.de/",
+        "auswahlgespraech_ss_2025": "17.–18.06.2025"
       }
     },
     "professors": {
-      "last_crawled": "2026-04-19T01:30:00Z",
+      "last_crawled": "2026-05-02T03:03:00Z",
       "url": "https://www.hfg-gmuend.de/hochschule/professoren",
       "count": 25
     }
   },
   "next_explore": "2026-07-19T00:00:00Z",
-  "next_sync": "2026-04-26T00:00:00Z"
+  "next_sync": "2026-05-09T00:00:00Z"
 }

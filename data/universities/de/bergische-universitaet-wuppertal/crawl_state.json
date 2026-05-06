@@ -1,6 +1,6 @@
 {
   "university_slug": "bergische-universitaet-wuppertal",
-  "last_full_crawl": "2026-04-17T17:45:00Z",
+  "last_full_crawl": "2026-05-03T01:45:00Z",
   "pages": {
     "https://www.uni-wuppertal.de/": {
       "last_crawled": "2026-04-17T17:45:00Z",
@@ -27,15 +27,95 @@
       "status": "success",
       "content_type": "department_overview"
     },
-    "https://mr.uni-wuppertal.de/pid": {
-      "last_crawled": "2026-04-17T17:45:00Z",
+    "https://mr.uni-wuppertal.de/dam": {
+      "last_crawled": "2026-05-03T01:45:00Z",
       "status": "success",
       "content_type": "program"
     },
+    "https://mr.uni-wuppertal.de/dam/bachelor": {
+      "last_crawled": "2026-05-03T01:45:00Z",
+      "status": "success",
+      "content_type": "program_detail"
+    },
+    "https://mr.uni-wuppertal.de/dam/bewerben": {
+      "last_crawled": "2026-05-03T01:45:00Z",
+      "status": "success",
+      "content_type": "admission"
+    },
+    "https://mr.uni-wuppertal.de/dim": {
+      "last_crawled": "2026-05-03T01:45:00Z",
+      "status": "success",
+      "content_type": "program"
+    },
+    "https://mr.uni-wuppertal.de/dim/bachelor": {
+      "last_crawled": "2026-05-03T01:45:00Z",
+      "status": "success",
+      "content_type": "program_detail"
+    },
+    "https://mr.uni-wuppertal.de/fro": {
+      "last_crawled": "2026-05-03T01:45:00Z",
+      "status": "success",
+      "content_type": "program"
+    },
+    "https://mr.uni-wuppertal.de/fro/bachelor": {
+      "last_crawled": "2026-05-03T01:45:00Z",
+      "status": "success",
+      "content_type": "program_detail"
+    },
+    "https://mr.uni-wuppertal.de/med": {
+      "last_crawled": "2026-05-03T01:45:00Z",
+      "status": "success",
+      "content_type": "program"
+    },
+    "https://mr.uni-wuppertal.de/med/bachelor": {
+      "last_crawled": "2026-05-03T01:45:00Z",
+      "status": "success",
+      "content_type": "program_detail"
+    },
+    "https://mr.uni-wuppertal.de/pid": {
+      "last_crawled": "2026-05-03T01:45:00Z",
+      "status": "success",
+      "content_type": "program"
+    },
+    "https://mr.uni-wuppertal.de/pid/studium": {
+      "last_crawled": "2026-05-03T01:45:00Z",
+      "status": "success",
+      "content_type": "program_detail"
+    },
+    "https://mr.uni-wuppertal.de/pid/bewerbungpid": {
+      "last_crawled": "2026-05-03T01:45:00Z",
+      "status": "success",
+      "content_type": "admission"
+    },
     "http://www.kunst.uni-wuppertal.de/": {
-      "last_crawled": "2026-04-17T17:45:00Z",
+      "last_crawled": "2026-05-03T01:45:00Z",
       "status": "success",
       "content_type": "department"
+    },
+    "http://kunst.uni-wuppertal.de/bewerbung/studienzugang-und-eignungsfeststellungsverfahren/": {
+      "last_crawled": "2026-05-03T01:45:00Z",
+      "status": "success",
+      "content_type": "admission"
+    },
+    "http://kunst.uni-wuppertal.de/studium-und-lehre/studienverlauf/": {
+      "last_crawled": "2026-05-03T01:45:00Z",
+      "status": "success",
+      "content_type": "program_detail"
+    },
+    "https://www.uni-wuppertal.de/de/studium/studiengaenge/detail/ma-strategische-produkt-und-innovationsentwicklung-ein-fach-studiengaenge/": {
+      "last_crawled": "2026-05-03T01:45:00Z",
+      "status": "success",
+      "content_type": "program"
+    },
+    "https://studiengaenge.zeit.de/studiengang/w42358/strategische-produkt-und-innovationsentwicklung": {
+      "last_crawled": "2026-05-03T01:45:00Z",
+      "status": "success",
+      "content_type": "external_info"
+    },
+    "https://www.daad.de/de/in-deutschland-studieren/hochschulen/alle-studiengaenge/detail/bergische-universitaet-wuppertal-strategische-produkt-und-innovationsentwicklung-w42358/": {
+      "last_crawled": "2026-05-03T01:45:00Z",
+      "status": "success",
+      "content_type": "external_info"
     }
   },
   "pending_urls": [],
@@ -47,10 +127,21 @@
       "design-audiovisueller-medien",
       "design-interaktiver-medien",
       "farbtechnik-raumgestaltung-oberflaechentechnik",
-      "public-interest-design-ma"
+      "public-interest-design-ma",
+      "kunst-ba",
+      "strategische-produkt-innovationsentwicklung"
     ],
-    "programs_updated": [],
-    "programs_total": 7,
-    "last_sync": "2026-04-17T17:45:00Z"
+    "programs_updated": [
+      "design-audiovisueller-medien",
+      "design-interaktiver-medien",
+      "farbtechnik-raumgestaltung-oberflaechentechnik",
+      "mediendesign-und-designtechnik",
+      "public-interest-design-ma",
+      "industrial-design-ba",
+      "strategische-produkt-innovationsentwicklung",
+      "kunst-ba"
+    ],
+    "programs_total": 8,
+    "last_sync": "2026-05-03T01:45:00Z"
   }
 }

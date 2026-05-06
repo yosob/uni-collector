@@ -1,80 +1,226 @@
-# Site Map: Bauhaus-Universität Weimar
+# Bauhaus-Universität Weimar — Site Map
 
-**Exploration Date:** 2026-04-18
-**Root URL:** https://www.uni-weimar.de
-**Design Faculty:** Fakultät Kunst und Gestaltung
+- **University**: Bauhaus-Universität Weimar
+- **Root URL**: https://www.uni-weimar.de
+- **Faculty**: Fakultät Kunst und Gestaltung (Faculty of Art and Design)
+- **Phase**: Phase 1 — Site Discovery
+- **Date**: 2026-05-02
+- **Status**: ✅ Complete
 
-## Website Structure
+---
 
-### University Level
-- Homepage: https://www.uni-weimar.de
-- Universität Overview: https://www.uni-weimar.de/de/universitaet/start/
-- Studium (Studies): https://www.uni-weimar.de/de/universitaet/studium/
-- Studienangebote (Study Programmes): https://www.uni-weimar.de/de/universitaet/studium/studienangebote/
+## 1. Fakultät Kunst und Gestaltung — Overview Pages
 
-### Faculty: Kunst und Gestaltung (Art and Design)
-- Faculty Start: https://www.uni-weimar.de/de/kunst-und-gestaltung/start/
-- Studium (Studies): https://www.uni-weimar.de/de/kunst-und-gestaltung/studium/
-- Übersicht der Studiengänge: https://www.uni-weimar.de/de/kunst-und-gestaltung/studium/uebersicht-der-studiengaenge/
-- Lehrgebiete und Personen: https://www.uni-weimar.de/de/kunst-und-gestaltung/struktur/lehrgebiete-personen/
-- Informationen für Studienbewerber*innen: https://www.uni-weimar.de/de/kunst-und-gestaltung/studium/informationen-fuer-studienbewerberinnen/
-- Bewerbung und Zulassung: https://www.uni-weimar.de/de/kunst-und-gestaltung/studium/informationen-fuer-studienbewerberinnen/bewerbung-und-zulassung/
-- Profil/Über die Fakultät: https://www.uni-weimar.de/de/kunst-und-gestaltung/profil/ueber-die-fakultaet/
-- Weimarer Modell: https://www.uni-weimar.de/de/kunst-und-gestaltung/profil/das-weimarer-modell/
+| Section | URL (DE) | URL (EN) | Status |
+|---------|----------|----------|--------|
+| Fakultät Start | `/de/kunst-und-gestaltung/start/` | `/en/art-and-design/start/` | ✅ |
+| Profil | `/de/kunst-und-gestaltung/profil/` | `/en/art-and-design/profile/` | ✅ |
+| Über die Fakultät | `/de/kunst-und-gestaltung/profil/ueber-die-fakultaet/` | — | ✅ |
+| Das Weimarer Modell | `/de/kunst-und-gestaltung/profil/das-weimarer-modell/` | — | ✅ |
+| Studium (Hauptseite) | `/de/kunst-und-gestaltung/studium/` | `/en/art-and-design/studies/` | ✅ |
+| Struktur | `/de/kunst-und-gestaltung/struktur/` | `/en/art-and-design/structure/` | ✅ |
+| Aktuell | `/de/kunst-und-gestaltung/aktuell/` | `/en/art-and-design/news/` | ✅ |
+| International | `/de/kunst-und-gestaltung/international/` | `/en/art-and-design/international/` | ✅ |
+| Partner und Alumni | `/de/kunst-und-gestaltung/partner-und-alumni/` | `/en/art-and-design/partners-and-alumni/` | ✅ |
+| Service | `/de/kunst-und-gestaltung/service/` | `/en/art-and-design/services/` | ✅ |
+| Projekte | `/de/kunst-und-gestaltung/projekte/` | `/en/art-and-design/projekte/` | ✅ |
+| Erklärvideos | `/de/kunst-und-gestaltung/projekte/erklaervideos-zum-studium/` | — | ✅ |
 
-### Programs (Design/Art Related)
+---
 
-#### 1. Freie Kunst (Fine Art) — Diplom
-- Overview: https://www.uni-weimar.de/de/kunst-und-gestaltung/studium/freie-kunst/
-- Professuren: https://www.uni-weimar.de/de/kunst-und-gestaltung/struktur/lehrgebiete-personen/freie-kunst-diplom-kunst-im-oeffentlichen-raum-mfa/
+## 2. Studiengangsübersicht (Degree Programs Overview)
 
-#### 2. Kunst im öffentlichen Raum (Public Art and New Artistic Strategies) — M.F.A.
-- Professur: https://www.uni-weimar.de/de/kunst-und-gestaltung/professuren/public-art-and-new-artistic-strategies/
-- Personen: https://www.uni-weimar.de/de/kunst-und-gestaltung/professuren/public-art-and-new-artistic-strategies/personen/
-- Lehre: https://www.uni-weimar.de/de/kunst-und-gestaltung/professuren/public-art-and-new-artistic-strategies/lehre/
+| Page | URL (DE) | URL (EN) | Status |
+|------|----------|----------|--------|
+| Übersicht der Studiengänge | `/de/kunst-und-gestaltung/studium/uebersicht-der-studiengaenge/` | `/en/art-and-design/studies/overview-of-degree-programmes/` | ⚠️ EN 404 |
 
-#### 3. Lehramt an Gymnasien Kunst (Fine Art Education) — Staatsexamen
-- Overview: https://www.uni-weimar.de/de/kunst-und-gestaltung/studium/lehramt-an-gymnasien-kunst/
+---
 
-#### 4. Medienkunst/Mediengestaltung (Media Art and Design) — B.F.A.
-- Overview: https://www.uni-weimar.de/de/kunst-und-gestaltung/studium/medienkunstmediengestaltung/
-- B.F.A. Detail: https://www.uni-weimar.de/de/kunst-und-gestaltung/studium/medienkunstmediengestaltung/medienkunstmediengestaltung-bfa/
+## 3. Freie Kunst (Fine Art)
 
-#### 5. Medienkunst (Media Art) — M.F.A.
-- M.F.A. Detail: https://www.uni-weimar.de/de/kunst-und-gestaltung/studium/medienkunstmediengestaltung/medienkunstmediengestaltung-mfa/
+| Subpage | URL (DE) | URL (EN) | Status |
+|---------|----------|----------|--------|
+| **Hauptseite** | `/de/kunst-und-gestaltung/studium/freie-kunst/` | `/en/art-and-design/studies/freie-kunst-fine-art/` | ✅ |
+| Was passiert im ersten Semester | `/de/kunst-und-gestaltung/studium/informationen-fuer-studienbewerberinnen/was-passiert-eigentlichim-ersten-semester-freie-kunst/` | — | ✅ |
 
-#### 6. Produktdesign (Product Design) — B.A.
-- Overview: https://www.uni-weimar.de/de/kunst-und-gestaltung/studium/produktdesign/
-- B.A. Detail: https://www.uni-weimar.de/de/kunst-und-gestaltung/studium/produktdesign/produktdesign-ba/
+---
 
-#### 7. Produktdesign (Product Design) — M.A.
-- M.A. Detail: https://www.uni-weimar.de/de/kunst-und-gestaltung/studium/produktdesign/produktdesign-ma/
+## 4. Lehramt an Gymnasien Kunst (Teaching Degree Art)
 
-#### 8. Visuelle Kommunikation (Visual Communication) — B.A.
-- Overview: https://www.uni-weimar.de/de/kunst-und-gestaltung/studium/visuelle-kommunikation/
-- B.A. Detail: https://www.uni-weimar.de/de/kunst-und-gestaltung/studium/visuelle-kommunikation/visuelle-kommunikation-ba/
+| Subpage | URL (DE) | URL (EN) | Status |
+|---------|----------|----------|--------|
+| **Hauptseite** | `/de/kunst-und-gestaltung/studium/lehramt-an-gymnasien-kunst/` | `/en/art-and-design/studies/teaching-degree-art/` | ✅ |
 
-#### 9. Visuelle Kommunikation (Visual Communication) — M.A.
-- M.A. Detail: https://www.uni-weimar.de/de/kunst-und-gestaltung/studium/visuelle-kommunikation/visuelle-kommunikation-ma/
+---
 
-### Application Pages
-- Application Overview (EN): https://www.uni-weimar.de/en/art-and-design/studies/information-for-students-applicants/application/
-- Bauhaus.CampusPortal: https://elearning.uni-weimar.de/campusportal/
+## 5. Medienkunst / Mediengestaltung (Media Art / Media Design)
 
-### Professor/Chair Pages
-- Visuelle Kommunikation: https://www.uni-weimar.de/de/kunst-und-gestaltung/struktur/lehrgebiete-personen/visuelle-kommunikation/
-- Produktdesign: https://www.uni-weimar.de/de/kunst-und-gestaltung/struktur/lehrgebiete-personen/produktdesign/
-- Medienkunst/Mediengestaltung: https://www.uni-weimar.de/de/kunst-und-gestaltung/struktur/lehrgebiete-personen/medienkunstmediengestaltung/
-- Freie Kunst: https://www.uni-weimar.de/de/kunst-und-gestaltung/struktur/lehrgebiete-personen/freie-kunst-diplom-kunst-im-oeffentlichen-raum-mfa/
-- Public Art: https://www.uni-weimar.de/de/kunst-und-gestaltung/professuren/public-art-and-new-artistic-strategies/
+| Subpage | URL (DE) | URL (EN) | Status |
+|---------|----------|----------|--------|
+| **Hauptseite** | `/de/kunst-und-gestaltung/studium/medienkunstmediengestaltung/` | `/en/art-and-design/studies/media-art-and-design/` | ✅ |
+| B.F.A. Medienkunst/Mediengestaltung | `/de/kunst-und-gestaltung/studium/medienkunstmediengestaltung/medienkunstmediengestaltung-bfa/` | — | ✅ |
+| M.F.A. Medienkunst/Mediengestaltung | `/de/kunst-und-gestaltung/studium/medienkunstmediengestaltung/medienkunstmediengestaltung-mfa/` | — | ✅ |
 
-### Other Faculties (non-design, not collected)
-- Fakultät Architektur und Urbanistik: https://www.uni-weimar.de/de/architektur-und-urbanistik/start/
-- Fakultät Bau und Umwelt: https://www.uni-weimar.de/de/bau-und-umwelt/start/
-- Fakultät Medien: https://www.uni-weimar.de/de/medien/start/
+---
 
-## Notes
-- Website is heavily JavaScript-based; content extraction via web_fetch is limited to navigation structure
-- Many detailed program pages render content dynamically via JS
-- The English pages often have the same structure but at /en/ paths
-- All programs in the Faculty of Art and Design follow the "Weimarer Modell" (Weimar Model)
+## 6. Produktdesign (Product Design)
+
+| Subpage | URL (DE) | URL (EN) | Status |
+|---------|----------|----------|--------|
+| **Hauptseite** | `/de/kunst-und-gestaltung/studium/produktdesign/` | `/en/art-and-design/studies/produktdesign-product-design/` | ✅ |
+| Produktdesign (B.A.) | `/de/kunst-und-gestaltung/studium/produktdesign/produktdesign-ba/` | — | ✅ |
+| Produktdesign (M.A.) | `/de/kunst-und-gestaltung/studium/produktdesign/produktdesign-ma/` | — | ✅ |
+| Abschlussarbeiten Produktdesign | `/de/kunst-und-gestaltung/studium/produktdesign/abschlussarbeiten-produktdesign/` | `/en/art-and-design/studies/produktdesign-product-design/abschlussarbeiten-produktdesign/` | ✅ |
+
+---
+
+## 7. Visuelle Kommunikation (Visual Communication)
+
+| Subpage | URL (DE) | URL (EN) | Status |
+|---------|----------|----------|--------|
+| **Hauptseite** | `/de/kunst-und-gestaltung/studium/visuelle-kommunikation/` | `/en/art-and-design/studies/visuelle-kommunikation-visual-communication/` | ✅ |
+| Visuelle Kommunikation (B.A.) | `/de/kunst-und-gestaltung/studium/visuelle-kommunikation/visuelle-kommunikation-ba/` | — | ✅ |
+| Visuelle Kommunikation (M.A.) | `/de/kunst-und-gestaltung/studium/visuelle-kommunikation/visuelle-kommunikation-ma/` | — | ✅ |
+
+---
+
+## 8. Promovieren an der Fakultät Kunst und Gestaltung (Doctorate)
+
+| Subpage | URL (DE) | URL (EN) | Status |
+|---------|----------|----------|--------|
+| **Hauptseite** | `/de/kunst-und-gestaltung/studium/promovieren-an-der-fakultaet-kunst-und-gestaltung/` | `/en/art-and-design/studies/doctorate-at-the-faculty-of-art-and-design/` | ✅ |
+| Aktuelles | `/de/kunst-und-gestaltung/studium/promovieren-an-der-fakultaet-kunst-und-gestaltung/aktuelles/` | — | ✅ |
+| **Studienprogramme** | `/de/kunst-und-gestaltung/studium/promovieren-an-der-fakultaet-kunst-und-gestaltung/studienprogramme/` | — | ✅ |
+| Ph.D.-Programm | `…/studienprogramme/phd-programm/` | — | ✅ |
+| Ph.D. Bewerbung | `…/studienprogramme/phd-programm/bewerbung/` | — | ✅ |
+| Ph.D. Graduierungskommission | `…/studienprogramme/phd-programm/phd-graduierungskommission/` | — | ✅ |
+| Promotion Dr.phil. | `…/studienprogramme/promotion-drphil/` | — | ✅ |
+| Dr.phil. Bewerbung | `…/studienprogramme/promotion-drphil/bewerbung/` | — | ✅ |
+| Dr.phil. Graduierungskommission | `…/studienprogramme/promotion-drphil/drphil-graduierungskommission/` | — | ✅ |
+| **Promotionsprojekte** | `…/promotionsprojekte/` | — | ✅ |
+| Kunst (Ph.D.) | `…/promotionsprojekte/kunst-phd/` | — | ✅ |
+| Design (Ph.D.) | `…/promotionsprojekte/design-phd/` | — | ✅ |
+| Promotionen (Dr.phil.) | `…/promotionsprojekte/promotionen-drphil/` | — | ✅ |
+| Alumni | `…/promotionsprojekte/alumni/` | — | ✅ |
+| Promotionsordnung | `/de/kunst-und-gestaltung/service/downloads/ordnungen/promotionsordnung/` | — | ✅ |
+
+---
+
+## 9. Wissenschaftliche Lehrgebiete (Scientific Disciplines)
+
+| Subpage | URL (DE) | URL (EN) | Status |
+|---------|----------|----------|--------|
+| **Übersicht** | `/de/kunst-und-gestaltung/studium/wissenschaftliche-lehrgebiete/` | `/en/art-and-design/studies/scientific-disciplines/` | ✅ |
+| Geschichte und Theorie der Architektur | `/de/kunst-und-gestaltung/studium/wissenschaftliche-lehrgebiete/geschichte-und-theorie-der-architektur/` | — | ✅ |
+| Kunst- und Kulturgeschichte | `/de/kunst-und-gestaltung/studium/wissenschaftliche-lehrgebiete/kunst-und-kulturgeschichte/` | — | ✅ |
+| Philosophie | `/de/kunst-und-gestaltung/studium/wissenschaftliche-lehrgebiete/philosophie/` | — | ✅ |
+| Bildwissenschaft (visuelle Kultur) | `/de/kunst-und-gestaltung/studium/wissenschaftliche-lehrgebiete/bildwissenschaft-visuelle-kultur/` | — | ✅ |
+
+---
+
+## 10. Lehrgebiete und Personen (Departments & People)
+
+| Subpage | URL (DE) | Status |
+|---------|----------|--------|
+| **Übersicht** | `/de/kunst-und-gestaltung/struktur/lehrgebiete-personen/` | ✅ |
+| **Freie Kunst / Kunst im öffentlichen Raum (M.f.A.)** | `/de/kunst-und-gestaltung/struktur/lehrgebiete-personen/freie-kunst-diplom-kunst-im-oeffentlichen-raum-mfa/` | ✅ |
+| Prof. Danijela Dugandzic (Zeichnen / Malen) | `…/freie-kunst-diplom-kunst-im-oeffentlichen-raum-mfa/prof-danijela-dugandzic-zele/` | ✅ |
+| Prof. Annette Gries (Drucken/Fläche) | `…/freie-kunst-diplom-kunst-im-oeffentlichen-raum-mfa/prof-annette-gries-druckenflache/` | ✅ |
+| Prof. Barbara Nemitz (Malerei) | `…/freie-kunst-diplom-kunst-im-oeffentlichen-raum-mfa/prof-barbara-nemitz-malerei/` | ✅ |
+| Prof. Michaela Rotsch (Objekte/Räume) | `…/freie-kunst-diplom-kunst-im-oeffentlichen-raum-mfa/prof-michaela-rotsch-objekteraume/` | ✅ |
+| Prof._Ines Lechleitner (Künstlerisches Handeln und Wahrnehmen) | `…/freie-kunst-diplom-kunst-im-oeffentlichen-raum-mfa/prof-ines-lechleitner-kuenstlerisches-handeln-und-wahrnehmen/` | ✅ |
+| Prof. Maria Vedder (Kunst und Medien) | `…/freie-kunst-diplom-kunst-im-oeffentlichen-raum-mfa/prof-maria-vedder-kunst-und-medien/` | ✅ |
+| **Medienkunst / Mediengestaltung** | `/de/kunst-und-gestaltung/struktur/lehrgebiete-personen/medienkunstmediengestaltung/` | ✅ |
+| Prof. Ursula Damm | `…/medienkunstmediengestaltung/prof-ursula-damm/` | ✅ |
+| Prof. Verena Kuni | `…/medienkunstmediengestaltung/prof-verena-kuni/` | ✅ |
+| Prof. Nikita Dhawan (Global Dis:connect) | `…/medienkunstmediengestaltung/prof-nikita-dhawan/` | ✅ |
+| **Produktdesign** | `/de/kunst-und-gestaltung/struktur/lehrgebiete-personen/produktdesign/` | ✅ |
+| Prof. Sidsel Meineche Hansen | `…/produktdesign/prof-sidsel-meineche-hansen/` | ✅ |
+| Prof. Mark Weiler | `…/produktdesign/prof-mark-weiler/` | ✅ |
+| Prof. Tom Hanses | `…/produktdesign/prof-tom-hanses/` | ✅ |
+| **Visuelle Kommunikation** | `/de/kunst-und-gestaltung/struktur/lehrgebiete-personen/visuelle-kommunikation/` | ✅ |
+| Prof. Markus Weisbeck | `…/visuelle-kommunikation/prof-markus-weisbeck/` | ✅ |
+| Prof. Till Gathmann | `…/visuelle-kommunikation/prof-till-gathmann/` | ✅ |
+| Prof. Ludger Pfanz | `…/visuelle-kommunikation/prof-ludger-pfanz/` | ✅ |
+| Prof. Daniel ben Schmuel (Typografie) | `…/visuelle-kommunikation/prof-daniel-ben-schmuel-typografie/` | ✅ |
+| **Lehramt an Gymnasien Kunst** | `/de/kunst-und-gestaltung/struktur/lehrgebiete-personen/lehramt-an-gymnasien-kunst/` | ✅ |
+| Prof. Sven Drühl | `…/lehramt-an-gymnasien-kunst/prof-sven-druehl/` | ✅ |
+| Prof. Ben Laumann (Grundlagen der Gestaltung) | `…/lehramt-an-gymnasien-kunst/prof-ben-laumann-grundlagen-der-gestaltung/` | ✅ |
+| **Werkstätten** | `/de/kunst-und-gestaltung/struktur/werkstaetten/` | ✅ |
+| **Verwaltung** | `/de/kunst-und-gestaltung/struktur/verwaltung/` | ✅ |
+| **Dekanat** | `/de/kunst-und-gestaltung/struktur/dekanat/` | ✅ |
+
+---
+
+## 11. Informationen für Studienbewerber\*innen
+
+| Subpage | URL (DE) | URL (EN) | Status |
+|---------|----------|----------|--------|
+| **Hauptseite** | `/de/kunst-und-gestaltung/studium/informationen-fuer-studienbewerberinnen/` | `/en/art-and-design/studies/information-for-students-applicants/` | ✅ |
+| FAQ | `/de/kunst-und-gestaltung/studium/informationen-fuer-studienbewerberinnen/faq/` | — | ✅ |
+| Portfoliomappe | `/de/kunst-und-gestaltung/studium/informationen-fuer-studienbewerberinnen/portfoliomappe/` | — | ✅ |
+
+---
+
+## 12. Informationen für Studienstarter
+
+| Subpage | URL (DE) | Status |
+|---------|----------|--------|
+| Hauptseite | `/de/kunst-und-gestaltung/studium/informationen-fuer-studienstarter/` | ✅ |
+
+---
+
+## 13. Service / Downloads
+
+| Subpage | URL (DE) | Status |
+|---------|----------|--------|
+| Downloads | `/de/kunst-und-gestaltung/service/downloads/` | ✅ |
+| Ordnungen | `/de/kunst-und-gestaltung/service/downloads/ordnungen/` | ✅ |
+| Promotionsordnung | `/de/kunst-und-gestaltung/service/downloads/ordnungen/promotionsordnung/` | ✅ |
+| Studienordnungen | `/de/kunst-und-gestaltung/service/downloads/ordnungen/studienordnungen/` | ✅ |
+
+---
+
+## 14. Degree Programs Summary
+
+| # | Program | Degree | URL (DE) |
+|---|---------|--------|----------|
+| 1 | Freie Kunst | Diplom | `/de/kunst-und-gestaltung/studium/freie-kunst/` |
+| 2 | Kunst im öffentlichen Raum | M.f.A. | `/de/kunst-und-gestaltung/studium/freie-kunst/kunst-im-oeffentlichen-raum-mfa/` |
+| 3 | Lehramt an Gymnasien Kunst | Staatsexamen | `/de/kunst-und-gestaltung/studium/lehramt-an-gymnasien-kunst/` |
+| 4 | Medienkunst / Mediengestaltung | B.F.A. | `/de/kunst-und-gestaltung/studium/medienkunstmediengestaltung/medienkunstmediengestaltung-bfa/` |
+| 5 | Medienkunst / Mediengestaltung | M.F.A. | `/de/kunst-und-gestaltung/studium/medienkunstmediengestaltung/medienkunstmediengestaltung-mfa/` |
+| 6 | Produktdesign | B.A. | `/de/kunst-und-gestaltung/studium/produktdesign/produktdesign-ba/` |
+| 7 | Produktdesign | M.A. | `/de/kunst-und-gestaltung/studium/produktdesign/produktdesign-ma/` |
+| 8 | Visuelle Kommunikation | B.A. | `/de/kunst-und-gestaltung/studium/visuelle-kommunikation/visuelle-kommunikation-ba/` |
+| 9 | Visuelle Kommunikation | M.A. | `/de/kunst-und-gestaltung/studium/visuelle-kommunikation/visuelle-kommunikation-ma/` |
+| 10 | Ph.D. (Kunst/Design) | Ph.D. | `…/promovieren-an-der-fakultaet-kunst-und-gestaltung/studienprogramme/phd-programm/` |
+| 11 | Promotion Dr.phil. | Dr.phil. | `…/promovieren-an-der-fakultaet-kunst-und-gestaltung/studienprogramme/promotion-drphil/` |
+
+---
+
+## 15. 404 / Dead Pages (Previously in old sitemap, now removed)
+
+| URL | Status |
+|-----|--------|
+| `…/freie-kunst/freie-kunst-diplom/` | ❌ 404 |
+| `…/freie-kunst/kunst-im-oeffentlichen-raum-mfa/` | ❌ 404 |
+| `…/informationen-fuer-studienbewerberinnen/bewerbung-und-einschreibung/` | ❌ 404 |
+| `…/informationen-fuer-studienbewerberinnen/bewerbung-studienkolleg/` | ❌ 404 |
+| `…/informationen-fuer-studienbewerberinnen/bewerbung-und-einschreibung-freie-kunst-und-kunst-auf-dem-lehramt/` | ❌ 404 |
+| `…/informationen-fuer-studienbewerberinnen/bewerbung-und-einschreibung-gestalterische-studiengaenge/` | ❌ 404 |
+| EN: `/en/art-and-design/studies/overview-of-degree-programmes/` | ❌ 404 |
+| EN: `/en/art-and-design/studies/overview-of-study-programmes/` | ❌ 404 |
+
+---
+
+## 16. Crawl Statistics
+
+| Metric | Value |
+|--------|-------|
+| Pages fetched | ~30 |
+| Unique program pages | 11 degree programs |
+| Professor/Department pages | 17+ |
+| Dead pages (404) | 8 |
+| Languages | DE + EN (partial) |
+| Faculty scope | Kunst und Gestaltung only |

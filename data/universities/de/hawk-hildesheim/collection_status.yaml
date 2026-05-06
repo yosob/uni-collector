@@ -2,6 +2,7 @@ university_slug: "hawk-hildesheim"
 university_name: "HAWK Hochschule für angewandte Wissenschaft und Kunst"
 status: "completed"
 last_deep_crawl: "2026-04-19"
+last_smart_extract: "2026-05-03"
 programs:
   - slug: "ba-gestaltung"
     name: "Gestaltung (B.A.)"
@@ -40,6 +41,13 @@ kompetenzfelder:
     status: "completed"
   - slug: "produktgestaltung"
     name: "Product Design / Produktdesign"
+    status: "completed"
+additional_programs:
+  - slug: "gestaltung"
+    name: "Gestaltung (Übersicht)"
+    status: "completed"
+  - slug: "kommunikationsdesign"
+    name: "Kommunikationsdesign (Übersicht)"
     status: "completed"
 pages_crawled: 30
 pages_failed: 1

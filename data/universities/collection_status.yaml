@@ -1,281 +1,280 @@
-version: 1
 countries:
   de:
     universities:
-    - slug: bauhaus-universitaet-weimar
+    - errors: []
       explored: true
-      last_explored: '2026-04-18'
-      next_explore: '2026-07-18'
-      last_synced: '2026-04-18'
-      sync_mode: site_explorer
-      next_sync: '2026-04-25'
-      field_fill_rate: 0.48
+      field_fill_rate: 0.43
+      last_explored: '2026-05-02'
+      last_synced: '2026-05-02'
+      needs_reexplore: false
+      next_explore: '2026-08-01'
+      next_sync: '2026-06-02'
       programs_explored: 9
-      programs_total: 9
-      errors: []
-      needs_reexplore: false
-    - slug: hfg-schwaebisch-gmuend
-      explored: true
-      last_explored: '2026-04-19'
-      next_explore: '2026-07-19'
-      last_synced: '2026-04-19'
-      sync_mode: site_explorer
-      next_sync: '2026-04-26'
-      field_fill_rate: 0.36
-      programs_explored: 4
-      programs_total: 4
-      errors: []
-      needs_reexplore: false
-    - slug: bergische-universitaet-wuppertal
-      explored: true
-      last_explored: '2026-04-18'
-      next_explore: '2026-07-18'
-      last_synced: '2026-04-18'
-      sync_mode: site_explorer
-      next_sync: '2026-04-25'
-      field_fill_rate: 0.55
-      programs_explored: 7
-      programs_total: 8
-      errors:
-      - 'missing program _index.md: kunst-ba'
-      needs_reexplore: false
-    - slug: hfg-offenbach
-      explored: true
-      last_explored: '2026-04-19'
-      next_explore: '2026-07-19'
-      last_synced: '2026-04-19'
-      sync_mode: site_explorer
-      next_sync: '2026-04-26'
-      field_fill_rate: 0.72
-      programs_explored: 7
-      programs_total: 7
-      errors: []
-      needs_reexplore: false
-    - slug: muthesius-kunsthochschule
-      explored: true
-      last_explored: '2026-04-19'
-      next_explore: '2026-07-19'
-      last_synced: '2026-04-19'
-      sync_mode: site_explorer
-      next_sync: '2026-04-26'
-      field_fill_rate: 0.68
-      programs_explored: 12
-      programs_total: 12
-      errors: []
-      needs_reexplore: false
-    - slug: hs-magdeburg-stendal
-      explored: true
-      last_explored: '2026-04-19'
-      next_explore: '2026-07-19'
-      last_synced: '2026-04-19'
-      sync_mode: site_explorer
-      next_sync: '2026-04-26'
-      field_fill_rate: 0.55
-      programs_explored: 3
-      programs_total: 3
-      errors: []
-      needs_reexplore: false
-    - slug: fh-potsdam
-      explored: true
-      last_explored: '2026-04-19'
-      next_explore: '2026-07-19'
-      last_synced: '2026-04-19'
-      sync_mode: site_explorer
-      next_sync: '2026-04-26'
-      field_fill_rate: 0.68
-      programs_explored: 10
       programs_total: 10
-      errors: []
-      needs_reexplore: false
-    - slug: kh-berlin-weissensee
-      explored: true
-      last_explored: '2026-04-19'
-      next_explore: '2026-07-19'
-      last_synced: '2026-04-19'
+      slug: bauhaus-universitaet-weimar
       sync_mode: site_explorer
-      next_sync: '2026-04-26'
-      field_fill_rate: 0.62
-      programs_explored: 9
-      programs_total: 9
-      errors: []
-      needs_reexplore: false
-    - slug: hawk-hildesheim
+    - errors: []
       explored: true
-      last_explored: '2026-04-19'
-      next_explore: '2026-07-19'
-      last_synced: '2026-04-19'
-      sync_mode: site_explorer
-      next_sync: '2026-04-26'
-      field_fill_rate: 0.55
-      programs_explored: 13
-      programs_total: 13
-      errors: []
+      field_fill_rate: 0.41
+      last_explored: '2026-05-02'
+      last_synced: '2026-05-02'
       needs_reexplore: false
-    - slug: hs-darmstadt
-      explored: true
-      last_explored: '2026-04-19'
-      next_explore: '2026-07-19'
-      last_synced: '2026-04-19'
-      sync_mode: site_explorer
-      next_sync: '2026-04-26'
-      field_fill_rate: 0.55
-      programs_explored: 4
-      programs_total: 4
-      errors: []
-      needs_reexplore: false
-    - slug: htw-berlin
-      explored: true
-      last_explored: '2026-04-19'
-      next_explore: '2026-07-19'
-      last_synced: '2026-04-19'
-      sync_mode: site_explorer
-      next_sync: '2026-04-26'
-      field_fill_rate: 0.47
-      programs_explored: 14
-      programs_total: 14
-      errors: []
-      needs_reexplore: false
-    - slug: htw-dresden
-      explored: true
-      last_explored: '2026-04-19'
-      next_explore: '2026-07-19'
-      last_synced: '2026-04-19'
-      sync_mode: site_explorer
-      next_sync: '2026-04-26'
-      field_fill_rate: 0.82
-      programs_explored: 2
-      programs_total: 2
-      errors: []
-      needs_reexplore: false
-    - slug: udk-berlin
-      explored: true
-      last_explored: '2026-04-19'
-      next_explore: '2026-07-19'
-      last_synced: '2026-04-19'
-      sync_mode: site_explorer
-      next_sync: '2026-04-26'
-      field_fill_rate: 0.75
-      programs_explored: 16
-      programs_total: 16
-      errors: []
-      needs_reexplore: false
-    - slug: tu-udk-berlin
-      explored: true
-      last_explored: '2026-04-18'
-      next_explore: '2026-07-18'
-      last_synced: '2026-04-18'
-      sync_mode: site_explorer
-      next_sync: '2026-04-25'
-      field_fill_rate: 0.6
-      programs_explored: 1
-      programs_total: 1
-      errors: []
-      needs_reexplore: false
-    - slug: kunsthochschule-kassel
-      explored: true
-      last_explored: '2026-04-19'
-      next_explore: '2026-07-19'
-      last_synced: '2026-04-19'
-      sync_mode: site_explorer
-      next_sync: '2026-04-26'
-      field_fill_rate: 0.65
-      programs_explored: 6
-      programs_total: 6
-      errors: []
-      needs_reexplore: false
-    - slug: hfg-karlsruhe
-      explored: true
-      last_explored: '2026-04-19'
-      next_explore: '2026-07-19'
-      last_synced: '2026-04-19'
-      sync_mode: site_explorer
-      next_sync: '2026-04-26'
-      field_fill_rate: 0.49
+      next_explore: '2026-08-01'
+      next_sync: '2026-06-02'
       programs_explored: 5
       programs_total: 5
-      errors: []
-      needs_reexplore: false
-    - slug: folkwang-uni
-      explored: true
-      last_explored: '2026-04-19'
-      next_explore: '2026-07-19'
-      last_synced: '2026-04-19'
+      slug: hfg-schwaebisch-gmuend
       sync_mode: site_explorer
-      next_sync: '2026-04-26'
-      field_fill_rate: 0.87
+    - errors: []
+      explored: true
+      field_fill_rate: 0.46
+      last_explored: '2026-05-02'
+      last_synced: '2026-05-02'
+      needs_reexplore: false
+      next_explore: '2026-08-01'
+      next_sync: '2026-06-02'
       programs_explored: 8
       programs_total: 8
-      errors: []
-      needs_reexplore: false
-    - slug: abk-stuttgart
-      explored: true
-      last_explored: '2026-04-19'
-      next_explore: '2026-07-19'
-      last_synced: '2026-04-19'
+      slug: bergische-universitaet-wuppertal
       sync_mode: site_explorer
-      next_sync: '2026-04-26'
-      field_fill_rate: 0.62
-      programs_explored: 15
-      programs_total: 15
-      errors: []
-      needs_reexplore: false
-    - slug: hfk-bremen
+    - errors: []
       explored: true
-      last_explored: '2026-04-19'
-      next_explore: '2026-07-19'
-      last_synced: '2026-04-19'
-      sync_mode: site_explorer
-      next_sync: '2026-04-26'
-      field_fill_rate: 0.6
-      programs_explored: 5
-      programs_total: 5
-      errors: []
-      needs_reexplore: false
-    - slug: hbksaar
-      explored: true
-      last_explored: '2026-04-19'
-      next_explore: '2026-07-19'
-      last_synced: '2026-04-19'
-      sync_mode: site_explorer
-      next_sync: '2026-04-26'
       field_fill_rate: 0.41
-      programs_explored: 14
-      programs_total: 14
-      errors: []
+      last_explored: '2026-05-02'
+      last_synced: '2026-05-02'
       needs_reexplore: false
-    - slug: burg-halle
-      explored: true
-      last_explored: '2026-04-19'
-      next_explore: '2026-07-19'
-      last_synced: '2026-04-19'
+      next_explore: '2026-08-01'
+      next_sync: '2026-06-02'
+      programs_explored: 7
+      programs_total: 7
+      slug: hfg-offenbach
       sync_mode: site_explorer
-      next_sync: '2026-04-26'
-      field_fill_rate: 0.72
-      programs_explored: 24
-      programs_total: 24
-      errors: []
+    - errors: []
+      explored: true
+      field_fill_rate: 0.32
+      last_explored: '2026-05-02'
+      last_synced: '2026-05-02'
       needs_reexplore: false
-    - slug: hbk-braunschweig
-      explored: true
-      last_explored: '2026-04-19'
-      next_explore: '2026-07-19'
-      last_synced: '2026-04-19'
+      next_explore: '2026-08-01'
+      next_sync: '2026-06-02'
+      programs_explored: 12
+      programs_total: 12
+      slug: muthesius-kunsthochschule
       sync_mode: site_explorer
-      next_sync: '2026-04-26'
+    - errors: []
+      explored: true
+      field_fill_rate: 0.53
+      last_explored: '2026-05-02'
+      last_synced: '2026-05-02'
+      needs_reexplore: false
+      next_explore: '2026-08-01'
+      next_sync: '2026-06-02'
+      programs_explored: 3
+      programs_total: 3
+      slug: hs-magdeburg-stendal
+      sync_mode: site_explorer
+    - errors: []
+      explored: true
       field_fill_rate: 0.44
-      programs_explored: 6
-      programs_total: 6
-      errors: []
+      last_explored: '2026-05-02'
+      last_synced: '2026-05-02'
       needs_reexplore: false
-    - slug: hs-muenchen
-      explored: true
-      last_explored: '2026-04-19'
-      next_explore: '2026-07-19'
-      last_synced: '2026-04-19'
+      next_explore: '2026-08-01'
+      next_sync: '2026-06-02'
+      programs_explored: 10
+      programs_total: 10
+      slug: fh-potsdam
       sync_mode: site_explorer
-      next_sync: '2026-04-26'
-      field_fill_rate: 0.72
+    - errors: []
+      explored: true
+      field_fill_rate: 0.35
+      last_explored: '2026-05-02'
+      last_synced: '2026-05-02'
+      needs_reexplore: false
+      next_explore: '2026-08-01'
+      next_sync: '2026-06-02'
+      programs_explored: 9
+      programs_total: 9
+      slug: kh-berlin-weissensee
+      sync_mode: site_explorer
+    - errors: []
+      explored: true
+      field_fill_rate: 0.4
+      last_explored: '2026-05-03'
+      last_synced: '2026-05-03'
+      needs_reexplore: false
+      next_explore: '2026-08-01'
+      next_sync: '2026-06-02'
+      programs_explored: 13
+      programs_total: 13
+      slug: hawk-hildesheim
+      sync_mode: site_explorer
+    - errors: []
+      explored: true
+      field_fill_rate: 0.41
+      last_explored: '2026-05-03'
+      last_synced: '2026-05-03'
+      needs_reexplore: false
+      next_explore: '2026-08-01'
+      next_sync: '2026-06-02'
       programs_explored: 4
       programs_total: 4
-      errors: []
+      slug: hs-darmstadt
+      sync_mode: site_explorer
+    - errors: []
+      explored: true
+      field_fill_rate: 0.46
+      last_explored: '2026-05-03'
+      last_synced: '2026-05-03'
       needs_reexplore: false
+      next_explore: '2026-08-01'
+      next_sync: '2026-06-02'
+      programs_explored: 16
+      programs_total: 16
+      slug: htw-berlin
+      sync_mode: site_explorer
+    - errors: []
+      explored: true
+      field_fill_rate: 0.37
+      last_explored: '2026-05-03'
+      last_synced: '2026-05-03'
+      needs_reexplore: false
+      next_explore: '2026-08-01'
+      next_sync: '2026-06-02'
+      programs_explored: 2
+      programs_total: 2
+      slug: htw-dresden
+      sync_mode: site_explorer
+    - errors: []
+      explored: true
+      field_fill_rate: 0.4
+      last_explored: '2026-05-03'
+      last_synced: '2026-05-03'
+      needs_reexplore: false
+      next_explore: '2026-08-01'
+      next_sync: '2026-06-02'
+      programs_explored: 16
+      programs_total: 16
+      slug: udk-berlin
+      sync_mode: site_explorer
+    - errors: []
+      explored: true
+      field_fill_rate: 0.32
+      last_explored: '2026-05-03'
+      last_synced: '2026-05-03'
+      needs_reexplore: false
+      next_explore: '2026-08-01'
+      next_sync: '2026-06-02'
+      programs_explored: 2
+      programs_total: 2
+      slug: tu-udk-berlin
+      sync_mode: site_explorer
+    - errors: []
+      explored: true
+      field_fill_rate: 0.47
+      last_explored: '2026-05-03'
+      last_synced: '2026-05-03'
+      needs_reexplore: false
+      next_explore: '2026-08-01'
+      next_sync: '2026-06-02'
+      programs_explored: 6
+      programs_total: 6
+      slug: kunsthochschule-kassel
+      sync_mode: site_explorer
+    - errors: []
+      explored: true
+      field_fill_rate: 0.47
+      last_explored: '2026-05-03'
+      last_synced: '2026-05-03'
+      needs_reexplore: false
+      next_explore: '2026-08-01'
+      next_sync: '2026-06-02'
+      programs_explored: 5
+      programs_total: 5
+      slug: hfg-karlsruhe
+      sync_mode: site_explorer
+    - errors: []
+      explored: true
+      field_fill_rate: 0.42
+      last_explored: '2026-05-03'
+      last_synced: '2026-05-03'
+      needs_reexplore: false
+      next_explore: '2026-08-01'
+      next_sync: '2026-06-02'
+      programs_explored: 8
+      programs_total: 8
+      slug: folkwang-uni
+      sync_mode: site_explorer
+    - errors: []
+      explored: true
+      field_fill_rate: 0.32
+      last_explored: '2026-05-03'
+      last_synced: '2026-05-03'
+      needs_reexplore: false
+      next_explore: '2026-08-01'
+      next_sync: '2026-06-02'
+      programs_explored: 15
+      programs_total: 15
+      slug: abk-stuttgart
+      sync_mode: site_explorer
+    - errors: []
+      explored: true
+      field_fill_rate: 0.44
+      last_explored: '2026-05-03'
+      last_synced: '2026-05-03'
+      needs_reexplore: false
+      next_explore: '2026-08-01'
+      next_sync: '2026-06-02'
+      programs_explored: 5
+      programs_total: 5
+      slug: hfk-bremen
+      sync_mode: site_explorer
+    - errors: []
+      explored: true
+      field_fill_rate: 0.43
+      last_explored: '2026-05-03'
+      last_synced: '2026-05-03'
+      needs_reexplore: false
+      next_explore: '2026-08-01'
+      next_sync: '2026-06-02'
+      programs_explored: 14
+      programs_total: 14
+      slug: hbksaar
+      sync_mode: site_explorer
+    - errors: []
+      explored: true
+      field_fill_rate: 0.46
+      last_explored: '2026-05-03'
+      last_synced: '2026-05-03'
+      needs_reexplore: false
+      next_explore: '2026-08-01'
+      next_sync: '2026-06-02'
+      programs_explored: 24
+      programs_total: 24
+      slug: burg-halle
+      sync_mode: site_explorer
+    - errors: []
+      explored: true
+      field_fill_rate: 0.46
+      last_explored: '2026-05-03'
+      last_synced: '2026-05-03'
+      needs_reexplore: false
+      next_explore: '2026-08-01'
+      next_sync: '2026-06-02'
+      programs_explored: 6
+      programs_total: 6
+      slug: hbk-braunschweig
+      sync_mode: site_explorer
+    - errors: []
+      explored: true
+      field_fill_rate: 0.35
+      last_explored: '2026-05-03'
+      last_synced: '2026-05-03'
+      needs_reexplore: false
+      next_explore: '2026-08-01'
+      next_sync: '2026-06-02'
+      programs_explored: 4
+      programs_total: 4
+      slug: hs-muenchen
+      sync_mode: site_explorer
+version: 1

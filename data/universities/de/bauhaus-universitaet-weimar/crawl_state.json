@@ -2,56 +2,231 @@
   "university": "bauhaus-universitaet-weimar",
   "last_explored": "2026-04-18",
   "next_explore": "2026-07-18",
-  "last_synced": "2026-04-18",
-  "sync_mode": "site_explorer",
+  "last_synced": "2026-05-02",
+  "last_updated": "2026-05-02",
+  "last_smart_extract": "2026-05-02",
+  "sync_mode": "smart_extractor",
   "next_sync": "2026-04-25",
   "programs_explored": 9,
   "programs_total": 9,
   "programs": {
     "freie-kunst-diplom": {
-      "status": "explored",
-      "last_crawled": "2026-04-18",
+      "status": "updated",
+      "last_crawled": "2026-05-02",
       "pages_visited": [
         "https://www.uni-weimar.de/de/kunst-und-gestaltung/studium/freie-kunst/",
-        "https://www.uni-weimar.de/de/kunst-und-gestaltung/struktur/lehrgebiete-personen/freie-kunst-diplom-kunst-im-oeffentlichen-raum-mfa/"
+        "https://www.uni-weimar.de/de/kunst-und-gestaltung/struktur/lehrgebiete-personen/freie-kunst-diplom-kunst-im-oeffentlichen-raum-mfa/",
+        "https://www.uni-weimar.de/en/art-and-design/studies/freie-kunst-fine-art/",
+        "https://www.uni-weimar.de/de/kunst-und-gestaltung/studium/informationen-fuer-studienbewerberinnen/bewerbung/",
+        "https://www.uni-weimar.de/de/kunst-und-gestaltung/professuren/freie-kunst-prof-bjoern-dahlem/"
+      ],
+      "new_pages_discovered": [
+        "https://www.uni-weimar.de/de/kunst-und-gestaltung/professuren/freie-kunst-prof-bjoern-dahlem/",
+        "https://www.uni-weimar.de/de/kunst-und-gestaltung/professuren/experimentelle-malerei-und-zeichnung/",
+        "https://www.uni-weimar.de/de/kunst-und-gestaltung/professuren/kunst-und-sozialer-raum/",
+        "https://www.uni-weimar.de/de/kunst-und-gestaltung/struktur/lehrgebiete-personen/freie-kunst-diplom-kunst-im-oeffentlichen-raum-mfa/gastwiss-marcel-walldorf/",
+        "https://www.uni-weimar.de/de/kunst-und-gestaltung/struktur/werkstaetten-ausstattung/"
+      ],
+      "changes": [
+        "Corrected duration from 10 to 8 semesters",
+        "Corrected application deadline from March 31 to July 15",
+        "Corrected portfolio from ~20 to 10-15 work samples (max 30MB PDF)",
+        "Added 3 professors: Prof. Dr. habil. Roman Liška, Prof. Christine Hill, Gastwiss. Marcel Walldorf",
+        "Added ECTS credits: 300",
+        "Added 5 new discovered subpages to site_map",
+        "Added tags, EN URL, application_portal_url, related_pages"
       ]
     },
     "kunst-im-oeffentlichen-raum-mfa": {
-      "status": "explored",
-      "last_crawled": "2026-04-18",
+      "status": "updated",
+      "last_crawled": "2026-05-02",
       "pages_visited": [
-        "https://www.uni-weimar.de/de/kunst-und-gestaltung/professuren/public-art-and-new-artistic-strategies/"
+        "https://www.uni-weimar.de/de/kunst-und-gestaltung/professuren/public-art-and-new-artistic-strategies/",
+        "https://www.uni-weimar.de/de/kunst-und-gestaltung/professuren/public-art-and-new-artistic-strategies/personen/",
+        "https://www.uni-weimar.de/de/kunst-und-gestaltung/professuren/public-art-and-new-artistic-strategies/lehre/",
+        "https://www.uni-weimar.de/de/kunst-und-gestaltung/professuren/public-art-and-new-artistic-strategies/lehre/credit-system/",
+        "https://www.uni-weimar.de/de/kunst-und-gestaltung/professuren/public-art-and-new-artistic-strategies/lehre/internationalitaet/",
+        "https://www.uni-weimar.de/de/kunst-und-gestaltung/professuren/public-art-and-new-artistic-strategies/projekte/",
+        "https://www.uni-weimar.de/de/kunst-und-gestaltung/professuren/public-art-and-new-artistic-strategies/guest-lectures/",
+        "https://www.uni-weimar.de/de/kunst-und-gestaltung/professuren/public-art-and-new-artistic-strategies/panas-komplizen/",
+        "https://www.uni-weimar.de/de/kunst-und-gestaltung/professuren/public-art-and-new-artistic-strategies/personen/ehemalige-lehrende/",
+        "https://www.uni-weimar.de/en/art-and-design/chairs/public-art-and-new-artistic-strategies/intro/",
+        "https://www.uni-weimar.de/en/art-and-design/chairs/public-art-and-new-artistic-strategies/chair/",
+        "https://www.uni-weimar.de/en/art-and-design/chairs/public-art-and-new-artistic-strategies/intro/internationality/",
+        "https://www.uni-weimar.de/de/kunst-und-gestaltung/struktur/lehrgebiete-personen/freie-kunst-diplom-kunst-im-oeffentlichen-raum-mfa/",
+        "https://www.uni-weimar.de/de/kunst-und-gestaltung/studium/informationen-fuer-studienbewerberinnen/bewerbung/"
+      ],
+      "changes": [
+        "Added ECTS credits: 120",
+        "Added EN URL and comprehensive related_pages (14 links)",
+        "Added application_portal_url",
+        "Added tags: 公共设计, 空间设计, 新媒体",
+        "Added curriculum details: credit system, internationality, Weimarer Modell",
+        "Added 8 documented projects with descriptions",
+        "Added 40+ guest lectures documented",
+        "Added PANAS & Komplizen initiative",
+        "Added extended professor information with related Freie Kunst Lehrgebiet faculty",
+        "Added comprehensive teaching/curriculum section",
+        "Added 14 source_urls from DE and EN pages"
       ]
     },
     "lehramt-kunst-gymnasium": {
-      "status": "explored",
-      "last_crawled": "2026-04-18",
+      "status": "updated",
+      "last_crawled": "2026-05-02",
       "pages_visited": [
-        "https://www.uni-weimar.de/de/kunst-und-gestaltung/studium/lehramt-an-gymnasien-kunst/"
+        "https://www.uni-weimar.de/de/kunst-und-gestaltung/studium/lehramt-an-gymnasien-kunst/",
+        "https://www.uni-weimar.de/de/kunst-und-gestaltung/struktur/lehrgebiete-personen/lehramt-an-gymnasien-kunst/",
+        "https://www.uni-weimar.de/en/art-and-design/studies/lehramt-an-gymnasien-kunst-fine-art-education/",
+        "https://www.uni-weimar.de/de/kunst-und-gestaltung/professuren/kunst-und-ihre-didaktik/lehre-vermittlung/leitbild-lehramt-an-gymnasien-kunst/",
+        "https://www.uni-weimar.de/de/kunst-und-gestaltung/studium/informationen-fuer-studienbewerberinnen/bewerbung/",
+        "https://www.uni-weimar.de/de/kunst-und-gestaltung/professuren/kunst-und-ihre-didaktik/personen/elisa-rufenach-ruthenberg/",
+        "https://www.uni-weimar.de/de/kunst-und-gestaltung/professuren/kunst-und-ihre-didaktik/personen/christian-nille/vita/"
+      ],
+      "new_pages_discovered": [
+        "https://www.uni-weimar.de/de/kunst-und-gestaltung/professuren/kunst-und-ihre-didaktik/",
+        "https://www.uni-weimar.de/de/kunst-und-gestaltung/professuren/kunst-und-ihre-didaktik/lehre-vermittlung/leitbild-lehramt-an-gymnasien-kunst/",
+        "https://www.uni-weimar.de/de/kunst-und-gestaltung/professuren/kunst-und-ihre-didaktik/personen/prof-dr-andrea-dreyer/",
+        "https://www.uni-weimar.de/de/kunst-und-gestaltung/professuren/kunst-und-ihre-didaktik/personen/gaby-kosa/",
+        "https://www.uni-weimar.de/de/kunst-und-gestaltung/professuren/kunst-und-ihre-didaktik/personen/christian-nille/",
+        "https://www.uni-weimar.de/de/kunst-und-gestaltung/professuren/kunst-und-ihre-didaktik/personen/christian-andres-parra-sanchez/",
+        "https://www.uni-weimar.de/de/kunst-und-gestaltung/professuren/kunst-und-ihre-didaktik/personen/elisa-rufenach-ruthenberg/",
+        "https://www.uni-weimar.de/de/kunst-und-gestaltung/professuren/kunst-und-ihre-didaktik/personen/katja-milker/"
+      ],
+      "changes": [
+        "Added name_cn: 文理中学艺术教育（师范）",
+        "Added url_en for English program page",
+        "Added application_portal_url",
+        "Added tags: 视觉传达, 新媒体",
+        "Added 6 detailed professors/staff with individual URLs",
+        "Added contact info (Prof. Dr. Andrea Dreyer)",
+        "Added 5 related_pages (mission, people, chair, application, courses)",
+        "Expanded curriculum_summary with detailed structure description",
+        "Expanded application_process with three-phase details",
+        "Added Leitbild (mission statement) page content",
+        "Added 7 source_urls from DE and EN pages",
+        "Updated program variant descriptions (Doppelfach/Einzelfach)",
+        "Updated full markdown body with curriculum structure and staff table"
       ]
     },
     "medienkunst-mediengestaltung-bfa": {
-      "status": "explored",
-      "last_crawled": "2026-04-18",
+      "status": "updated",
+      "last_crawled": "2026-05-02",
       "pages_visited": [
         "https://www.uni-weimar.de/de/kunst-und-gestaltung/studium/medienkunstmediengestaltung/",
         "https://www.uni-weimar.de/de/kunst-und-gestaltung/studium/medienkunstmediengestaltung/medienkunstmediengestaltung-bfa/",
-        "https://www.uni-weimar.de/en/art-and-design/studies/media-art-and-design/"
+        "https://www.uni-weimar.de/en/art-and-design/studies/media-art-and-design/medienkunstmediengestaltung-bfa/",
+        "https://www.uni-weimar.de/de/kunst-und-gestaltung/struktur/lehrgebiete-personen/medienkunstmediengestaltung/",
+        "https://www.uni-weimar.de/de/kunst-und-gestaltung/professuren/media-environments/",
+        "https://www.uni-weimar.de/de/kunst-und-gestaltung/professuren/media-environments/personen/",
+        "https://www.uni-weimar.de/de/kunst-und-gestaltung/professuren/interface-design/",
+        "https://www.uni-weimar.de/de/kunst-und-gestaltung/professuren/medien-ereignisse/",
+        "https://www.uni-weimar.de/de/kunst-und-gestaltung/professuren/medien-ereignisse/personen/",
+        "https://www.uni-weimar.de/de/kunst-und-gestaltung/professuren/experimentelles-radio/",
+        "https://www.uni-weimar.de/de/kunst-und-gestaltung/professuren/akustische-oekologien-und-sound-studies/",
+        "https://www.uni-weimar.de/de/kunst-und-gestaltung/studium/informationen-fuer-studienbewerberinnen/bewerbung/"
+      ],
+      "new_pages_discovered": [
+        "https://www.uni-weimar.de/de/kunst-und-gestaltung/professuren/media-environments/",
+        "https://www.uni-weimar.de/de/kunst-und-gestaltung/professuren/media-environments/personen/",
+        "https://www.uni-weimar.de/de/kunst-und-gestaltung/professuren/media-environments/kurse/",
+        "https://www.uni-weimar.de/de/kunst-und-gestaltung/professuren/media-environments/laboratories/",
+        "https://www.uni-weimar.de/de/kunst-und-gestaltung/professuren/media-environments/projekte/",
+        "https://www.uni-weimar.de/de/kunst-und-gestaltung/professuren/interface-design/",
+        "https://www.uni-weimar.de/de/kunst-und-gestaltung/professuren/medien-ereignisse/",
+        "https://www.uni-weimar.de/de/kunst-und-gestaltung/professuren/medien-ereignisse/personen/",
+        "https://www.uni-weimar.de/de/kunst-und-gestaltung/professuren/medien-ereignisse/lehre/",
+        "https://www.uni-weimar.de/de/kunst-und-gestaltung/professuren/experimentelles-radio/",
+        "https://www.uni-weimar.de/de/kunst-und-gestaltung/professuren/experimentelles-radio/personen/",
+        "https://www.uni-weimar.de/de/kunst-und-gestaltung/professuren/experimentelles-radio/lehre/",
+        "https://www.uni-weimar.de/de/kunst-und-gestaltung/professuren/akustische-oekologien-und-sound-studies/",
+        "https://www.uni-weimar.de/de/kunst-und-gestaltung/professuren/akustische-oekologien-und-sound-studies/people/",
+        "https://www.uni-weimar.de/de/kunst-und-gestaltung/professuren/akustische-oekologien-und-sound-studies/teaching/",
+        "https://www.uni-weimar.de/de/kunst-und-gestaltung/professuren/akustische-oekologien-und-sound-studies/studios/"
+      ],
+      "changes": [
+        "Added ECTS credits: 240",
+        "Added url_en for English BFA program page",
+        "Added application_portal_url (Bauhaus.CampusPortal)",
+        "Added tags: 新媒体, 交互设计, 数字媒体",
+        "Added 6 detailed professors with individual URLs and research areas",
+        "Added 3 staff members with profile URLs",
+        "Added 9 related_pages (Lehrgebiete, 6 professor chairs, application, portal, MFA)",
+        "Added 12 source_urls from DE and EN pages",
+        "Added Studios and Laboratories table (10 facilities across 4 chairs)",
+        "Added curriculum structure with 4 phases (orientation, deepening, specialization, thesis)",
+        "Expanded application_process with detailed 5-phase timeline table",
+        "Added portfolio_details (max 30MB PDF)",
+        "Added detailed professorship sections with labs, projects, courses, and staff",
+        "Added 'animation' to focus_areas (from Medien-Ereignisse chair)",
+        "Added 16 new discovered subpages to site_map"
       ]
     },
     "medienkunst-mfa": {
-      "status": "explored",
-      "last_crawled": "2026-04-18",
+      "status": "updated",
+      "last_crawled": "2026-05-02",
       "pages_visited": [
-        "https://www.uni-weimar.de/de/kunst-und-gestaltung/studium/medienkunstmediengestaltung/medienkunstmediengestaltung-mfa/"
+        "https://www.uni-weimar.de/de/kunst-und-gestaltung/studium/medienkunstmediengestaltung/medienkunstmediengestaltung-mfa/",
+        "https://www.uni-weimar.de/en/art-and-design/studies/media-art-and-design/medienkunstmediengestaltung-mfa/",
+        "https://www.uni-weimar.de/de/kunst-und-gestaltung/struktur/lehrgebiete-personen/medienkunstmediengestaltung/",
+        "https://www.uni-weimar.de/de/kunst-und-gestaltung/studium/informationen-fuer-studienbewerberinnen/bewerbung/",
+        "https://www.uni-weimar.de/de/kunst-und-gestaltung/professuren/media-environments/",
+        "https://www.uni-weimar.de/de/kunst-und-gestaltung/professuren/interface-design/",
+        "https://www.uni-weimar.de/de/kunst-und-gestaltung/professuren/medien-ereignisse/",
+        "https://www.uni-weimar.de/de/kunst-und-gestaltung/professuren/experimentelles-radio/",
+        "https://www.uni-weimar.de/de/kunst-und-gestaltung/professuren/akustische-oekologien-und-sound-studies/"
+      ],
+      "changes": [
+        "Added ECTS credits: 120 (4-semester track) / 60 (2-semester fast-track)",
+        "Added duration_semesters: 4 (standard track, was 2)",
+        "Added url_en for English MFA program page",
+        "Added application_portal_url (Bauhaus.CampusPortal)",
+        "Added tags: 新媒体, 交互设计, 数字媒体",
+        "Added 6 detailed professors with individual URLs and research areas",
+        "Added 3 staff members with profile URLs",
+        "Added 10 related_pages (Lehrgebiete, 6 professor chairs, application, portal, BFA sibling, Weimarer Modell)",
+        "Added 9 source_urls from DE and EN pages",
+        "Added Studios and Laboratories table (10 facilities across 4 chairs)",
+        "Added detailed curriculum structure for both 4-semester and 2-semester tracks",
+        "Expanded application_process with detailed 4-phase timeline table",
+        "Added portfolio_details (max 30MB PDF)",
+        "Added detailed professorship sections with labs, projects, courses, and staff",
+        "Added 'animation' to focus_areas (from Medien-Ereignisse chair)"
       ]
     },
     "product-design-ba": {
-      "status": "explored",
-      "last_crawled": "2026-04-18",
+      "status": "updated",
+      "last_crawled": "2026-05-02",
       "pages_visited": [
         "https://www.uni-weimar.de/de/kunst-und-gestaltung/studium/produktdesign/produktdesign-ba/",
-        "https://www.uni-weimar.de/de/kunst-und-gestaltung/struktur/lehrgebiete-personen/produktdesign/"
+        "https://www.uni-weimar.de/de/kunst-und-gestaltung/studium/produktdesign/",
+        "https://www.uni-weimar.de/de/kunst-und-gestaltung/struktur/lehrgebiete-personen/produktdesign/",
+        "https://www.uni-weimar.de/de/kunst-und-gestaltung/professuren/transformatives-design/",
+        "https://www.uni-weimar.de/de/kunst-und-gestaltung/professuren/emerging-technologies-and-design/",
+        "https://www.uni-weimar.de/de/kunst-und-gestaltung/studium/produktdesign/abschlussarbeiten-produktdesign/"
+      ],
+      "new_pages_discovered": [
+        "https://www.uni-weimar.de/de/kunst-und-gestaltung/professuren/transformatives-design/",
+        "https://www.uni-weimar.de/de/kunst-und-gestaltung/professuren/transformatives-design/personen/",
+        "https://www.uni-weimar.de/de/kunst-und-gestaltung/professuren/emerging-technologies-and-design/",
+        "https://www.uni-weimar.de/de/kunst-und-gestaltung/studium/produktdesign/abschlussarbeiten-produktdesign/"
+      ],
+      "changes": [
+        "Corrected duration from 6 to 8 semesters",
+        "Corrected Prof. Mühlenberend chair from 'Transformation Design' to 'experimental industrial design'",
+        "Added associated professor: Prof. Dr. Jan Willmann (Designtheorie und Designforschung)",
+        "Added Gastwiss. Dr.-Ing. Charlett Wenig (Vertretung Transformatives Design)",
+        "Added 5 staff members with contact details",
+        "Added Prüfungsausschuss (examination board) with 5 members",
+        "Added detailed 3-stage application process timeline",
+        "Updated portfolio_details: up to 10 work samples, must bring originals to interview",
+        "Added application_portal_url",
+        "Added 14 career perspectives",
+        "Added 5 workshops/facilities",
+        "Added tags: 产品设计, 工业设计, 可持续设计, 思辨设计, 数字产品设计",
+        "Added 7 related_pages",
+        "Added extended professorship descriptions with focus areas",
+        "Expanded curriculum_summary with Weimarer Modell and project types",
+        "Updated source_urls to 5 pages"
       ]
     },
     "product-design": {

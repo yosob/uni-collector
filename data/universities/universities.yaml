@@ -513,7 +513,16 @@ universities:
         name_en: Fine Art
         name_de: Freie Kunst
         url: https://www.hbksaar.de/studiengaenge/freie-kunst
-        degree: ba_diplom
+        degree: ba
+        focus: false
+        start_urls:
+          - url: https://www.hbksaar.de/studiengaenge/freie-kunst
+            type: program_overview
+      - slug: freie-kunst-diplom
+        name_en: Fine Art (Diplom)
+        name_de: Freie Kunst (Diplom)
+        url: https://www.hbksaar.de/studiengaenge/freie-kunst
+        degree: diplom
         focus: false
         start_urls:
           - url: https://www.hbksaar.de/studiengaenge/freie-kunst
@@ -522,7 +531,16 @@ universities:
         name_en: Communication Design
         name_de: Kommunikationsdesign
         url: https://www.hbksaar.de/studiengaenge/kommunikationsdesign
-        degree: ba_diplom
+        degree: ba
+        focus: false
+        start_urls:
+          - url: https://www.hbksaar.de/studiengaenge/kommunikationsdesign
+            type: program_overview
+      - slug: kommunikationsdesign-diplom
+        name_en: Communication Design (Diplom)
+        name_de: Kommunikationsdesign (Diplom)
+        url: https://www.hbksaar.de/studiengaenge/kommunikationsdesign
+        degree: diplom
         focus: false
         start_urls:
           - url: https://www.hbksaar.de/studiengaenge/kommunikationsdesign
@@ -531,7 +549,16 @@ universities:
         name_en: Product Design
         name_de: Produktdesign
         url: https://www.hbksaar.de/studiengaenge/produktdesign
-        degree: ba_diplom
+        degree: ba
+        focus: false
+        start_urls:
+          - url: https://www.hbksaar.de/studiengaenge/produktdesign
+            type: program_overview
+      - slug: produktdesign-diplom
+        name_en: Product Design (Diplom)
+        name_de: Produktdesign (Diplom)
+        url: https://www.hbksaar.de/studiengaenge/produktdesign
+        degree: diplom
         focus: false
         start_urls:
           - url: https://www.hbksaar.de/studiengaenge/produktdesign
@@ -540,7 +567,16 @@ universities:
         name_en: Media Art and Design
         name_de: Media Art & Design
         url: https://www.hbksaar.de/studiengaenge/media-art-design
-        degree: ba_diplom
+        degree: ba
+        focus: false
+        start_urls:
+          - url: https://www.hbksaar.de/studiengaenge/media-art-design
+            type: program_overview
+      - slug: media-art-design-diplom
+        name_en: Media Art and Design (Diplom)
+        name_de: Media Art & Design (Diplom)
+        url: https://www.hbksaar.de/studiengaenge/media-art-design
+        degree: diplom
         focus: false
         start_urls:
           - url: https://www.hbksaar.de/studiengaenge/media-art-design
@@ -549,7 +585,7 @@ universities:
         name_en: Art Education (Lehramt)
         name_de: Kunsterziehung
         url: https://www.hbksaar.de/studiengaenge/kunsterziehung
-        degree: staatsexamen
+        degree: state_exam
         focus: false
         start_urls:
           - url: https://www.hbksaar.de/studiengaenge/kunsterziehung
@@ -630,7 +666,7 @@ universities:
         name_en: Master Career Changer Teaching Art
         name_de: Master Quereinstieg Lehramt Bildende Kunst
         url: https://www.hbksaar.de/studiengaenge/master-studiengaenge
-        degree: med
+        degree: ma
         focus: false
         start_urls:
           - url: https://www.hbksaar.de/studiengaenge/master-studiengaenge
@@ -706,7 +742,16 @@ universities:
         name_en: Art History
         name_de: Kunstwissenschaft
         url: https://www.hbk-bs.de/studium/studienangebot/kunstwissenschaft/
-        degree: ba-ma
+        degree: ba
+        focus: false
+        start_urls:
+          - url: https://www.hbk-bs.de/studium/studienangebot/kunstwissenschaft/
+            type: program_overview
+      - slug: kunstwissenschaft-ma
+        name_en: Art History (Master)
+        name_de: Kunstwissenschaft (Master)
+        url: https://www.hbk-bs.de/studium/studienangebot/kunstwissenschaft/
+        degree: ma
         focus: false
         start_urls:
           - url: https://www.hbk-bs.de/studium/studienangebot/kunstwissenschaft/

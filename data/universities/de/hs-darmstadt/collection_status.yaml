@@ -1,0 +1,40 @@
+university_slug: "hs-darmstadt"
+university_name: "Hochschule Darmstadt — Fachbereich Gestaltung"
+status: "completed"
+last_deep_crawl: "2026-04-19"
+last_smart_extract: "2026-05-03"
+programs:
+  - slug: "industriedesign-diplom"
+    name: "Industriedesign (Diplom FH)"
+    status: "completed"
+    data_completeness: 92
+    notes: "Full data including faculty, workshops, application details"
+  - slug: "kommunikationsdesign-diplom"
+    name: "Kommunikationsdesign (Diplom FH)"
+    status: "completed"
+    data_completeness: 92
+    notes: "Full data including faculty, workshops, application details"
+  - slug: "fotografie-diplom"
+    name: "Fotografie (Diplom FH, Schwerpunkt KD)"
+    status: "completed"
+    data_completeness: 88
+    notes: "Full data, photography focus within KD"
+  - slug: "industriedesign"
+    name: "Industriedesign (Alias)"
+    status: "completed"
+    notes: "Redirect alias to industriedesign-diplom"
+pages_crawled: 12
+werkstaetten: 8
+professors_found: 20
+research_institutes: 4
+data_quality:
+  has_all_programs: true
+  has_admission_info: true
+  has_curriculum_info: true
+  has_contact_info: true
+  has_faculty_info: true
+  has_workshops: true
+  has_research: true
+  missing_fields:
+    - "tuition fee details (only standard semester fee mentioned)"
+    - "some professor profile pages not individually fetched"
