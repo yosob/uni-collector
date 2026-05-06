@@ -134,20 +134,14 @@ web_fetch(url=<url>)
 - 专业名称、学位等专有名词保留原文
 - 翻译完成后删除原始 `_index.md`
 
-### Step 8: 校验
-
-```
-exec("python3 skills/data-organizer/scripts/validate_data.py --program {program-slug}")
-```
-
-### Step 9: 更新爬取状态
+### Step 8: 更新爬取状态
 
 更新 `crawl_state.json`：
 - 更新每个 URL 的 `last_crawled`、`status`、`extracted_fields`
 - 记录错误信息
 - crawl_state 用于记录已处理 URL，防止遗漏
 
-### Step 10: 报告
+### Step 9: 报告
 
 输出提取报告：
 ```
@@ -158,7 +152,7 @@ exec("python3 skills/data-organizer/scripts/validate_data.py --program {program-
 - 状态: 正常/警告/需要重新探索
 ```
 
-### Step 11: 更新全局状态
+### Step 10: 更新全局状态
 
 **仅在独立执行（日常更新）时执行此步骤**。在三阶段流程中作为 subagent 被调用时，全局状态由 uni-collector 在 Phase 3 统一更新，跳过此步骤。
 
@@ -179,12 +173,17 @@ exec("python3 skills/data-organizer/scripts/validate_data.py --program {program-
 
 当输入为单个 URL（非院校 slug 或专业名称）时：
 
-1. **判断页面类型**：读取 `references/page-type-classification.md`，根据 URL 模式和内容判断
-2. **抓取页面**：web_fetch(url)
-3. **提取数据**：按对应模板提取
-4. **保存**：根据数据类型保存到合适位置（或输出结果由用户决定）
-5. **翻译**：生成多语言版本
-6. **不更新全局状态**：单页面模式不修改 collection_status.yaml
+1. **抓取页面**：web_fetch(url)
+2. **判断页面类型**：读取 `references/page-type-classification.md`，根据 URL 模式和内容判断
+3. **识别所属院校和专业**：
+   - 从 URL 域名匹配 `universities.yaml` 中已知院校
+   - 从 URL 路径匹配 `site_map.md` 中已知专业
+   - 如果无法识别，检查 `data/universities/` 下所有院校的 site_map.md
+4. **根据识别结果分支**：
+   - **已知院校 + 已知专业** → 将 URL 补充到 site_map.md（如未记录） → 提取数据 → 更新专业 _index.md → 翻译
+   - **已知院校 + 新专业/新子页面** → 将 URL 补充到 site_map.md → 提取数据 → 创建新专业目录（如需要） → 保存+翻译
+   - **未知院校** → 询问用户是否收录该院校 → 如果确认，触发 university-scout 完整流程（更新 universities.yaml + collection_status.yaml + 首次探索）
+5. **不更新全局状态**：单页面模式不修改 collection_status.yaml
 
 ## 批量模式
 

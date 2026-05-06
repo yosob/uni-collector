@@ -6,8 +6,8 @@ Detailed guide for filling each field in the data schemas.
 
 | Field | Required | Type | Description | Example |
 |-------|----------|------|-------------|---------|
-| `name_de` | Yes | string | Official German name | "Bauhaus-Universitat Weimar" |
-| `name_en` | Yes | string | English name | "Bauhaus-Universitat Weimar" |
+| `name_de` | Yes | string | Official German name | "Bauhaus-Universität Weimar" |
+| `name_en` | Yes | string | English name | "Bauhaus-Universität Weimar" |
 | `name_cn` | No | string | Chinese name | "包豪斯大学" |
 | `slug` | Yes | string | URL-safe ID | "bauhaus-universitaet-weimar" |
 | `url` | Yes | URI | Official website | "https://www.uni-weimar.de" |
@@ -20,7 +20,10 @@ Detailed guide for filling each field in the data schemas.
 | `languages` | No | array | Instruction languages | ["de", "en"] |
 | `tuition` | No | object | Fee info | see below |
 | `application_deadlines` | No | object | Deadlines | see below |
+| `application_portal` | No | string | Application portal name/URL | "uni-assist" |
+| `faculties` | No | array | List of faculties | see below |
 | `overview` | No | string | Brief description | 2-3 sentences |
+| `programs` | No | array | Program slug list | ["product-design"] |
 | `tags` | No | array | Aggregated tags (auto-generated) | ["产品设计", "工业设计"] |
 
 ## Program Schema Fields
@@ -36,7 +39,11 @@ Detailed guide for filling each field in the data schemas.
 | `duration_semesters` | No | integer | Semester count | 4 |
 | `start_semester` | No | string | Start timing | "Winter semester" |
 | `url` | Yes | URI | Program page URL | "https://..." |
+| `url_en` | No | URI | English version URL | "https://.../en/" |
 | `department` | No | string | Faculty name | "Faculty of Art and Design" |
+| `city` | No | string | City | "Weimar" |
+| `state` | No | string | Bundesland | "Thuringia" |
+| `country` | No | string | ISO country code | "de" |
 | `focus_areas` | No | array | Key areas | ["product design", "UX"] |
 | `tags` | No | array | Classification tags (from tags.yaml) | ["产品设计", "交互设计"] |
 | `admission_requirements` | No | string | Requirements summary | Free text |
@@ -44,10 +51,17 @@ Detailed guide for filling each field in the data schemas.
 | `portfolio_required` | No | boolean | Portfolio needed? | true |
 | `portfolio_details` | No | string | Portfolio info | Free text |
 | `application_process` | No | string | How to apply | Free text |
+| `application_portal` | No | string | Portal name | "Bauhaus.CampusPortal" |
+| `application_portal_url` | No | URI | Portal URL | "https://..." |
 | `application_deadlines` | No | object | Deadlines | see below |
 | `curriculum_summary` | No | string | Key modules | Free text |
 | `tuition` | No | object | Fee info | see below |
-| `contact` | No | object | Contact info | {"email": "..."} |
+| `scholarship_info` | No | string | Scholarship/funding info | Free text |
+| `contact` | No | object | Contact info | see below |
+| `additional_contacts` | No | array | Extra contacts | see below |
+| `professors` | No | array | Professors in program | see below |
+| `career_perspectives` | No | array | Career paths | ["Industrial Design", "UX"] |
+| `workshops` | No | array | Available workshops | see below |
 | `num_places` | No | integer | Available places | 30 |
 
 ## Common Sub-objects
@@ -76,15 +90,63 @@ contact:
   phone: "+49 3643 58-0000"
 ```
 
+### additional_contacts
+```yaml
+additional_contacts:
+  - name: "Prof. Dr. Jane Doe"
+    role: "Academic advisor"
+    email: "doe@uni-weimar.de"
+    phone: "+49 3643 58-0001"
+```
+
+### professors
+```yaml
+professors:
+  - name: "Prof. Dr. Max Mustermann"
+    chair: "Design und Management"
+    role: "Studiengangssprecher"
+```
+
+### career_perspectives
+```yaml
+career_perspectives:
+  - "Industrial Design and Product Development"
+  - "Sustainable Design"
+  - "Design Consulting"
+```
+
+### workshops
+```yaml
+workshops:
+  - name: "Holzwerkstatt"
+    en: "Wood Workshop"
+  - name: "Metallwerkstatt"
+    en: "Metal Workshop"
+```
+
+### faculties (university-level)
+```yaml
+faculties:
+  - name_de: "Fakultät Kunst und Gestaltung"
+    name_en: "Faculty of Art and Design"
+  - name_de: "Fakultät Medien"
+    name_en: "Faculty of Media"
+```
+
 ## Degree Types
 
 | Value | German | English |
 |-------|--------|---------|
 | `ba` | Bachelor | Bachelor |
 | `ma` | Master | Master |
+| `bfa` | Bachelor of Fine Arts | Bachelor of Fine Arts |
+| `mfa` | Master of Fine Arts | Master of Fine Arts |
 | `diplom` | Diplom | Diplom |
 | `phd` | Promotion | PhD/Doctorate |
+| `dr` | Doktor | Doctor (Dr. phil., Dr.-Ing.) |
+| `staatsexamen` | Staatsexamen | State Examination |
 | `state_exam` | Staatsexamen | State Examination |
+| `other` | Andere | Other |
 
 ## Institution Types
 

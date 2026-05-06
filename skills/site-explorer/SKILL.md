@@ -50,6 +50,16 @@ web_fetch(url=<root_url>)
 - 院系/Fakultät 入口
 - 专业列表/学位项目入口
 
+**记录学校级页面**：在探索过程中，将以下类型的 URL 记录到 site_map.md 的"基本信息"区（标注为 `university_overview`）：
+- 院校首页（根 URL）
+- 关于/概览页面（Über uns / About / Portrait）
+- 院系列表页面
+- 全校性申请入口页面
+- 学费/资助信息页面
+- 联系方式页面
+
+这些 URL 供 data-organizer 在 Phase 3 提取学校级数据时使用。
+
 ### Step 5: 找到专业汇总页
 
 优先寻找以下页面（按优先级）：

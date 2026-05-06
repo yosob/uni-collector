@@ -58,19 +58,22 @@ python3 skills/data-organizer/scripts/reset_status.py --slugs <slug>
 
 #### Phase 3: 学校级聚合（data-organizer）
 
-9. 运行 data-organizer 完成学校级处理：
-    - 聚合 tags: `python3 skills/data-organizer/scripts/aggregate_tags.py --university <slug>`
-    - 校验数据: `python3 skills/data-organizer/scripts/validate_data.py --university <slug>`
-    - 学校级数据提取+翻译: 读取 `skills/data-organizer/SKILL.md` Step 1-2
-    - 生成 profile: `university_profile_EN.md` / `_ZH.md` / `_DE.md`
-    - 填充率: `python3 skills/data-organizer/scripts/validate_data.py --fill-rate <slug>`
-    - 更新 `collection_status.yaml`
+9. 读取 `skills/data-organizer/SKILL.md`，按以下顺序执行：
+    1. **学校级数据提取+翻译**（Step 1-2）: 从 site_map.md 中 university_overview URL 提取学校信息 → 翻译为 EN/ZH/DE
+    2. **聚合 tags**（Step 3）: `python3 skills/data-organizer/scripts/aggregate_tags.py --university <slug>`
+    3. **校验数据**（Step 4）: `python3 skills/data-organizer/scripts/validate_data.py --university <slug>`
+    4. **生成 profile**（Step 5）: `university_profile_EN.md` / `_ZH.md` / `_DE.md`
+    5. **填充率 + 更新状态**（Step 6）: `python3 skills/data-organizer/scripts/validate_data.py --fill-rate <slug>` → 更新 `collection_status.yaml`
 10. 折叠该院校在 HEARTBEAT.md 中的记录为一行：`✅ {slug} — 完成 (fill-rate: X, N/M programs)`
 11. 如果全部完成，清理 HEARTBEAT.md
 
 ### 情况 B: 日常增量更新
 
-当用户说 "更新 XX 大学数据"、"日常爬取"，且 site_map.md 已存在时：
+触发条件（满足其一即可）：
+- **用户主动请求**：用户说 "更新 XX 大学数据"、"日常爬取"，且 `explored: true` + `site_map.md` 存在（否则走情况 A）
+- **自然到期**：`collection_status.yaml` 中 `next_sync` 已过期
+
+注意：用户显式指定院校时，**忽略到期判断**，强制执行更新。只有"更新全部"时才按到期过滤。
 
 1. 读取 `skills/smart-extractor/SKILL.md` 并执行完整工作流
 2. smart-extractor 会自动完成：
@@ -78,7 +81,7 @@ python3 skills/data-organizer/scripts/reset_status.py --slugs <slug>
    - 批量提取结构化数据
    - 发现未在 site_map 中记录的新子页面，补充到 site_map.md
    - 翻译为多语言版本（EN/ZH/DE）
-   - 校验并保存
+   - 保存数据
 3. 如果提取失败率 > 50%，建议用户运行情况 A（重新探索）
 
 ### 情况 C: 发现新院校
@@ -192,16 +195,16 @@ python3 skills/data-organizer/scripts/reset_status.py --slugs <slug>
   ├─ 涉及新院校发现 → 情况 C (university-scout)
   ├─ 指定单个 URL → 情况 E (smart-extractor 单页面模式)
   ├─ 含"全量/完整/完全"关键词 → 先执行 reset_status.py 归零，再走下方逻辑
-  ├─ 指定院校 → 在 collection_status.yaml 中查找:
-  │    ├─ explored: false → 情况 A (site-explorer + smart-extractor × N, 首次探索)
-  │    ├─ needs_reexplore: true → 情况 A (site-explorer + smart-extractor × N, 强制重扫)
-  │    ├─ explored: true + next_explore 已过期 → 情况 A (site-explorer + smart-extractor × N, 定期重扫)
-  │    ├─ explored: true + next_sync 已过期 → 情况 B (smart-extractor, 日常更新)
-  │    └─ explored: true + 未到期 → 跳过
-  ├─ "更新全部" → 情况 D (遍历 collection_status.yaml 逐个串行处理)
+  ├─ 用户显式指定院校 → 忽略到期判断，根据状态决定流程:
+  │    ├─ explored: false / needs_reexplore: true / next_explore 已过期 → 情况 A (三阶段)
+  │    └─ explored: true + site_map.md 存在 → 情况 B (日常更新，忽略到期)
+  ├─ "更新全部" → 情况 D (遍历 collection_status.yaml，按到期判断逐个处理)
   └─ 不确定 → 询问用户
 
-注意：以上判断仅基于 collection_status.yaml 的状态字段。site_map.md 或数据文件是否存在不影响判断——不要因为文件存在就跳过任何阶段。
+注意：
+- 用户显式指定院校时，忽略 next_sync 到期判断，强制执行
+- "更新全部"时才按到期过滤：explored: true + 未到期 → 跳过
+- site_map.md 或数据文件是否存在不影响情况 A 的判断
 ```
 
 ## 范围控制

@@ -32,6 +32,13 @@ description: "学校级数据处理：院校数据提取、多语言翻译、pro
 
 ## 工作流
 
+**在三阶段流程中（Phase 3），按以下顺序执行**：
+1. Step 1-2: 学校级数据提取 + 翻译（产出 _index_EN/ZH/DE.md）
+2. Step 3: 聚合 tags（需要 program 数据已存在）
+3. Step 4: 校验数据
+4. Step 5: 生成 profile（需要所有数据就绪）
+5. Step 6: 更新全局状态（fill-rate + collection_status.yaml）
+
 ### Step 1: 学校级数据提取与更新
 
 从院校网站或已有数据中提取/更新学校级信息（非专业级）。

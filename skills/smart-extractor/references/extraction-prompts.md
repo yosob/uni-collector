@@ -15,7 +15,12 @@ Given page content from a German university website, extract:
   "language": ["de", "en"],
   "duration_semesters": 4,
   "start_semester": "Winter semester",
+  "url": "Program page URL",
+  "url_en": "English version URL (if available)",
   "department": "Faculty/Department name",
+  "city": "City",
+  "state": "Federal state",
+  "country": "de",
   "focus_areas": ["area1", "area2"],
   "admission_requirements": "Summary of requirements",
   "language_requirements": {
@@ -25,6 +30,8 @@ Given page content from a German university website, extract:
   "portfolio_required": true,
   "portfolio_details": "Description of portfolio requirements",
   "application_process": "Steps and portal info",
+  "application_portal": "Portal name, e.g. uni-assist, Bauhaus.CampusPortal",
+  "application_portal_url": "https://...",
   "application_deadlines": {
     "winter_semester": "July 15",
     "summer_semester": null,
@@ -36,13 +43,24 @@ Given page content from a German university website, extract:
     "semester_fee_eur": 200,
     "notes": "Notes about fees"
   },
+  "scholarship_info": "Available scholarships or funding",
   "contact": {
     "name": "Contact person",
     "email": "email@example.com",
     "phone": null
   },
-  "tags": ["Product Design", "Industrial Design"],
-  "num_places": null
+  "additional_contacts": [
+    {"name": "Prof. X", "role": "Academic advisor", "email": "x@uni.de"}
+  ],
+  "professors": [
+    {"name": "Prof. Dr. Y", "chair": "Chair name", "role": "Program director"}
+  ],
+  "career_perspectives": ["Career path 1", "Career path 2"],
+  "workshops": [
+    {"name": "Holzwerkstatt", "en": "Wood Workshop"}
+  ],
+  "num_places": null,
+  "tags": ["Product Design", "Industrial Design"]
 }
 ```
 
@@ -52,6 +70,7 @@ Rules:
 - Summarize long text blocks into concise descriptions
 - `focus_areas` should be 3-7 keywords max
 - `tags` must be selected from `data/universities/schema/tags.yaml` controlled vocabulary — generous matching, up to 5 tags. Tag strings must exactly match vocabulary entries, never invent new tags. Use Chinese tags in intermediate `_index.md`.
+- Extract any additional useful information found on the page even if not listed in the template above — the schema defines the full set of valid fields
 
 ## Faculty List Extraction
 
