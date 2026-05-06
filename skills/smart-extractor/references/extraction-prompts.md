@@ -10,7 +10,7 @@ Given page content from a German university website, extract:
 {
   "name_de": "German program name (original)",
   "name_en": "English translation of program name",
-  "degree": "ba|ma|diplom|phd|other",
+  "degree": "ba|ma|bfa|mfa|diplom|phd|dr|state_exam|other",
   "degree_title": "Full degree title, e.g. Master of Arts (M.A.)",
   "language": ["de", "en"],
   "duration_semesters": 4,
@@ -60,7 +60,7 @@ Given page content from a German university website, extract:
     {"name": "Holzwerkstatt", "en": "Wood Workshop"}
   ],
   "num_places": null,
-  "tags": ["Product Design", "Industrial Design"]
+  "tags": ["产品设计", "工业设计"]
 }
 ```
 

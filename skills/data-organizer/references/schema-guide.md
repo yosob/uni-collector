@@ -25,6 +25,8 @@ Detailed guide for filling each field in the data schemas.
 | `overview` | No | string | Brief description | 2-3 sentences |
 | `programs` | No | array | Program slug list | ["product-design"] |
 | `tags` | No | array | Aggregated tags (auto-generated) | ["产品设计", "工业设计"] |
+| `last_crawled` | No | string | Last crawl timestamp (auto) | "2026-05-01" |
+| `source_urls` | No | array | Source URLs used (auto) | ["https://..."] |
 
 ## Program Schema Fields
 
@@ -32,6 +34,7 @@ Detailed guide for filling each field in the data schemas.
 |-------|----------|------|-------------|---------|
 | `name_de` | Yes | string | German name | "Produktdesign" |
 | `name_en` | Yes | string | English name | "Product Design" |
+| `name_cn` | No | string | Chinese name | "产品设计" |
 | `slug` | Yes | string | URL-safe ID | "product-design" |
 | `degree` | Yes | enum | Degree type | "ma" |
 | `degree_title` | No | string | Full degree title | "Master of Arts (M.A.)" |
@@ -41,6 +44,7 @@ Detailed guide for filling each field in the data schemas.
 | `url` | Yes | URI | Program page URL | "https://..." |
 | `url_en` | No | URI | English version URL | "https://.../en/" |
 | `department` | No | string | Faculty name | "Faculty of Art and Design" |
+| `faculty_url` | No | URI | Faculty page URL | "https://..." |
 | `city` | No | string | City | "Weimar" |
 | `state` | No | string | Bundesland | "Thuringia" |
 | `country` | No | string | ISO country code | "de" |
@@ -63,6 +67,8 @@ Detailed guide for filling each field in the data schemas.
 | `career_perspectives` | No | array | Career paths | ["Industrial Design", "UX"] |
 | `workshops` | No | array | Available workshops | see below |
 | `num_places` | No | integer | Available places | 30 |
+| `last_crawled` | No | string | Last crawl timestamp (auto) | "2026-05-01" |
+| `source_urls` | No | array | Source URLs used (auto) | ["https://..."] |
 
 ## Common Sub-objects
 
@@ -144,7 +150,6 @@ faculties:
 | `diplom` | Diplom | Diplom |
 | `phd` | Promotion | PhD/Doctorate |
 | `dr` | Doktor | Doctor (Dr. phil., Dr.-Ing.) |
-| `staatsexamen` | Staatsexamen | State Examination |
 | `state_exam` | Staatsexamen | State Examination |
 | `other` | Andere | Other |
 

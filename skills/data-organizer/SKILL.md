@@ -98,7 +98,7 @@ description: "学校级数据处理：院校数据提取、多语言翻译、pro
 所有 program 的数据提取完成后（由 smart-extractor 完成），运行脚本聚合 tags：
 
 ```bash
-exec("python3 skills/data-organizer/scripts/aggregate_tags.py --university <slug>")
+python3 skills/data-organizer/scripts/aggregate_tags.py --university <slug>
 ```
 
 脚本自动从所有 program 的 `_index_EN.md` 中提取 tags，去重聚合到 university 级别。
@@ -106,13 +106,13 @@ exec("python3 skills/data-organizer/scripts/aggregate_tags.py --university <slug
 ### Step 4: 校验数据
 
 ```bash
-exec("python3 skills/data-organizer/scripts/validate_data.py --university <slug>")
+python3 skills/data-organizer/scripts/validate_data.py --university <slug>
 ```
 
 校验学校级和所有 program 的 required 字段。
 
 ```bash
-exec("python3 skills/data-organizer/scripts/validate_data.py --fill-rate <slug>")
+python3 skills/data-organizer/scripts/validate_data.py --fill-rate <slug>
 ```
 
 获取填充率。
@@ -122,9 +122,9 @@ exec("python3 skills/data-organizer/scripts/validate_data.py --fill-rate <slug>"
 汇总该院校所有已提取的专业数据，生成多语言摘要文档。
 
 生成文件：
-- `data/universities/de/{slug}/university_profile_EN.md`（英文）
-- `data/universities/de/{slug}/university_profile_ZH.md`（中文）
-- `data/universities/de/{slug}/university_profile_DE.md`（德文，仅德国院校）
+- `data/universities/{country}/{slug}/university_profile_EN.md`（英文）
+- `data/universities/{country}/{slug}/university_profile_ZH.md`（中文）
+- `data/universities/{country}/{slug}/university_profile_DE.md`（德文，仅德国院校）
 
 每种语言从对应语言的 `_index` 文件读取数据：
 - EN 版从 `_index_EN.md` 和 `programs/*/_index_EN.md` 汇总
@@ -174,10 +174,10 @@ exec("python3 skills/data-organizer/scripts/validate_data.py --fill-rate <slug>"
 ### init_university.py — 初始化新院校目录
 
 ```bash
-python3 skills/data-organizer/scripts/init_university.py --slug <slug> --country de
+python3 skills/data-organizer/scripts/init_university.py --slug <slug> --country de [--programs-total N]
 ```
 
-创建标准目录结构、占位文件和空 crawl_state.json。
+创建标准目录结构、占位文件和空 crawl_state.json。`--programs-total` 设置 collection_status 中的初始专业数。
 
 ### reset_status.py — 重置院校状态
 
@@ -187,12 +187,13 @@ python3 skills/data-organizer/scripts/reset_status.py --all
 python3 skills/data-organizer/scripts/reset_status.py --country de
 ```
 
-将目标院校的 collection_status.yaml 状态归零（不删除数据文件）。
+将目标院校的 collection_status.yaml 状态归零（不删除数据文件）。三个模式互斥。
 
 ### aggregate_tags.py — 聚合 tags
 
 ```bash
 python3 skills/data-organizer/scripts/aggregate_tags.py --university <slug>
+python3 skills/data-organizer/scripts/aggregate_tags.py --all [--country de]
 ```
 
 从所有 program 的数据文件中提取 tags，去重聚合到 university 级别。
@@ -200,9 +201,9 @@ python3 skills/data-organizer/scripts/aggregate_tags.py --university <slug>
 ### validate_data.py — 校验数据
 
 ```bash
-python3 skills/data-organizer/scripts/validate_data.py --university <slug>
+python3 skills/data-organizer/scripts/validate_data.py --university <slug> [--country de]
 python3 skills/data-organizer/scripts/validate_data.py --fill-rate <slug>
-python3 skills/data-organizer/scripts/validate_data.py --all
+python3 skills/data-organizer/scripts/validate_data.py --all [--country de]
 ```
 
 校验 required 字段完整性、计算字段填充率。

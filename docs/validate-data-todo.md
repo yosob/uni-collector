@@ -68,16 +68,22 @@ schema 中新增了 `professors`、`career_perspectives`、`workshops`、`additi
 ## 实现方案建议
 
 1. 引入 `pyyaml` 依赖（项目可能已有，需确认）
-2. 重写 `parse_frontmatter` 为 `parse_frontmatter_yaml`：
+2. 重写 `parse_frontmatter`，用 pyyaml 替代手写解析（pyyaml 已在项目中使用，见 aggregate_tags.py 等）：
    ```python
-   def parse_frontmatter_yaml(content: str) -> dict:
+   import yaml
+
+   def parse_frontmatter(content: str) -> dict:
        if not content.startswith("---"):
            return {}
        parts = content.split("---", 2)
        if len(parts) < 3:
            return {}
-       return yaml.safe_load(parts[1].strip())
+       try:
+           return yaml.safe_load(parts[1].strip()) or {}
+       except yaml.YAMLError:
+           return {}
    ```
+   替换后可删除原 50 行手写解析代码，`count_filled_fields` 的 `isinstance(sub_data, dict)` 分支将正常工作。
 3. 修复 `--fill-rate` 参数：改为 `--fill-rate --university <slug>` 格式
 4. 增加枚举检查（至少检查 `degree` 和 `type`）
 5. 增加 `--json` 输出格式，方便 LLM 解析校验结果

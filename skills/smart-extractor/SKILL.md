@@ -25,7 +25,7 @@ description: "按站点地图进行数据提取并探索新子页面，也支持
 
 ### Step 1: 读取站点地图
 
-读取 `data/universities/de/{slug}/site_map.md` 获取：
+读取 `data/universities/{country}/{slug}/site_map.md` 获取：
 - 需要爬取的 URL 列表
 - 每个 URL 的页面类型
 - 每个页面可提取的字段
@@ -39,17 +39,17 @@ description: "按站点地图进行数据提取并探索新子页面，也支持
 读取 `references/extraction-prompts.md` 获取各页面类型的数据提取模板。
 读取 `references/page-type-classification.md` 获取页面类型分类规则（单页面模式需要判断页面类型）。
 
-### Step 2.5: 读取 Tag 词汇表
+### Step 3: 读取 Tag 词汇表
 
 读取 `data/universities/schema/tags.yaml` 获取标准分类标签词汇表（中英文映射）。提取数据时需要根据专业内容分配 tag。
 
-### Step 3: 读取爬取状态
+### Step 4: 读取爬取状态
 
-读取 `data/universities/de/{slug}/crawl_state.json` 了解之前的爬取进度。
+读取 `data/universities/{country}/{slug}/crawl_state.json` 了解之前的爬取进度。
 
 **crawl_state 的定位**：进度追踪工具，记录哪些 URL 已经处理过、防止遗漏。**不是**更新决策的依据——是否更新由 `collection_status.yaml` 和用户指令决定，不由 crawl_state 中的 `next_check` 决定。
 
-### Step 4: 批量提取
+### Step 5: 批量提取
 
 对 site_map 中每个 URL（或单页面模式下的指定 URL）：
 
@@ -97,7 +97,7 @@ web_fetch(url=<url>)
 
 请求间等待 2 秒。
 
-### Step 5: 失败检测与回退
+### Step 6: 失败检测与回退
 
 提取完成后检查失败率：
 
@@ -107,11 +107,11 @@ web_fetch(url=<url>)
 
 如果某个 URL 连续 3 次提取失败，自动将其标记为需要重新探索。
 
-### Step 6: 保存数据
+### Step 7: 保存数据
 
 将提取到的数据更新到对应的 `_index.md` 文件：
-- `data/universities/de/{slug}/_index.md`
-- `data/universities/de/{slug}/programs/{prog}/_index.md`
+- `data/universities/{country}/{slug}/_index.md`
+- `data/universities/{country}/{slug}/programs/{prog}/_index.md`
 
 规则：
 - 只更新非 null 的新值
@@ -120,7 +120,7 @@ web_fetch(url=<url>)
 
 **单页面提取模式**：根据提取的数据类型（program/university/application），保存到对应目录。如果无法确定目标目录，输出提取结果由用户决定。
 
-### Step 7: 翻译多语言版本
+### Step 8: 翻译多语言版本
 
 **总是执行**。无论是否作为 subagent 被调用。
 
@@ -134,14 +134,14 @@ web_fetch(url=<url>)
 - 专业名称、学位等专有名词保留原文
 - 翻译完成后删除原始 `_index.md`
 
-### Step 8: 更新爬取状态
+### Step 9: 更新爬取状态
 
 更新 `crawl_state.json`：
 - 更新每个 URL 的 `last_crawled`、`status`、`extracted_fields`
 - 记录错误信息
 - crawl_state 用于记录已处理 URL，防止遗漏
 
-### Step 9: 报告
+### Step 10: 报告
 
 输出提取报告：
 ```
@@ -152,7 +152,7 @@ web_fetch(url=<url>)
 - 状态: 正常/警告/需要重新探索
 ```
 
-### Step 10: 更新全局状态
+### Step 11: 更新全局状态
 
 **仅在独立执行（日常更新）时执行此步骤**。在三阶段流程中作为 subagent 被调用时，全局状态由 uni-collector 在 Phase 3 统一更新，跳过此步骤。
 
@@ -196,7 +196,7 @@ web_fetch(url=<url>)
 
 ## 依赖
 
-- `data/universities/de/{slug}/site_map.md` — 必须存在（由 site-explorer 生成，本 skill 可补充新发现的 URL）
+- `data/universities/{country}/{slug}/site_map.md` — 必须存在（由 site-explorer 生成，本 skill 可补充新发现的 URL）
 - `references/extraction-prompts.md` — 提取模板
 - `references/page-type-classification.md` — 页面类型分类规则
 - `data/universities/schema/*.json` — Schema 定义

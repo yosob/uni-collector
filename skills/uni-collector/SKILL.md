@@ -48,7 +48,7 @@ python3 skills/data-organizer/scripts/reset_status.py --slugs <slug>
 #### Phase 2: 逐专业提取+翻译+校验
 
 5. 对 site_map.md 中每个专业，spawn smart-extractor subagent：
-   - **Task 格式**: "提取 {院校名称} 的 '{专业名称}' 数据。读取 skills/smart-extractor/SKILL.md，从 data/universities/de/{slug}/site_map.md 找到该专业的 URL 列表，提取结构化数据并发现未记录的子页面。smart-extractor 会自动完成提取+翻译+校验全流程。"
+   - **Task 格式**: "提取 {院校名称} 的 '{专业名称}' 数据。读取 skills/smart-extractor/SKILL.md，从 data/universities/{country}/{slug}/site_map.md 找到该专业的 URL 列表，提取结构化数据并发现未记录的子页面。smart-extractor 会自动完成提取+翻译+校验全流程。"
 6. 遵守 maxConcurrentSubagents 限制（最多 2 个并行）
 7. 收到 announce 后：
    - 如果还有未处理的专业 → spawn 下一个
@@ -126,7 +126,7 @@ python3 skills/data-organizer/scripts/reset_status.py --slugs <slug>
 
 当使用 subagent 执行多院校任务时，必须：
 
-1. **写入 HEARTBEAT.md**（checklist 格式）：
+1. **写入 `HEARTBEAT.md`**（位于项目根目录 `uni-collector/HEARTBEAT.md`，checklist 格式）：
 
    **全量模式**（所有学校一次性 reset）：
    ```markdown

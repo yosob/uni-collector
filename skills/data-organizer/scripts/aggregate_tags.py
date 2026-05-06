@@ -6,7 +6,7 @@
 用法:
   python3 aggregate_tags.py --university <slug>
   python3 aggregate_tags.py --all
-  python3 aggregate_tags.py --country de
+  python3 aggregate_tags.py --all --country de
 """
 
 import argparse
@@ -88,9 +88,9 @@ def update_frontmatter_tags(filepath, tags):
         f.write(new_content)
 
 
-def aggregate_for_university(slug, zh_to_en, en_to_zh):
+def aggregate_for_university(slug, zh_to_en, en_to_zh, country="de"):
     """聚合一所院校的 program tags 到 university 级别"""
-    uni_dir = os.path.join(BASE_DIR, "de", slug)
+    uni_dir = os.path.join(BASE_DIR, country, slug)
     programs_dir = os.path.join(uni_dir, "programs")
 
     if not os.path.isdir(uni_dir):
@@ -161,7 +161,7 @@ def main():
     zh_to_en, en_to_zh = load_tags_vocab()
 
     if args.university:
-        aggregate_for_university(args.university, zh_to_en, en_to_zh)
+        aggregate_for_university(args.university, zh_to_en, en_to_zh, args.country)
     elif args.all:
         country_dir = os.path.join(BASE_DIR, args.country)
         if not os.path.isdir(country_dir):
@@ -175,7 +175,7 @@ def main():
 
         print(f"处理 {len(slugs)} 所院校...")
         for slug in slugs:
-            aggregate_for_university(slug, zh_to_en, en_to_zh)
+            aggregate_for_university(slug, zh_to_en, en_to_zh, args.country)
 
         print("完成。")
 

@@ -22,8 +22,8 @@
     },
     "degree": {
       "type": "string",
-      "enum": ["ba", "ma", "bfa", "mfa", "diplom", "phd", "dr", "staatsexamen", "other"],
-      "description": "Degree type: ba=Bachelor of Arts, ma=Master of Arts, bfa=Bachelor of Fine Arts, mfa=Master of Fine Arts, diplom=Diplom, phd=Doctor of Philosophy, dr=Doctor (Dr. phil., Dr.-Ing.), staatsexamen=State Examination, other"
+      "enum": ["ba", "ma", "bfa", "mfa", "diplom", "phd", "dr", "state_exam", "other"],
+      "description": "Degree type: ba=Bachelor of Arts, ma=Master of Arts, bfa=Bachelor of Fine Arts, mfa=Master of Fine Arts, diplom=Diplom, phd=Doctor of Philosophy, dr=Doctor (Dr. phil., Dr.-Ing.), state_exam=State Examination, other"
     },
     "degree_title": {
       "type": "string",
@@ -151,10 +151,6 @@
     "country": {
       "type": "string",
       "description": "ISO country code"
-    },
-    "type": {
-      "type": "string",
-      "description": "Institution type: public, private, etc."
     },
     "career_perspectives": {
       "type": "array",

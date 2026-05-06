@@ -25,11 +25,14 @@ def parse_frontmatter(content: str) -> dict:
         return {}
     yaml_str = parts[1].strip()
     frontmatter = {}
-    for line in yaml_str.split("\n"):
-        line = line.strip()
-        if not line or line.startswith("#"):
+    for orig_line in yaml_str.split("\n"):
+        line = orig_line.strip()
+        if not line or line.startswith("#") or line.startswith("- "):
             continue
-        if ":" in line:
+        # Skip indented lines (nested YAML) — only parse top-level keys
+        if orig_line != orig_line.lstrip() and orig_line[0] == ' ':
+            continue
+        if ":" in line and not line.startswith("-"):
             key, _, value = line.partition(":")
             key = key.strip()
             value = value.strip().strip('"').strip("'")
@@ -86,6 +89,15 @@ def count_filled_fields(frontmatter: dict, schema: dict) -> int:
     return filled
 
 
+def find_index_file(directory: Path) -> Path | None:
+    """Find the primary index file (_index_EN.md preferred, then _index.md)."""
+    for name in ["_index_EN.md", "_index.md"]:
+        p = directory / name
+        if p.exists():
+            return p
+    return None
+
+
 def compute_fill_rate(slug: str, country: str = "de") -> float:
     """Compute field fill rate for a university and its programs."""
     base = Path(__file__).resolve().parents[3] / "data" / "universities" / country / slug
@@ -98,22 +110,22 @@ def compute_fill_rate(slug: str, country: str = "de") -> float:
     total = 0
     filled = 0
 
-    # University _index.md
-    index_path = base / "_index.md"
-    if index_path.exists():
+    # University index file
+    index_path = find_index_file(base)
+    if index_path:
         content = index_path.read_text()
         fm = parse_frontmatter(content)
         total += count_schema_fields(uni_schema)
         filled += count_filled_fields(fm, uni_schema)
 
-    # Program _index.md files
+    # Program index files
     programs_dir = base / "programs"
     if programs_dir.exists():
         for prog_dir in sorted(programs_dir.iterdir()):
             if not prog_dir.is_dir():
                 continue
-            prog_index = prog_dir / "_index.md"
-            if prog_index.exists():
+            prog_index = find_index_file(prog_dir)
+            if prog_index:
                 content = prog_index.read_text()
                 fm = parse_frontmatter(content)
                 total += count_schema_fields(prog_schema)
@@ -132,25 +144,25 @@ def validate_university(slug: str, country: str = "de") -> list[str]:
     errors = []
     schema = load_schema("university")
 
-    # Validate university _index.md
-    index_path = base / "_index.md"
-    if not index_path.exists():
-        errors.append(f"  MISSING university _index.md")
+    # Validate university index file
+    index_path = find_index_file(base)
+    if not index_path:
+        errors.append(f"  MISSING university _index_EN.md or _index.md")
     else:
         content = index_path.read_text()
         frontmatter = parse_frontmatter(content)
         errors.extend(validate_required_fields(frontmatter, schema, str(index_path)))
 
-    # Validate program _index.md files
+    # Validate program index files
     programs_dir = base / "programs"
     if programs_dir.exists():
         program_schema = load_schema("program")
         for prog_dir in sorted(programs_dir.iterdir()):
             if not prog_dir.is_dir():
                 continue
-            prog_index = prog_dir / "_index.md"
-            if not prog_index.exists():
-                errors.append(f"  MISSING program _index.md: {prog_dir.name}")
+            prog_index = find_index_file(prog_dir)
+            if not prog_index:
+                errors.append(f"  MISSING program index file: {prog_dir.name}")
             else:
                 content = prog_index.read_text()
                 frontmatter = parse_frontmatter(content)
@@ -182,7 +194,7 @@ def main():
         if not base.exists():
             print(f"No data directory found: {base}")
             sys.exit(1)
-        slugs = [d.name for d in base.iterdir() if d.is_dir() and not d.name.startswith(".")]
+        slugs = [d.name for d in base.iterdir() if d.is_dir() and not d.name.startswith(".") and d.name != "schema"]
         if not slugs:
             print("No universities found.")
             sys.exit(0)

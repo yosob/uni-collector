@@ -9,7 +9,7 @@
 | 信息类别 | 字段 | 说明 |
 |---------|------|------|
 | 专业名称 | name_de, name_en | 德语原名 + 英文翻译 |
-| 学位类型 | degree | ba / ma / diplom / phd / bfa / mfa / staatsexamen / dr |
+| 学位类型 | degree | ba / ma / diplom / phd / bfa / mfa / state_exam / dr |
 | 学制 | duration_semesters | 学期数 |
 | 授课语言 | language | de, en 或其他 |
 | 申请截止日期 | application_deadlines | 冬/夏季学期截止日 |

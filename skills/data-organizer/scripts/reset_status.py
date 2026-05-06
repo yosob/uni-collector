@@ -54,8 +54,9 @@ def reset_universities(slugs: set[str]):
             found_slugs.add(uni.get("slug", ""))
     not_found = slugs - found_slugs
 
-    with open(status_path, "w", encoding="utf-8") as f:
-        yaml.dump(status, f, default_flow_style=False, allow_unicode=True, sort_keys=False)
+    if reset_count > 0:
+        with open(status_path, "w", encoding="utf-8") as f:
+            yaml.dump(status, f, default_flow_style=False, allow_unicode=True, sort_keys=False)
 
     print(f"\nReset {reset_count} university(ies).")
     if not_found:
