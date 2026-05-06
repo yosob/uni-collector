@@ -61,7 +61,7 @@ python3 skills/data-organizer/scripts/reset_status.py --slugs <slug>
 9. 读取 `skills/data-organizer/SKILL.md`，按以下顺序执行：
     1. **学校级数据提取+翻译**（Step 1-2）: 从 site_map.md 中 university_overview URL 提取学校信息 → 翻译为 EN/ZH/DE
     2. **聚合 tags**（Step 3）: `python3 skills/data-organizer/scripts/aggregate_tags.py --university <slug>`
-    3. **校验数据**（Step 4）: `python3 skills/data-organizer/scripts/validate_data.py --university <slug>`
+    3. **校验数据**（Step 4）: `python3 skills/data-organizer/scripts/validate_data.py --university <slug> --fix`
     4. **生成 profile**（Step 5）: `university_profile_EN.md` / `_ZH.md` / `_DE.md`
     5. **填充率 + 更新状态**（Step 6）: `python3 skills/data-organizer/scripts/validate_data.py --fill-rate <slug>` → 更新 `collection_status.yaml`
 10. 折叠该院校在 HEARTBEAT.md 中的记录为一行：`✅ {slug} — 完成 (fill-rate: X, N/M programs)`

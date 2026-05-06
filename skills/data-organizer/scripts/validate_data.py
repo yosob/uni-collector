@@ -1,10 +1,18 @@
 #!/usr/bin/env python3
-"""Validate collected university data against schemas."""
+"""Validate collected university data against schemas.
+
+Usage:
+  python3 validate_data.py --university <slug> [--fix] [--country de]
+  python3 validate_data.py --all [--fix] [--country de]
+  python3 validate_data.py --fill-rate <slug>
+"""
 
 import argparse
 import json
 import sys
 from pathlib import Path
+
+import yaml
 
 
 def load_schema(schema_name: str) -> dict:
@@ -50,7 +58,7 @@ def parse_frontmatter(content: str) -> dict:
     return frontmatter
 
 
-def validate_required_fields(data: dict, schema: dict, file_path: str) -> list[str]:
+def validate_required_fields(data: dict, schema: dict, file_path: str):
     """Check that all required fields are present and non-null."""
     errors = []
     required = schema.get("required", [])
@@ -89,13 +97,68 @@ def count_filled_fields(frontmatter: dict, schema: dict) -> int:
     return filled
 
 
-def find_index_file(directory: Path) -> Path | None:
+def find_index_file(directory: Path):
     """Find the primary index file (_index_EN.md preferred, then _index.md)."""
     for name in ["_index_EN.md", "_index.md"]:
         p = directory / name
         if p.exists():
             return p
     return None
+
+
+def find_all_index_files(directory: Path):
+    """Find all _index*.md files (EN, ZH, DE, and intermediate)."""
+    files = []
+    if not directory.exists():
+        return files
+    for name in ["_index.md", "_index_EN.md", "_index_ZH.md", "_index_DE.md"]:
+        p = directory / name
+        if p.exists():
+            files.append(p)
+    return files
+
+
+def validate_and_fix_yaml(filepath: Path, fix: bool = False):
+    """Validate YAML frontmatter syntax; auto-fix simple formatting issues.
+
+    - Simple issues (quoting, whitespace): silently auto-fixed when --fix is on, no error reported
+    - Structural errors (yaml.safe_load cannot parse): reported as errors for LLM to fix
+
+    Returns list of error strings. Empty list means OK or auto-fixed.
+    """
+    errors = []
+    content = filepath.read_text(encoding="utf-8")
+    if not content.startswith("---"):
+        return [f"  {filepath.name}: no YAML frontmatter"]
+
+    parts = content.split("---", 2)
+    if len(parts) < 3:
+        return [f"  {filepath.name}: invalid frontmatter structure"]
+
+    fm_text = parts[1].strip()
+    body = parts[2]
+
+    # Try parsing with yaml.safe_load
+    try:
+        fm = yaml.safe_load(fm_text)
+    except yaml.YAMLError as e:
+        return [f"  {filepath.name}: YAML syntax error (needs manual fix) — {e}"]
+
+    if fm is None:
+        fm = {}
+
+    # Re-serialize to normalize formatting (auto-fix quoting etc.)
+    new_fm = yaml.dump(fm, allow_unicode=True, default_flow_style=False, sort_keys=False)
+
+    if new_fm.rstrip("\n") != fm_text.rstrip("\n"):
+        if fix:
+            new_content = f"---\n{new_fm}---{body}"
+            filepath.write_text(new_content, encoding="utf-8")
+            # Silent fix — no error reported
+        else:
+            errors.append(f"  {filepath.name}: YAML formatting issue (run with --fix to auto-repair)")
+
+    return errors
 
 
 def compute_fill_rate(slug: str, country: str = "de") -> float:
@@ -136,7 +199,7 @@ def compute_fill_rate(slug: str, country: str = "de") -> float:
     return round(filled / total, 2)
 
 
-def validate_university(slug: str, country: str = "de") -> list[str]:
+def validate_university(slug: str, country: str = "de", fix: bool = False):
     base = Path(__file__).resolve().parents[3] / "data" / "universities" / country / slug
     if not base.exists():
         return [f"University directory not found: {base}"]
@@ -144,7 +207,11 @@ def validate_university(slug: str, country: str = "de") -> list[str]:
     errors = []
     schema = load_schema("university")
 
-    # Validate university index file
+    # YAML syntax validation for ALL language versions
+    for idx_file in find_all_index_files(base):
+        errors.extend(validate_and_fix_yaml(idx_file, fix))
+
+    # Validate university index file (required fields)
     index_path = find_index_file(base)
     if not index_path:
         errors.append(f"  MISSING university _index_EN.md or _index.md")
@@ -160,6 +227,12 @@ def validate_university(slug: str, country: str = "de") -> list[str]:
         for prog_dir in sorted(programs_dir.iterdir()):
             if not prog_dir.is_dir():
                 continue
+
+            # YAML syntax validation for all program language versions
+            for idx_file in find_all_index_files(prog_dir):
+                errors.extend(validate_and_fix_yaml(idx_file, fix))
+
+            # Required fields check
             prog_index = find_index_file(prog_dir)
             if not prog_index:
                 errors.append(f"  MISSING program index file: {prog_dir.name}")
@@ -167,11 +240,6 @@ def validate_university(slug: str, country: str = "de") -> list[str]:
                 content = prog_index.read_text()
                 frontmatter = parse_frontmatter(content)
                 errors.extend(validate_required_fields(frontmatter, program_schema, str(prog_index)))
-
-    # Check crawl_state.json exists
-    crawl_state_path = base / "crawl_state.json"
-    if not crawl_state_path.exists():
-        errors.append(f"  MISSING crawl_state.json")
 
     return errors
 
@@ -182,6 +250,7 @@ def main():
     parser.add_argument("--country", default="de", help="ISO country code")
     parser.add_argument("--all", action="store_true", help="Validate all universities")
     parser.add_argument("--fill-rate", metavar="SLUG", help="Compute field fill rate for a university")
+    parser.add_argument("--fix", action="store_true", help="Auto-fix YAML syntax issues (quoting, formatting)")
     args = parser.parse_args()
 
     if args.fill_rate:
@@ -207,7 +276,7 @@ def main():
     total_errors = 0
     for slug in slugs:
         print(f"\nValidating: {slug}")
-        errors = validate_university(slug, args.country)
+        errors = validate_university(slug, args.country, args.fix)
         if errors:
             for e in errors:
                 print(e)

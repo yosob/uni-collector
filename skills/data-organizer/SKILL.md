@@ -106,10 +106,15 @@ python3 skills/data-organizer/scripts/aggregate_tags.py --university <slug>
 ### Step 4: 校验数据
 
 ```bash
-python3 skills/data-organizer/scripts/validate_data.py --university <slug>
+python3 skills/data-organizer/scripts/validate_data.py --university <slug> --fix
 ```
 
-校验学校级和所有 program 的 required 字段。
+校验学校级和所有 program 的 required 字段。`--fix` 自动修复简单的 YAML 格式问题（引号缺失、空白不规范等），这些修复静默完成不报错。
+
+**如果校验报出 "YAML syntax error (needs manual fix)"**：表示该文件有结构性问题（如字符串内含未转义引号、重复列表等），脚本无法自动修复。此时需要：
+1. 读取报错文件，找到错误位置
+2. 修复 YAML 格式问题（常见原因：中文引号 `""` 混用、字符串值含 `:` 或 `#` 未加引号、重复的列表项）
+3. 修复后重新运行校验确认通过
 
 ```bash
 python3 skills/data-organizer/scripts/validate_data.py --fill-rate <slug>
@@ -201,12 +206,12 @@ python3 skills/data-organizer/scripts/aggregate_tags.py --all [--country de]
 ### validate_data.py — 校验数据
 
 ```bash
-python3 skills/data-organizer/scripts/validate_data.py --university <slug> [--country de]
+python3 skills/data-organizer/scripts/validate_data.py --university <slug> --fix [--country de]
 python3 skills/data-organizer/scripts/validate_data.py --fill-rate <slug>
-python3 skills/data-organizer/scripts/validate_data.py --all [--country de]
+python3 skills/data-organizer/scripts/validate_data.py --all --fix [--country de]
 ```
 
-校验 required 字段完整性、计算字段填充率。
+校验 required 字段完整性、检查 YAML 语法、计算字段填充率。`--fix` 自动修复简单格式问题（静默）；结构性错误会报出，需手动修复后重跑。
 
 ## Schema 参考
 
