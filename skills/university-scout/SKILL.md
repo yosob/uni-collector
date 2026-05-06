@@ -128,6 +128,22 @@ web_fetch(url="<university url>")
 
 2. **初始化目录**: 委托 `data-organizer` skill（读取 `skills/data-organizer/SKILL.md`）执行初始化步骤。
 
+3. **更新 `collection_status.yaml`**: 为新院校添加记录：
+```yaml
+- slug: {new-slug}
+  explored: false
+  last_explored: null
+  next_explore: null
+  last_synced: null
+  sync_mode: null
+  next_sync: null
+  field_fill_rate: 0.0
+  programs_explored: 0
+  programs_total: 0
+  errors: []
+  needs_reexplore: false
+```
+
 ### Step 10: 报告
 
 汇报：

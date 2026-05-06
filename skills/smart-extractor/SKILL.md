@@ -1,21 +1,22 @@
 ---
 name: smart-extractor
-description: "按站点地图进行数据提取并探索新子页面。当需要增量更新已有院校的专业数据、按已知 URL 列表批量提取信息、或执行非 LLM 探索的常规爬取时使用。触发词：日常爬取、增量更新、按地图提取、更新专业数据、常规爬取、提取数据"
+description: "按站点地图进行数据提取并探索新子页面，也支持单页面提取。当需要增量更新已有院校的专业数据、按已知 URL 列表批量提取信息、执行常规爬取、或从单个 URL 提取数据时使用。触发词：日常爬取、增量更新、按地图提取、更新专业数据、常规爬取、提取数据、提取页面"
 ---
 
 # 智能数据提取器
 
-按 site_map.md 中记录的 URL 架构进行数据提取，同时检查页面中是否有 site_map 未记录的子页面。发现新子页面后补充到 site_map.md 并提取数据。
+按 site_map.md 中记录的 URL 架构进行数据提取，同时检查页面中是否有 site_map 未记录的子页面。也支持从单个 URL 提取数据（替代 page-extractor）。
 
 ## 与 site-explorer 的分工
 
 - `site-explorer`: 发现网站结构，生成 site_map.md（只发现 URL，不提取数据）
-- `smart-extractor`: 按 site_map 提取数据 + 发现遗漏的子页面（提取数据 + 补充 site_map）
+- `smart-extractor`: 按 site_map 提取数据 + 发现遗漏的子页面 + 翻译 + 校验（提取数据 + 补充 site_map + 完整后处理）
 
 ## 输入
 
 - 院校 slug（如 `hfg-offenbach`）— 处理该院校全部专业
 - 或指定专业名称（如 "Medienkunst BFA"）— 只处理该专业
+- 或单个 URL — 单页面提取模式（见"单页面提取模式"章节）
 - 或"全部院校"（批量提取，只处理到期的院校）
 
 **处理范围由 task 描述决定**：subagent 的 task 指定了院校和专业名称时，只处理该专业的 URL；只指定院校时，处理 site_map.md 中该院校的全部 URL。
@@ -31,9 +32,12 @@ description: "按站点地图进行数据提取并探索新子页面。当需要
 
 如果 site_map.md 不存在，提示用户先运行 `site-explorer` 进行首次探索。
 
+**单页面提取模式**：如果输入是单个 URL 而非院校 slug，跳过 Step 1-3，直接进入 Step 4。
+
 ### Step 2: 读取提取模板
 
-读取 `skills/page-extractor/references/extraction-prompts.md` 获取各页面类型的数据提取模板。
+读取 `references/extraction-prompts.md` 获取各页面类型的数据提取模板。
+读取 `references/page-type-classification.md` 获取页面类型分类规则（单页面模式需要判断页面类型）。
 
 ### Step 2.5: 读取 Tag 词汇表
 
@@ -41,14 +45,13 @@ description: "按站点地图进行数据提取并探索新子页面。当需要
 
 ### Step 3: 读取爬取状态
 
-读取 `data/universities/de/{slug}/crawl_state.json` 判断哪些 URL 需要更新：
-- `next_check` 在未来 → 跳过
-- `next_check` 已过期 → 重新爬取
-- URL 没有记录 → 爬取
+读取 `data/universities/de/{slug}/crawl_state.json` 了解之前的爬取进度。
+
+**crawl_state 的定位**：进度追踪工具，记录哪些 URL 已经处理过、防止遗漏。**不是**更新决策的依据——是否更新由 `collection_status.yaml` 和用户指令决定，不由 crawl_state 中的 `next_check` 决定。
 
 ### Step 4: 批量提取
 
-对 site_map 中每个需要更新的 URL：
+对 site_map 中每个 URL（或单页面模式下的指定 URL）：
 
 **a) 抓取页面内容**:
 ```
@@ -57,7 +60,7 @@ web_fetch(url=<url>)
 
 如果 web_fetch 失败或内容不完整，尝试 browser 工具。
 
-**b) 检查未发现的子页面**:
+**b) 检查未发现的子页面**（仅 site_map 模式）:
 
 对比当前页面中的链接与 site_map.md 中已记录的 URL。如果发现新的相关子页面（申请、课程、教授、作品集等），记录下来，这些新页面也要执行数据提取。
 
@@ -70,10 +73,11 @@ web_fetch(url=<url>)
 
 **c) LLM 提取结构化数据**:
 
-根据 site_map 中标注的页面类型，使用对应的提取模板，从页面内容中提取数据。
+根据 site_map 中标注的页面类型（或单页面模式下的自动判断），使用对应的提取模板，从页面内容中提取数据。
 
 - 已知页面类型 → 使用对应模板
 - 未知页面类型 → 使用 program_overview 作为默认模板
+- 单页面模式 → 读取 `references/page-type-classification.md` 判断页面类型
 
 **Tag 分配**：在处理完一个专业的所有 URL、准备保存数据前，根据积累的全部信息（专业名称、focus_areas、课程内容、方向描述等）综合判断，从 `tags.yaml` 词汇表中选择合适的 tag：
 
@@ -105,7 +109,7 @@ web_fetch(url=<url>)
 
 ### Step 6: 保存数据
 
-将提取到的数据更新到对应的 `_index.md` 文件（中间产物，后续由 `data-organizer` 翻译为多语言版本）：
+将提取到的数据更新到对应的 `_index.md` 文件：
 - `data/universities/de/{slug}/_index.md`
 - `data/universities/de/{slug}/programs/{prog}/_index.md`
 
@@ -113,16 +117,37 @@ web_fetch(url=<url>)
 - 只更新非 null 的新值
 - 不覆盖已有的有效数据（除非新值更完整）
 - `last_crawled` 更新为当前时间
-- 多语言版本（`_index_EN.md` / `_index_ZH.md` / `_index_DE.md`）由 `data-organizer` 统一生成
 
-### Step 7: 更新爬取状态
+**单页面提取模式**：根据提取的数据类型（program/university/application），保存到对应目录。如果无法确定目标目录，输出提取结果由用户决定。
+
+### Step 7: 翻译多语言版本
+
+**总是执行**。无论是否作为 subagent 被调用。
+
+读取刚写入的 `_index.md`，将其翻译为多语言版本：
+- `_index_EN.md` — 英文版本
+- `_index_ZH.md` — 中文版本
+- `_index_DE.md` — 德文版本（德国院校三语）
+
+翻译规则：
+- tags 字段从 `tags.yaml` 词汇表查找对应语言版本，不自由翻译
+- 专业名称、学位等专有名词保留原文
+- 翻译完成后删除原始 `_index.md`
+
+### Step 8: 校验
+
+```
+exec("python3 skills/data-organizer/scripts/validate_data.py --program {program-slug}")
+```
+
+### Step 9: 更新爬取状态
 
 更新 `crawl_state.json`：
 - 更新每个 URL 的 `last_crawled`、`status`、`extracted_fields`
-- 计算 `next_check`（当前时间 + crawl_interval_days）
 - 记录错误信息
+- crawl_state 用于记录已处理 URL，防止遗漏
 
-### Step 8: 报告
+### Step 10: 报告
 
 输出提取报告：
 ```
@@ -133,9 +158,9 @@ web_fetch(url=<url>)
 - 状态: 正常/警告/需要重新探索
 ```
 
-### Step 9: 更新全局状态
+### Step 11: 更新全局状态
 
-**仅在独立执行（日常更新）时执行此步骤**。在三阶段流程中作为 subagent 被调用时，全局状态由 data-organizer 在 Phase 3 统一更新，跳过此步骤。
+**仅在独立执行（日常更新）时执行此步骤**。在三阶段流程中作为 subagent 被调用时，全局状态由 uni-collector 在 Phase 3 统一更新，跳过此步骤。
 
 更新 `data/universities/collection_status.yaml` 中对应院校的记录：
 
@@ -150,6 +175,17 @@ web_fetch(url=<url>)
 
 只更新该院校的字段，不修改其他院校的记录。
 
+## 单页面提取模式
+
+当输入为单个 URL（非院校 slug 或专业名称）时：
+
+1. **判断页面类型**：读取 `references/page-type-classification.md`，根据 URL 模式和内容判断
+2. **抓取页面**：web_fetch(url)
+3. **提取数据**：按对应模板提取
+4. **保存**：根据数据类型保存到合适位置（或输出结果由用户决定）
+5. **翻译**：生成多语言版本
+6. **不更新全局状态**：单页面模式不修改 collection_status.yaml
+
 ## 批量模式
 
 当处理"全部院校"时：
@@ -162,6 +198,7 @@ web_fetch(url=<url>)
 ## 依赖
 
 - `data/universities/de/{slug}/site_map.md` — 必须存在（由 site-explorer 生成，本 skill 可补充新发现的 URL）
-- `skills/page-extractor/references/extraction-prompts.md` — 提取模板
+- `references/extraction-prompts.md` — 提取模板
+- `references/page-type-classification.md` — 页面类型分类规则
 - `data/universities/schema/*.json` — Schema 定义
 - `data/universities/schema/tags.yaml` — Tag 受控词汇表

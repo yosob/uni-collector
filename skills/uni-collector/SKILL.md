@@ -17,10 +17,9 @@ always: true
 | Skill | 职责 | 何时使用 |
 |-------|------|---------|
 | `site-explorer` | 站点发现 + sitemap 生成（递归发现 URL） | 首次深爬、定期重扫、site_map 缺失 |
-| `smart-extractor` | 按 site_map 提取数据 + 发现新子页面 | 增量更新、per-program 提取 |
+| `smart-extractor` | 按 site_map 提取数据 + 翻译 + 校验 + 发现新子页面 + 单页面提取 | 增量更新、per-program 提取+翻译、单 URL 提取 |
 | `university-scout` | 搜索发现新院校 | 寻找新学校 |
-| `data-organizer` | 保存数据、更新状态、校验、多语言翻译、生成 profile | 所有场景中保存数据 |
-| `page-extractor` | 单页面手动提取 | 手动指定 URL 提取 |
+| `data-organizer` | 学校级数据处理：院校提取+翻译、profile 生成、脚本调用 | Phase 3 学校级聚合、初始化新院校 |
 
 **使用方式**：用 `read_file` 读取对应 `skills/{name}/SKILL.md`，按其中的工作流执行。
 
@@ -30,7 +29,14 @@ always: true
 
 当用户说 "深度爬取 XX 大学"、"首次爬取"、"重新扫描"，或 site_map.md 不存在时：
 
+**前置步骤**：先重置目标院校状态，确保 `explored: false`：
+```
+python3 skills/data-organizer/scripts/reset_status.py --slugs <slug>
+```
+
 分三个阶段执行（**多阶段流程**）：
+
+> **重要**：判断是否执行 Phase 1 的**唯一依据**是 `collection_status.yaml` 中的状态字段（`explored`、`needs_reexplore`、`next_explore`）。**即使 `site_map.md` 已存在，只要状态为 `explored: false` 或 `needs_reexplore: true` 或 `next_explore` 已过期，就必须执行 Phase 1。** 不要因为 sitemap 文件存在就跳过 Phase 1——site-explorer 会覆盖更新现有的 site_map.md。
 
 #### Phase 1: 站点发现
 
@@ -39,45 +45,41 @@ always: true
 3. 收到 announce 后，读取 `site_map.md` 获取专业列表和 URL 架构
 4. 更新 `HEARTBEAT.md` 记录进度
 
-#### Phase 2: 逐专业数据提取
+#### Phase 2: 逐专业提取+翻译+校验
 
 5. 对 site_map.md 中每个专业，spawn smart-extractor subagent：
-   - **Task 格式**: "提取 {院校名称} 的 '{专业名称}' 数据。读取 skills/smart-extractor/SKILL.md，从 data/universities/de/{slug}/site_map.md 找到该专业的 URL 列表，提取结构化数据并发现未记录的子页面。"
+   - **Task 格式**: "提取 {院校名称} 的 '{专业名称}' 数据。读取 skills/smart-extractor/SKILL.md，从 data/universities/de/{slug}/site_map.md 找到该专业的 URL 列表，提取结构化数据并发现未记录的子页面。smart-extractor 会自动完成提取+翻译+校验全流程。"
 6. 遵守 maxConcurrentSubagents 限制（最多 2 个并行）
 7. 收到 announce 后：
    - 如果还有未处理的专业 → spawn 下一个
    - 如果某个专业失败 → 标记为 failed，跳过继续
    - 如果全部处理完 → 进入 Phase 3
-8. 更新 HEARTBEAT.md 记录当前进度（已完成/待处理专业列表）
+8. 更新 HEARTBEAT.md 勾选对应专业
 
-#### Phase 3: 校验、翻译与摘要
+#### Phase 3: 学校级聚合（data-organizer）
 
-9. 使用 data-organizer 生成多语言版本：
-   - 读取 smart-extractor 保存的 `_index.md`（院校级 + 专业级）
-   - 翻译为 `_index_EN.md` / `_index_ZH.md`（德国院校额外生成 `_index_DE.md`）
-   - tags 字段从词汇表查找对应语言版本，不自由翻译
-   - 删除原始 `_index.md`
-10. 运行 data-organizer 聚合 tags + 校验：
-    `exec("python3 skills/data-organizer/scripts/aggregate_tags.py --university <slug>")` → 聚合 program tags 到 university 级别
-    `exec("python3 skills/data-organizer/scripts/validate_data.py --university <slug>")` → 校验数据完整性
-11. 使用 data-organizer 生成多语言 profile：
-    `university_profile_EN.md` / `university_profile_ZH.md` / `university_profile_DE.md`
-12. 运行 `python3 skills/data-organizer/scripts/validate_data.py --fill-rate --university <slug>` 获取填充率，更新 `collection_status.yaml` 中该院校的记录
-13. 汇报最终结果（包括失败的专业列表，如有）
-14. 如果全部完成，清理 HEARTBEAT.md
+9. 运行 data-organizer 完成学校级处理：
+    - 聚合 tags: `python3 skills/data-organizer/scripts/aggregate_tags.py --university <slug>`
+    - 校验数据: `python3 skills/data-organizer/scripts/validate_data.py --university <slug>`
+    - 学校级数据提取+翻译: 读取 `skills/data-organizer/SKILL.md` Step 1-2
+    - 生成 profile: `university_profile_EN.md` / `_ZH.md` / `_DE.md`
+    - 填充率: `python3 skills/data-organizer/scripts/validate_data.py --fill-rate <slug>`
+    - 更新 `collection_status.yaml`
+10. 折叠该院校在 HEARTBEAT.md 中的记录为一行：`✅ {slug} — 完成 (fill-rate: X, N/M programs)`
+11. 如果全部完成，清理 HEARTBEAT.md
 
 ### 情况 B: 日常增量更新
 
 当用户说 "更新 XX 大学数据"、"日常爬取"，且 site_map.md 已存在时：
 
 1. 读取 `skills/smart-extractor/SKILL.md` 并执行完整工作流
-2. smart-extractor 会自动：
+2. smart-extractor 会自动完成：
    - 读取 site_map.md 获取 URL 列表
    - 批量提取结构化数据
    - 发现未在 site_map 中记录的新子页面，补充到 site_map.md
-   - 保存并更新状态
+   - 翻译为多语言版本（EN/ZH/DE）
+   - 校验并保存
 3. 如果提取失败率 > 50%，建议用户运行情况 A（重新探索）
-4. 日常更新完成后，使用 data-organizer 将 `_index.md` 翻译为多语言版本（`_index_EN.md` / `_index_ZH.md` / `_index_DE.md`）
 
 ### 情况 C: 发现新院校
 
@@ -98,7 +100,7 @@ always: true
    - `explored: true` + `next_sync` 已过期 → 执行情况 B（日常更新）
    - 未到期 → 跳过
 3. **串行处理**：完成一个院校的全部阶段后再开始下一个（受 `maxConcurrentSubagents=2` 限制）
-4. HEARTBEAT.md 记录当前处理的院校和全局进度
+4. 创建 HEARTBEAT.md（全量模式 checklist 格式，见"批次调度规范"），全局前置步骤记录 reset_status
 
 #### 全量更新前置步骤（强制重爬）
 
@@ -115,34 +117,71 @@ always: true
 
 当用户提供一个具体 URL 说 "提取这个页面的信息"：
 
-读取 `skills/page-extractor/SKILL.md` 并执行，处理单个 URL。
+读取 `skills/smart-extractor/SKILL.md` 并以"单页面提取模式"执行，处理单个 URL。smart-extractor 会自动完成提取+翻译+校验。
 
 ## 批次调度规范
 
 当使用 subagent 执行多院校任务时，必须：
 
-1. **写入 HEARTBEAT.md**：在 workspace 下创建/更新 `HEARTBEAT.md`，写入阶段化检查指令：
-   ```
-   当前任务: {任务描述}
-   处理院校: {slug}
-   阶段: Phase {1|2|3}
-   已完成专业: {列表}
-   待处理专业: {列表}
-   全部完成后: 运行 data-organizer 翻译多语言版本 + 校验 + 生成多语言 profile + 更新 collection_status
+1. **写入 HEARTBEAT.md**（checklist 格式）：
+
+   **全量模式**（所有学校一次性 reset）：
+   ```markdown
+   # 全量探索任务 (第N次重爬)
+
+   > 启动时间: YYYY-MM-DD | N 所院校 | 批次大小: 2 并发
+
+   ## 前置准备
+   - [x] reset_status.py --all (N 所院校)
+
+   ## Batch 1
+
+   ### {slug}
+   - [ ] Phase 1: site-explorer → site_map.md
+   - [ ] Phase 2: 待 site_map.md 确定专业列表
+   - [ ] Phase 3: aggregate + profile + fill-rate
+
+   ### {slug2}
+   - [ ] Phase 1: site-explorer → site_map.md
+   - [ ] Phase 2: 待 site_map.md 确定专业列表
+   - [ ] Phase 3: aggregate + profile + fill-rate
+
+   ## Batch 2
+   - {slug3}
+   - {slug4}
+
+   ... (所有批次)
    ```
 
-2. **阶段推进逻辑**（收到 subagent announce 后）：
-   - Phase 1 完成 → 读取 site_map.md → 进入 Phase 2（spawn per-program subagent）
-   - Phase 2 每个专业完成 → 检查待处理列表 → spawn 下一个或进入 Phase 3
-   - Phase 2 某专业失败 → 标记 failed，跳过继续
-   - Phase 3 完成 → 更新 collection_status → 处理下一个院校（如有）→ 清理 HEARTBEAT.md
+   **单校模式**（per-university reset）：
+   ```markdown
+   ### {slug}
+   - [ ] reset_status
+   - [ ] Phase 1: site-explorer → site_map.md
+   - [ ] Phase 2: 待 site_map.md 确定专业列表
+   - [ ] Phase 3: aggregate + profile + fill-rate
+   ```
 
-3. **批次执行规则**：
+2. **HEARTBEAT 操作规则**：
+   - **初始化**：全量任务启动时创建 HEARTBEAT.md，所有批次写入，当前批次展开 checklist
+   - **Phase 1 完成后**：读取 site_map.md，将 "待 site_map.md 确定专业列表" 替换为实际专业 checklist（每专业一行）
+   - **每步完成后**：将 `[ ]` 改为 `[x]`（成功）或 `[!]` + 原因（失败）
+   - **学校完成后**：折叠该校所有行为一行 `✅ {slug} — 完成 (fill-rate: X, N/M programs)`
+   - **批次完成后**：推进下一批次，展开下一批次的 checklist
+   - **全部完成后**：清理 HEARTBEAT.md 为空闲状态
+
+3. **阶段推进逻辑**（收到 subagent announce 后）：
+   - Phase 1 完成 → 读取 site_map.md → 展开专业列表 → spawn Phase 2 subagent
+   - Phase 2 每个专业完成 → 勾选 HEARTBEAT.md → spawn 下一个或进入 Phase 3
+   - Phase 2 某专业失败 → 标记 `[!]` + 原因，跳过继续
+   - Phase 3 完成 → 折叠学校记录 → 处理下一个院校 → 清理 HEARTBEAT.md
+
+4. **批次执行规则**：
    - 每批最多 2 个 subagent（`maxConcurrentSubagents` 限制）
    - spawn 后 turn 可结束，由 subagent announce + heartbeat 兜底推进
    - 单个院校的 Phase 2 最多并行 2 个 per-program subagent
 
-4. **恢复机制**：如果 nanobot 重启，heartbeat 会自动读取 HEARTBEAT.md，从当前阶段恢复
+5. **恢复机制**：如果 nanobot 重启，heartbeat 会自动读取 HEARTBEAT.md，从当前阶段恢复
 
 ## 判断逻辑
 
@@ -151,7 +190,7 @@ always: true
 ```
 收到请求 → 判断场景:
   ├─ 涉及新院校发现 → 情况 C (university-scout)
-  ├─ 指定单个 URL → 情况 E (page-extractor)
+  ├─ 指定单个 URL → 情况 E (smart-extractor 单页面模式)
   ├─ 含"全量/完整/完全"关键词 → 先执行 reset_status.py 归零，再走下方逻辑
   ├─ 指定院校 → 在 collection_status.yaml 中查找:
   │    ├─ explored: false → 情况 A (site-explorer + smart-extractor × N, 首次探索)
@@ -161,6 +200,8 @@ always: true
   │    └─ explored: true + 未到期 → 跳过
   ├─ "更新全部" → 情况 D (遍历 collection_status.yaml 逐个串行处理)
   └─ 不确定 → 询问用户
+
+注意：以上判断仅基于 collection_status.yaml 的状态字段。site_map.md 或数据文件是否存在不影响判断——不要因为文件存在就跳过任何阶段。
 ```
 
 ## 范围控制

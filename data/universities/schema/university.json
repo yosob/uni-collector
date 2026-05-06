@@ -78,6 +78,17 @@
       "type": "string",
       "description": "URL or name of application portal, e.g. uni-assist, direct"
     },
+    "faculties": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "name_de": { "type": "string", "description": "Faculty name in German" },
+          "name_en": { "type": "string", "description": "Faculty name in English" }
+        }
+      },
+      "description": "List of faculties/departments"
+    },
     "overview": {
       "type": "string",
       "description": "Brief overview paragraph"

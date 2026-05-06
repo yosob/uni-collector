@@ -41,6 +41,7 @@ Given page content from a German university website, extract:
     "email": "email@example.com",
     "phone": null
   },
+  "tags": ["Product Design", "Industrial Design"],
   "num_places": null
 }
 ```
@@ -50,6 +51,7 @@ Rules:
 - Keep German values as-is for `name_de`, translate for `name_en`
 - Summarize long text blocks into concise descriptions
 - `focus_areas` should be 3-7 keywords max
+- `tags` must be selected from `data/universities/schema/tags.yaml` controlled vocabulary — generous matching, up to 5 tags. Tag strings must exactly match vocabulary entries, never invent new tags. Use Chinese tags in intermediate `_index.md`.
 
 ## Faculty List Extraction
 

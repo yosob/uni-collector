@@ -9,32 +9,32 @@ uni-collector/                         # 独立 Git 仓库
 │   ├── ARCHITECTURE.md                # 本文件
 │   ├── CONTEXT.md                     # 开发者上下文
 │   └── USAGE.md                       # 使用方式
-├── skills/                            # nanobot skills（6 个）
+├── skills/                            # nanobot skills（5 个）
 │   ├── uni-collector/                 # 管线编排器
 │   │   └── SKILL.md
 │   ├── site-explorer/                 # 站点发现 + sitemap 生成
 │   │   ├── SKILL.md
 │   │   └── references/
 │   │       └── exploration-guide.md   # 探索指南（信息优先级、页面识别规则）
-│   ├── smart-extractor/               # 数据提取 + 新页面探索
-│   │   └── SKILL.md
+│   ├── smart-extractor/               # 数据提取 + 翻译 + 校验 + 单页面提取
+│   │   ├── SKILL.md
+│   │   └── references/
+│   │       ├── extraction-prompts.md  # 提取模板
+│   │       └── page-type-classification.md  # 页面类型分类
 │   ├── university-scout/              # 院校发现
 │   │   ├── SKILL.md
 │   │   └── references/
 │   │       └── search-strategies.md
-│   ├── page-extractor/                # 单页面手动提取
-│   │   ├── SKILL.md
-│   │   └── references/
-│   │       ├── extraction-prompts.md
-│   │       └── page-type-classification.md
-│   └── data-organizer/                # 数据保存校验 + profile 生成
+│   └── data-organizer/                # 学校级数据处理 + 脚本工具箱
 │       ├── SKILL.md
 │       ├── references/
 │       │   └── schema-guide.md
 │       └── scripts/
 │           ├── init_university.py
 │           ├── validate_data.py
-│           └── aggregate_tags.py
+│           ├── aggregate_tags.py
+│           ├── reset_status.py
+│           └── clean_status.py
 ├── data/                              # 收集到的数据（23 所院校）
 │   └── universities/
 │       ├── universities.yaml          # 院校配置
@@ -64,30 +64,32 @@ uni-collector/                         # 独立 Git 仓库
 
 nanobot 的 skill 是 Markdown 文件（`SKILL.md`），通过自然语言指导 Agent 如何使用工具完成特定任务。
 
-### 6 个 Skill 职责
+### 5 个 Skill 职责
 
 | Skill | 职责 | 何时使用 |
 |-------|------|---------|
 | `uni-collector` | 管线编排器，判断场景、协调多阶段流程 | 所有请求的入口 |
 | `site-explorer` | 站点发现 + sitemap 生成（递归发现） | 首次深爬、定期重扫 |
-| `smart-extractor` | 数据提取 + 新页面探索 + tag 分配 | 增量更新、per-program 提取 |
+| `smart-extractor` | 数据提取 + 翻译 + 校验 + 新页面探索 + tag 分配 + 单页面提取 | 增量更新、per-program 提取+翻译、单 URL 提取 |
 | `university-scout` | web_search 发现新院校 | 寻找新学校 |
-| `page-extractor` | 单页面手动提取 | 手动指定 URL |
-| `data-organizer` | 保存数据、校验、初始化目录、多语言翻译、tags 聚合、生成 profile | 所有场景中保存数据 |
+| `data-organizer` | 学校级数据处理：院校提取+翻译、profile 生成、脚本调用 | Phase 3 学校级聚合、初始化新院校 |
 
 ### 数据流
 
 ```
 首次探索（多阶段流程）:
   Phase 1: site-explorer → 递归发现 → 生成 site_map.md（URL 架构）
-  Phase 2: smart-extractor × N → 每个专业提取数据 + 分配 tags + 探索新子页面 → 保存 _index.md（中间产物）
-  Phase 3: data-organizer → 翻译多语言版本（含 tags 词汇表查找）+ 聚合 tags + 校验数据 + 生成多语言 profile
+  Phase 2: smart-extractor × N → 每个专业提取数据 + 分配 tags + 翻译 DE/EN/ZH + 校验 + 探索新子页面
+  Phase 3: data-organizer → 学校级数据提取+翻译 + 聚合 tags + 校验 + 生成 profile + fill-rate
 
 日常更新:
-  smart-extractor → 读 site_map → web_fetch 已知 URL → LLM 提取 + 发现新页面 → 更新 _index.md（中间产物）
+  smart-extractor → 读 site_map → web_fetch 已知 URL → LLM 提取 + 发现新页面 + 翻译 + 校验
 
 发现新院校:
-  university-scout → web_search → 更新 universities.yaml → site-explorer 深爬（多阶段）
+  university-scout → web_search → 更新 universities.yaml + collection_status.yaml → site-explorer 深爬（多阶段）
+
+单页面提取:
+  smart-extractor（单页面模式） → 判断类型 → 抓取 → 提取 + 翻译 + 校验
 ```
 
 ## 探索、收集与更新策略
@@ -95,16 +97,18 @@ nanobot 的 skill 是 Markdown 文件（`SKILL.md`），通过自然语言指导
 ### 三阶段数据生命周期
 
 ```
-┌─────────────┐     ┌─────────────┐     ┌─────────────┐
-│  发现阶段    │ ──→ │  提取阶段    │ ──→ │  校验阶段    │
-│  (site-     │     │ (smart-     │     │  (data-     │
-│  explorer)  │     │  extractor) │     │  organizer) │
-└─────────────┘     └─────────────┘     └─────────────┘
-  递归发现            读 site_map         翻译多语言版本
-  生成 site_map      提取结构化数据       校验数据完整性
-  递归访问子页面      分配 tags           生成多语言 profile
-  记录 URL 架构       探索新子页面        聚合 tags 到院校级
-                      更新 site_map       更新全局状态
+┌─────────────┐     ┌──────────────────────┐     ┌─────────────┐
+│  发现阶段    │ ──→ │  提取+翻译+校验阶段    │ ──→ │  学校级聚合   │
+│  (site-     │     │ (smart-extractor × N) │     │  (data-     │
+│  explorer)  │     │  每个专业一个 subagent  │     │  organizer) │
+└─────────────┘     └──────────────────────┘     └─────────────┘
+  递归发现            读 site_map                  聚合 tags 到院校级
+  生成 site_map      提取结构化数据                校验数据完整性
+  递归访问子页面      分配 tags                    生成多语言 profile
+  记录 URL 架构       翻译 _index → EN/ZH/DE      更新全局状态
+                      运行 validate_data.py
+                      探索新子页面 + 更新 site_map
+                      删除中间产物 _index.md
 ```
 
 ### 首次探索（三阶段流程）
@@ -118,22 +122,32 @@ nanobot 的 skill 是 Markdown 文件（`SKILL.md`），通过自然语言指导
 - **策略**: **递归深度发现** — 找到专业汇总页后，逐一访问每个专业概述页及子页面，**递归发现所有有价值的子页面 URL**，由 LLM 判断何时停止深入
 - **停止条件**: 专业汇总页中所有专业都已递归探索完毕，各层子页面中没有新的有价值链接
 
-**Phase 2: 逐专业数据提取（smart-extractor × N）**
+**前置步骤**: 重置目标院校状态（确保 explored: false）：
+```bash
+python3 skills/data-organizer/scripts/reset_status.py --slugs <slug>
+```
+
+**Phase 2: 逐专业提取+翻译+校验（smart-extractor × N）**
 - **入口**: site_map.md 中每个专业的 URL 列表
-- **方式**: 每个专业 spawn 一个 subagent，web_fetch 已知 URL → LLM 提取结构化数据
+- **方式**: 每个专业 spawn 一个 subagent，完成提取+翻译+校验的完整流程：
+  1. web_fetch 已知 URL → LLM 提取结构化数据 → 分配 tags → 保存 `_index.md`
+  2. 翻译 `_index.md` → `_index_EN.md` / `_index_ZH.md` / `_index_DE.md`（tags 从 `tags.yaml` 查找对应语言版本）
+  3. 运行 `validate_data.py --program {slug}` 校验
+  4. 删除中间产物 `_index.md`
 - **额外行为**: 检查页面中是否有 site_map 未记录的子页面，发现后提取数据并更新 site_map
-- **产出**: 保存 `_index.md` 数据文件（中间产物，含 tags 字段，Phase 3 翻译为多语言版本后删除） + 更新 `crawl_state.json`
+- **产出**: `_index_EN.md` / `_index_ZH.md` / `_index_DE.md`（三语数据文件，无中间产物） + 更新 `crawl_state.json`
 - **tag 分配**: 处理完一个专业的所有 URL 后，从 `tags.yaml` 词汇表分配 tag（宽松匹配，中文）
 - **并发**: 遵守 maxConcurrentSubagents 限制（最多 2 个并行）
 - **失败处理**: 单个专业失败标记为 failed，跳过继续处理剩余专业
+- **task 描述**: 必须在 task 末尾显式列出翻译步骤（提高 LLM 注意力权重）
 
-**Phase 3: 校验、翻译与摘要（data-organizer）**
-- **翻译**: 将 `_index.md`（中间产物）翻译为 `_index_EN.md` / `_index_ZH.md` / `_index_DE.md`（德国院校），删除原始 `_index.md`。tags 字段从 `tags.yaml` 词汇表查找对应语言版本，不自由翻译
+**Phase 3: 学校级聚合（data-organizer）**
 - **聚合 tags**: 运行 `aggregate_tags.py` 将所有 program 的 tags 去重聚合到 university 级别
-- **校验**: 运行 validate_data.py 检查数据完整性
+- **校验**: 运行 `validate_data.py --university <slug>` 检查数据完整性
 - **产出**: 生成多语言 `university_profile_EN.md` / `_ZH.md` / `_DE.md`（人可读摘要）
+- **fill-rate**: 运行 `validate_data.py --fill-rate --university <slug>` 获取填充率
 - **状态更新**: 更新 `collection_status.yaml`
-- **汇报**: 包括成功和失败的专业列表
+- **注意**: Phase 3 只处理学校级任务（3-4 次 tool call），per-program 的翻译已在 Phase 2 完成
 
 ### 日常更新（smart-extractor）
 
@@ -155,12 +169,12 @@ nanobot 的 skill 是 Markdown 文件（`SKILL.md`），通过自然语言指导
 - 错峰分散：选择 LLM 流量低的时间段，避免一次性全量扫描
 - 按列表顺序：不按变化量或优先级排序，简单轮询
 
-**日常判断逻辑**:
+**日常判断逻辑**（唯一依据: `collection_status.yaml` 的状态字段，文件是否存在不影响判断）:
 ```
 收到更新请求 →
-  ├─ site_map.md 不存在 → 运行 site-explorer（Phase 1）→ smart-extractor × N（Phase 2）→ data-organizer（Phase 3）
-  ├─ site_map.md 存在 + 到期 → 运行 smart-extractor（日常提取）
-  ├─ site_map.md 存在 + 未到期 → 跳过
+  ├─ explored: false / needs_reexplore: true / next_explore 已过期 → 三阶段流程（Phase 1→2→3）
+  ├─ explored: true + next_sync 已过期 → 日常更新（smart-extractor）
+  ├─ explored: true + 未到期 → 跳过
   └─ 提取失败率 > 50% → 重新运行三阶段流程
 ```
 
@@ -216,16 +230,59 @@ countries:
 
 ### 多阶段流程的进度追踪
 
-`HEARTBEAT.md` 用于追踪多阶段流程的当前状态，同时作为 heartbeat 恢复的兜底：
+`HEARTBEAT.md` 使用 **checklist 格式**追踪多阶段流程的进度，同时作为 heartbeat 恢复的兜底。
 
+**全量模式**（所有学校一次性 reset）：
+```markdown
+# 全量探索任务 (第N次重爬)
+
+> 启动时间: YYYY-MM-DD | N 所院校 | 批次大小: 2 并发
+
+## 前置准备
+- [x] reset_status.py --all (N 所院校)
+
+## Batch 1
+
+### {slug}
+- [ ] Phase 1: site-explorer → site_map.md
+- [ ] Phase 2: 待 site_map.md 确定专业列表
+- [ ] Phase 3: aggregate + profile + fill-rate
+
+### {slug2}
+- [ ] Phase 1: site-explorer → site_map.md
+- [ ] Phase 2: 待 site_map.md 确定专业列表
+- [ ] Phase 3: aggregate + profile + fill-rate
+
+## Batch 2
+- {slug3}
+- {slug4}
 ```
-当前任务: {任务描述}
-处理院校: {slug}
-阶段: Phase {1|2|3}
-已完成专业: {列表}
-待处理专业: {列表}
-全部完成后: 运行 data-organizer 翻译 + 校验 + 生成多语言 profile + 更新 collection_status
+
+**Phase 1 完成后**（动态展开专业列表）：
+```markdown
+### {slug} (10 programs)
+- [x] Phase 1: site-explorer → site_map.md
+- [x] program-a
+- [!] program-b — LLM error, 保留上轮数据
+- [ ] program-c              ← 🔄 subagent abc123 运行中
+- [ ] program-d
+- [ ] Phase 3: aggregate + profile + fill-rate
 ```
+
+**学校完成后**（折叠为一行）：
+```markdown
+### ✅ {slug} — 完成 (fill-rate: 0.41, 5/5 programs)
+```
+
+**全部完成后**：清理为空闲状态。
+
+**HEARTBEAT 操作规则**：
+1. **初始化**：全量任务启动时创建 HEARTBEAT.md，所有批次写入，当前批次展开 checklist
+2. **Phase 1 完成后**：读取 site_map.md，将 "待 site_map.md 确定专业列表" 替换为实际专业 checklist
+3. **每步完成后**：将 `[ ]` 改为 `[x]`（成功）或 `[!]` + 原因（失败）
+4. **学校完成后**：折叠该校所有行为一行 `✅ {slug} — 完成 (fill-rate, N/M programs)`
+5. **批次完成后**：推进下一批次，展开下一批次的 checklist
+6. **全部完成后**：清理 HEARTBEAT.md 为空闲状态
 
 ## 每所院校的数据文件
 
@@ -314,6 +371,8 @@ data/universities/de/{slug}/
 
 ### crawl_state.json
 
+**定位：进度追踪工具，非决策依据。** 记录哪些 URL 已处理过，防止遗漏。是否更新由 `collection_status.yaml` 和用户指令决定，不由 crawl_state 决定。
+
 ```json
 {
   "university_slug": "<slug>",
@@ -369,17 +428,20 @@ nanobot 的 subagent announce 机制是"单向通知"——subagent 完成后注
 ```
 主 agent（编排器）
   │
+  ├─ 前置: reset_status.py --slugs <slug>（确保 explored: false）
+  │
   ├─ Phase 1: site-explorer subagent → 递归发现 → 输出 site_map.md
   │   announce: "发现 N 个专业，M 个子页面 URL"
   │
   ├─ Phase 2: smart-extractor subagent × N（每个专业一个）
-  │   Task: "提取 {院校} 的 '{专业名}' 数据，读 site_map.md 定位"
-  │   每个完成后 announce → 主 agent 检查剩余 → spawn 下一个
+  │   Task: "提取 {院校} 的 '{专业名}' 数据 + 翻译 + 校验"
+  │   每个 subagent 完成: 提取 → _index.md → 翻译 EN/ZH/DE → validate → 删除 _index.md
+  │   每个完成后 announce → 主 agent 勾选 HEARTBEAT.md → spawn 下一个
   │   失败的专业标记为 failed，跳过继续
-  │   HEARTBEAT.md 记录进度（已完成/待处理列表）
   │
-  └─ Phase 3: data-organizer → 翻译多语言版本（含 tags 查找）+ 聚合 tags + 校验 + 生成多语言 profile
+  └─ Phase 3: data-organizer → 聚合 tags + 校验 + 生成多语言 profile + fill-rate
       更新 collection_status.yaml
+      折叠 HEARTBEAT.md 该院校为一行
 ```
 
 ### 多院校串行处理
@@ -415,7 +477,7 @@ HEARTBEAT.md 同时追踪：
 
 | 文件 | 追踪内容 |
 |------|---------|
-| `HEARTBEAT.md` | 当前阶段、处理中院校、专业完成列表 |
+| `HEARTBEAT.md` | Checklist 格式：批次列表、专业进度、完成状态（`[x]`/`[!]`/`[ ]`） |
 | `site_map.md` | 专业列表和 URL 架构（Phase 1 产出） |
 | `crawl_state.json` | 每个 URL 的提取状态（Phase 2 实时更新） |
 
@@ -423,12 +485,40 @@ HEARTBEAT.md 同时追踪：
 
 | 文件 | 改动 |
 |---|---|
-| `nanobot/templates/agent/subagent_announce.md` | 新增"检查追踪文件并继续推进"指令 |
 | `uni-collector/skills/uni-collector/SKILL.md` | 情况 A 改为多阶段流程，新增阶段编排逻辑 |
 | `uni-collector/skills/site-explorer/SKILL.md` | 收窄为 discovery + sitemap 生成 |
-| `uni-collector/skills/smart-extractor/SKILL.md` | 新增"探索未发现页面"行为 |
+| `uni-collector/skills/smart-extractor/SKILL.md` | 合并 page-extractor，统一翻译行为，新增单页面模式 |
 
 ## nanobot 近期修复
+
+### Skill 体系重构（2026-05-06）
+
+**page-extractor 合并到 smart-extractor**：5 个 skill（原 6 个）。smart-extractor 新增单页面提取模式，合并了 extraction-prompts.md 和 page-type-classification.md 到自己的 references 目录。
+
+**data-organizer 重新定位**：从"通用数据保存+翻译"改为"学校级数据处理"——只负责学校级 _index 提取+翻译、profile 生成、脚本调用。专业级数据完全由 smart-extractor 处理。
+
+**smart-extractor 统一翻译**：去掉条件判断，无论是否作为 subagent 都执行翻译+校验。
+
+**crawl_state 定位明确**：进度追踪工具（防遗漏），不是更新决策依据。
+
+**collection_status.yaml 字段统一**：清理冗余字段（last_explore→last_explored, last_sync→last_synced, fill_rate→field_fill_rate）。
+
+**Schema 更新**：program.json 新增 professors, career_perspectives, workshops, additional_contacts, application_portal 等 11 个字段。university.json 新增 faculties 字段。
+
+**university-scout 闭环**：发现新院校后同步添加 collection_status.yaml 条目。
+
+**校验改进 TODO**：记录在 `docs/validate-data-todo.md`，后续处理 parse_frontmatter 嵌套解析、参数格式、类型校验等问题。
+
+### 管线合并与 HEARTBEAT 格式改进（2026-05-03）
+
+**管线合并**：Phase 2（提取）和 Phase 3（翻译/校验）的 per-program 部分合并。每个 Phase 2 subagent 现在完成提取 + 翻译 + 校验的完整流程，Phase 3 缩减为学校级聚合（aggregate + profile + fill-rate）。
+
+**HEARTBEAT.md Checklist 格式**：从模糊的 "Phase 2 进行中" 改为详细的 checklist 格式，包含批次列表、专业级进度标记（`[x]`/`[!]`/`[ ]`）、动态展开和折叠规则。
+
+**判断逻辑强化**：
+- 情况 A 增加 `reset_status.py` 前置步骤
+- 强调 Phase 1 不可因 site_map.md 存在而跳过
+- 判断逻辑基于 `collection_status.yaml` 状态字段，不受文件存在与否影响
 
 ### 子代理配置对齐（2026-04-18）
 

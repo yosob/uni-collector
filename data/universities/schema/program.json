@@ -126,6 +126,77 @@
       "type": "integer",
       "description": "Number of available places (if known)"
     },
+    "application_portal": {
+      "type": "string",
+      "description": "Application portal name or platform, e.g. uni-assist, Bauhaus.CampusPortal"
+    },
+    "application_portal_url": {
+      "type": "string",
+      "format": "uri",
+      "description": "URL of the application portal"
+    },
+    "url_en": {
+      "type": "string",
+      "format": "uri",
+      "description": "English version of program page URL (if available)"
+    },
+    "city": {
+      "type": "string",
+      "description": "City where the program is offered"
+    },
+    "state": {
+      "type": "string",
+      "description": "Federal state (Bundesland)"
+    },
+    "country": {
+      "type": "string",
+      "description": "ISO country code"
+    },
+    "type": {
+      "type": "string",
+      "description": "Institution type: public, private, etc."
+    },
+    "career_perspectives": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "Potential career paths after graduation"
+    },
+    "workshops": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "name": { "type": "string", "description": "Workshop name (German)" },
+          "en": { "type": "string", "description": "Workshop name (English)" }
+        }
+      },
+      "description": "Available workshops and facilities"
+    },
+    "professors": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "name": { "type": "string" },
+          "chair": { "type": "string", "description": "Professorship/Chair name" },
+          "role": { "type": "string", "description": "Role in program" }
+        }
+      },
+      "description": "Professors associated with the program"
+    },
+    "additional_contacts": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "name": { "type": "string" },
+          "role": { "type": "string" },
+          "email": { "type": "string", "format": "email" },
+          "phone": { "type": "string" }
+        }
+      },
+      "description": "Additional contact persons"
+    },
     "last_crawled": {
       "type": "string",
       "format": "date-time"
