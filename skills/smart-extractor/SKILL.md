@@ -5,7 +5,7 @@ description: "按站点地图进行数据提取并探索新子页面，也支持
 
 # 智能数据提取器
 
-按 site_map.md 中记录的 URL 架构进行数据提取，同时检查页面中是否有 site_map 未记录的子页面。也支持从单个 URL 提取数据（替代 page-extractor）。
+按 site_map.md 中记录的 URL 架构进行数据提取，同时检查页面中是否有 site_map 未记录的子页面。也支持从单个 URL 提取数据。
 
 ## 与 site-explorer 的分工
 
@@ -65,11 +65,13 @@ web_fetch(url=<url>)
 对比当前页面中的链接与 site_map.md 中已记录的 URL。如果发现新的相关子页面（申请、课程、教授、作品集等），记录下来，这些新页面也要执行数据提取。
 
 判断规则：链接指向同一院校域名，且页面内容与以下主题相关：
-- 申请/录取 (Bewerbung/Application/Zulassung)
-- 课程/教学计划 (Curriculum/Module/Studienverlaufsplan)
-- 教授/教师 (Professuren/People/Lehrende)
-- 作品集/考试 (Portfolio/Mappe/Eignungsprüfung)
-- 学费/资助 (Gebühren/Stipendium)
+- 申请/录取 (Application/Admission)
+- 课程/教学计划 (Curriculum/Module)
+- 教授/教师 (People/Faculty)
+- 作品集/考试 (Portfolio/Aptitude test)
+- 学费/资助 (Tuition/Fees/Scholarship)
+
+> 各国语言的关键词请参考 `skills/site-explorer/references/country-guides/{country}.md` 中的"页面识别补充"章节。
 
 **c) LLM 提取结构化数据**:
 
@@ -83,7 +85,7 @@ web_fetch(url=<url>)
 
 - **宽松匹配**：只要专业内容与某个 tag 有一定关联就应该打上，宁可多打不要漏打
 - **严格匹配**：tag 字符串必须与 `tags.yaml` 中的 `zh` 值完全一致，不得自创 tag
-- 在中间产物 `_index.md` 中使用**中文 tag**
+- 在中间产物 `_index.md` 中使用**中文 tag**，翻译后 `_index_ZH.md` 用中文 tag，`_index_EN.md` 和 `_index_DE.md` 用英文 tag
 - 示例：一个 "Mediendesign" 专业可能同时打上 `["数字媒体", "视觉传达", "交互设计"]`
 
 **d) 记录结果**:
@@ -127,7 +129,7 @@ web_fetch(url=<url>)
 读取刚写入的 `_index.md`，将其翻译为多语言版本：
 - `_index_EN.md` — 英文版本
 - `_index_ZH.md` — 中文版本
-- `_index_DE.md` — 德文版本（德国院校三语）
+- `_index_DE.md` — 德文版本（仅 country=de 时生成）
 
 翻译规则：
 - tags 字段从 `tags.yaml` 词汇表查找对应语言版本，不自由翻译
@@ -156,15 +158,18 @@ web_fetch(url=<url>)
 
 **仅在独立执行（日常更新）时执行此步骤**。在三阶段流程中作为 subagent 被调用时，全局状态由 uni-collector 在 Phase 3 统一更新，跳过此步骤。
 
-更新 `data/universities/collection_status.yaml` 中对应院校的记录：
+更新 `data/universities/collection_status.yaml` 中对应院校的记录。文件结构为嵌套格式 `countries.{country}.universities[]`：
 
 ```yaml
-- slug: {slug}
-  last_synced: "{今天日期}"
-  sync_mode: smart_extractor
-  next_sync: "{今天 + 7天}"
-  field_fill_rate: {运行 validate_data.py --fill-rate 获取}
-  needs_reexplore: {失败率 > 50% 时为 true，否则 false}
+countries:
+  {country}:
+    universities:
+    - slug: {slug}
+      last_synced: "{今天日期}"
+      sync_mode: smart_extractor
+      next_sync: "{今天 + 7天}"
+      field_fill_rate: {运行 validate_data.py --fill-rate --country {country} 获取}
+      needs_reexplore: {失败率 > 50% 时为 true，否则 false}
 ```
 
 只更新该院校的字段，不修改其他院校的记录。
@@ -176,7 +181,7 @@ web_fetch(url=<url>)
 1. **抓取页面**：web_fetch(url)
 2. **判断页面类型**：读取 `references/page-type-classification.md`，根据 URL 模式和内容判断
 3. **识别所属院校和专业**：
-   - 从 URL 域名匹配 `universities.yaml` 中已知院校
+   - 从 URL 域名匹配 `universities.yaml` 中已知院校（遍历所有国家分组）
    - 从 URL 路径匹配 `site_map.md` 中已知专业
    - 如果无法识别，检查 `data/universities/` 下所有院校的 site_map.md
 4. **根据识别结果分支**：
@@ -188,10 +193,10 @@ web_fetch(url=<url>)
 ## 批量模式
 
 当处理"全部院校"时：
-1. 读取 `data/universities/collection_status.yaml`
-2. 筛选 `explored: true` 且 `next_sync` 已过期的院校
+1. 读取 `data/universities/collection_status.yaml`（结构为 `countries.{country}.universities[]`）
+2. 遍历所有国家下的院校，筛选 `explored: true` 且 `next_sync` 已过期的院校
 3. 按列表顺序逐一处理
-4. 每所院校处理完后更新 collection_status.yaml
+4. 每所院校处理完后更新 collection_status.yaml 中对应国家下的记录
 5. 汇总所有院校的报告
 
 ## 依赖

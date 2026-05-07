@@ -1,40 +1,44 @@
 ---
 name: university-scout
-description: "通过网络搜索发现德国设计类院校和专业。当用户想要寻找新院校、扩展收集范围、搜索特定类型的专业、或更新院校配置时使用。触发词：发现院校、搜索学校、查找大学、添加新院校、扩展收集、寻找设计学校、搜索专业"
+description: "通过网络搜索发现设计类院校和专业。当用户想要寻找新院校、扩展收集范围、搜索特定类型的专业、或更新院校配置时使用。触发词：发现院校、搜索学校、查找大学、添加新院校、扩展收集、寻找设计学校、搜索专业"
 ---
 
 # 院校发现
 
-通过 web_search 搜索德国的设计类院校和专业，更新采集配置。
+通过 web_search 搜索设计类院校和专业，更新采集配置。
 
 ## 工作流
 
 ### Step 1: 加载搜索策略
 
-读取 `references/search-strategies.md` 获取关键词模板和查询模式。
+读取 `references/search-strategies.md` 获取通用关键词模板和查询模式。
+然后根据用户指定的目标国家，读取 `references/country-guides/{country}.md` 获取该国家的特定搜索关键词和策略。
 
 ### Step 2: 读取现有配置
 
-读取 `data/universities/universities.yaml` 获取已收录院校列表，用于去重。
+读取 `data/universities/universities.yaml` 获取已收录院校列表，用于去重。院校按国家分组，去重时遍历所有国家分组。
 
 ### Step 3: 执行搜索
 
-根据用户意图构造搜索查询。支持以下搜索模式：
+根据用户意图构造搜索查询。查询关键词参考 `references/country-guides/{country}.md`。支持以下搜索模式：
 
 **按专业搜索**（用户指定专业方向）：
-- 组合德/英/中关键词 + "Studiengang Deutschland"
-- 示例: `"Produktdesign Master Studiengang Deutschland"`
+- 组合目标语言/英/中关键词 + 国家限定词
+- 示例（德国）: `"Produktdesign Master Studiengang Deutschland"`
+- 示例（英国）: `"Product Design master course UK university"`
 
 **按城市搜索**（用户指定城市）：
 - 组合城市名 + 设计关键词
-- 示例: `"Design Studium Berlin Kunsthochschule"`
+- 示例（德国）: `"Design Studium Berlin Kunsthochschule"`
+- 示例（英国）: `"design course London art school"`
 
 **按类型搜索**（用户指定院校类型）：
 - 组合院校类型 + 专业方向
-- 示例: `"Kunsthochschule Design Studiengang"`
+- 示例（德国）: `"Kunsthochschule Design Studiengang"`
+- 示例（美国）: `"art school design program US"`
 
 **广泛搜索**（用户未指定范围）：
-- 使用 `references/search-strategies.md` 中的高优先级关键词
+- 使用 `references/search-strategies.md` 和 `country-guides/{country}.md` 中的高优先级关键词
 - 从 Tier 1 城市开始，逐步扩展
 
 对每个搜索查询使用：
@@ -103,45 +107,48 @@ web_fetch(url="<university url>")
 
 对用户确认添加的院校：
 
-1. **更新 `universities.yaml`**: 添加新院校条目，格式：
+1. **更新 `universities.yaml`**: 在对应的国家分组下添加新院校条目，格式：
 ```yaml
-- slug: hfg-offenbach
-  name_en: HfG Offenbach
-  name_de: Hochschule fur Gestaltung Offenbach
-  url: https://www.hfg-offenbach.de
-  country: de
-  city: Offenbach
-  state: Hessen
-  type: kunsthochschule
-  focus: false
-  programs:
-    - slug: produktdesign
-      name_en: Product Design
-      name_de: Produktdesign
-      url: https://www.hfg-offenbach.de/...
-      degree: ma
-      focus: false
-      start_urls:
-        - url: https://www.hfg-offenbach.de/...
-          type: program_overview
+{country}:
+  - slug: hfg-offenbach
+    name_en: HfG Offenbach
+    name_de: Hochschule fur Gestaltung Offenbach
+    url: https://www.hfg-offenbach.de
+    city: Offenbach
+    state: Hessen
+    type: kunsthochschule
+    focus: false
+    programs:
+      - slug: produktdesign
+        name_en: Product Design
+        name_de: Produktdesign
+        url: https://www.hfg-offenbach.de/...
+        degree: ma
+        focus: false
+        start_urls:
+          - url: https://www.hfg-offenbach.de/...
+            type: program_overview
 ```
 
 2. **初始化目录**: 委托 `data-organizer` skill（读取 `skills/data-organizer/SKILL.md`）执行初始化步骤。
 
-3. **更新 `collection_status.yaml`**: 为新院校添加记录：
+3. **更新 `collection_status.yaml`**: 在 `countries.{country}.universities` 数组中为新院校添加记录：
 ```yaml
-- slug: {new-slug}
-  explored: false
-  last_explored: null
-  next_explore: null
-  last_synced: null
-  sync_mode: null
-  next_sync: null
-  field_fill_rate: 0.0
-  programs_explored: 0
-  programs_total: 0
-  errors: []
-  needs_reexplore: false
+countries:
+  {country}:
+    universities:
+    - slug: {new-slug}
+      explored: false
+      last_explored: null
+      next_explore: null
+      last_synced: null
+      sync_mode: null
+      next_sync: null
+      field_fill_rate: 0.0
+      programs_explored: 0
+      programs_total: 0
+      errors: []
+      needs_reexplore: false
 ```
 
 ### Step 10: 报告

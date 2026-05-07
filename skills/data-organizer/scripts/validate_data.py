@@ -2,9 +2,9 @@
 """Validate collected university data against schemas.
 
 Usage:
-  python3 validate_data.py --university <slug> [--fix] [--country de]
-  python3 validate_data.py --all [--fix] [--country de]
-  python3 validate_data.py --fill-rate <slug>
+  python3 validate_data.py --university <slug> [--fix] [--country <country>]
+  python3 validate_data.py --all [--fix] [--country <country>]
+  python3 validate_data.py --fill-rate <slug> [--country <country>]
 """
 
 import argparse

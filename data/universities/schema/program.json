@@ -6,7 +6,7 @@
   "properties": {
     "name_de": {
       "type": "string",
-      "description": "German program name, e.g. Produktdesign"
+      "description": "Program name in original language, e.g. Produktdesign"
     },
     "name_en": {
       "type": "string",
@@ -22,8 +22,8 @@
     },
     "degree": {
       "type": "string",
-      "enum": ["ba", "ma", "bfa", "mfa", "diplom", "phd", "dr", "state_exam", "other"],
-      "description": "Degree type: ba=Bachelor of Arts, ma=Master of Arts, bfa=Bachelor of Fine Arts, mfa=Master of Fine Arts, diplom=Diplom, phd=Doctor of Philosophy, dr=Doctor (Dr. phil., Dr.-Ing.), state_exam=State Examination, other"
+      "enum": ["ba", "ma", "bfa", "mfa", "diplom", "phd", "dr", "state_exam", "bsc", "msc", "mphil", "bdes", "mdes", "march", "other"],
+      "description": "Degree type: ba=Bachelor of Arts, ma=Master of Arts, bfa=Bachelor of Fine Arts, mfa=Master of Fine Arts, diplom=Diplom, phd=Doctor of Philosophy, dr=Doctor (Dr. phil., Dr.-Ing.), state_exam=State Examination, bsc=Bachelor of Science, msc=Master of Science, mphil=Master of Philosophy, bdes=Bachelor of Design, mdes=Master of Design, march=Master of Architecture, other"
     },
     "degree_title": {
       "type": "string",
@@ -37,6 +37,14 @@
     "duration_semesters": {
       "type": "integer",
       "description": "Standard duration in semesters"
+    },
+    "credits": {
+      "type": "integer",
+      "description": "Total credit points for the program, e.g. 120 for ECTS"
+    },
+    "credits_system": {
+      "type": "string",
+      "description": "Credit system used, e.g. ECTS, CATS, US credits"
     },
     "start_semester": {
       "type": "string",
@@ -73,8 +81,8 @@
     "language_requirements": {
       "type": "object",
       "properties": {
-        "german": { "type": "string", "description": "e.g. DSH-2, TestDaF 4x4" },
-        "english": { "type": "string", "description": "e.g. IELTS 6.5, TOEFL 80" }
+        "german": { "type": "string", "description": "e.g. DSH-2, TestDaF 4x4 (if applicable)" },
+        "english": { "type": "string", "description": "e.g. IELTS 6.5, TOEFL 80 (if applicable)" }
       }
     },
     "portfolio_required": {
@@ -92,8 +100,8 @@
     "application_deadlines": {
       "type": "object",
       "properties": {
-        "winter_semester": { "type": "string" },
-        "summer_semester": { "type": "string" },
+        "winter_semester": { "type": "string", "description": "Fall/Winter intake deadline" },
+        "summer_semester": { "type": "string", "description": "Spring/Summer intake deadline" },
         "notes": { "type": "string" }
       }
     },
@@ -105,7 +113,9 @@
       "type": "object",
       "properties": {
         "tuition_free": { "type": "boolean" },
-        "semester_fee_eur": { "type": "number" },
+        "amount": { "type": "number", "description": "Tuition fee amount" },
+        "currency": { "type": "string", "description": "ISO 4217 currency code: EUR, GBP, USD" },
+        "period": { "type": "string", "description": "Fee period: semester, year, total" },
         "notes": { "type": "string" }
       }
     },
@@ -128,7 +138,7 @@
     },
     "application_portal": {
       "type": "string",
-      "description": "Application portal name or platform, e.g. uni-assist, Bauhaus.CampusPortal"
+      "description": "Application portal name or platform, e.g. uni-assist, UCAS, Common App"
     },
     "application_portal_url": {
       "type": "string",
@@ -146,7 +156,7 @@
     },
     "state": {
       "type": "string",
-      "description": "Federal state (Bundesland)"
+      "description": "State/province/region"
     },
     "country": {
       "type": "string",
@@ -162,7 +172,7 @@
       "items": {
         "type": "object",
         "properties": {
-          "name": { "type": "string", "description": "Workshop name (German)" },
+          "name": { "type": "string", "description": "Workshop name (original language)" },
           "en": { "type": "string", "description": "Workshop name (English)" }
         }
       },
@@ -202,5 +212,5 @@
       "items": { "type": "string", "format": "uri" }
     }
   },
-  "required": ["name_de", "name_en", "slug", "degree", "url"]
+  "required": ["name_en", "slug", "degree", "url"]
 }

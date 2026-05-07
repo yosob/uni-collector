@@ -1,6 +1,8 @@
 # Exploration Guide
 
-指导 LLM 在德国高校网站中寻找目标信息的参考文档。
+指导 LLM 在高校网站中寻找目标信息的参考文档。
+
+> 国家特定的搜索词汇、院校类型、学位体系等，请读取 `country-guides/{country}.md`。
 
 ## 目标信息（按优先级排序）
 
@@ -8,11 +10,11 @@
 
 | 信息类别 | 字段 | 说明 |
 |---------|------|------|
-| 专业名称 | name_de, name_en | 德语原名 + 英文翻译 |
-| 学位类型 | degree | ba / ma / diplom / phd / bfa / mfa / state_exam / dr |
+| 专业名称 | name_de, name_en | 原语言名称 + 英文翻译（name_de 存本地语言名称，UK/US 与 name_en 相同） |
+| 学位类型 | degree | ba / ma / bfa / mfa / diplom / phd / dr / state_exam / bsc / msc / mphil / bdes / mdes / march / other |
 | 学制 | duration_semesters | 学期数 |
 | 授课语言 | language | de, en 或其他 |
-| 申请截止日期 | application_deadlines | 冬/夏季学期截止日 |
+| 申请截止日期 | application_deadlines | 截止日 |
 | 录取要求 | admission_requirements | 学历、语言、作品集等 |
 | 申请流程 | application_process | 通过什么平台、步骤 |
 | 学费 | tuition | 是否免学费、学期费 |
@@ -23,7 +25,7 @@
 |---------|------|------|
 | 课程概述 | curriculum_summary | 核心课程和结构 |
 | 作品集要求 | portfolio_required, portfolio_details | 是否需要、具体要求 |
-| 语言要求 | language_requirements | DSH/IELTS/TOEFL 等级 |
+| 语言要求 | language_requirements | IELTS/TOEFL/DSH 等级 |
 | 联系方式 | contact | 联系人、邮箱 |
 | 专业方向 | focus_areas | 3-7 个关键词 |
 | 学位全称 | degree_title | 如 "Master of Arts (M.A.)" |
@@ -36,7 +38,7 @@
 | 招生人数 | num_places | 每年招生名额 |
 | 所属院系 | department | 院系名称 |
 | 教授/教师 | faculty_list | 姓名、职称、研究方向 |
-| 申请门户 | application_portal | uni-assist / 学校自有系统 |
+| 申请门户 | application_portal | UCAS / uni-assist / 学校自有系统 |
 
 ## 目标学位类型
 
@@ -44,23 +46,25 @@
 
 | 学位级别 | 常见类型 | 示例 |
 |---------|---------|------|
-| 本科 | B.A., B.F.A., B.Sc., Diplom (grundständig) | Bachelor of Arts, Bachelor of Fine Arts |
-| 硕士 | M.A., M.F.A., M.Sc. | Master of Arts, Master of Fine Arts |
+| 本科 | B.A., B.F.A., B.Sc., B.Des., Diplom | Bachelor of Arts, Bachelor of Fine Arts |
+| 硕士 | M.A., M.F.A., M.Sc., M.Des., M.Arch., M.Phil. | Master of Arts, Master of Fine Arts |
 | 博士 | Ph.D., Dr. phil., Dr.-Ing. | Doctor of Philosophy, Doktor der Philosophie |
-| 师范 | Staatsexamen (Erstes Staatsexamen) | Lehramt an Gymnasien |
-| 工程 | Diplom (Dipl.-Ing., Dipl.-Des.) | Diplom-Designer |
+| 师范 | Staatsexamen (Erstes Staatsexamen) | Lehramt an Gymnasien（德国特有） |
+| 工程 | Diplom (Dipl.-Ing., Dipl.-Des.) | Diplom-Designer（德国特有） |
 
 ## 页面识别规则
 
 ### 值得深入的页面（URL 和内容关键词）
 
-- 含 `design`, `gestaltung`, `studiengang`, `programm`, `studium` → 专业相关
-- 含 `bewerbung`, `application`, `zulassung`, `admission` → 申请相关
-- 含 `curriculum`, `modul`, `verlauf`, `studienplan` → 课程相关
-- 含 `professur`, `professor`, `people`, `team`, `lehrpersonen` → 教师相关
-- 含 `gebühr`, `fee`, `beitrag`, `semester` (非学期) → 学费相关
-- 含 `kunst`, `künstlerisch`, `freie kunst`, `malerei`, `bildhauerei` → 纯艺术相关
-- 含 `medien`, `media`, `medienkunst`, `mediengestaltung` → 媒体艺术相关
+> 以下为通用英文关键词，各国语言的关键词请参考 `country-guides/{country}.md`。
+
+- 含 `design`, `program`, `course`, `study` → 专业相关
+- 含 `application`, `admission`, `apply` → 申请相关
+- 含 `curriculum`, `module`, `syllabus` → 课程相关
+- 含 `professor`, `people`, `faculty`, `staff` → 教师相关
+- 含 `fee`, `tuition`, `funding`, `scholarship` → 学费相关
+- 含 `art`, `fine art`, `painting`, `sculpture` → 纯艺术相关
+- 含 `media`, `digital`, `animation` → 媒体艺术相关
 
 ### 可以快速掠过的页面（非目标但可能含有用链接）
 
@@ -82,7 +86,7 @@
 
 ### 穷举流程
 
-1. **找到专业汇总页**：优先搜索 `Übersicht der Studiengänge`、`Studiengänge`、`Degree Programs`、`Study Programs` 等汇总页
+1. **找到专业汇总页**：优先搜索 `Degree Programs`、`Courses`、`Study Programs` 等汇总页（具体术语参考 country-guides）
 2. **提取全部专业列表**：从汇总页提取所有专业的名称、学位和链接
 3. **制作专业清单**：列出所有发现的专业，作为后续检查清单
 4. **逐一访问**：对清单中每个专业至少访问概述页，发现子页面 URL
@@ -93,11 +97,11 @@
 每发现一个专业汇总页后，维护如下清单：
 
 ```
-[院校名] 专业清单:
-  [ ] Freie Kunst (Diplom) → /path/to/page
-  [ ] Medienkunst (B.F.A.) → /path/to/page
-  [x] Produktdesign (M.A.) → /path/to/page ✓ 已探索
-  [ ] Lehramt Kunst (Staatsexamen) → /path/to/page
+[University Name] Program Checklist:
+  [ ] Product Design (B.A.) → /path/to/page
+  [ ] Visual Communication (M.A.) → /path/to/page
+  [x] Fine Art (M.F.A.) → /path/to/page ✓ explored
+  [ ] Interaction Design (B.Sc.) → /path/to/page
   ...
 ```
 
@@ -108,9 +112,9 @@
 ### 入口点
 
 从院校根 URL 开始：
-1. 先看首页导航，找到"Studium"、"Study"、"Programs"等入口
-2. 从导航进入院系页面（Fakultät / Fachbereich）
-3. 从院系页面找到专业汇总页（Übersicht/Studiengänge）
+1. 先看首页导航，找到 "Study"、"Programs"、"Courses" 等入口
+2. 从导航进入院系页面（Faculty / Department）
+3. 从院系页面找到专业汇总页（Programs/Courses）
 4. 从汇总页进入每个具体专业页面
 5. 从专业页面追踪到申请、课程、教师等子页面
 

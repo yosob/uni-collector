@@ -1,10 +1,10 @@
 ---
 name: uni-collector
-description: "德国高校数据收集管线编排器。协调 site-explorer（深度探索）、smart-extractor（日常提取）、university-scout（院校发现）等技能完成数据收集流程。触发词：收集院校数据、爬取高校信息、更新专业数据、深度爬取、运行收集管线"
+description: "高校数据收集管线编排器。协调 site-explorer（深度探索）、smart-extractor（日常提取）、university-scout（院校发现）等技能完成数据收集流程。触发词：收集院校数据、爬取高校信息、更新专业数据、深度爬取、运行收集管线"
 always: true
 ---
 
-# 德国高校数据收集管线
+# 高校数据收集管线
 
 编排器：根据场景选择合适的子 skill 执行。不直接执行爬取或提取操作。
 
@@ -42,30 +42,31 @@ python3 skills/data-organizer/scripts/reset_status.py --slugs <slug>
 
 1. Spawn subagent 执行 site-explorer（读取 `skills/site-explorer/SKILL.md`）
 2. Subagent 完成后 announce 回来 → 输出 `site_map.md`（包含所有专业和子页面 URL）
-3. 收到 announce 后，读取 `site_map.md` 获取专业列表和 URL 架构
-4. 更新 `HEARTBEAT.md` 记录进度
+3. **如果 site-explorer 失败**（subagent 报错或 site_map.md 未生成）：标记该院校为 `[!]` 在 HEARTBEAT.md，跳过该院校继续处理下一个。不要重试 Phase 1——用户可以手动触发重跑。
+4. 收到 announce 后，读取 `site_map.md` 获取专业列表和 URL 架构
+5. 更新 `HEARTBEAT.md` 记录进度
 
 #### Phase 2: 逐专业提取+翻译+校验
 
-5. 对 site_map.md 中每个专业，spawn smart-extractor subagent：
+6. 对 site_map.md 中每个专业，spawn smart-extractor subagent：
    - **Task 格式**: "提取 {院校名称} 的 '{专业名称}' 数据。读取 skills/smart-extractor/SKILL.md，从 data/universities/{country}/{slug}/site_map.md 找到该专业的 URL 列表，提取结构化数据并发现未记录的子页面。smart-extractor 会自动完成提取+翻译+校验全流程。"
-6. 遵守 maxConcurrentSubagents 限制（最多 2 个并行）
-7. 收到 announce 后：
+7. 遵守 maxConcurrentSubagents 限制（最多 2 个并行）
+8. 收到 announce 后：
    - 如果还有未处理的专业 → spawn 下一个
    - 如果某个专业失败 → 标记为 failed，跳过继续
    - 如果全部处理完 → 进入 Phase 3
-8. 更新 HEARTBEAT.md 勾选对应专业
+9. 更新 HEARTBEAT.md 勾选对应专业
 
 #### Phase 3: 学校级聚合（data-organizer）
 
-9. 读取 `skills/data-organizer/SKILL.md`，按以下顺序执行：
-    1. **学校级数据提取+翻译**（Step 1-2）: 从 site_map.md 中 university_overview URL 提取学校信息 → 翻译为 EN/ZH/DE
-    2. **聚合 tags**（Step 3）: `python3 skills/data-organizer/scripts/aggregate_tags.py --university <slug>`
-    3. **校验数据**（Step 4）: `python3 skills/data-organizer/scripts/validate_data.py --university <slug> --fix`
-    4. **生成 profile**（Step 5）: `university_profile_EN.md` / `_ZH.md` / `_DE.md`
-    5. **填充率 + 更新状态**（Step 6）: `python3 skills/data-organizer/scripts/validate_data.py --fill-rate <slug>` → 更新 `collection_status.yaml`
-10. 折叠该院校在 HEARTBEAT.md 中的记录为一行：`✅ {slug} — 完成 (fill-rate: X, N/M programs)`
-11. 如果全部完成，清理 HEARTBEAT.md
+10. 读取 `skills/data-organizer/SKILL.md`，按以下顺序执行：
+    1. **学校级数据提取+翻译**（Step 1-2）: 从 site_map.md 中 university_overview URL 提取学校信息 → 翻译为 EN/ZH（DE 仅 country=de）
+    2. **聚合 tags**（Step 3）: `python3 skills/data-organizer/scripts/aggregate_tags.py --university <slug> --country <country>`
+    3. **校验数据**（Step 4）: `python3 skills/data-organizer/scripts/validate_data.py --university <slug> --country <country> --fix`
+    4. **生成 profile**（Step 5）: `university_profile_EN.md` / `_ZH.md`（`_DE.md` 仅 country=de）
+    5. **填充率 + 更新状态**（Step 6）: `python3 skills/data-organizer/scripts/validate_data.py --fill-rate <slug> --country <country>` → 更新 `collection_status.yaml`
+11. 折叠该院校在 HEARTBEAT.md 中的记录为一行：`✅ {slug} — 完成 (fill-rate: X, N/M programs)`
+12. 如果全部完成，清理 HEARTBEAT.md
 
 ### 情况 B: 日常增量更新
 
@@ -80,13 +81,13 @@ python3 skills/data-organizer/scripts/reset_status.py --slugs <slug>
    - 读取 site_map.md 获取 URL 列表
    - 批量提取结构化数据
    - 发现未在 site_map 中记录的新子页面，补充到 site_map.md
-   - 翻译为多语言版本（EN/ZH/DE）
+   - 翻译为多语言版本（EN/ZH，DE 仅 country=de）
    - 保存数据
 3. 如果提取失败率 > 50%，建议用户运行情况 A（重新探索）
 
 ### 情况 C: 发现新院校
 
-当用户说 "搜索德国设计院校"、"帮我找 XX 专业的学校"：
+当用户说 "搜索设计院校"、"帮我找 XX 专业的学校"：
 
 1. 读取 `skills/university-scout/SKILL.md` 执行院校发现
 2. 用户确认后，对新院校执行情况 A（首次深爬）
@@ -95,8 +96,8 @@ python3 skills/data-organizer/scripts/reset_status.py --slugs <slug>
 
 当用户说 "更新所有院校"：
 
-1. 读取 `data/universities/collection_status.yaml`
-2. 对每个院校根据 collection_status 中的状态判断：
+1. 读取 `data/universities/collection_status.yaml`（结构为 `countries.{country}.universities[]`）
+2. 遍历所有国家下的院校，根据 collection_status 中的状态判断：
    - `explored: false` → 执行情况 A（首次探索，三阶段流程）
    - `needs_reexplore: true` → 执行情况 A（强制重扫，三阶段流程）
    - `explored: true` + `next_explore` 已过期 → 执行情况 A（定期重扫，三阶段流程）
@@ -112,7 +113,7 @@ python3 skills/data-organizer/scripts/reset_status.py --slugs <slug>
 1. **先重置状态**：执行脚本将目标学校的 collection_status 归零（不删除数据文件）
    - 指定学校：`python3 skills/data-organizer/scripts/reset_status.py --slugs <slug1>,<slug2>`
    - 所有学校：`python3 skills/data-organizer/scripts/reset_status.py --all`
-   - 指定国家：`python3 skills/data-organizer/scripts/reset_status.py --country de`
+   - 指定国家：`python3 skills/data-organizer/scripts/reset_status.py --country <country>`
 2. **再正常调度**：状态归零后，所有目标学校变为 `explored: false`，按正常的三阶段批次调度流程执行
 3. site-explorer 会覆盖生成 site_map.md，smart-extractor 会覆盖写入数据文件，旧数据在重跑期间作为 fallback
 

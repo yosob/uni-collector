@@ -1,12 +1,12 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
   "title": "University",
-  "description": "German university/institution data schema (medium depth)",
+  "description": "University/institution data schema (medium depth)",
   "type": "object",
   "properties": {
     "name_de": {
       "type": "string",
-      "description": "Official German name"
+      "description": "Official name in original language"
     },
     "name_en": {
       "type": "string",
@@ -27,8 +27,7 @@
     },
     "country": {
       "type": "string",
-      "description": "ISO 3166-1 alpha-2 country code",
-      "default": "de"
+      "description": "ISO 3166-1 alpha-2 country code"
     },
     "city": {
       "type": "string",
@@ -36,11 +35,11 @@
     },
     "state": {
       "type": "string",
-      "description": "Federal state (Bundesland)"
+      "description": "State/province/region"
     },
     "type": {
       "type": "string",
-      "enum": ["universitaet", "fachhochschule", "kunsthochschule", "musikhochschule", "other"],
+      "enum": ["universitaet", "fachhochschule", "kunsthochschule", "musikhochschule", "university", "art_school", "college", "institute", "other"],
       "description": "Institution type"
     },
     "founded_year": {
@@ -60,7 +59,9 @@
       "type": "object",
       "properties": {
         "tuition_free": { "type": "boolean" },
-        "semester_fee_eur": { "type": "number" },
+        "amount": { "type": "number", "description": "Tuition fee amount" },
+        "currency": { "type": "string", "description": "ISO 4217 currency code: EUR, GBP, USD" },
+        "period": { "type": "string", "description": "Fee period: semester, year, total" },
         "notes": { "type": "string" }
       },
       "description": "Tuition information"
@@ -68,22 +69,27 @@
     "application_deadlines": {
       "type": "object",
       "properties": {
-        "winter_semester": { "type": "string", "description": "e.g. 'July 15'" },
-        "summer_semester": { "type": "string", "description": "e.g. 'January 15'" },
+        "winter_semester": { "type": "string", "description": "Fall/Winter intake deadline, e.g. 'July 15'" },
+        "summer_semester": { "type": "string", "description": "Spring/Summer intake deadline, e.g. 'January 15'" },
         "notes": { "type": "string" }
       },
       "description": "General application deadlines"
     },
     "application_portal": {
       "type": "string",
-      "description": "URL or name of application portal, e.g. uni-assist, direct"
+      "description": "URL or name of application portal, e.g. uni-assist, UCAS, direct"
+    },
+    "application_portal_url": {
+      "type": "string",
+      "format": "uri",
+      "description": "URL of the application portal"
     },
     "faculties": {
       "type": "array",
       "items": {
         "type": "object",
         "properties": {
-          "name_de": { "type": "string", "description": "Faculty name in German" },
+          "name_de": { "type": "string", "description": "Faculty name in original language" },
           "name_en": { "type": "string", "description": "Faculty name in English" }
         }
       },
@@ -112,5 +118,5 @@
       "items": { "type": "string", "format": "uri" }
     }
   },
-  "required": ["name_de", "name_en", "slug", "url", "country"]
+  "required": ["name_en", "slug", "url", "country"]
 }

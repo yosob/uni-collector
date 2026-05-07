@@ -12,15 +12,15 @@ description: "学校级数据处理：院校数据提取、多语言翻译、pro
 | 本 Skill 负责 | smart-extractor 负责 |
 |--------------|---------------------|
 | 学校级 `_index` 数据提取和更新 | 专业级 `_index` 数据提取和更新 |
-| 学校级 `_index.md` → EN/ZH/DE 翻译 | 专业级 `_index.md` → EN/ZH/DE 翻译 |
+| 学校级 `_index.md` → EN/ZH 翻译（DE 仅 country=de） | 专业级 `_index.md` → EN/ZH 翻译（DE 仅 country=de） |
 | `university_profile` 生成 | 专业级数据提取 |
 | 脚本调用（init, aggregate, validate, reset） | crawl_state 更新 |
 | collection_status.yaml 更新 | site_map.md 更新 |
 
 ## 数据位置
 
-- 院校数据: `data/universities/{country}/{slug}/_index_EN.md` / `_index_ZH.md` / `_index_DE.md`
-- 摘要文档: `data/universities/{country}/{slug}/university_profile_EN.md` / `_ZH.md` / `_DE.md`
+- 院校数据: `data/universities/{country}/{slug}/_index_EN.md` / `_index_ZH.md`（`_index_DE.md` 仅 country=de）
+- 摘要文档: `data/universities/{country}/{slug}/university_profile_EN.md` / `_ZH.md`（`_DE.md` 仅 country=de）
 - Schema: `data/universities/schema/*.json`
 - 配置: `data/universities/universities.yaml`
 - 状态: `data/universities/collection_status.yaml`
@@ -33,7 +33,7 @@ description: "学校级数据处理：院校数据提取、多语言翻译、pro
 ## 工作流
 
 **在三阶段流程中（Phase 3），按以下顺序执行**：
-1. Step 1-2: 学校级数据提取 + 翻译（产出 _index_EN/ZH/DE.md）
+1. Step 1-2: 学校级数据提取 + 翻译（产出 _index_EN/ZH.md，DE 仅 country=de）
 2. Step 3: 聚合 tags（需要 program 数据已存在）
 3. Step 4: 校验数据
 4. Step 5: 生成 profile（需要所有数据就绪）
@@ -65,13 +65,19 @@ description: "学校级数据处理：院校数据提取、多语言翻译、pro
 
 ### Step 2: 翻译学校级数据
 
-将 `_index.md` 翻译为多语言版本：
+根据是否存在 `_index.md` 中间文件，分两种路径：
 
+**路径 A — 首次翻译**（`_index.md` 存在，Scene A 之后）：
 1. 读取 `_index.md`
 2. 生成 `_index_EN.md`（英文版）
 3. 生成 `_index_ZH.md`（中文版）
 4. 对于德国院校（country=de），生成 `_index_DE.md`（德文版）
 5. 删除原始 `_index.md`
+
+**路径 B — 增量翻译**（`_index.md` 不存在，Scene B 更新后）：
+1. 读取已有的 `_index_EN.md`（Step 1 中已更新）
+2. 对变化的字段，同步更新 `_index_ZH.md`（中文版）
+3. 对于德国院校（country=de），同步更新 `_index_DE.md`（德文版）
 
 **翻译原则**：
 
@@ -83,7 +89,7 @@ description: "学校级数据处理：院校数据提取、多语言翻译、pro
 - `last_crawled`（时间戳）
 
 词汇表查找的字段（从 `tags.yaml` 查找对应语言版本）：
-- `tags`：ZH 文件用中文 tag，EN 文件用英文 tag
+- `tags`：ZH 文件用中文 tag，EN 和 DE 文件用英文 tag
 
 翻译的字段：
 - `name_de`/`name_en`/`name_cn` → 各语言版本使用对应名称
@@ -98,15 +104,13 @@ description: "学校级数据处理：院校数据提取、多语言翻译、pro
 所有 program 的数据提取完成后（由 smart-extractor 完成），运行脚本聚合 tags：
 
 ```bash
-python3 skills/data-organizer/scripts/aggregate_tags.py --university <slug>
+python3 skills/data-organizer/scripts/aggregate_tags.py --university <slug> --country <country>
 ```
-
-脚本自动从所有 program 的 `_index_EN.md` 中提取 tags，去重聚合到 university 级别。
 
 ### Step 4: 校验数据
 
 ```bash
-python3 skills/data-organizer/scripts/validate_data.py --university <slug> --fix
+python3 skills/data-organizer/scripts/validate_data.py --university <slug> --country <country> --fix
 ```
 
 校验学校级和所有 program 的 required 字段。`--fix` 自动修复简单的 YAML 格式问题（引号缺失、空白不规范等），这些修复静默完成不报错。
@@ -117,7 +121,7 @@ python3 skills/data-organizer/scripts/validate_data.py --university <slug> --fix
 3. 修复后重新运行校验确认通过
 
 ```bash
-python3 skills/data-organizer/scripts/validate_data.py --fill-rate <slug>
+python3 skills/data-organizer/scripts/validate_data.py --fill-rate <slug> --country <country>
 ```
 
 获取填充率。
@@ -154,20 +158,24 @@ python3 skills/data-organizer/scripts/validate_data.py --fill-rate <slug>
 
 ### Step 6: 更新全局状态
 
-在三阶段流程完成后，更新 `data/universities/collection_status.yaml` 中对应院校的记录：
+在三阶段流程完成后，更新 `data/universities/collection_status.yaml` 中对应院校的记录。文件结构为嵌套格式 `countries.{country}.universities[]`：
 
 ```yaml
-- slug: {slug}
-  explored: true
-  last_explored: "{今天日期}"
-  next_explore: "{今天 + 3个月}"
-  last_synced: "{今天日期}"
-  sync_mode: site_explorer
-  next_sync: "{今天 + 7天}"
-  field_fill_rate: {从 validate_data.py --fill-rate 获取}
-  programs_explored: {实际探索的专业数}
-  programs_total: {site_map.md 中的总专业数}
-  needs_reexplore: false
+countries:
+  {country}:
+    universities:
+    - slug: {slug}
+      explored: true
+      last_explored: "{今天日期}"
+      next_explore: "{今天 + 3个月}"
+      last_synced: "{今天日期}"
+      sync_mode: site_explorer
+      next_sync: "{今天 + 7天}"
+      field_fill_rate: {从 validate_data.py --fill-rate --country {country} 获取}
+      programs_explored: {实际探索的专业数}
+      programs_total: {site_map.md 中的总专业数}
+      errors: []
+      needs_reexplore: false
 ```
 
 只更新该院校的字段，不修改其他院校的记录。
@@ -179,7 +187,7 @@ python3 skills/data-organizer/scripts/validate_data.py --fill-rate <slug>
 ### init_university.py — 初始化新院校目录
 
 ```bash
-python3 skills/data-organizer/scripts/init_university.py --slug <slug> --country de [--programs-total N]
+python3 skills/data-organizer/scripts/init_university.py --slug <slug> --country <country> [--programs-total N]
 ```
 
 创建标准目录结构、占位文件和空 crawl_state.json。`--programs-total` 设置 collection_status 中的初始专业数。
@@ -197,8 +205,8 @@ python3 skills/data-organizer/scripts/reset_status.py --country de
 ### aggregate_tags.py — 聚合 tags
 
 ```bash
-python3 skills/data-organizer/scripts/aggregate_tags.py --university <slug>
-python3 skills/data-organizer/scripts/aggregate_tags.py --all [--country de]
+python3 skills/data-organizer/scripts/aggregate_tags.py --university <slug> --country <country>
+python3 skills/data-organizer/scripts/aggregate_tags.py --all [--country <country>]
 ```
 
 从所有 program 的数据文件中提取 tags，去重聚合到 university 级别。
@@ -206,9 +214,9 @@ python3 skills/data-organizer/scripts/aggregate_tags.py --all [--country de]
 ### validate_data.py — 校验数据
 
 ```bash
-python3 skills/data-organizer/scripts/validate_data.py --university <slug> --fix [--country de]
-python3 skills/data-organizer/scripts/validate_data.py --fill-rate <slug>
-python3 skills/data-organizer/scripts/validate_data.py --all --fix [--country de]
+python3 skills/data-organizer/scripts/validate_data.py --university <slug> --country <country> --fix
+python3 skills/data-organizer/scripts/validate_data.py --fill-rate <slug> --country <country>
+python3 skills/data-organizer/scripts/validate_data.py --all --fix [--country <country>]
 ```
 
 校验 required 字段完整性、检查 YAML 语法、计算字段填充率。`--fix` 自动修复简单格式问题（静默）；结构性错误会报出，需手动修复后重跑。

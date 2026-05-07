@@ -2,6 +2,8 @@
 
 Rules for classifying university web pages by type, used to select the correct extraction template.
 
+> URL patterns below show both English and German examples. For country-specific URL patterns, also consult `skills/site-explorer/references/country-guides/{country}.md`.
+
 ## Page Types
 
 ### program_overview
@@ -77,6 +79,26 @@ The main page or "about" page of a university.
 - Facts: founded year, student count, location
 - List of faculties or departments
 - No specific program details
+
+### program_page
+A specific program's detailed page, similar to program_overview but used in `universities.yaml` start_urls config to denote a direct program link.
+
+**URL patterns:**
+- Direct link to a program page within a university site
+
+**Content signals:**
+- Same as program_overview
+
+### faculty_page
+A faculty or department's main page, used in `universities.yaml` start_urls config.
+
+**URL patterns:**
+- `/faculty/`, `/fakultaet/`, `/department/`, `/school/`
+
+**Content signals:**
+- Faculty overview
+- Links to programs within the faculty
+- Professor listings
 
 ## Classification Rules
 
