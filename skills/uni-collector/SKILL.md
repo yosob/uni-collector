@@ -135,6 +135,10 @@ python3 skills/data-organizer/scripts/reset_status.py --slugs <slug>
 
    > 启动时间: YYYY-MM-DD | N 所院校 | 批次大小: 2 并发
 
+   ## Wake Conditions
+   - 有未完成的 Phase 且无活跃 subagent
+   - 任何 Phase 等待超过 1 小时
+
    ## 前置准备
    - [x] reset_status.py --all (N 所院校)
 
@@ -182,10 +186,10 @@ python3 skills/data-organizer/scripts/reset_status.py --slugs <slug>
 
 4. **批次执行规则**：
    - 每批最多 2 个 subagent（`maxConcurrentSubagents` 限制）
-   - spawn 后 turn 可结束，由 subagent announce + heartbeat 兜底推进
+   - spawn 后 turn 可结束，由 subagent announce 兜底推进。heartbeat watchdog 仅在检测到主 agent 停滞时提醒，不会主动执行任务
    - 单个院校的 Phase 2 最多并行 2 个 per-program subagent
 
-5. **恢复机制**：如果 nanobot 重启，heartbeat 会自动读取 HEARTBEAT.md，从当前阶段恢复
+5. **恢复机制**：主 agent 在 HEARTBEAT.md 中写入唤醒条件。如果 nanobot 重启或主 agent 停滞，heartbeat watchdog 会检测到唤醒条件满足，提醒主 agent 继续推进未完成任务。主 agent 读取 HEARTBEAT.md 的 checklist 判断当前进度，从断点恢复。
 
 ## 判断逻辑
 

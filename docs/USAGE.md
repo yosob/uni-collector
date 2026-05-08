@@ -40,7 +40,7 @@ LLM 从院校根 URL 出发，采用**专业穷举策略**：
 ```
 全量更新 hawk-hildesheim
 完整爬取 hfg-karlsruhe, hfk-bremen
-完全更新所有德国院校
+完全更新所有院校
 ```
 
 触发词："全量"、"完整"、"完全"。LLM 会先调用 `reset_status.py` 将目标学校的 `collection_status.yaml` 状态归零，再启动 site-explorer 完整重跑。旧数据不会被删除，site-explorer 会覆盖写入。
@@ -62,11 +62,13 @@ LLM 从院校根 URL 出发，采用**专业穷举策略**：
 ```
 搜索柏林的设计类院校
 帮我找德国有哪些工业设计硕士项目
+搜索英国的设计类院校
+帮我找美国的交互设计硕士项目
 ```
 
 搜索新院校，确认后自动初始化目录并建议深爬。
 
-### 单页面提取（page-extractor）
+### 单页面提取（smart-extractor）
 
 ```
 提取这个页面的专业信息: https://www.uni-weimar.de/...
@@ -77,15 +79,15 @@ LLM 从院校根 URL 出发，采用**专业穷举策略**：
 ### 批量探索（多院校 subagent）
 
 ```
-全量探索所有未探索的德国院校
+全量探索所有未探索的院校
 批量爬取 B01 到 B12
 ```
 
 LLM 会自动：
 1. 创建任务追踪文件（记录每所院校状态）
-2. 写入 HEARTBEAT.md（heartbeat 兜底检查）
+2. 写入 HEARTBEAT.md（checklist 格式 + 唤醒条件）
 3. 每批 spawn 2 个 subagent（受并发限制）
-4. subagent 完成后自动推进下一批（三层保障：announce → heartbeat → 启动恢复）
+4. subagent 完成后通过 announce 驱动下一批；heartbeat watchdog 在主 agent 停滞时兜底提醒
 
 ### 初始化/校验
 
@@ -152,6 +154,7 @@ LLM 会自动：
 
 ```bash
 python3 skills/data-organizer/scripts/init_university.py --slug <slug> --country de
+python3 skills/data-organizer/scripts/init_university.py --slug <slug> --country uk
 ```
 
 ### reset_status.py
