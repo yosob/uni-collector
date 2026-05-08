@@ -24,15 +24,21 @@ def init_university(slug: str, country: str = "de"):
         d.mkdir(parents=True, exist_ok=True)
         print(f"Created: {d}")
 
-    # Create university _index.md
+    # Determine languages based on country
+    if country == "de":
+        languages = ["de", "en"]
+    else:
+        languages = ["en"]
+
+    # Create university _index.md (intermediate file — smart-extractor translates to _index_EN/ZH/DE.md)
     index_content = f"""---
 slug: "{slug}"
-name_de: null
 name_en: null
 url: null
 country: "{country}"
 city: null
 type: null
+languages: {json.dumps(languages)}
 programs: []
 last_crawled: null
 source_urls: []

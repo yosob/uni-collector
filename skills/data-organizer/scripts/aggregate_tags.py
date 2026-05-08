@@ -4,9 +4,8 @@
 读取所有 program 的 tags 字段，去重后写入 university 数据文件。
 
 用法:
-  python3 aggregate_tags.py --university <slug>
-  python3 aggregate_tags.py --all
-  python3 aggregate_tags.py --all --country de
+  python3 aggregate_tags.py --university <slug> [--country de]
+  python3 aggregate_tags.py --all [--country de]
 """
 
 import argparse
@@ -142,8 +141,9 @@ def aggregate_for_university(slug, zh_to_en, en_to_zh, country="de"):
 
     update_frontmatter_tags(en_file, all_tags_en)
     update_frontmatter_tags(zh_file, list(all_tags_zh))
-    # DE 版本暂时用 EN tag（德语翻译待 LLM 处理）
-    update_frontmatter_tags(de_file, all_tags_en)
+    # DE 版本仅德国院校生成
+    if country == "de":
+        update_frontmatter_tags(de_file, all_tags_en)
 
     print(f"  {slug}: 聚合 {len(all_tags_zh)} 个 tag → {', '.join(all_tags_en)}")
 
