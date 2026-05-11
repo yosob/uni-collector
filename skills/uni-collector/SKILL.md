@@ -66,7 +66,13 @@ python3 skills/data-organizer/scripts/reset_status.py --slugs <slug>
     4. **生成 profile**（Step 5）: `university_profile_EN.md` / `_ZH.md`（`_DE.md` 仅 country=de）
     5. **填充率 + 更新状态**（Step 6）: `python3 skills/data-organizer/scripts/validate_data.py --fill-rate <slug> --country <country>` → 更新 `collection_status.yaml`
 11. 折叠该院校在 HEARTBEAT.md 中的记录为一行：`✅ {slug} — 完成 (fill-rate: X, N/M programs)`
-12. 如果全部完成，清理 HEARTBEAT.md
+12. **Git 提交该院校数据**：
+    ```
+    git add data/universities/{country}/{slug}/
+    git commit -m "feat({country}/{slug}): 完成三阶段采集 — N programs, fill-rate: X"
+    ```
+    > 注意：只 commit 不 push。等全部院校完成后统一 push。
+13. 如果全部完成，清理 HEARTBEAT.md 并执行 `git push`
 
 ### 情况 B: 日常增量更新
 
@@ -84,6 +90,13 @@ python3 skills/data-organizer/scripts/reset_status.py --slugs <slug>
    - 翻译为多语言版本（EN/ZH，DE 仅 country=de）
    - 保存数据
 3. 如果提取失败率 > 50%，建议用户运行情况 A（重新探索）
+4. **更新完成后提交数据**：
+   ```
+   git add data/universities/{country}/{slug}/
+   git commit -m "update({country}/{slug}): 日常增量更新"
+   git push
+   ```
+   > 日常更新只处理单个院校，直接 commit + push。
 
 ### 情况 C: 发现新院校
 
@@ -105,6 +118,11 @@ python3 skills/data-organizer/scripts/reset_status.py --slugs <slug>
    - 未到期 → 跳过
 3. **串行处理**：完成一个院校的全部阶段后再开始下一个（受 `maxConcurrentSubagents=2` 限制）
 4. 创建 HEARTBEAT.md（全量模式 checklist 格式，见"批次调度规范"），全局前置步骤记录 reset_status
+5. **全部院校处理完成后统一 push**：
+   ```
+   git push
+   ```
+   > 每个院校的 commit 已在情况 A/B 中完成，这里只需 push。
 
 #### 全量更新前置步骤（强制重爬）
 
