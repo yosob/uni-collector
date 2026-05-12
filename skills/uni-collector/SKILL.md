@@ -19,26 +19,91 @@ always: true
 | `site-explorer` | 站点发现 + sitemap 生成（递归发现 URL） | 首次深爬、定期重扫、site_map 缺失 |
 | `smart-extractor` | 按 site_map 提取数据 + 翻译 + 校验 + 发现新子页面 + 单页面提取 | 增量更新、per-program 提取+翻译、单 URL 提取 |
 | `university-scout` | 搜索发现新院校 | 寻找新学校 |
-| `data-organizer` | 学校级数据处理：院校提取+翻译、profile 生成、脚本调用 | Phase 3 学校级聚合、初始化新院校 |
+| `data-organizer` | 学校级数据处理：院校提取+翻译、profile 生成、脚本调用 | Phase 3 学校级聚合、增量更新后处理、初始化新院校 |
 
 **使用方式**：用 `read_file` 读取对应 `skills/{name}/SKILL.md`，按其中的工作流执行。
 
 ## 编排工作流
 
-### 情况 A: 首次深度爬取 / 重新探索
+### 判断路由
 
-当用户说 "深度爬取 XX 大学"、"首次爬取"、"重新扫描"，或 site_map.md 不存在时：
-
-**前置步骤**：先重置目标院校状态，确保 `explored: false`：
 ```
-python3 skills/data-organizer/scripts/reset_status.py --slugs <slug>
+判断路由（按优先级依次匹配，命中即执行）:
+
+IF 请求涉及新院校发现（"搜索 XX 学校"、"帮我找设计院校"）:
+  → 操作过程 4（发现新学校）
+
+IF 请求是单个 URL 提取（"提取这个页面"）:
+  → 操作过程 3（单页面提取）
+
+IF 请求含 "爬取/重新爬取" 关键词（意图是三阶段流程）:
+  IF 指定单校:
+    auto detect: 未收录→init，已收录/重爬→reset
+    → 操作过程 1（三阶段流程）
+  ELIF 指定多校（"爬取 XX、YY"）:
+    逐校 auto detect: 未收录→init each，已收录→reset each
+    → 操作过程 1 + 批次调度规范
+  ELIF 条件筛选（"重爬 fill-rate 最低的 5 所"，“重爬更新最旧院校中的三所”）:
+    条件筛选 → 确定 slugs → reset each
+    → 操作过程 1 + 批次调度规范
+  ELIF "全量/完整/完全" + 指定范围:
+    reset --all / --country
+    → 操作过程 1 + 遍历 + 批次调度规范
+  END IF
+
+IF 请求含 "更新" 关键词（意图是增量更新）:
+  IF 指定单校（explored=true + site_map 存在）:
+    → 操作过程 2（增量更新）
+  ELIF 指定多校:
+    → 操作过程 2 + 可并行
+  ELIF 条件筛选（"更新最旧的 3 所"）:
+    条件筛选 → 确定 slugs
+    → 操作过程 2 + 可并行
+  ELIF "更新全部":
+    → 操作过程 2 + 遍历（忽略到期判断，强制更新）+ 可并行
+  END IF
+
+IF 以上均不匹配:
+  → 返回使用指南，询问用户
+
+注意：
+- 判断是否执行 Phase 1 的唯一依据是 collection_status.yaml
+- 用户显式指定院校时，忽略到期判断，强制执行
+- "爬取" vs "更新"的区分：爬取 = 三阶段（含 site_map 重建），更新 = 增量（保留 site_map）
 ```
 
-分三个阶段执行（**多阶段流程**）：
+### 场景速查表
+
+| 用户意图 | 前置 | 操作过程 | 编排 | 后置 |
+|----------|------|---------|------|------|
+| "爬取 XX" | auto detect | 三阶段 | N/A | commit + push |
+| "爬取 XX、YY" | auto each | 三阶段 | 批次调度 | commit + push each |
+| "重新爬取 XX" | reset | 三阶段 | N/A | commit + push |
+| "重新爬取 XX、YY" | reset each | 三阶段 | 批次调度 | commit + push each |
+| "重爬 fill-rate 最低的 5 所" | 筛选 + reset | 三阶段 | 批次调度 | commit + push each |
+| "全量更新" | reset --all | 三阶段 | 遍历 + 批次 | commit + push each |
+| "更新 XX 数据" | 无 | 增量更新 | N/A | commit + push |
+| "更新 XX、YY 数据" | 无 | 增量更新 | 可并行 | commit + push each |
+| "更新最旧的 3 所" | 筛选 | 增量更新 | 可并行 | commit + push each |
+| "更新全部" | 无 | 增量更新 | 遍历 | commit + push each |
+| "提取这个 URL" | 无 | 单页面提取 | N/A | commit + push |
+| "搜索设计院校" | 无 | 发现新校 | N/A | → 确认后爬取 |
+
+### 操作过程定义
+
+#### 操作过程 1：三阶段流程
+
+**前置变体**：
+
+- **init（未收录）**：`python3 skills/data-organizer/scripts/init_university.py --slug <slug> --country <country>`
+- **reset（已收录/重爬）**：`python3 skills/data-organizer/scripts/reset_status.py --slugs <slug>`
+- **auto detect（自动判断）**：读 `collection_status.yaml`，未收录→init，已收录→reset
+
+**多校编排**：如果目标包含多所院校，必须遵循下方"共享规范：批次调度"。
 
 > **重要**：判断是否执行 Phase 1 的**唯一依据**是 `collection_status.yaml` 中的状态字段（`explored`、`needs_reexplore`、`next_explore`）。**即使 `site_map.md` 已存在，只要状态为 `explored: false` 或 `needs_reexplore: true` 或 `next_explore` 已过期，就必须执行 Phase 1。** 不要因为 sitemap 文件存在就跳过 Phase 1——site-explorer 会覆盖更新现有的 site_map.md。
 
-#### Phase 1: 站点发现
+##### Phase 1: 站点发现
 
 1. Spawn subagent 执行 site-explorer（读取 `skills/site-explorer/SKILL.md`）
 2. Subagent 完成后 announce 回来 → 输出 `site_map.md`（包含所有专业和子页面 URL）
@@ -46,7 +111,7 @@ python3 skills/data-organizer/scripts/reset_status.py --slugs <slug>
 4. 收到 announce 后，读取 `site_map.md` 获取专业列表和 URL 架构
 5. 更新 `HEARTBEAT.md` 记录进度
 
-#### Phase 2: 逐专业提取+翻译+校验
+##### Phase 2: 逐专业提取+翻译+校验
 
 6. 对 site_map.md 中每个专业，spawn smart-extractor subagent：
    - **Task 格式**: "提取 {院校名称} 的 '{专业名称}' 数据。读取 skills/smart-extractor/SKILL.md，从 data/universities/{country}/{slug}/site_map.md 找到该专业的 URL 列表，提取结构化数据并发现未记录的子页面。smart-extractor 会自动完成提取+翻译+校验全流程。"
@@ -57,7 +122,7 @@ python3 skills/data-organizer/scripts/reset_status.py --slugs <slug>
    - 如果全部处理完 → 进入 Phase 3
 9. 更新 HEARTBEAT.md 勾选对应专业
 
-#### Phase 3: 学校级聚合（data-organizer）
+##### Phase 3: 学校级聚合（data-organizer）
 
 10. 读取 `skills/data-organizer/SKILL.md`，按以下顺序执行：
     1. **学校级数据提取+翻译**（Step 1-2）: 从 site_map.md 中 university_overview URL 提取学校信息 → 翻译为 EN/ZH（DE 仅 country=de）
@@ -66,82 +131,48 @@ python3 skills/data-organizer/scripts/reset_status.py --slugs <slug>
     4. **生成 profile**（Step 5）: `university_profile_EN.md` / `_ZH.md`（`_DE.md` 仅 country=de）
     5. **填充率 + 更新状态**（Step 6）: `python3 skills/data-organizer/scripts/validate_data.py --fill-rate <slug> --country <country>` → 更新 `collection_status.yaml`
 11. 折叠该院校在 HEARTBEAT.md 中的记录为一行：`✅ {slug} — 完成 (fill-rate: X, N/M programs)`
-12. **Git 提交该院校数据**：
+12. **Git 提交并推送该院校数据**：
     ```
     git add data/universities/{country}/{slug}/
-    git commit -m "feat({country}/{slug}): 完成三阶段采集 — N programs, fill-rate: X"
+    git commit -m "feat({country}/{slug}): 完成学校探索数据收集 — N programs, fill-rate: X"
+    git push
     ```
-    > 注意：只 commit 不 push。等全部院校完成后统一 push。
-13. 如果全部完成，清理 HEARTBEAT.md 并执行 `git push`
+13. 如果全部完成，清理 HEARTBEAT.md
 
-### 情况 B: 日常增量更新
+#### 操作过程 2：增量更新
 
-触发条件（满足其一即可）：
-- **用户主动请求**：用户说 "更新 XX 大学数据"、"日常爬取"，且 `explored: true` + `site_map.md` 存在（否则走情况 A）
-- **自然到期**：`collection_status.yaml` 中 `next_sync` 已过期
+**条件**：`explored: true` + `site_map.md` 存在。否则提示用户先运行操作过程 1。
 
-注意：用户显式指定院校时，**忽略到期判断**，强制执行更新。只有"更新全部"时才按到期过滤。
-
-1. 读取 `skills/smart-extractor/SKILL.md` 并执行完整工作流
-2. smart-extractor 会自动完成：
-   - 读取 site_map.md 获取 URL 列表
-   - 批量提取结构化数据
-   - 发现未在 site_map 中记录的新子页面，补充到 site_map.md
-   - 翻译为多语言版本（EN/ZH，DE 仅 country=de）
-   - 保存数据
-3. 如果提取失败率 > 50%，建议用户运行情况 A（重新探索）
-4. **更新完成后提交数据**：
+1. 读取 `skills/smart-extractor/SKILL.md` 并执行 Steps 1-11（专业级数据提取+翻译+crawl_state 更新+collection_status 更新）
+   - smart-extractor 独立执行，Step 11 会更新 `collection_status.yaml`（sync_mode=smart_extractor）
+2. smart-extractor 完成后，读取 `skills/data-organizer/SKILL.md` 执行 Steps 1-5（**跳过 Step 6**）：
+   - Step 1: 学校级数据提取（场景 B — 已有数据更新，web_fetch 检查网站更新）
+   - Step 2: 翻译学校级数据（_index_EN/ZH/DE）
+   - Step 3: `python3 skills/data-organizer/scripts/aggregate_tags.py --university <slug> --country <country>`
+   - Step 4: `python3 skills/data-organizer/scripts/validate_data.py --university <slug> --country <country> --fix`
+   - Step 5: 生成 university_profile（刷新多语言 profile）
+3. 如果提取失败率 > 50%，建议用户运行操作过程 1
+4. **Git 提交并推送**：
    ```
    git add data/universities/{country}/{slug}/
-   git commit -m "update({country}/{slug}): 日常增量更新"
+   git commit -m "update({country}/{slug}): 增量更新"
    git push
    ```
-   > 日常更新只处理单个院校，直接 commit + push。
 
-### 情况 C: 发现新院校
+> **为什么跳过 data-organizer Step 6**：Step 6 会设置 `sync_mode=site_explorer`、`explored=true`、`last_explored`、`next_explore` 等字段，这些只适用于三阶段流程。增量更新由 smart-extractor Step 11 负责 collection_status 更新（`sync_mode=smart_extractor`、`last_synced`、`next_sync`、`field_fill_rate`）。
 
-当用户说 "搜索设计院校"、"帮我找 XX 专业的学校"：
-
-1. 读取 `skills/university-scout/SKILL.md` 执行院校发现
-2. 用户确认后，对新院校执行情况 A（首次深爬）
-
-### 情况 D: 全量更新
-
-当用户说 "更新所有院校"：
-
-1. 读取 `data/universities/collection_status.yaml`（结构为 `countries.{country}.universities[]`）
-2. 遍历所有国家下的院校，根据 collection_status 中的状态判断：
-   - `explored: false` → 执行情况 A（首次探索，三阶段流程）
-   - `needs_reexplore: true` → 执行情况 A（强制重扫，三阶段流程）
-   - `explored: true` + `next_explore` 已过期 → 执行情况 A（定期重扫，三阶段流程）
-   - `explored: true` + `next_sync` 已过期 → 执行情况 B（日常更新）
-   - 未到期 → 跳过
-3. **串行处理**：完成一个院校的全部阶段后再开始下一个（受 `maxConcurrentSubagents=2` 限制）
-4. 创建 HEARTBEAT.md（全量模式 checklist 格式，见"批次调度规范"），全局前置步骤记录 reset_status
-5. **全部院校处理完成后统一 push**：
-   ```
-   git push
-   ```
-   > 每个院校的 commit 已在情况 A/B 中完成，这里只需 push。
-
-#### 全量更新前置步骤（强制重爬）
-
-当用户请求中包含 **"全量"、"完整"、"完全"** 等关键词，并指定了目标范围时：
-
-1. **先重置状态**：执行脚本将目标学校的 collection_status 归零（不删除数据文件）
-   - 指定学校：`python3 skills/data-organizer/scripts/reset_status.py --slugs <slug1>,<slug2>`
-   - 所有学校：`python3 skills/data-organizer/scripts/reset_status.py --all`
-   - 指定国家：`python3 skills/data-organizer/scripts/reset_status.py --country <country>`
-2. **再正常调度**：状态归零后，所有目标学校变为 `explored: false`，按正常的三阶段批次调度流程执行
-3. site-explorer 会覆盖生成 site_map.md，smart-extractor 会覆盖写入数据文件，旧数据在重跑期间作为 fallback
-
-### 情况 E: 手动单页面提取
-
-当用户提供一个具体 URL 说 "提取这个页面的信息"：
+#### 操作过程 3：单页面提取
 
 读取 `skills/smart-extractor/SKILL.md` 并以"单页面提取模式"执行，处理单个 URL。smart-extractor 会自动完成提取+翻译+校验。
 
-## 批次调度规范
+完成后 commit + push。
+
+#### 操作过程 4：发现新学校
+
+1. 读取 `skills/university-scout/SKILL.md` 执行院校发现
+2. 用户确认后，对新院校执行操作过程 1（init + 三阶段流程）
+
+#### 共享规范：批次调度
 
 当使用 subagent 执行多院校任务时，必须：
 
@@ -156,6 +187,8 @@ python3 skills/data-organizer/scripts/reset_status.py --slugs <slug>
    ## Wake Conditions
    - 有未完成的 Phase 且无活跃 subagent
    - 任何 Phase 等待超过 1 小时
+
+   > ⚠️ 严格批次隔离：完成当前 Batch 全部 Phase 后再推进下一 Batch
 
    ## 前置准备
    - [x] reset_status.py --all (N 所院校)
@@ -206,28 +239,55 @@ python3 skills/data-organizer/scripts/reset_status.py --slugs <slug>
    - 每批最多 2 个 subagent（`maxConcurrentSubagents` 限制）
    - spawn 后 turn 可结束，由 subagent announce 兜底推进。heartbeat watchdog 仅在检测到主 agent 停滞时提醒，不会主动执行任务
    - 单个院校的 Phase 2 最多并行 2 个 per-program subagent
+   - ⚠️ **跨 Batch 禁令**：当前 Batch 的所有院校都完成 Phase 3 之前，禁止 spawn 任何其他 Batch 的 subagent。违反此规则会导致 Phase 3 被遗漏和批次顺序混乱
+   - **spawn 前检查**：每次 spawn 前读取 HEARTBEAT.md，确认当前 Batch 状态。仅当当前 Batch 全部完成时才推进下一 Batch
 
 5. **恢复机制**：主 agent 在 HEARTBEAT.md 中写入唤醒条件。如果 nanobot 重启或主 agent 停滞，heartbeat watchdog 会检测到唤醒条件满足，提醒主 agent 继续推进未完成任务。主 agent 读取 HEARTBEAT.md 的 checklist 判断当前进度，从断点恢复。
 
-## 判断逻辑
+#### 共享规范：条件筛选
 
-读取 `data/universities/collection_status.yaml`，按以下逻辑判断每所院校应使用哪个 skill：
+读取 `data/universities/collection_status.yaml`，按用户指定的字段排序，取前 N 所学校。
 
-```
-收到请求 → 判断场景:
-  ├─ 涉及新院校发现 → 情况 C (university-scout)
-  ├─ 指定单个 URL → 情况 E (smart-extractor 单页面模式)
-  ├─ 含"全量/完整/完全"关键词 → 先执行 reset_status.py 归零，再走下方逻辑
-  ├─ 用户显式指定院校 → 忽略到期判断，根据状态决定流程:
-  │    ├─ explored: false / needs_reexplore: true / next_explore 已过期 → 情况 A (三阶段)
-  │    └─ explored: true + site_map.md 存在 → 情况 B (日常更新，忽略到期)
-  ├─ "更新全部" → 情况 D (遍历 collection_status.yaml，按到期判断逐个处理)
-  └─ 不确定 → 询问用户
+可行的筛选条件：
+- `last_synced` 最早的 N 所（最久未更新）
+- `field_fill_rate` 最低的 N 所（数据质量最差）
+- `programs_total` 最多的 N 所（专业最多的）
+- `last_explored` 最早的 N 所（最久未重爬）
+- 某个国家 + 上述任意条件的组合
 
-注意：
-- 用户显式指定院校时，忽略 next_sync 到期判断，强制执行
-- "更新全部"时才按到期过滤：explored: true + 未到期 → 跳过
-- site_map.md 或数据文件是否存在不影响情况 A 的判断
+院校数量少时可直接读取 YAML 排序筛选。院校数量多时，建议用 Python 脚本处理更快更准：
+```bash
+# 按 fill-rate 排序（数据质量最差）
+python3 -c "
+import yaml
+with open('data/universities/collection_status.yaml') as f:
+    data = yaml.safe_load(f)
+unis = []
+for country, cdata in data.get('countries', {}).items():
+    for u in cdata.get('universities', []):
+        unis.append(u)
+unis.sort(key=lambda x: x.get('field_fill_rate', 0))
+for u in unis[:5]:
+    print(u['slug'], u.get('field_fill_rate', 'N/A'))
+"
+
+# 按时间排序（最久未更新/未探索）— last_synced / last_explored
+python3 -c "
+import yaml
+from datetime import datetime
+with open('data/universities/collection_status.yaml') as f:
+    data = yaml.safe_load(f)
+unis = []
+for country, cdata in data.get('countries', {}).items():
+    for u in cdata.get('universities', []):
+        unis.append(u)
+def parse_date(d):
+    try: return datetime.fromisoformat(d.replace('Z','+00:00'))
+    except: return datetime.min
+unis.sort(key=lambda x: parse_date(x.get('last_synced', '')))
+for u in unis[:5]:
+    print(u['slug'], u.get('last_synced', 'never'))
+"
 ```
 
 ## 范围控制

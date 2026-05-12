@@ -2,7 +2,7 @@
 
 ## 项目定位
 
-uni-collector 是一个基于 nanobot 框架的德国高校数据采集 Agent，专注于工业设计、艺术等设计方向的专业信息收集与结构化整理。当前收录 23 所德国设计院校。
+uni-collector 是一个基于 nanobot 框架的高校数据采集 Agent，专注于工业设计、艺术等设计方向的专业信息收集与结构化整理。当前收录德国设计院校，计划扩展至英国、美国等多国。
 
 ## 已确认的设计决策
 
@@ -37,7 +37,7 @@ uni-collector 是一个基于 nanobot 框架的德国高校数据采集 Agent，
 **目标**: 拆分职责，形成 skill 管线 ✅
 
 - ✅ `university-scout` — 搜索发现新院校
-- ✅ `page-extractor` — 单页面数据提取
+- ✅ `page-extractor` — 单页面数据提取（已合并到 smart-extractor）
 - ✅ `data-organizer` — 保存校验
 - ✅ `uni-collector` — 重构为编排器
 - ✅ 23 所院校基本信息导入（universities.yaml + _index.md）
@@ -48,7 +48,7 @@ uni-collector 是一个基于 nanobot 框架的德国高校数据采集 Agent，
 
 - ✅ `site-explorer` — LLM 深度探索 + exploration-guide + 专业穷举策略
 - ✅ `smart-extractor` — 按 site_map 日常提取
-- ✅ `uni-collector` 编排器增加 5 种模式
+- ✅ `uni-collector` 编排器重构为三层结构（判断路由+场景速查表+操作过程定义），12 个场景全覆盖
 - ✅ Bauhaus-Weimar 试点深爬（site_map + profile + 全字段填充）
 - ⏳ 其余 22 所院校首次深爬
 - ⏳ 定期刷新调度机制

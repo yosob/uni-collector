@@ -9,7 +9,7 @@ uni-collector/                         # 独立 Git 仓库
 │   ├── ARCHITECTURE.md                # 本文件
 │   ├── CONTEXT.md                     # 开发者上下文
 │   └── USAGE.md                       # 使用方式
-├── skills/                            # nanobot skills（5 个）
+├── skills/                            # nanobot skills（6 个）
 │   ├── uni-collector/                 # 管线编排器
 │   │   └── SKILL.md
 │   ├── site-explorer/                 # 站点发现 + sitemap 生成
@@ -43,6 +43,8 @@ uni-collector/                         # 独立 Git 仓库
 │           ├── aggregate_tags.py
 │           ├── reset_status.py
 │           └── clean_status.py
+│   └── usage-guide/                   # 用户使用指引
+│       └── SKILL.md
 ├── data/                              # 收集到的数据
 │   └── universities/
 │       ├── universities.yaml          # 院校配置（按国家分组）
@@ -72,15 +74,16 @@ uni-collector/                         # 独立 Git 仓库
 
 nanobot 的 skill 是 Markdown 文件（`SKILL.md`），通过自然语言指导 Agent 如何使用工具完成特定任务。
 
-### 5 个 Skill 职责
+### 6 个 Skill 职责
 
 | Skill | 职责 | 何时使用 |
 |-------|------|---------|
-| `uni-collector` | 管线编排器，判断场景、协调多阶段流程 | 所有请求的入口 |
+| `uni-collector` | 管线编排器，12 个场景三层路由（判断路由+场景速查表+操作过程定义） | 所有请求的入口 |
 | `site-explorer` | 站点发现 + sitemap 生成（递归发现） | 首次深爬、定期重扫 |
 | `smart-extractor` | 数据提取 + 翻译 + 校验 + 新页面探索 + tag 分配 + 单页面提取 | 增量更新、per-program 提取+翻译、单 URL 提取 |
 | `university-scout` | web_search 发现新院校 | 寻找新学校 |
-| `data-organizer` | 学校级数据处理：院校提取+翻译、profile 生成、脚本调用 | Phase 3 学校级聚合、初始化新院校 |
+| `data-organizer` | 学校级数据处理：院校提取+翻译、profile 生成、脚本调用 | Phase 3 学校级聚合、增量更新后处理、初始化新院校 |
+| `usage-guide` | 用户使用指引（命令示例、操作说明、FAQ） | 用户询问如何使用系统时 |
 
 ### 数据流
 
@@ -90,8 +93,9 @@ nanobot 的 skill 是 Markdown 文件（`SKILL.md`），通过自然语言指导
   Phase 2: smart-extractor × N → 每个专业提取数据 + 分配 tags + 翻译 DE/EN/ZH + 校验 + 探索新子页面
   Phase 3: data-organizer → 学校级数据提取+翻译 + 聚合 tags + 校验 + 生成 profile + fill-rate
 
-日常更新:
+日常更新（增量更新）:
   smart-extractor → 读 site_map → web_fetch 已知 URL → LLM 提取 + 发现新页面 + 翻译 + 校验
+  data-organizer → 学校级数据更新 + aggregate_tags + validate --fix + 生成 profile
 
 发现新院校:
   university-scout → web_search → 更新 universities.yaml + collection_status.yaml → site-explorer 深爬（多阶段）
@@ -157,18 +161,19 @@ python3 skills/data-organizer/scripts/reset_status.py --slugs <slug>
 - **状态更新**: 更新 `collection_status.yaml`
 - **注意**: Phase 3 只处理学校级任务（3-4 次 tool call），per-program 的翻译已在 Phase 2 完成
 
-**Git 提交**: 每所院校完成三阶段后立即 git add + commit；全部院校完成后 git push。
-- 情况 A（三阶段）: `git commit -m "feat({country}/{slug}): 完成三阶段采集 — N programs, fill-rate: X"`
-- 情况 B（日常更新）: `git commit -m "update({country}/{slug}): 日常增量更新"` + `git push`
-- 情况 D（全量更新）: 每校 commit 已在 A/B 中完成，全部结束后 `git push`
+**Git 提交**: 所有场景完成后均立即 commit + push。
+- 三阶段流程: `git commit -m "feat({country}/{slug}): 完成学校探索数据收集 — N programs, fill-rate: X"` + `git push`
+- 增量更新: `git commit -m "update({country}/{slug}): 增量更新"` + `git push`
 
-### 日常更新（smart-extractor）
+### 日常更新（操作过程 2：增量更新）
 
-- **入口**: `site_map.md` 中的 URL 列表
-- **方式**: web_fetch 已知 URL → LLM 提取结构化数据 + 发现新子页面
-- **产出**: 更新 `_index.md` 中的字段值（中间产物，需由 data-organizer 翻译为多语言版本） + 更新 site_map.md（新发现的页面）
+- **前置条件**: `explored: true` + `site_map.md` 存在
+- **Step 1**: smart-extractor 执行 Steps 1-11（专业级数据提取+翻译+crawl_state 更新+collection_status 更新）
+- **Step 2**: data-organizer 执行 Steps 1-5（跳过 Step 6）：
+  - 学校级数据提取+翻译、aggregate_tags、validate --fix、生成 profile
 - **成本**: 低（URL 已知，LLM 提取 + 轻量探索）
-- **失败检测**: 提取失败率 > 50% → 建议重新运行 site-explorer
+- **失败检测**: 提取失败率 > 50% → 建议重新运行操作过程 1（三阶段流程）
+- **Git**: commit + push
 
 ### 定期刷新（重跑 site-explorer）
 
@@ -182,13 +187,13 @@ python3 skills/data-organizer/scripts/reset_status.py --slugs <slug>
 - 错峰分散：选择 LLM 流量低的时间段，避免一次性全量扫描
 - 按列表顺序：不按变化量或优先级排序，简单轮询
 
-**日常判断逻辑**（唯一依据: `collection_status.yaml` 的状态字段，文件是否存在不影响判断）:
+**日常判断逻辑**（判断路由伪代码，覆盖 12 个场景，见 SKILL.md）:
 ```
-收到更新请求 →
-  ├─ explored: false / needs_reexplore: true / next_explore 已过期 → 三阶段流程（Phase 1→2→3）
-  ├─ explored: true + next_sync 已过期 → 日常更新（smart-extractor）
-  ├─ explored: true + 未到期 → 跳过
-  └─ 提取失败率 > 50% → 重新运行三阶段流程
+新院校发现 → 操作过程 4（university-scout）
+单 URL 提取 → 操作过程 3（smart-extractor 单页面模式）
+"爬取/重新爬取" → 操作过程 1（三阶段流程），含条件筛选和全量版本
+"更新" → 操作过程 2（增量更新），含条件筛选和更新全部
+以上不匹配 → 返回使用指南，询问用户
 ```
 
 ### 探索穷举策略
@@ -425,7 +430,7 @@ nanobot/                          # nanobot 框架（运行时引擎）
       │  python -m nanobot agent -w ../uni-collector
       ↓
 uni-collector/                    # 本项目（数据和技能包）
-  skills/     ← SkillsLoader 加载（5 个 skill）
+  skills/     ← SkillsLoader 加载（6 个 skill）
   data/       ← Agent 读写数据（49 所院校：23 DE + 26 UK）
 ```
 
@@ -462,9 +467,9 @@ nanobot 的 subagent announce 机制是"单向通知"——subagent 完成后注
       折叠 HEARTBEAT.md 该院校为一行
 ```
 
-### 多院校串行处理
+### 多院校批次调度
 
-全量更新时，一次只处理一个院校的完整三阶段流程。完成一个院校后再开始下一个。这是由 `maxConcurrentSubagents=2` 限制决定的——Phase 2 已经占用了 subagent 并发槽位。
+多院校任务使用**严格批次隔离**：每批最多 2 所院校并行，当前 Batch 的所有院校完成 Phase 3 之前，禁止 spawn 下一 Batch 的 subagent。每次 spawn 前必须检查 HEARTBEAT.md 确认当前 Batch 状态。
 
 HEARTBEAT.md 同时追踪：
 - 当前处理的院校
@@ -503,7 +508,7 @@ HEARTBEAT.md 同时追踪：
 
 | 文件 | 改动 |
 |---|---|
-| `uni-collector/skills/uni-collector/SKILL.md` | 情况 A 改为多阶段流程，新增阶段编排逻辑 |
+| `uni-collector/skills/uni-collector/SKILL.md` | 三层结构重构：判断路由+场景速查表+操作过程定义，12 个场景全覆盖 |
 | `uni-collector/skills/site-explorer/SKILL.md` | 收窄为 discovery + sitemap 生成 |
 | `uni-collector/skills/smart-extractor/SKILL.md` | 合并 page-extractor，统一翻译行为，新增单页面模式 |
 
