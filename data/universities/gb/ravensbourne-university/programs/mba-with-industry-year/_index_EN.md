@@ -1,0 +1,191 @@
+---
+name_en: MBA with Industry Year
+slug: mba-with-industry-year
+degree: mba
+degree_title: Master of Business Administration (MBA) with Industry Year
+language:
+- en
+duration_semesters: 4
+credits: 180
+credits_system: UK credits
+start_semester: September
+url: https://www.ravensbourne.ac.uk/study/postgraduate/mba-with-industry-year
+department: Business
+city: London
+state: Greater London
+country: gb
+focus_areas:
+- business administration
+- strategic communication
+- contemporary business practice
+- organisational technologies
+- consultancy
+- industry placement
+- evidence-based management
+- ethical business practice
+- sustainable practice
+tags:
+- Design Strategy
+admission_requirements: A higher second-class honours degree (2:1) or equivalent non-UK
+  qualification in a relevant subject, or an equivalent professional qualification
+  in a related field. CV/Resume required. Applicants without professional experience
+  must demonstrate strong understanding of the chosen subject area.
+language_requirements:
+  english: IELTS 6.0 overall (minimum 5.5 in each sub-test) or CEFR Level B2 in each
+    component
+portfolio_required: true
+portfolio_details: Portfolio of work containing 6-8 final design solutions with accompanying
+  research materials/sketches, demonstrating creative thinking, problem-solving abilities
+  and technical skillsets. Accepted as PDF or weblink.
+application_process: Apply directly via the Ravensbourne eVision portal. Select the
+  September 2026 start date and complete the online application.
+curriculum_summary: 'The course spans 2 years full-time, integrating academic study
+  with a dedicated industry year:
+
+  Year 1 (Academic Study): Core modules include Evidence Based Project Management
+  Decisions, Contemporary Strategy, Consultancy Skills, and specialist modules. Explore
+  strategic communication, contemporary business models, and organisational technologies.
+
+  Year 2 (Industry Year): Industry Year Preparation, Industry Immersion 1, Industry
+  Immersion 2, and a Critical Final Project. Gain hands-on professional experience
+  through industry placements alongside your studies.
+
+  Subject to validation. Modules are designed to develop evidence-based, ethical,
+  and sustainable business practice across sectors.
+
+  '
+tuition:
+  tuition_free: false
+  amount: 9750
+  currency: GBP
+  period: year
+  notes: 'UK students: £9,750 Year 1 + £4,000 Year 2. International students: £18,500
+    Year 1 + £4,000 Year 2. Fees apply to 2026-27 entry only.'
+career_perspectives:
+- Business Consultant
+- Senior Manager
+- Strategy Analyst
+- Operations Director
+- Project Manager
+- Entrepreneur
+- Organisational Development Manager
+- Industry Placement Coordinator
+application_portal: Direct Application (eVision)
+application_deadlines:
+  winter_semester: September 2026 intake
+  notes: September intake. Apply directly via the university eVision portal.
+contact:
+  email: postgrad@rave.ac.uk
+notes: MBA with Industry Year programme designed to make students genuinely industry-ready
+  through consultancy-style projects, organisational responsibilities, and real-world
+  industry experience. Subject to validation. Includes integrated industry year for
+  hands-on professional experience. Explores the role of business leadership and its
+  applications across global industries.
+last_crawled: '2026-05-13T06:27:00'
+source_urls:
+- https://www.ravensbourne.ac.uk/study/postgraduate/mba-with-industry-year
+---
+
+## Overview
+
+The MBA with Industry Year at Ravensbourne University London equips you to analyse and communicate complex business challenges with clarity and impact. Through exploring a wide range of strategic, managerial, and organisational approaches, you will develop the confidence to apply advanced business theory in real-world contexts and make informed decisions that drive organisational success. Your integrated industry year strengthens your professional readiness, giving you hands-on experience and insight into contemporary business practice.
+
+Throughout your MBA with Industry Year degree in London, you will examine the role of business leadership today and its wide-ranging professional applications across global industries. You will work with strategic, analytical and managerial frameworks that enable you to interpret, communicate and reposition complex information in a clear, impactful and accessible way.
+
+You will analyse organisational challenges, market data and emerging trends, bringing them to life through informed decision-making and a strong sense of commercial awareness. This will empower you to shape solutions that matter and ensure that no insight is lost in translation.
+
+Join the MBA with Industry Year, where ambitious minds thrive. By taking on consultancy-style projects, organisational responsibilities and real-world industry experience, this master's programme is designed to make you genuinely industry ready.
+
+## Key Study Topics
+
+- **Strategic communication** — Making complex business information clear and accessible
+- **Contemporary business models** — Collaborative and interdisciplinary approaches to business practice
+- **Organisational learning** — The role of business in fostering community, dialogue and organisational growth
+- **Ethical business administration** — Evidence-based discipline with defined behaviours and principles
+- **Cross-sector application** — Responsible and sustainable practice across diverse industries
+- **Professional development** — Modern management methods and digital tools
+- **Emerging technologies** — Engaging stakeholders and communicating insights effectively
+- **Multi-platform business communication** — Sharing business information in structured, interactive and immersive ways
+
+## Why Study This Degree?
+
+1. Explore cutting-edge business and management approaches
+2. Strengthen your understanding of contemporary organisational technologies
+3. Accelerate your professional growth and business readiness
+4. Tap into exceptional industry connections
+5. Apply for year in industry placements alongside your studies
+
+## Course Structure
+
+### Year 1 — Academic Study
+
+Core and specialist modules covering strategic communication, contemporary business practice, evidence-based project management, and consultancy skills. Develop your understanding of business leadership and its applications across global industries.
+
+**Modules include:**
+- Evidence Based Project Management Decisions
+- Contemporary Strategy
+- Core Course Modules (×2)
+- Specialist Exclusive Modules (×2)
+- Consultancy Skills
+- Industry Year Preparation
+
+### Year 2 — Industry Year
+
+Gain hands-on professional experience through industry placements, building on your academic foundation with real-world business practice.
+
+**Modules include:**
+- Industry Immersion 1
+- Industry Immersion 2
+- Critical Module: Final Project
+
+*Full details of modules are subject to validation.*
+
+## Course Details
+
+- **Degree:** Master of Business Administration (MBA) with Industry Year
+- **Duration:** 2 years full-time
+- **Start Date:** September 2026
+- **Campus:** Ravensbourne University London, Greenwich Peninsula
+- **Department:** Business
+- **Mode:** Full-time, Face-to-face
+- **Credits:** 180 UK credits
+- **Validation Status:** Subject to validation
+
+## Entry Requirements
+
+### UK Students
+
+- A higher second-class honours degree (2:1) or equivalent non-UK qualification in a relevant subject, OR
+- An equivalent professional qualification in a related field
+- Submission of CV/Resume required
+- Applicants applying directly from an undergraduate degree without professional experience must demonstrate strong understanding of the chosen subject area
+
+### International Students
+
+- Equivalent international qualifications accepted — check the university's country-specific entry requirements
+- Submission of CV/Resume required
+- English language requirement: IELTS 6.0 overall (minimum 5.5 in each sub-test) or CEFR Level B2 in each component
+- Contact postgrad@rave.ac.uk for more information
+
+### Selection Criteria
+
+The university welcomes suitably-qualified applicants who can demonstrate a good level of skills in areas associated with this subject. Selection considers your enthusiasm and interest in the subject area, how you manage the creative process, previous study and your professional skill-set.
+
+Applications are welcome from a wide range of backgrounds and experience, including from students who may not necessarily possess formal academic qualifications. It is important that applicants can demonstrate an aptitude for learning and continued professional development through a research-led approach.
+
+### Portfolio Requirements
+
+Your portfolio can be accepted as a PDF uploaded to the applicant portal, or as a weblink. This should be a portfolio of work containing 6-8 final design solutions with accompanying research materials/sketches. The university is looking for applicants who can demonstrate creative thinking and problem-solving abilities as well as their technical skillsets within their work. Your portfolio must include only work that you have created and where any group projects are submitted you should identify your role in the project. Your portfolio should be a reflection of your own creative and professional interests.
+
+## Fees and Funding
+
+| Student Type | Fee Structure |
+|---|---|
+| UK Students | £9,750 Year 1 + £4,000 Year 2* |
+| International Students | £18,500 Year 1 + £4,000 Year 2* |
+
+*Fees apply to 2026-27 entry only.
+
+## How to Apply
+
+Apply directly via the Ravensbourne eVision portal. Select the September 2026 start date and complete the online application.

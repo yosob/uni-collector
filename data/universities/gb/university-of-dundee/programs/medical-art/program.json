@@ -1,0 +1,160 @@
+{
+  "university": "University of Dundee",
+  "university_slug": "university-of-dundee",
+  "country": "gb",
+  "program_name": "Medical Art MSc",
+  "program_slug": "medical-art",
+  "degree": "MSc",
+  "level": "postgraduate",
+  "department": "School of Science and Engineering (CAHID)",
+  "department_slug": "science-engineering",
+  "duration": "12 months",
+  "duration_months": 12,
+  "attendance": "Full time",
+  "start_date": "September 2026",
+  "location": "Dundee City Campus",
+  "city": "Dundee",
+  "country_full": "Scotland, UK",
+  "ucas_code": null,
+  "application_code": "TFMSC-DAMEDA",
+  "apply_url": "https://evision.dundee.ac.uk/urd/sits.urd/run/siw_ipp_lgn.login?process=siw_ipp_app&code1=TFMSC-DAMEDA&code2=2411",
+  "program_url": "https://www.dundee.ac.uk/postgraduate/medical-art",
+  "total_credits": 180,
+  "ranking_highlight": "2nd in the UK for Forensic Science (Complete University Guide 2026); 3rd in the UK for Anatomy and Physiology (The Times Good University Guide 2026)",
+  "accreditation": "Institute of Medical Illustrators (IMI); graduates can register with the Academy for Healthcare Science (AHCS)",
+  "fees": {
+    "uk_scotland": 13230,
+    "uk_rest": 13230,
+    "international": 28750,
+    "currency": "GBP",
+    "per": "year",
+    "scholarships": [
+      {
+        "name": "Vice Chancellor's Americas Postgraduate Scholarship",
+        "amount": 4000,
+        "fee_after": 24750
+      },
+      {
+        "name": "Global Excellence Scholarship Postgraduate",
+        "amount": 8000,
+        "fee_after": 20750,
+        "note": "For applicants with a 1st class degree or equivalent"
+      }
+    ]
+  },
+  "entry_requirements": {
+    "academic": "Relevant degree in art/design or related medical/anatomical science (US Bachelor: 3.0–3.69/4.0); relevant professional experience considered",
+    "portfolio": "Portfolio of 10–15 images demonstrating competency across traditional and digital media, including examples from direct observation such as life drawing",
+    "ielts": {
+      "overall": 6.5,
+      "writing": 6.0,
+      "listening": 6.0,
+      "reading": 6.0,
+      "speaking": 6.0
+    }
+  },
+  "modules": [
+    {
+      "name": "Research Methods",
+      "code": "CA51009",
+      "credits": 10,
+      "semester": "Semester 1",
+      "type": "core"
+    },
+    {
+      "name": "Gross Anatomy for Artists",
+      "code": "CA51010",
+      "credits": 40,
+      "semester": "Semester 1",
+      "type": "core"
+    },
+    {
+      "name": "Life Art",
+      "code": "DJ51016",
+      "credits": 10,
+      "semester": "Semester 1",
+      "type": "core"
+    },
+    {
+      "name": "Medical Art 1: Contemporary Theory and Practice",
+      "code": "DJ52038",
+      "credits": 30,
+      "semester": "Semester 2",
+      "type": "core"
+    },
+    {
+      "name": "Medical Art 2: Communication and Education",
+      "code": "DJ52039",
+      "credits": 30,
+      "semester": "Semester 2",
+      "type": "core"
+    },
+    {
+      "name": "Medical Art Dissertation",
+      "code": "DJ53006",
+      "credits": 60,
+      "semester": "Summer",
+      "type": "core"
+    }
+  ],
+  "teaching_methods": [
+    "Lectures (face-to-face and online)",
+    "Practical sessions in studios, workshops, and dissection room",
+    "Small group discussions",
+    "Field trips",
+    "Self-directed study"
+  ],
+  "assessment_methods": [
+    "Anatomy spot tests and multiple choice exams",
+    "Portfolio assessment of 2D and 3D artwork",
+    "Written coursework (journal reviews and essays)",
+    "Exhibition presentation"
+  ],
+  "career_paths": [
+    "Medical Illustrator",
+    "Medical Media Specialist",
+    "Science Graphic Designer",
+    "Medical Artist",
+    "Video Animator",
+    "Motion Graphic Designer"
+  ],
+  "industry_connections": [
+    "NHS",
+    "Institute of Medical Illustrators",
+    "Medical Artists' Association of Great Britain",
+    "AMICULUM (healthcare communications)"
+  ],
+  "facilities": [
+    "Art school and medical science facilities",
+    "Thiel-embalmed cadavers for anatomy study",
+    "Digital illustration software",
+    "3D digital modelling software"
+  ],
+  "how_to_apply": {
+    "method": "Direct application via eVision portal",
+    "documents_required": [
+      "Official transcript",
+      "Degree certificate",
+      "Evidence of English language proficiency",
+      "CV",
+      "Academic reference",
+      "Professional reference",
+      "Personal statement",
+      "Passport (international applicants)"
+    ],
+    "deposit": "£5,000 for international students",
+    "offer_types": ["Unconditional", "Conditional", "Rejection"]
+  },
+  "tags": [
+    "medical-art",
+    "medical-illustration",
+    "anatomy",
+    "scientific-illustration",
+    "digital-art",
+    "3d-modelling",
+    "healthcare",
+    "forensic-art",
+    "postgraduate",
+    "msc"
+  ]
+}

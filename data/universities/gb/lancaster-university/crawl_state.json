@@ -1,0 +1,222 @@
+{
+  "university_slug": "lancaster-university",
+  "country": "gb",
+  "last_full_crawl": null,
+  "last_incremental_extract": "2026-05-14",
+  "site_map_path": "data/universities/gb/lancaster-university/site_map.md",
+  "programs": {
+    "design-ba-hons-w281": {
+      "url": "https://www.lancaster.ac.uk/study/undergraduate/courses/design-ba-hons-w281/2026/",
+      "status": "extracted",
+      "last_extracted": "2026-05-14",
+      "has_en": true,
+      "has_zh": true,
+      "page_type": "program_overview"
+    },
+    "architecture-ba-hons-k100": {
+      "url": "https://www.lancaster.ac.uk/study/undergraduate/courses/architecture-ba-hons-k100/2026/",
+      "status": "extracted",
+      "last_extracted": "2026-05-14",
+      "has_en": true,
+      "has_zh": true,
+      "page_type": "course_detail"
+    },
+    "fine-art-ba-hons-w100": {
+      "url": "https://www.lancaster.ac.uk/study/undergraduate/courses/fine-art-ba-hons-w100/2026/",
+      "status": "extracted",
+      "last_extracted": "2026-05-14",
+      "has_en": true,
+      "has_zh": true,
+      "page_type": "program_overview"
+    },
+    "fine-art-and-creative-writing-ba-hons-ww18": {
+      "url": "https://www.lancaster.ac.uk/study/undergraduate/courses/fine-art-and-creative-writing-ba-hons-ww18/2026/",
+      "status": "extracted",
+      "last_extracted": "2026-05-14",
+      "has_en": true,
+      "has_zh": true,
+      "page_type": "program_overview"
+    },
+    "fine-art-and-design-ba-hons-w1w2": {
+      "url": "https://www.lancaster.ac.uk/study/undergraduate/courses/fine-art-and-design-ba-hons-w1w2/2026/",
+      "status": "extracted",
+      "last_extracted": "2026-05-14",
+      "has_en": true,
+      "has_zh": true,
+      "page_type": "program_overview"
+    },
+    "fine-art-and-digital-media-ba-hons-w1p3": {
+      "url": "https://www.lancaster.ac.uk/study/undergraduate/courses/fine-art-and-digital-media-ba-hons-w1p3/2026/",
+      "status": "extracted",
+      "last_extracted": "2026-05-14",
+      "has_en": true,
+      "has_zh": true,
+      "page_type": "program_overview"
+    },
+    "fine-art-and-film-ba-hons-wp13": {
+      "url": "https://www.lancaster.ac.uk/study/undergraduate/courses/fine-art-and-film-ba-hons-wp13/2026/",
+      "status": "extracted",
+      "last_extracted": "2026-05-14",
+      "has_en": true,
+      "has_zh": true,
+      "page_type": "program_overview"
+    },
+    "fine-art-and-theatre-ba-hons-ww14": {
+      "url": "https://www.lancaster.ac.uk/study/undergraduate/courses/fine-art-and-theatre-ba-hons-ww14/2026/",
+      "status": "extracted",
+      "last_extracted": "2026-05-14",
+      "has_en": true,
+      "has_zh": true,
+      "page_type": "program_overview"
+    },
+    "digital-media-ba-hons-p300": {
+      "url": "https://www.lancaster.ac.uk/study/undergraduate/courses/digital-media-ba-hons-p300/2026/",
+      "status": "extracted",
+      "last_extracted": "2026-05-14",
+      "has_en": true,
+      "has_zh": true,
+      "page_type": "program_overview"
+    },
+    "film-studies-ba-hons-p303": {
+      "url": "https://www.lancaster.ac.uk/study/undergraduate/courses/film-studies-ba-hons-p303/2026/",
+      "status": "extracted",
+      "last_extracted": "2026-05-14",
+      "has_en": true,
+      "has_zh": true,
+      "page_type": "program_overview"
+    },
+    "film-media-and-cultural-studies-ba-hons-pl36": {
+      "url": "https://www.lancaster.ac.uk/study/undergraduate/courses/film-media-and-cultural-studies-ba-hons-pl36/2026/",
+      "status": "extracted",
+      "last_extracted": "2026-05-14",
+      "has_en": true,
+      "has_zh": true,
+      "page_type": "program_overview"
+    },
+    "film-and-creative-writing-ba-hons-pw38": {
+      "url": "https://www.lancaster.ac.uk/study/undergraduate/courses/film-and-creative-writing-ba-hons-pw38/2026/",
+      "status": "extracted",
+      "last_extracted": "2026-05-14",
+      "has_en": true,
+      "has_zh": true,
+      "page_type": "program_overview"
+    },
+    "film-and-english-literature-ba-hons-pq33": {
+      "url": "https://www.lancaster.ac.uk/study/undergraduate/courses/film-and-english-literature-ba-hons-pq33/2026/",
+      "status": "extracted",
+      "last_extracted": "2026-05-14",
+      "has_en": true,
+      "has_zh": true,
+      "page_type": "program_overview"
+    },
+    "film-and-philosophy-ba-hons-pv35": {
+      "url": "https://www.lancaster.ac.uk/study/undergraduate/courses/film-and-philosophy-ba-hons-pv35/2026/",
+      "status": "extracted",
+      "last_extracted": "2026-05-14",
+      "has_en": true,
+      "has_zh": true,
+      "page_type": "program_overview"
+    },
+    "film-and-theatre-ba-hons-pw34": {
+      "url": "https://www.lancaster.ac.uk/study/undergraduate/courses/film-and-theatre-ba-hons-pw34/2026/",
+      "status": "extracted",
+      "last_extracted": "2026-05-14",
+      "has_en": true,
+      "has_zh": true,
+      "page_type": "program_overview"
+    },
+    "media-and-cultural-studies-ba-hons-lp63": {
+      "url": "https://www.lancaster.ac.uk/study/undergraduate/courses/media-and-cultural-studies-ba-hons-lp63/2026/",
+      "status": "extracted",
+      "last_extracted": "2026-05-14",
+      "has_en": true,
+      "has_zh": true,
+      "page_type": "program_overview"
+    },
+    "creative-writing-and-digital-media-ba-hons-p3w8": {
+      "slug": "creative-writing-and-digital-media-ba-hons-p3w8",
+      "url": "https://www.lancaster.ac.uk/study/undergraduate/courses/creative-writing-and-digital-media-ba-hons-p3w8/2026/",
+      "status": "extracted",
+      "extracted_at": "2026-05-14T04:24:00+08:00",
+      "files": [
+        "programs/creative-writing-and-digital-media-ba-hons-p3w8/_index_EN.md",
+        "programs/creative-writing-and-digital-media-ba-hons-p3w8/_index_ZH.md"
+      ]
+    },
+    "theatre-and-performing-ba-hons-w440": {
+      "slug": "theatre-and-performing-ba-hons-w440",
+      "url": "https://www.lancaster.ac.uk/study/undergraduate/courses/theatre-and-performing-ba-hons-w440/2026/",
+      "status": "extracted",
+      "extracted_at": "2026-05-14T04:31:00+08:00",
+      "has_en": true,
+      "has_zh": true,
+      "page_type": "program_overview",
+      "files": [
+        "programs/theatre-and-performing-ba-hons-w440/_index_EN.md",
+        "programs/theatre-and-performing-ba-hons-w440/_index_ZH.md"
+      ]
+    },
+    "theatre-and-creative-writing-ba-hons-ww48": {
+      "slug": "theatre-and-creative-writing-ba-hons-ww48",
+      "url": "https://www.lancaster.ac.uk/study/undergraduate/courses/theatre-and-creative-writing-ba-hons-ww48/2026/",
+      "status": "extracted",
+      "extracted_at": "2026-05-14T04:41:00+08:00",
+      "has_en": true,
+      "has_zh": true,
+      "page_type": "program_overview",
+      "files": [
+        "programs/theatre-and-creative-writing-ba-hons-ww48/_index_EN.md",
+        "programs/theatre-and-creative-writing-ba-hons-ww48/_index_ZH.md"
+      ]
+    },
+    "theatre-and-english-literature-ba-hons-wq43": {
+      "url": "https://www.lancaster.ac.uk/study/undergraduate/courses/theatre-and-english-literature-ba-hons-wq43/2026/",
+      "status": "extracted",
+      "last_extracted": "2026-05-14",
+      "has_en": true,
+      "has_zh": true,
+      "page_type": "program_overview"
+    },
+    "design-management-ma": {
+      "slug": "design-management-ma",
+      "url": "https://www.lancaster.ac.uk/study/postgraduate/postgraduate-courses/design-management-ma/2026/",
+      "status": "extracted",
+      "extracted_at": "2026-05-14T04:55:00+08:00",
+      "has_en": true,
+      "has_zh": true,
+      "page_type": "program_overview",
+      "files": [
+        "programs/design-management-ma/_index_EN.md",
+        "programs/design-management-ma/_index_ZH.md"
+      ]
+    },
+    "global-media-and-society-ma": {
+      "slug": "global-media-and-society-ma",
+      "url": "https://www.lancaster.ac.uk/study/postgraduate/postgraduate-courses/global-media-and-society-ma/2026/",
+      "status": "extracted",
+      "extracted_at": "2026-05-14T04:59:00+08:00",
+      "has_en": true,
+      "has_zh": true,
+      "page_type": "program_overview",
+      "files": [
+        "programs/global-media-and-society-ma/_index_EN.md",
+        "programs/global-media-and-society-ma/_index_ZH.md"
+      ]
+    },
+    "creative-writing-ma": {
+      "slug": "creative-writing-ma",
+      "url": "https://www.lancaster.ac.uk/study/postgraduate/postgraduate-courses/creative-writing-ma/2026/",
+      "status": "extracted",
+      "extracted_at": "2026-05-14T05:17:00+08:00",
+      "has_en": true,
+      "has_zh": true,
+      "page_type": "program_overview",
+      "files": [
+        "programs/creative-writing-ma/_index_EN.md",
+        "programs/creative-writing-ma/_index_ZH.md"
+      ]
+    }
+  },
+  "failed": [],
+  "skipped": []
+}

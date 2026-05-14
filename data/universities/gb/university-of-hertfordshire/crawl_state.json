@@ -1,0 +1,224 @@
+{
+  "university_slug": "university-of-hertfordshire",
+  "country": "gb",
+  "last_extraction": "2026-05-12T13:15:00+08:00",
+  "extracted_programs": [
+    {
+      "slug": "2d-digital-animation-ba-hons",
+      "name_en": "2D Digital Animation BA (Hons)",
+      "url": "https://www.herts.ac.uk/courses/undergraduate/ba-hons-2d-digital-animation",
+      "extracted_at": "2026-05-12T10:00:00+08:00",
+      "status": "complete",
+      "data_file": "programs/2d-digital-animation-ba-hons.json"
+    },
+    {
+      "slug": "3d-animation-and-visual-effects-ba-hons",
+      "name_en": "3D Animation and Visual Effects BA (Hons)",
+      "url": "https://www.herts.ac.uk/courses/undergraduate/ba-hons-3d-animation-and-visual-effects",
+      "extracted_at": "2026-05-12T10:06:00+08:00",
+      "status": "complete",
+      "data_file": "programs/3d-animation-and-visual-effects-ba-hons.json"
+    },
+    {
+      "slug": "3d-games-art-and-design-ba-hons",
+      "name_en": "3D Games Art & Design BA (Hons)",
+      "url": "https://www.herts.ac.uk/courses/undergraduate/ba-hons-3d-games-art-and-design",
+      "extracted_at": "2026-05-12T10:13:00+08:00",
+      "status": "complete",
+      "data_file": "programs/3d-games-art-and-design-ba-hons.json"
+    },
+    {
+      "slug": "graphic-design-ba-hons",
+      "name_en": "Graphic Design BA (Hons)",
+      "url": "https://www.herts.ac.uk/courses/undergraduate/graphic-design",
+      "extracted_at": "2026-05-12T10:17:00+08:00",
+      "status": "complete",
+      "data_file": "programs/graphic-design-ba-hons.json"
+    },
+    {
+      "slug": "graphic-design-advertising-and-branding-ba-hons",
+      "name_en": "Graphic Design: Advertising and Branding BA (Hons)",
+      "url": "https://www.herts.ac.uk/courses/undergraduate/ba-hons-graphic-design-advertising-and-branding",
+      "extracted_at": "2026-05-12T10:32:00+08:00",
+      "status": "complete",
+      "data_file": "programs/graphic-design-advertising-and-branding-ba-hons.json"
+    },
+    {
+      "slug": "product-and-industrial-design-ba-hons",
+      "name_en": "Product and Industrial Design BA (Hons)",
+      "url": "https://www.herts.ac.uk/courses/undergraduate/ba-hons-product-and-industrial-design",
+      "extracted_at": "2026-05-12T10:37:00+08:00",
+      "status": "complete",
+      "data_file": "programs/product-and-industrial-design-ba-hons.json"
+    },
+    {
+      "slug": "illustration-ba-hons",
+      "name_en": "Illustration BA (Hons)",
+      "url": "https://www.herts.ac.uk/courses/undergraduate/illustration3",
+      "extracted_at": "2026-05-12T10:58:00+08:00",
+      "status": "complete",
+      "data_file": "programs/illustration-ba-hons.json"
+    },
+    {
+      "slug": "fine-art-ba-hons",
+      "name_en": "Fine Art BA (Hons)",
+      "url": "https://www.herts.ac.uk/courses/undergraduate/fine-art",
+      "extracted_at": "2026-05-12T11:08:00+08:00",
+      "status": "url_unavailable_404",
+      "data_file": "programs/fine-art-ba-hons.json",
+      "notes": "Official course page returns 404. Data aggregated from third-party sources."
+    },
+    {
+      "slug": "digital-arts-for-animation-games-and-immersion-ba-hons",
+      "name_en": "Digital Arts for Animation, Games & Immersion BA (Hons)",
+      "url": "https://www.herts.ac.uk/courses/undergraduate/ba-hons-digital-arts-for-animation-games-immersion",
+      "extracted_at": "2026-05-12T12:32:00+08:00",
+      "status": "complete",
+      "data_file": "programs/digital-arts-for-animation-games-and-immersion-ba-hons.json"
+    },
+    {
+      "slug": "digital-technologies-for-animation-games-and-immersion-bsc-hons",
+      "name_en": "Digital Technologies for Animation, Games & Immersion BSc (Hons)",
+      "url": "https://www.herts.ac.uk/courses/undergraduate/bsc-hons-digital-technologies-for-animation-games-and-immersion",
+      "extracted_at": "2026-05-12T12:33:00+08:00",
+      "status": "complete",
+      "data_file": "programs/digital-technologies-for-animation-games-and-immersion-bsc-hons.json"
+    },
+    {
+      "slug": "architecture-ba-hons",
+      "name_en": "Architecture BA (Hons)",
+      "url": "https://www.herts.ac.uk/courses/undergraduate/ba-hons-architecture",
+      "extracted_at": "2026-05-12T12:43:00+08:00",
+      "status": "complete",
+      "data_file": "programs/architecture-ba-hons.json"
+    },
+    {
+      "slug": "interior-architecture-and-design-ba-hons",
+      "name_en": "Interior Architecture and Design BA (Hons)",
+      "url": "https://www.herts.ac.uk/courses/undergraduate/ba-hons-interior-architecture-and-design",
+      "extracted_at": "2026-05-12T12:44:00+08:00",
+      "status": "complete",
+      "data_file": "programs/interior-architecture-and-design-ba-hons.json"
+    },
+    {
+      "slug": "songwriting-and-artist-development-bsc-hons",
+      "name_en": "Songwriting and Artist Development BSc (Hons)",
+      "url": "https://www.herts.ac.uk/courses/undergraduate/bsc-hons-songwriting-and-artist-development",
+      "extracted_at": "2026-05-12T12:58:00+08:00",
+      "status": "complete",
+      "data_file": "programs/songwriting-and-artist-development-bsc-hons.json"
+    },
+    {
+      "slug": "animation-ma",
+      "name_en": "Animation MA",
+      "url": "https://www.herts.ac.uk/courses/postgraduate-masters/ma-animation",
+      "extracted_at": "2026-05-12T13:03:00+08:00",
+      "status": "complete",
+      "data_file": "programs/animation-ma.json"
+    },
+    {
+      "slug": "character-and-creature-animation-online-ma",
+      "name_en": "Character and Creature Animation (Online) MA",
+      "url": "https://www.herts.ac.uk/courses/postgraduate-masters/ma-character-and-creature-animation-online",
+      "extracted_at": "2026-05-12T13:15:00+08:00",
+      "status": "complete",
+      "data_file": "programs/character-and-creature-animation-online-ma.json"
+    },
+    {
+      "slug": "graphic-design-and-branding-ma",
+      "name_en": "Graphic Design and Branding MA",
+      "url": "https://www.herts.ac.uk/courses/postgraduate-masters/ma-graphic-design",
+      "extracted_at": "2026-05-12T13:25:00+08:00",
+      "status": "complete",
+      "data_file": "programs/graphic-design-and-branding-ma.json"
+    },
+    {
+      "slug": "illustration-ma",
+      "name_en": "Illustration MA",
+      "url": "https://www.herts.ac.uk/courses/postgraduate-masters/ma-illustration",
+      "extracted_at": "2026-05-12T13:45:00+08:00",
+      "status": "complete",
+      "data_file": "programs/illustration-ma.json",
+      "notes": "Official course page blocked by Cloudflare (403). Data aggregated from Prospects, UniScholars, PostgraduateSearch, Mastersportal."
+    },
+    {
+      "slug": "art-therapy-ma",
+      "name_en": "Art Therapy MA",
+      "url": "https://www.herts.ac.uk/courses/postgraduate-masters/ma-art-therapy",
+      "extracted_at": "2026-05-12T13:54:00+08:00",
+      "status": "complete",
+      "data_file": "programs/art-therapy-ma.json",
+      "notes": "Data extracted from official course page, Prospects.ac.uk, and programme specification PDF. HCPC-approved vocational programme."
+    },
+    {
+      "slug": "audio-engineering-msc",
+      "name_en": "Audio Engineering MSc",
+      "url": "https://www.herts.ac.uk/courses/postgraduate-masters/msc-audio-engineering",
+      "extracted_at": "2026-05-12T14:00:00+08:00",
+      "status": "complete",
+      "data_file": "programs/audio-engineering-msc.json"
+    }
+  ],
+  "discovered_subpages": [
+    {
+      "url": "https://www.herts.ac.uk/courses/undergraduate-courses/animation-film-games-and-visual-effects-applicants",
+      "type": "applicant_advice",
+      "status": "already_in_site_map"
+    },
+    {
+      "url": "https://www.herts.ac.uk/courses/undergraduate-courses/art-design-and-fashion/undergraduate-art-and-design-applicant/undergraduate-art-and-design-portfolio-advice",
+      "type": "portfolio_advice",
+      "status": "already_in_site_map"
+    },
+    {
+      "url": "https://www.herts.ac.uk/courses/undergraduate-courses/animation-film-games-and-creative-media/animation,-games-and-visual-effects-applicants",
+      "type": "applicant_advice",
+      "status": "already_in_site_map"
+    }
+  ],
+  "new_subpages_not_in_site_map": [
+    {
+      "url": "https://www.herts.ac.uk/courses/undergraduate-courses/art-design-and-fashion/art-design-applicant-interviews",
+      "type": "applicant_advice",
+      "discovered_from": "graphic-design-ba-hons",
+      "status": "new"
+    },
+    {
+      "url": "https://www.herts.ac.uk/courses/preparatory/foundation-in-arts-therapies-and-wellbeing-university-certificate",
+      "type": "related_course",
+      "discovered_from": "art-therapy-ma",
+      "status": "new",
+      "title": "Foundation in Arts Therapies and Wellbeing (University Certificate)"
+    },
+    {
+      "url": "https://www.herts.ac.uk/study/careers/flare",
+      "type": "student_support",
+      "discovered_from": "art-therapy-ma",
+      "status": "new",
+      "title": "Flare Business Competition"
+    },
+    {
+      "url": "https://www.herts.ac.uk/__data/assets/word_doc/0017/330209/MA-Art-Therapy-Additional-Application-Information.docx",
+      "type": "entry_requirements",
+      "discovered_from": "art-therapy-ma",
+      "status": "new",
+      "title": "MA Art Therapy Additional Application Information"
+    },
+    {
+      "url": "https://www.baat.org/",
+      "type": "professional_body",
+      "discovered_from": "art-therapy-ma",
+      "status": "new",
+      "title": "British Association of Art Therapists (BAAT)"
+    },
+    {
+      "url": "https://www.baatn.org.uk/",
+      "type": "professional_body",
+      "discovered_from": "art-therapy-ma",
+      "status": "new",
+      "title": "Black, African and Asian Therapy Network (BAATN)"
+    }
+  ],
+  "last_extraction": "2026-05-12T14:00:00+08:00",
+  "last_crawl": "2026-05-12T14:00:00+08:00"
+}

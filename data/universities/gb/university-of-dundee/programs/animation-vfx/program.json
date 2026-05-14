@@ -1,0 +1,155 @@
+{
+  "university": "University of Dundee",
+  "university_slug": "university-of-dundee",
+  "country": "gb",
+  "program_name": "Animation & VFX MSc",
+  "program_slug": "animation-vfx",
+  "degree": "MSc",
+  "level": "postgraduate",
+  "department": "Duncan of Jordanstone College of Art & Design (DJCAD)",
+  "department_slug": "djcad",
+  "duration": "12 months",
+  "duration_months": 12,
+  "attendance": "Full time",
+  "start_date": "September 2026",
+  "location": "Dundee City Campus",
+  "city": "Dundee",
+  "country_full": "Scotland, UK",
+  "ucas_code": null,
+  "application_code": "TFMSC-DAAVIS",
+  "apply_url": "https://evision.dundee.ac.uk/urd/sits.urd/run/siw_ipp_lgn.login?process=siw_ipp_app&code1=TFMSC-DAAVIS&code2=2411",
+  "program_url": "https://www.dundee.ac.uk/postgraduate/animation-vfx",
+  "total_credits": 180,
+  "ranking_highlight": "2nd in the UK for Animation (Guardian University Guide 2026)",
+  "fees": {
+    "uk_scotland": 11000,
+    "uk_rest": 11000,
+    "international": 23700,
+    "currency": "GBP",
+    "per": "year",
+    "scholarships": [
+      {
+        "name": "Vice Chancellor's Americas Postgraduate Scholarship",
+        "amount": 4000,
+        "fee_after": 19700
+      },
+      {
+        "name": "Global Excellence Scholarship Postgraduate",
+        "amount": 8000,
+        "fee_after": 15700,
+        "note": "For applicants with a 1st class degree or equivalent"
+      }
+    ]
+  },
+  "entry_requirements": {
+    "academic": "Relevant degree (US Bachelor: 3.0–3.69/4.0) or appropriate professional experience",
+    "portfolio": "Showreel (max 2 min, 1920x1080 HD on YouTube/Vimeo) or portfolio (up to 15 pages)",
+    "ielts": {
+      "overall": 6.0,
+      "writing": 6.0,
+      "listening": 5.5,
+      "reading": 5.5,
+      "speaking": 5.5
+    },
+    "interview": "May be invited for an informal conversation with the Programme Director"
+  },
+  "modules": [
+    {
+      "name": "Research and Development in Practice",
+      "code": "DJ51019",
+      "credits": 20,
+      "semester": "Semester 1",
+      "type": "core"
+    },
+    {
+      "name": "Exploring Practice",
+      "code": "DJ51029",
+      "credits": 40,
+      "semester": "Semester 1",
+      "type": "core"
+    },
+    {
+      "name": "Advanced Production",
+      "code": "DJ52026",
+      "credits": 40,
+      "semester": "Semester 2",
+      "type": "core"
+    },
+    {
+      "name": "Going Live",
+      "code": "DJ52027",
+      "credits": 20,
+      "semester": "Semester 2",
+      "type": "core"
+    },
+    {
+      "name": "A&V - Realisation",
+      "code": "DJ53002",
+      "credits": 60,
+      "semester": "Summer",
+      "type": "core"
+    }
+  ],
+  "teaching_methods": [
+    "Lectures",
+    "Workshops",
+    "Practical work",
+    "Online materials",
+    "Group tutorials",
+    "Individual appointments",
+    "Group projects"
+  ],
+  "assessment_methods": [
+    "Practical work",
+    "Written assignments",
+    "Oral presentations"
+  ],
+  "career_paths": [
+    "CG Artist",
+    "Concept Artist",
+    "Compositor",
+    "Production Manager",
+    "3D Generalist",
+    "Animator"
+  ],
+  "graduate_credits": [
+    "Jurassic World: Dominion",
+    "Eternals",
+    "WandaVision",
+    "The Mandalorian",
+    "Artemis Fowl"
+  ],
+  "facilities": [
+    "Dedicated studio space",
+    "PC Lab with industry standard animation and VFX software",
+    "4K edit suites",
+    "Green screen production studio"
+  ],
+  "how_to_apply": {
+    "method": "Direct application via eVision portal",
+    "documents_required": [
+      "Official transcript",
+      "Degree certificate",
+      "Evidence of English language proficiency",
+      "CV",
+      "Academic reference",
+      "Professional reference",
+      "Personal statement",
+      "Passport (international applicants)"
+    ],
+    "deposit": "£5,000 for international students",
+    "offer_types": ["Unconditional", "Conditional", "Rejection"]
+  },
+  "tags": [
+    "animation",
+    "vfx",
+    "visual-effects",
+    "3d",
+    "cg",
+    "motion-graphics",
+    "digital-art",
+    "film-production",
+    "postgraduate",
+    "msc"
+  ]
+}

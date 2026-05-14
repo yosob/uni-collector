@@ -1,0 +1,153 @@
+{
+  "university": "heriot-watt-university",
+  "country": "gb",
+  "last_updated": "2026-05-14",
+  "total_programs": 13,
+  "extracted": {
+    "ug": 5,
+    "pg": 7,
+    "total": 12
+  },
+  "programs": {
+    "fashion": {
+      "title": "BA (Hons) Fashion",
+      "level": "ug",
+      "url": "https://www.hw.ac.uk/study/undergraduate/fashion",
+      "extracted": true,
+      "extracted_date": "2026-05-14",
+      "files": [
+        "_index_EN.md",
+        "_index_ZH.md"
+      ]
+    },
+    "fashion-marketing-and-retailing": {
+      "title": "BA (Hons) Fashion Marketing and Retailing",
+      "level": "ug",
+      "url": "https://www.hw.ac.uk/study/undergraduate/fashion-marketing-and-retailing",
+      "extracted": false,
+      "note": "URL returns 404 — program may have been renamed to Fashion Branding and Promotion"
+    },
+    "fashion-branding-and-promotion": {
+      "title": "BA (Hons) Fashion Branding and Promotion",
+      "level": "ug",
+      "url": "https://www.hw.ac.uk/study/undergraduate/fashion-branding-and-promotion",
+      "extracted": true,
+      "extracted_date": "2026-05-14",
+      "files": [
+        "_index_EN.md",
+        "_index_ZH.md"
+      ]
+    },
+    "design-for-textiles": {
+      "title": "BA (Hons) Design for Textiles (Fashion, Interior, Art)",
+      "level": "ug",
+      "url": "https://www.hw.ac.uk/study/undergraduate/design-for-textiles-fashion-interior-art",
+      "extracted": true,
+      "extracted_date": "2026-05-14",
+      "files": [
+        "_index_EN.md",
+        "_index_ZH.md"
+      ]
+    },
+    "communication-design": {
+      "title": "BA (Hons) Communication Design",
+      "level": "ug",
+      "url": "https://www.hw.ac.uk/study/undergraduate/communication-design",
+      "extracted": true,
+      "extracted_date": "2026-05-14",
+      "files": [
+        "_index_EN.md",
+        "_index_ZH.md"
+      ]
+    },
+    "interior-architecture-design": {
+      "title": "BA (Hons) Interior Architecture and Design",
+      "level": "ug",
+      "url": "https://www.hw.ac.uk/study/undergraduate/interior-architecture-design",
+      "extracted": true,
+      "extracted_date": "2026-05-14",
+      "files": [
+        "_index_EN.md",
+        "_index_ZH.md"
+      ]
+    },
+    "fashion-textiles-design-ma": {
+      "title": "MA Fashion and Textiles Design",
+      "level": "pg",
+      "url": "https://www.hw.ac.uk/study/postgraduate/fashion-textiles-design",
+      "extracted": true,
+      "extracted_date": "2026-05-14",
+      "files": [
+        "_index_EN.md",
+        "_index_ZH.md"
+      ]
+    },
+    "interior-architecture-and-design-ma": {
+      "title": "MA Interior Architecture and Design",
+      "level": "pg",
+      "url": "https://www.hw.ac.uk/study/postgraduate/interior-architecture-and-design",
+      "extracted": true,
+      "extracted_date": "2026-05-14",
+      "files": [
+        "_index_EN.md",
+        "_index_ZH.md"
+      ]
+    },
+    "design-management": {
+      "title": "MSc Design Management",
+      "level": "pg",
+      "url": "https://www.hw.ac.uk/study/postgraduate/design-management",
+      "extracted": true,
+      "extracted_date": "2026-05-14",
+      "files": [
+        "_index_EN.md",
+        "_index_ZH.md"
+      ]
+    },
+    "user-experience-design": {
+      "title": "MSc User Experience Design",
+      "level": "pg",
+      "url": "https://www.hw.ac.uk/study/postgraduate/user-experience-design",
+      "extracted": true,
+      "extracted_date": "2026-05-14",
+      "files": [
+        "_index_EN.md",
+        "_index_ZH.md"
+      ]
+    },
+    "fashion-textiles-management": {
+      "title": "MSc Fashion and Textiles Management",
+      "level": "pg",
+      "url": "https://www.hw.ac.uk/study/postgraduate/fashion-textiles-management",
+      "extracted": true,
+      "extracted_date": "2026-05-14",
+      "files": [
+        "_index_EN.md",
+        "_index_ZH.md"
+      ]
+    },
+    "global-textile-design": {
+      "title": "MSc/MS Global Textile Design",
+      "level": "pg",
+      "url": "https://www.hw.ac.uk/about/our-schools/textiles-and-design/study/postgraduate/mscms-global-textile-design",
+      "extracted": true,
+      "extracted_date": "2026-05-14",
+      "files": [
+        "_index_EN.md",
+        "_index_ZH.md"
+      ],
+      "note": "Joint degree with Thomas Jefferson University (USA). Fee info not published — contact institution."
+    },
+    "games-design-development": {
+      "title": "MDes Games Design and Development",
+      "level": "pg",
+      "url": "https://www.hw.ac.uk/study/postgraduate/games-design-development",
+      "extracted": true,
+      "extracted_date": "2026-05-14",
+      "files": [
+        "_index_EN.md",
+        "_index_ZH.md"
+      ]
+    }
+  }
+}

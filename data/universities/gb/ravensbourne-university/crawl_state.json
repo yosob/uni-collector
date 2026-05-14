@@ -1,0 +1,680 @@
+{
+  "university": "ravensbourne-university",
+  "country": "gb",
+  "last_crawl": "2026-05-13T09:29:00+08:00",
+  "status": "in_progress",
+  "total_programs": 71,
+  "extracted": 65,
+  "programs": {
+    "ba-hons-3d-animation": {
+      "status": "extracted",
+      "url": "https://www.ravensbourne.ac.uk/study/undergraduate/animation-and-games-degrees/ba-hons-3d-animation",
+      "last_updated": "2026-05-13T03:12:00+08:00",
+      "files": [
+        "_index.md",
+        "_index_EN.md",
+        "_index_ZH.md"
+      ]
+    },
+    "ba-hons-animation": {
+      "status": "extracted",
+      "url": "https://www.ravensbourne.ac.uk/ba-hons-animation",
+      "last_updated": "2026-05-13T03:24:00+08:00",
+      "files": [
+        "_index_EN.md",
+        "_index_ZH.md"
+      ]
+    },
+    "ba-hons-games-art": {
+      "status": "extracted",
+      "url": "https://www.ravensbourne.ac.uk/ba-hons-games-art",
+      "last_updated": "2026-05-13T03:30:00+08:00",
+      "files": [
+        "_index.md",
+        "_index_EN.md",
+        "_index_ZH.md"
+      ]
+    },
+    "ba-hons-games-design": {
+      "status": "extracted",
+      "url": "https://www.ravensbourne.ac.uk/ba-hons-games-design",
+      "last_updated": "2026-05-13T03:37:00+08:00",
+      "files": [
+        "_index.md",
+        "_index_EN.md",
+        "_index_ZH.md"
+      ]
+    },
+    "ba-hons-games-development": {
+      "status": "extracted",
+      "url": "https://www.ravensbourne.ac.uk/ba-hons-games-development",
+      "last_updated": "2026-05-13T03:42:00+08:00",
+      "files": [
+        "_index.md",
+        "_index_EN.md",
+        "_index_ZH.md"
+      ]
+    },
+    "bsc-hons-games-programming": {
+      "status": "extracted",
+      "url": "https://www.ravensbourne.ac.uk/bsc-hons-games-programming",
+      "last_updated": "2026-05-13T03:48:00+08:00",
+      "files": [
+        "_index.md",
+        "_index_EN.md",
+        "_index_ZH.md"
+      ]
+    },
+    "ba-hons-graphic-design": {
+      "status": "extracted",
+      "url": "https://www.ravensbourne.ac.uk/study/undergraduate/ba-hons-graphic-design",
+      "last_updated": "2026-05-13T03:51:00+08:00",
+      "files": [
+        "_index.md",
+        "_index_EN.md",
+        "_index_ZH.md"
+      ]
+    },
+    "ba-hons-architecture": {
+      "status": "extracted",
+      "url": "https://www.ravensbourne.ac.uk/study/undergraduate/ba-hons-architecture",
+      "last_updated": "2026-05-13T03:55:00+08:00",
+      "files": [
+        "_index.md",
+        "_index_EN.md",
+        "_index_ZH.md"
+      ]
+    },
+    "ba-hons-interior-architecture-and-reuse": {
+      "status": "extracted",
+      "url": "https://www.ravensbourne.ac.uk/study/undergraduate/ba-hons-interior-architecture-and-reuse",
+      "last_updated": "2026-05-13T04:02:00+08:00",
+      "files": [
+        "_index_EN.md",
+        "_index_ZH.md"
+      ]
+    },
+    "ba-hons-urban-landscape-architecture": {
+      "status": "extracted",
+      "url": "https://www.ravensbourne.ac.uk/study/undergraduate/ba-hons-urban-landscape-architecture",
+      "last_updated": "2026-05-13T04:07:00+08:00",
+      "files": [
+        "_index_EN.md",
+        "_index_ZH.md"
+      ]
+    },
+    "beng-hons-architectural-design-engineering": {
+      "status": "extracted",
+      "url": "https://www.ravensbourne.ac.uk/study/undergraduate/beng-hons-architectural-design-engineering",
+      "last_updated": "2026-05-13T04:11:00+08:00",
+      "files": [
+        "_index_EN.md",
+        "_index_ZH.md"
+      ],
+      "notes": "Course subject to validation — entry requirements, curriculum details not yet fully published"
+    },
+    "ba-hons-fashion": {
+      "status": "extracted",
+      "url": "https://www.ravensbourne.ac.uk/study/undergraduate/ba-hons-fashion",
+      "last_updated": "2026-05-13T04:21:00+08:00",
+      "files": [
+        "_index.md",
+        "_index_EN.md"
+      ]
+    },
+    "bsc-hons-business-management": {
+      "status": "extracted",
+      "url": "https://www.ravensbourne.ac.uk/bsc-hons-business-management",
+      "last_updated": "2026-05-13T04:16:00+08:00",
+      "files": [
+        "_index.md",
+        "_index_EN.md",
+        "_index_ZH.md"
+      ]
+    },
+    "ba-hons-fashion-promotion": {
+      "status": "extracted",
+      "url": "https://www.ravensbourne.ac.uk/study/undergraduate/ba-hons-fashion-promotion",
+      "last_updated": "2026-05-13T04:26:00+08:00",
+      "files": [
+        "_index.md",
+        "_index_EN.md"
+      ]
+    },
+    "bsc-hons-business-management-international-year-one": {
+      "status": "extracted",
+      "url": "https://www.ravensbourne.ac.uk/study/undergraduate/bsc-hons-business-management-international-year-one",
+      "last_updated": "2026-05-13T04:31:00+08:00",
+      "files": [
+        "_index_EN.md",
+        "_index_ZH.md"
+      ]
+    },
+    "bsc-hons-business-management-fashion": {
+      "status": "extracted",
+      "url": "https://www.ravensbourne.ac.uk/bsc-hons-business-management-fashion",
+      "last_updated": "2026-05-13T04:39:00+08:00",
+      "files": [
+        "_index.md",
+        "_index_EN.md",
+        "_index_ZH.md"
+      ]
+    },
+    "bsc-hons-digital-marketing": {
+      "status": "extracted",
+      "url": "https://www.ravensbourne.ac.uk/bsc-hons-digital-marketing",
+      "last_updated": "2026-05-13T04:46:00+08:00",
+      "files": [
+        "_index_EN.md",
+        "_index_ZH.md"
+      ]
+    },
+    "ba-hons-music-and-sound-production": {
+      "status": "extracted",
+      "url": "https://www.ravensbourne.ac.uk/study/undergraduate/ba-hons-music-and-sound-production",
+      "last_updated": "2026-05-13T04:55:00+08:00",
+      "files": [
+        "_index.md",
+        "_index_EN.md",
+        "_index_ZH.md"
+      ]
+    },
+    "bsc-hons-entrepreneurship-and-business-startup-top": {
+      "status": "extracted",
+      "url": "https://www.ravensbourne.ac.uk/bsc-hons-entrepreneurship-and-business-startup-top",
+      "last_updated": "2026-05-13T05:06:00+08:00",
+      "files": [
+        "_index.md",
+        "_index_EN.md",
+        "_index_ZH.md"
+      ]
+    },
+    "bsc-hons-business-computing": {
+      "status": "extracted",
+      "url": "https://www.ravensbourne.ac.uk/study/undergraduate/bsc-hons-business-computing",
+      "last_updated": "2026-05-13T05:08:00+08:00",
+      "files": [
+        "_index.md",
+        "_index_EN.md",
+        "_index_ZH.md"
+      ]
+    },
+    "ba-hons-digital-film-production": {
+      "status": "extracted",
+      "url": "https://www.ravensbourne.ac.uk/study/undergraduate/ba-hons-digital-film-production",
+      "last_updated": "2026-05-13T05:12:00+08:00",
+      "files": [
+        "_index.md",
+        "_index_EN.md",
+        "_index_ZH.md"
+      ]
+    },
+    "ba-hons-digital-content-creation": {
+      "status": "extracted",
+      "url": "https://www.ravensbourne.ac.uk/study/undergraduate/ba-hons-digital-content-creation",
+      "last_updated": "2026-05-13T05:17:00+08:00",
+      "files": [
+        "_index.md",
+        "_index_EN.md",
+        "_index_ZH.md"
+      ]
+    },
+    "bsc-hons-computer-science": {
+      "status": "extracted",
+      "url": "https://www.ravensbourne.ac.uk/study/undergraduate/bsc-hons-computer-science",
+      "last_updated": "2026-05-13T05:20:00+08:00",
+      "files": [
+        "_index.md",
+        "_index_EN.md",
+        "_index_ZH.md"
+      ]
+    },
+    "bsc-hons-computer-science-international-year-one": {
+      "status": "extracted",
+      "url": "https://www.ravensbourne.ac.uk/bsc-hons-computer-science-international-year-one",
+      "last_updated": "2026-05-13T05:26:00+08:00",
+      "files": [
+        "_index.md",
+        "_index_EN.md",
+        "_index_ZH.md"
+      ]
+    },
+    "bsc-hons-cyber-security": {
+      "status": "extracted",
+      "url": "https://www.ravensbourne.ac.uk/study/undergraduate/bsc-hons-cyber-security",
+      "last_updated": "2026-05-13T05:29:00+08:00",
+      "files": [
+        "_index.md",
+        "_index_EN.md",
+        "_index_ZH.md"
+      ]
+    },
+    "bsc-hons-information-technology-management": {
+      "status": "extracted",
+      "url": "https://www.ravensbourne.ac.uk/study/undergraduate/bsc-hons-information-technology-management",
+      "last_updated": "2026-05-13T05:37:00+08:00",
+      "files": [
+        "_index.md",
+        "_index_EN.md",
+        "_index_ZH.md"
+      ]
+    },
+    "ba-hons-product-design": {
+      "status": "extracted",
+      "url": "https://www.ravensbourne.ac.uk/study/undergraduate/design/ba-hons-product-design",
+      "last_updated": "2026-05-13T05:41:00+08:00",
+      "files": [
+        "_index_EN.md",
+        "_index_ZH.md"
+      ],
+      "notes": "User requested BSc (Hons) Product Design and Innovation — actual program is BA (Hons) Product Design (no BSc variant exists at Ravensbourne)"
+    },
+    "march-architecture": {
+      "status": "extracted",
+      "url": "https://www.ravensbourne.ac.uk/study/postgraduate/march-architecture-master-architecture",
+      "last_updated": "2026-05-13T05:50:00+08:00",
+      "files": [
+        "_index.md",
+        "_index_EN.md",
+        "_index_ZH.md"
+      ]
+    },
+    "msc-computer-science": {
+      "status": "extracted",
+      "url": "https://www.ravensbourne.ac.uk/study/postgraduate/msc-computer-science",
+      "last_updated": "2026-05-13T05:56:00+08:00",
+      "files": [
+        "_index.md",
+        "_index_EN.md",
+        "_index_ZH.md"
+      ]
+    },
+    "msc-software-engineering": {
+      "status": "extracted",
+      "url": "https://www.ravensbourne.ac.uk/study/postgraduate/msc-software-engineering",
+      "last_updated": "2026-05-13T06:00:00+08:00",
+      "files": [
+        "_index.md",
+        "_index_EN.md",
+        "_index_ZH.md"
+      ]
+    },
+    "msc-cyber-security": {
+      "status": "extracted",
+      "last_extracted": "2026-05-13T06:04:00+08:00",
+      "url": "https://www.ravensbourne.ac.uk/study/postgraduate/msc-cyber-security",
+      "pages": {
+        "main": {
+          "url": "https://www.ravensbourne.ac.uk/study/postgraduate/msc-cyber-security",
+          "status": "extracted",
+          "last_crawled": "2026-05-13T06:04:00+08:00"
+        }
+      }
+    },
+    "msc-cyber-security-management": {
+      "status": "extracted",
+      "url": "https://www.ravensbourne.ac.uk/study/postgraduate/msc-cyber-security-management",
+      "last_updated": "2026-05-13T06:08:00+08:00",
+      "files": [
+        "_index.md",
+        "_index_EN.md",
+        "_index_ZH.md"
+      ]
+    },
+    "msc-information-technology-management": {
+      "status": "extracted",
+      "url": "https://www.ravensbourne.ac.uk/study/postgraduate/msc-information-technology-management",
+      "last_updated": "2026-05-13T06:13:00+08:00",
+      "files": [
+        "_index.md",
+        "_index_EN.md",
+        "_index_ZH.md"
+      ]
+    },
+    "msc-business-and-data-analytics": {
+      "status": "extracted",
+      "url": "https://www.ravensbourne.ac.uk/study/postgraduate/msc-business-and-data-analytics",
+      "last_updated": "2026-05-13T06:19:00+08:00",
+      "files": [
+        "_index.md",
+        "_index_EN.md",
+        "_index_ZH.md"
+      ]
+    },
+    "mba": {
+      "status": "extracted",
+      "url": "https://www.ravensbourne.ac.uk/study/postgraduate/mba",
+      "last_updated": "2026-05-13T06:23:00+08:00",
+      "files": [
+        "_index.md",
+        "_index_EN.md",
+        "_index_ZH.md"
+      ]
+    },
+    "mba-with-industry-year": {
+      "status": "extracted",
+      "url": "https://www.ravensbourne.ac.uk/study/postgraduate/mba-with-industry-year",
+      "last_updated": "2026-05-13T06:27:00+08:00",
+      "files": [
+        "_index.md",
+        "_index_EN.md",
+        "_index_ZH.md"
+      ],
+      "notes": "Subject to validation. 2-year programme with integrated industry year. Different fee structure (Y1 academic + Y2 industry)."
+    },
+    "msc-accounting-and-finance": {
+      "status": "extracted",
+      "url": "https://www.ravensbourne.ac.uk/study/postgraduate/msc-accounting-and-finance",
+      "last_updated": "2026-05-13T06:35:00+08:00",
+      "files": [
+        "_index.md",
+        "_index_EN.md",
+        "_index_ZH.md"
+      ],
+      "notes": "ACCA-aligned MSc with two intakes (May/Sep). Course spec PDF also extracted."
+    },
+    "msc-accounting-and-finance-with-industry-year": {
+      "status": "extracted",
+      "url": "https://www.ravensbourne.ac.uk/study/postgraduate/msc-accounting-and-finance-with-industry-year",
+      "last_updated": "2026-05-13T06:40:00+08:00",
+      "files": [
+        "_index.md",
+        "_index_EN.md",
+        "_index_ZH.md"
+      ],
+      "notes": "Two-year programme with integrated industry year. Course subject to validation. Different fee structure (Y1 academic + Y2 industry placement)."
+    },
+    "msc-engineering-management-with-industry-year": {
+      "status": "extracted",
+      "url": "https://www.ravensbourne.ac.uk/study/postgraduate/msc-engineering-management-with-industry-year",
+      "last_updated": "2026-05-13T06:48:00+08:00",
+      "files": [
+        "_index.md",
+        "_index_EN.md",
+        "_index_ZH.md"
+      ],
+      "notes": "Two-year programme with integrated industry year. Course subject to validation. Entry requirement: 2:1 (higher than non-industry-year variant). Different fee structure (Y1 academic + Y2 industry)."
+    },
+    "msc-events-management": {
+      "status": "extracted",
+      "url": "https://www.ravensbourne.ac.uk/study/postgraduate/msc-events-management",
+      "last_updated": "2026-05-13T06:52:00+08:00",
+      "files": [
+        "_index_EN.md",
+        "_index_ZH.md"
+      ],
+      "notes": "CMI Level 7 accredited. Two intakes: May and September. Entry: 2:2 degree. Professional accreditation included."
+    },
+    "msc-events-management-with-industry-year": {
+      "status": "extracted",
+      "url": "https://www.ravensbourne.ac.uk/study/postgraduate/msc-events-management-with-industry-year",
+      "last_updated": "2026-05-13T06:56:00+08:00",
+      "files": [
+        "_index.md",
+        "_index_EN.md",
+        "_index_ZH.md"
+      ],
+      "notes": "Two-year programme with integrated industry year. Course subject to validation. Entry requirement: 2:1 (higher than non-industry-year variant). Different fee structure (Y1 academic + Y2 industry)."
+    },
+    "msc-international-finance": {
+      "url": "https://www.ravensbourne.ac.uk/study/postgraduate/msc-international-finance",
+      "status": "extracted",
+      "last_updated": "2026-05-13T07:00:00+08:00",
+      "files": [
+        "_index_EN.md",
+        "_index_ZH.md"
+      ]
+    },
+    "msc-international-finance-with-industry-year": {
+      "status": "extracted",
+      "url": "https://www.ravensbourne.ac.uk/study/postgraduate/msc-international-finance-with-industry-year",
+      "last_updated": "2026-05-13T07:05:00+08:00",
+      "files": [
+        "_index.md",
+        "_index_EN.md",
+        "_index_ZH.md"
+      ],
+      "notes": "Two-year programme with integrated industry year. Course subject to validation. Different fee structure (Y1 academic + Y2 industry placement)."
+    },
+    "ma-luxury-brand-management": {
+      "status": "extracted",
+      "url": "https://www.ravensbourne.ac.uk/study/postgraduate/ma-luxury-brand-management",
+      "last_crawled": "2026-05-13T08:15:00",
+      "files": [
+        "_index.md",
+        "_index_EN.md",
+        "_index_ZH.md"
+      ],
+      "page_type": "program_overview"
+    },
+    "msc-project-management": {
+      "status": "extracted",
+      "url": "https://www.ravensbourne.ac.uk/study/postgraduate/msc-project-management",
+      "last_updated": "2026-05-13T07:21:18+08:00",
+      "files": [
+        "_index_EN.md",
+        "_index_ZH.md"
+      ]
+    },
+    "msc-project-management-with-industry-year": {
+      "status": "extracted",
+      "url": "https://www.ravensbourne.ac.uk/study/postgraduate/msc-project-management-with-industry-year",
+      "last_updated": "2026-05-13T07:21:00+08:00",
+      "files": [
+        "_index.md",
+        "_index_EN.md",
+        "_index_ZH.md"
+      ],
+      "notes": "Two-year programme with integrated industry year. Course subject to validation. Entry requirement: 2:1 (higher than non-industry-year variant). Different fee structure (Y1 academic + Y2 industry placement)."
+    },
+    "msc-strategic-marketing-and-analytics": {
+      "status": "extracted",
+      "url": "https://www.ravensbourne.ac.uk/study/postgraduate/msc-strategic-marketing-and-analytics",
+      "last_updated": "2026-05-13T07:26:00+08:00",
+      "files": [
+        "_index.md",
+        "_index_EN.md",
+        "_index_ZH.md"
+      ],
+      "notes": "Dual professional accreditation: CIM + CMI Level 7. Course spec PDF also extracted. Two intakes: May and September."
+    },
+    "ma-design-communication": {
+      "status": "extracted",
+      "url": "https://www.ravensbourne.ac.uk/study/postgraduate/ma-design-communication",
+      "last_updated": "2026-05-13T07:31:00+08:00",
+      "files": [
+        "_index.md",
+        "_index_EN.md",
+        "_index_ZH.md"
+      ],
+      "notes": "Course closed for 2026 entry. No fee data available. Course spec PDF also available."
+    },
+    "ma-mfa-digital-photography": {
+      "status": "extracted",
+      "url": "https://www.ravensbourne.ac.uk/study/postgraduate/mamfa-digital-photography",
+      "last_updated": "2026-05-13T07:39:00+08:00",
+      "files": [
+        "_index.md",
+        "_index_EN.md",
+        "_index_ZH.md"
+      ],
+      "notes": "Combined MA/MFA programme. AOP accredited. Course spec PDF also extracted. Open for 2026 entry."
+    },
+    "ma-fashion-digital-futures": {
+      "status": "extracted",
+      "url": "https://www.ravensbourne.ac.uk/study/postgraduate/ma-fashion-digital-futures",
+      "last_updated": "2026-05-13T07:44:00+08:00",
+      "files": [
+        "_index.md",
+        "_index_EN.md",
+        "_index_ZH.md"
+      ],
+      "notes": "Course closed for 2026 entry. Fees based on standard Ravensbourne MA rates. Course spec PDF also available."
+    },
+    "msc-international-fashion-marketing": {
+      "status": "extracted",
+      "url": "https://www.ravensbourne.ac.uk/study/postgraduate/msc-international-fashion-marketing",
+      "last_updated": "2026-05-13T07:56:00+08:00",
+      "files": [
+        "_index_EN.md",
+        "_index_ZH.md"
+      ],
+      "notes": "Course closed for 2026 entry. No fee data available. Course spec PDF also extracted. Part of Fashion School."
+    },
+    "msc-strategic-marketing-analytics-with-industry-year": {
+      "status": "extracted",
+      "url": "https://www.ravensbourne.ac.uk/study/postgraduate/msc-strategic-marketing-analytics-with-industry-year",
+      "last_updated": "2026-05-13T08:00:00+08:00",
+      "files": [
+        "_index.md",
+        "_index_EN.md",
+        "_index_ZH.md"
+      ],
+      "notes": "Two-year programme with integrated industry year. Course subject to validation. Entry requirement: 2:1 (higher than non-industry-year variant which requires 2:2). Different fee structure (Y1 academic + Y2 industry placement)."
+    },
+    "ma-illustration": {
+      "status": "extracted",
+      "url": "https://www.ravensbourne.ac.uk/study/postgraduate/ma-illustration",
+      "last_updated": "2026-05-13T08:05:00+08:00",
+      "files": [
+        "_index_EN.md",
+        "_index_ZH.md"
+      ],
+      "notes": "Course not available for 2026 entry. Fees estimated based on standard Ravensbourne MA rates. Portfolio required for admission."
+    },
+    "ma-international-film-and-tv-business": {
+      "status": "extracted",
+      "url": "https://www.ravensbourne.ac.uk/study/postgraduate/ma-international-film-and-tv-business",
+      "last_updated": "2026-05-13T08:09:00+08:00",
+      "files": [
+        "_index_EN.md",
+        "_index_ZH.md"
+      ]
+    },
+    "ma-screenwriting": {
+      "status": "extracted",
+      "url": "https://www.ravensbourne.ac.uk/study/postgraduate/ma-screenwriting",
+      "last_updated": "2026-05-13T08:12:00+08:00",
+      "files": [
+        "_index_EN.md",
+        "_index_ZH.md"
+      ],
+      "notes": "Course subject to validation. Planned start September 2027. Hybrid delivery model (one evening on campus + one evening online)."
+    },
+    "ba-hons-advertising-and-brand-design": {
+      "status": "extracted",
+      "url": "https://www.ravensbourne.ac.uk/study/undergraduate/ba-hons-advertising-and-brand-design",
+      "last_updated": "2026-05-13T08:29:00+08:00",
+      "files": [
+        "_index_EN.md",
+        "_index_ZH.md"
+      ]
+    },
+    "ba-hons-character-design-concept-art": {
+      "status": "extracted",
+      "url": "https://www.ravensbourne.ac.uk/study/undergraduate/ba-hons-character-design-concept-art",
+      "last_updated": "2026-05-13T08:39:00+08:00",
+      "files": [
+        "_index_EN.md",
+        "_index_ZH.md"
+      ]
+    },
+    "ba-hons-illustration-communication": {
+      "status": "extracted",
+      "url": "https://www.ravensbourne.ac.uk/study/undergraduate/ba-hons-illustration-communication",
+      "last_updated": "2026-05-13T08:45:00+08:00",
+      "files": [
+        "_index.md",
+        "_index_EN.md",
+        "_index_ZH.md"
+      ],
+      "notes": "Course spec PDF also extracted. New course (first cohort September 2025). Course Leader: David Foldvari. UCAS code W220."
+    },
+    "ba-hons-motion-graphics": {
+      "status": "extracted",
+      "url": "https://www.ravensbourne.ac.uk/study/undergraduate/ba-hons-motion-graphics",
+      "last_updated": "2026-05-13T08:54:00+08:00",
+      "files": [
+        "_index.md",
+        "_index_EN.md",
+        "_index_ZH.md"
+      ],
+      "notes": "Course spec PDF also extracted. One of the only UK courses exclusively focused on motion design. UCAS code W280. Course Leader: Adrian Baxter."
+    },
+    "ba-hons-ux-ui-user-experience-and-user-interface-design": {
+      "status": "extracted",
+      "url": "https://www.ravensbourne.ac.uk/study/undergraduate/ba-hons-ux-ui-user-experience-and-user-interface-design",
+      "last_updated": "2026-05-13T09:01:00+08:00",
+      "files": [
+        "_index_EN.md",
+        "_index_ZH.md"
+      ],
+      "notes": "Course spec PDF also extracted. UCAS code I310 (standard), I311 (with IFY). 64 UCAS tariff points. Course Leader: David Hunter. Industry partners include Clearleft."
+    },
+    "bsc-hons-broadcast-engineering": {
+      "status": "extracted",
+      "url": "https://www.ravensbourne.ac.uk/study/undergraduate/bsc-hons-broadcast-engineering",
+      "last_updated": "2026-05-13T09:12:00+08:00",
+      "files": [
+        "_index.md",
+        "_index_EN.md",
+        "_index_ZH.md"
+      ],
+      "notes": "One of the UK's most established broadcast engineering degrees (40 years). UCAS code P312 (standard), P322 (with IFY). 64 UCAS tariff points. SMPTE Student Chapter member."
+    },
+    "ba-hons-digital-photography": {
+      "status": "extracted",
+      "url": "https://www.ravensbourne.ac.uk/study/undergraduate/ba-hons-digital-photography",
+      "last_updated": "2026-05-13T09:18:00+08:00",
+      "files": [
+        "_index.md",
+        "_index_EN.md",
+        "_index_ZH.md"
+      ],
+      "notes": "AOP and RPS accredited. Three named routes: Sport, Fashion, Editorial/Advertising. UCAS code W640 (standard), W643 (with IFY). 64 UCAS tariff points. Course Leader: Geraint Cunnick."
+    },
+    "ba-hons-digital-television-production": {
+      "status": "extracted",
+      "url": "https://www.ravensbourne.ac.uk/study/undergraduate/ba-hons-digital-television-production",
+      "last_updated": "2026-05-13T09:29:00+08:00",
+      "files": [
+        "_index.md",
+        "_index_EN.md",
+        "_index_ZH.md"
+      ],
+      "notes": "40-year leading course. Hands-on practice-intensive degree. UCAS code P311. 96 UCAS tariff points. Mandatory work experience. Screen School."
+    },
+    "ba-hons-editing-and-post-production": {
+      "status": "extracted",
+      "url": "https://www.ravensbourne.ac.uk/study/undergraduate/ba-hons-editing-and-post-production",
+      "last_updated": "2026-05-13T09:29:00+08:00",
+      "files": [
+        "_index.md",
+        "_index_EN.md",
+        "_index_ZH.md"
+      ],
+      "notes": "UCAS code PJ90. 64 UCAS tariff points. 90% graduate employment within 6 months. Alumni credits include Star Wars, Thor, Jurassic World. Guest speakers: Mick Audsley, Paul Machliss, Lisa Gunning, Walter Murch."
+    },
+    "ba-hons-multimedia-and-broadcast-journalism": {
+      "status": "extracted",
+      "url": "https://www.ravensbourne.ac.uk/study/undergraduate/ba-hons-multimedia-and-broadcast-journalism",
+      "last_updated": "2026-05-13T09:34:00+08:00",
+      "files": [
+        "_index.md",
+        "_index_EN.md",
+        "_index_ZH.md"
+      ],
+      "notes": "BJTC accredited. UCAS code P314. 88 UCAS tariff points. Bridges technical production and journalism. Course Leader: Peter Morgan."
+    },
+    "ba-hons-fashion-promotion-and-communication": {
+      "status": "extracted",
+      "url": "https://www.ravensbourne.ac.uk/study/undergraduate/ba-hons-fashion-promotion-and-communication",
+      "last_updated": "2026-05-13T09:35:00+08:00",
+      "files": [
+        "_index.md",
+        "_index_EN.md"
+      ],
+      "notes": "Updated version of BA (Hons) Fashion Promotion with added communication and media curation focus. UCAS code NP53 (3-year), NP54 (with IFY). 64 UCAS tariff points. Includes fully accredited work placement."
+    }
+  }
+}

@@ -1,0 +1,72 @@
+{
+  "name_de": "Media Production BA (Hons)",
+  "name_en": "Media Production BA (Hons)",
+  "name_cn": "媒体制作文学学士（荣誉）",
+  "slug": "media-production-ba-hons",
+  "degree": "ba",
+  "degree_title": "Bachelor of Arts with Honours (BA Hons)",
+  "language": ["en"],
+  "duration_semesters": 6,
+  "credits": 360,
+  "credits_system": "CATS",
+  "start_semester": "September",
+  "url": "https://www.coventry.ac.uk/course-structure/ug/fah/media-production-ba-hons/",
+  "department": "Faculty of Arts and Humanities — School of Art, Design & Media",
+  "focus_areas": [
+    "broadcast media",
+    "film production",
+    "digital media",
+    "convergent media",
+    "media theory"
+  ],
+  "tags": ["数字媒体", "新媒体"],
+  "admission_requirements": "A-Levels: BBC. BTEC: DMM. International Baccalaureate: 31+. GCSE: Minimum 5 GCSEs graded 9-4 / A*-C including English and Mathematics.",
+  "language_requirements": {
+    "english": "IELTS 6.0 overall (minimum 5.5 in each component) or equivalent",
+    "german": null
+  },
+  "portfolio_required": false,
+  "portfolio_details": null,
+  "application_process": "Apply through UCAS. Coventry University UCAS institution code: C85. Course code available on the UCAS website.",
+  "application_portal": "UCAS",
+  "application_portal_url": "https://www.ucas.com/",
+  "application_deadlines": {
+    "winter_semester": "January 31 (equal consideration)",
+    "summer_semester": null,
+    "notes": "Applications for September entry are managed through UCAS. Late applications may be considered until June 30 if places are available."
+  },
+  "curriculum_summary": "Year 1: Key concepts in communication, media and culture; media practice; researching for media production; convergent media; broadcast media; professional development planning 1; Add+vantage module. Year 2: Genre, meaning and production; professional experience (optional work placement); professional development planning 2; Add+vantage module; plus optional modules for specialisation in practice or production routes. Year 3: Context and analysis; genre, meaning and production 2; research and development; media production (major project — research, develop and produce a substantial media product in the medium of choice); professional development planning 3; Add+vantage module. An optional sandwich year (placement) is available between Year 2 and Year 3.",
+  "tuition": {
+    "tuition_free": false,
+    "amount": 9250,
+    "currency": "GBP",
+    "period": "year",
+    "notes": "UK students: £9,250/year. International students: £19,850/year (2025/26). Sandwich year placement fee: £1,250."
+  },
+  "scholarship_info": "Coventry University offers a range of scholarships for international students including the Global Leaders Scholarship and country-specific scholarships. See the university website for details.",
+  "contact": {
+    "name": null,
+    "email": null,
+    "phone": null
+  },
+  "city": "Coventry",
+  "state": "West Midlands",
+  "country": "gb",
+  "career_perspectives": [
+    "Media producer",
+    "Broadcast journalist",
+    "Film/TV production",
+    "Digital content creator",
+    "Media researcher",
+    "Video editor",
+    "Social media manager",
+    "Multimedia specialist"
+  ],
+  "last_crawled": "2026-05-13T04:35:00Z",
+  "source_urls": [
+    "https://www.coventry.ac.uk/course-structure/ug/fah/media-production-ba-hons/",
+    "https://www.topuniversities.com/universities/coventry-university/undergrad/ba-hons-media-production-sandwich",
+    "https://www.educationindex.co.uk/course-search/coventry-university/first-degree/ba-hons/media-production-ba-hons/",
+    "https://unienrol.com/study-uk/coventry-university/13648-media-production-ba-hons"
+  ]
+}

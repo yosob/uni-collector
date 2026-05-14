@@ -1,0 +1,161 @@
+{
+  "name_de": "Communication Design MDes",
+  "name_en": "Communication Design MDes",
+  "name_cn": "传达设计硕士",
+  "degree": "mdes",
+  "degree_title": "Master of Design (MDes)",
+  "language": ["en"],
+  "duration_semesters": 3,
+  "duration_months": 12,
+  "credits": 180,
+  "credits_system": "SCQF",
+  "start_semester": "September 2026",
+  "attendance": "Full time",
+  "url": "https://www.dundee.ac.uk/postgraduate/communication-design",
+  "department": "Duncan of Jordanstone College of Art & Design (DJCAD)",
+  "faculty_url": "https://www.dundee.ac.uk/djcad",
+  "city": "Dundee",
+  "state": "Scotland",
+  "country": "gb",
+  "focus_areas": [
+    "visual storytelling",
+    "graphic design",
+    "illustration",
+    "comics and graphic novels",
+    "data visualisation",
+    "social and environmental design"
+  ],
+  "admission_requirements": "Relevant bachelor's degree in Illustration, Graphic Design, Animation Design, Comic Design, Visual Media Studies, or related fields. US Bachelor GPA 2.4–2.99/4.0. Other degrees considered with relevant communication work experience.",
+  "language_requirements": {
+    "english": "IELTS Academic: Overall 6.0 (Writing 6.0, Listening 5.5, Reading 5.5, Speaking 5.5); AP English Language & Composition / AP English Literature & Composition: Grade 3"
+  },
+  "portfolio_required": false,
+  "portfolio_details": "Portfolio not required, but applicants may include a link to an online portfolio as part of their personal statement. A 500-word personal statement is required explaining motivation, relevant skills/work experience, expectations, and how the course will benefit the applicant.",
+  "application_process": "Apply directly via the University's eVision system. Upload official transcript, degree certificate, English language evidence, CV, academic reference, professional reference, and personal statement. International applicants must also provide passport details. Applications are reviewed on a rolling basis; early application recommended as courses may close when full.",
+  "application_portal": "eVision",
+  "application_portal_url": "https://evision.dundee.ac.uk/urd/sits.urd/run/siw_ipp_lgn.login?process=siw_ipp_app&code1=TFMDESDACODE&code2=0002",
+  "application_code": "TFMDESDACODE",
+  "application_deadlines": {
+    "winter_semester": null,
+    "summer_semester": null,
+    "notes": "Due to high demand, apply as soon as possible. Courses may close early if all vacancies are filled. International students should allow sufficient time for visa processing."
+  },
+  "curriculum_summary": "Studio-based course with 180 credits across 3 terms. Semester 1: Research and Development in Practice (20 credits) + Exploring Communication Design Practice (40 credits). Semester 2: Expanding Communication Design Practice (40 credits) + one optional module (20 credits). Summer: Realisation (60 credits) or Masters Placement (60 credits).",
+  "tuition": {
+    "tuition_free": false,
+    "amount": 23700,
+    "currency": "GBP",
+    "period": "year",
+    "notes": "Scotland/UK/Ireland students: £11,000/year. International students: £23,700/year before scholarships. Scholarships available: Global Excellence Scholarship (£8,000) and Vice Chancellor's Americas Scholarship (£4,000). Scholarships cannot be combined. International student deposit: £5,000.",
+    "domestic_amount": 11000,
+    "international_amount": 23700
+  },
+  "scholarship_info": "Global Excellence Scholarship Postgraduate: £8,000 (requires 1st class degree or equivalent). Vice Chancellor's Americas Postgraduate Scholarship: £4,000. Scholarships cannot be combined. International fee after Global Excellence: £15,700; after Americas Scholarship: £19,700.",
+  "contact": {
+    "name": null,
+    "email": null,
+    "phone": null
+  },
+  "career_perspectives": [
+    "Graphic Designer",
+    "Product Designer",
+    "Illustrator",
+    "Animator",
+    "Social Media and Web Designer",
+    "Content Designer",
+    "Marketing Professional"
+  ],
+  "teaching_methods": [
+    "client briefs",
+    "weekly group or one-to-one tutorials",
+    "study visits",
+    "lectures",
+    "workshops"
+  ],
+  "assessment_methods": [
+    "presentation on completion of a project brief",
+    "portfolio work"
+  ],
+  "competitions": [
+    "International Society of Typographic Design (ISTD)",
+    "British Design & Art Direction (D&AD)",
+    "Royal Society of Arts (RSA) Student Design Awards"
+  ],
+  "highlights": [
+    "Dundee is a UNESCO City of Design — the only one in the UK",
+    "Studio-based course with real client briefs and industry engagement",
+    "180-credit intensive MDes completed in one calendar year (typically MDes requires 2 years / 240 credits)",
+    "Optional Placement module for real-world professional experience",
+    "Focus on social, environmental and political change through visual storytelling"
+  ],
+  "modules": {
+    "core": [
+      {
+        "name": "Research and Development in Practice",
+        "code": "DJ51019",
+        "credits": 20,
+        "semester": "Semester 1",
+        "url": "https://www.dundee.ac.uk/module/dj51019"
+      },
+      {
+        "name": "Exploring Communication Design Practice",
+        "code": "DJ51048",
+        "credits": 40,
+        "semester": "Semester 1",
+        "url": "https://www.dundee.ac.uk/module/dj51048"
+      },
+      {
+        "name": "Expanding Communication Design Practice",
+        "code": "DJ52052",
+        "credits": 40,
+        "semester": "Semester 2",
+        "url": "https://www.dundee.ac.uk/module/dj52052"
+      }
+    ],
+    "optional": [
+      {
+        "name": "Leadership & Culture",
+        "code": "DJ51038",
+        "credits": 20,
+        "semester": "Semester 2",
+        "url": "https://www.dundee.ac.uk/module/dj51038"
+      },
+      {
+        "name": "Going Live",
+        "code": "DJ52027",
+        "credits": 20,
+        "semester": "Semester 2",
+        "url": "https://www.dundee.ac.uk/module/dj52027"
+      },
+      {
+        "name": "Experimental Writing Studio",
+        "code": "DJ52045",
+        "credits": 20,
+        "semester": "Semester 2",
+        "url": "https://www.dundee.ac.uk/module/dj52045"
+      },
+      {
+        "name": "Making and Materiality",
+        "code": "DJ52047",
+        "credits": 20,
+        "semester": "Semester 2",
+        "url": "https://www.dundee.ac.uk/module/dj52047"
+      },
+      {
+        "name": "A&V - Realisation",
+        "code": "DJ53002",
+        "credits": 60,
+        "semester": "Summer",
+        "url": "https://www.dundee.ac.uk/module/dj53002"
+      },
+      {
+        "name": "Masters Placement",
+        "code": "DJ53014",
+        "credits": 60,
+        "semester": "Summer",
+        "url": "https://www.dundee.ac.uk/module/dj53014"
+      }
+    ]
+  },
+  "tags": ["视觉传达", "新媒体", "数字媒体", "展览设计", "出版"]
+}

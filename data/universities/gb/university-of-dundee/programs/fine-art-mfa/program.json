@@ -1,0 +1,144 @@
+{
+  "name_de": "Fine Art MFA",
+  "name_en": "Fine Art MFA",
+  "name_cn": "纯艺术硕士",
+  "degree": "mfa",
+  "degree_title": "Master of Fine Art (MFA)",
+  "language": ["en"],
+  "duration_semesters": 3,
+  "duration_months": 12,
+  "credits": 180,
+  "credits_system": "SCQF",
+  "start_semester": "September 2026",
+  "attendance": "Full time",
+  "url": "https://www.dundee.ac.uk/postgraduate/fine-art",
+  "department": "Duncan of Jordanstone College of Art & Design (DJCAD)",
+  "faculty_url": "https://www.dundee.ac.uk/djcad",
+  "city": "Dundee",
+  "state": "Scotland",
+  "country": "gb",
+  "focus_areas": [
+    "contemporary art practice",
+    "studio-based research",
+    "critical thinking",
+    "experimental art",
+    "professional art practice",
+    "visual art",
+    "research-led practice"
+  ],
+  "admission_requirements": "Relevant first degree or equivalent qualification in a relevant subject. Applicants who can demonstrate appropriate professional experience may also apply. US Bachelor Degree: GPA 3.0–3.69/4.0. A 500-word personal statement is required explaining background and motivation, a brief summary of research interest with contemporary art and theory references, relevant knowledge/skills/work experience, and how the course will benefit the applicant.",
+  "language_requirements": {
+    "english": "IELTS Academic: Overall 6.0 (Writing 6.0, Listening 5.5, Reading 5.5, Speaking 5.5); AP English Language & Composition / AP English Literature & Composition: Grade 3"
+  },
+  "portfolio_required": true,
+  "portfolio_details": "One PDF document with up to 15 pages of work plus one contents page (max 50MB). Each page should contain high quality images with brief descriptions indicating media, size and date produced. Up to 5 minutes of video content optional via public link (YouTube/Vimeo/Dropbox). Portfolio must demonstrate creative ideas, skills, developmental process (sketchbook pages), and professional presentation.",
+  "application_process": "Apply directly via the University's eVision system. Upload official transcript, degree certificate, evidence of English language proficiency, passport (international applicants), CV, academic reference, professional reference, and personal statement. Portfolio submission required after invitation (within 2 weeks of invitation). Applications are reviewed on a rolling basis; early application recommended.",
+  "application_portal": "eVision",
+  "application_portal_url": "https://evision.dundee.ac.uk/urd/sits.urd/run/siw_ipp_lgn.login?process=siw_ipp_app&code1=TFMFA-DBFINE&code2=2411",
+  "application_code": "TFMFA-DBFINE",
+  "application_deadlines": {
+    "winter_semester": null,
+    "summer_semester": null,
+    "notes": "Due to high demand, apply as soon as possible. Courses may close early if all vacancies are filled. International students should allow sufficient time for visa processing."
+  },
+  "curriculum_summary": "Studio-based course with 180 credits across 3 terms. Semester 1: Research and Development in Practice (20 credits) + MFA Studio Research and Practice 1 (40 credits). Semester 2: MFA Studio Research and Practice 2 (40 credits) + one optional module (20 credits). Summer: MFA Realisation of Practice (60 credits).",
+  "tuition": {
+    "tuition_free": false,
+    "amount": 23700,
+    "currency": "GBP",
+    "period": "year",
+    "notes": "Scotland/UK/Ireland students: £11,000/year. International students: £23,700/year. Scholarships available: Global Excellence Scholarship (£8,000) and Vice Chancellor's Americas Scholarship (£4,000). Scholarships cannot be combined.",
+    "domestic_amount": 11000,
+    "international_amount": 23700
+  },
+  "scholarship_info": "Global Excellence Scholarship Postgraduate: £8,000 (requires 1st class degree or equivalent). Vice Chancellor's Americas Postgraduate Scholarship: £4,000. Scholarships cannot be combined. International fee after Global Excellence: £15,700; after Americas Scholarship: £19,700.",
+  "contact": {
+    "name": null,
+    "email": "djcadpostgraduate@dundee.ac.uk",
+    "phone": null
+  },
+  "career_perspectives": [
+    "Curator",
+    "Artist",
+    "Visual Artist",
+    "Illustrator",
+    "Interior Designer",
+    "Art Teacher",
+    "Cartoonist"
+  ],
+  "teaching_methods": [
+    "one-to-one tutorials",
+    "group critique",
+    "lectures",
+    "exhibitions",
+    "performance",
+    "workshops",
+    "seminars",
+    "field trips",
+    "independent studio practice"
+  ],
+  "assessment_methods": [
+    "portfolio of work",
+    "reflective reports",
+    "study reports",
+    "essays",
+    "oral presentations"
+  ],
+  "highlights": [
+    "Studio-centred MFA focusing on contemporary art practice and critical thinking",
+    "Dedicated adviser supporting personal study evolution throughout the course",
+    "Access to DJCAD workshops, studios and exhibition spaces",
+    "Annual Master Show showcasing work to industry experts and VIP guests",
+    "Strong links with local and international art communities for internships and networking",
+    "Interdisciplinary optional modules in Experimental Writing Studio and Making & Materiality"
+  ],
+  "modules": {
+    "core": [
+      {
+        "name": "Research and Development in Practice",
+        "code": "DJ51019",
+        "credits": 20,
+        "semester": "Semester 1",
+        "url": "https://www.dundee.ac.uk/module/dj51019"
+      },
+      {
+        "name": "MFA Studio Research and Practice 1",
+        "code": "DJ51033",
+        "credits": 40,
+        "semester": "Semester 1",
+        "url": "https://www.dundee.ac.uk/module/dj51033"
+      },
+      {
+        "name": "MFA Studio Research and Practice 2",
+        "code": "DJ52034",
+        "credits": 40,
+        "semester": "Semester 2",
+        "url": "https://www.dundee.ac.uk/module/dj52034"
+      },
+      {
+        "name": "MFA Realisation of Practice",
+        "code": "DJ53011",
+        "credits": 60,
+        "semester": "Summer",
+        "url": "https://www.dundee.ac.uk/module/dj53011"
+      }
+    ],
+    "optional": [
+      {
+        "name": "Experimental Writing Studio",
+        "code": "DJ52045",
+        "credits": 20,
+        "semester": "Semester 2",
+        "url": "https://www.dundee.ac.uk/module/dj52045"
+      },
+      {
+        "name": "Making and Materiality",
+        "code": "DJ52047",
+        "credits": 20,
+        "semester": "Semester 2",
+        "url": "https://www.dundee.ac.uk/module/dj52047"
+      }
+    ]
+  },
+  "tags": ["纯艺术", "当代艺术", "工作室实践", "艺术研究", "视觉艺术", "实验艺术", "跨学科创作"]
+}

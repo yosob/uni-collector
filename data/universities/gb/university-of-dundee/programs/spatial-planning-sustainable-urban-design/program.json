@@ -1,0 +1,165 @@
+{
+  "university": "University of Dundee",
+  "university_slug": "university-of-dundee",
+  "country": "gb",
+  "program_name": "Spatial Planning with Sustainable Urban Design MSc",
+  "program_slug": "spatial-planning-sustainable-urban-design",
+  "degree": "MSc",
+  "level": "postgraduate",
+  "department": "Duncan of Jordanstone College of Art & Design (DJCAD)",
+  "department_slug": "djcad",
+  "duration": "12 months",
+  "duration_months": 12,
+  "attendance": "Full time",
+  "start_date": "September 2026 / January 2027",
+  "location": "Dundee City Campus",
+  "city": "Dundee",
+  "country_full": "Scotland, UK",
+  "ucas_code": null,
+  "application_code": "TFMSC-DASPSU",
+  "apply_url": "https://evision.dundee.ac.uk/urd/sits.urd/run/siw_ipp_lgn.login?process=siw_ipp_app&code1=TFMSC-DASPSU&code2=2505",
+  "program_url": "https://www.dundee.ac.uk/postgraduate/spatial-planning-sustainable-urban-design",
+  "total_credits": 180,
+  "ranking_highlight": null,
+  "accreditation": "Royal Town Planning Institute (RTPI)",
+  "fees": {
+    "uk_scotland": 11000,
+    "uk_rest": 11000,
+    "international": 23700,
+    "currency": "GBP",
+    "per": "year",
+    "scholarships": [
+      {
+        "name": "Vice Chancellor's Americas Postgraduate Scholarship",
+        "amount": 4000,
+        "fee_after": 19700
+      },
+      {
+        "name": "Global Excellence Scholarship Postgraduate",
+        "amount": 8000,
+        "fee_after": 15700,
+        "note": "For applicants with a 1st class degree or equivalent"
+      }
+    ]
+  },
+  "entry_requirements": {
+    "academic": "Degree in architecture, economics, geography, engineering, urban planning, or a related subject (US Bachelor: 2.4–2.99/4.0); other degrees considered with personal statement outlining relevant work experience",
+    "portfolio": null,
+    "ielts": {
+      "overall": 6.0,
+      "writing": 6.0,
+      "listening": 5.5,
+      "reading": 5.5,
+      "speaking": 5.5
+    }
+  },
+  "modules": [
+    {
+      "name": "Spatial Analysis",
+      "code": "UP51003",
+      "credits": 20,
+      "semester": "Semester 1",
+      "type": "core"
+    },
+    {
+      "name": "Property Development Processes",
+      "code": "UP51005",
+      "credits": 20,
+      "semester": "Semester 1",
+      "type": "core"
+    },
+    {
+      "name": "Statutory Planning",
+      "code": "UP51007",
+      "credits": 20,
+      "semester": "Semester 1",
+      "type": "core"
+    },
+    {
+      "name": "Concepts of Spatial Planning",
+      "code": "UP51002",
+      "credits": 20,
+      "semester": "Semester 2",
+      "type": "core"
+    },
+    {
+      "name": "Sustainable Urban Design",
+      "code": "UP52001",
+      "credits": 20,
+      "semester": "Semester 2",
+      "type": "core"
+    },
+    {
+      "name": "Sustainability in Contemporary Cities",
+      "code": "UP52003",
+      "credits": 20,
+      "semester": "Semester 2",
+      "type": "core"
+    },
+    {
+      "name": "Spatial Planning with Sustainable Urban Design MSc Dissertation",
+      "code": "UP53001",
+      "credits": 60,
+      "semester": "Summer",
+      "type": "core"
+    }
+  ],
+  "teaching_methods": [
+    "Lectures",
+    "Guest speaker seminars",
+    "Student-led seminars",
+    "Fieldwork",
+    "Live project engagement"
+  ],
+  "assessment_methods": [
+    "Report writing",
+    "Essay writing",
+    "Oral presentations",
+    "Group-work tasks",
+    "Professional reflection",
+    "Individual research project (dissertation)"
+  ],
+  "career_paths": [
+    "Planning Officer",
+    "Town Planner",
+    "Policy Officer",
+    "Architect",
+    "Urban Designer",
+    "Strategy Officer"
+  ],
+  "industry_connections": [
+    "Royal Town Planning Institute (RTPI)",
+    "Local planning authorities",
+    "Key planning agencies in and around Dundee"
+  ],
+  "facilities": [
+    "Equipped workshops",
+    "Design studios",
+    "Exhibition spaces"
+  ],
+  "how_to_apply": {
+    "method": "Direct application via eVision portal",
+    "documents_required": [
+      "Official transcript",
+      "Degree certificate",
+      "Evidence of English language proficiency",
+      "CV",
+      "Academic reference",
+      "Professional reference",
+      "Personal statement",
+      "Passport (international applicants)"
+    ],
+    "deposit": "£5,000 for international students",
+    "offer_types": ["Unconditional", "Conditional", "Rejection"]
+  },
+  "tags": [
+    "urban-design",
+    "urban-planning",
+    "spatial-planning",
+    "sustainable-design",
+    "landscape-design",
+    "environmental-design",
+    "postgraduate",
+    "msc"
+  ]
+}
