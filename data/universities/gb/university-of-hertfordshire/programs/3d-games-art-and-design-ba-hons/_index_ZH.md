@@ -2,12 +2,12 @@
 credits: 360
 credits_system: CATS
 degree: ba
-degree_title: Bachelor of Arts (Honours)
-department: School of Creative Arts
+degree_title: 文学士（荣誉）
+department: 创意艺术学院
 duration: 6
 language:
 - en
-name: 3D Games Art & Design BA (Hons)
+name: 3D游戏美术与设计 文学士（荣誉）
 portfolio_required: true
 slug: 3d-games-art-and-design-ba-hons
 tags:
@@ -17,47 +17,98 @@ tags:
 url: https://www.herts.ac.uk/courses/undergraduate/ba-hons-3d-games-art-and-design
 ---
 
-# 3D Games Art & Design BA (Hons)
+# 3D游戏美术与设计 文学士（荣誉）
 
-## Entry Requirements
+## 入学要求
 
-112–120 UCAS points. A Level: BBC–BBB (mandatory Art & Design or creative subject involving drawing). BTEC: DMM–DDM (Art & Design, Games Art, Games Art and Animation, Animation, Level 3 Extended Diploma in Games/Animation/VFX Skills (NextGen), or UAL Extended Level 3 Diploma in Creative Media Production). T Levels accepted in various subjects (grade M plus A Level in Art & Design or creative subject with drawing, grade B). Access Course: Diploma with 45 Level 3 credits at Merit. GCSE: Grade 4/C in English Language and Mathematics. Interview required.
+UCAS分数：112–120分。A Level：BBC–BBB（必修科目：艺术与设计，或涉及绘画的创意类科目）。BTEC：DMM–DDM（要求科目：艺术与设计、游戏美术、游戏美术与动画、动画、游戏/动画/视觉特效三级扩展文凭（NextGen），或UAL创意媒体制作三级扩展文凭）。接受多种T Level科目（成绩M，另加A Level艺术与设计或涉及绘画的创意科目，成绩B）。Access课程：文凭+45个三级学分达到Merit。GCSE：英语语言和数学4/C级。需要面试。
 
-## English Language Requirements
+## 英语语言要求
 
-- english: IELTS 6.0 overall with no less than 5.5 in each band, or equivalent
+- 英语：雅思总分6.0，各单项不低于5.5，或同等水平
 
-## Portfolio Requirements
+## 作品集要求
 
-Portfolio of creative work required for interview. Should demonstrate drawing ability, visual storytelling, character design, environment design, and creative flair. Advice available at: https://www.herts.ac.uk/courses/undergraduate-courses/animation-film-games-and-creative-media/animation,-games-and-visual-effects-applicants
+面试时需提交创意作品集。应展示绘画能力、视觉叙事能力、角色设计能力、环境设计能力和创意天赋。建议参考：https://www.herts.ac.uk/courses/undergraduate-courses/animation-film-games-and-creative-media/animation,-games-and-visual-effects-applicants
 
-## Tuition Fees
+## 学费
 
-- tuition_free: False
-- amount: 9250
-- currency: GBP
-- period: year
-- notes: UK/Home students: £9,250 per year. International students: approximately £15,500–£15,965 per year. Sandwich/placement year: no tuition fee. Study abroad year: no tuition fee. Fees are subject to annual review.
+- 免学费: 否
+- 金额: 9250
+- 货币: GBP
+- 周期: 年
+- 备注: 英国/本土学生：每年£9,250。国际学生：每年约£15,500–£15,965。三明治/实习年：免学费。海外学习年：免学费。学费每年审核调整。
 
-## Focus Areas
+## 专业认证
 
-- 3D modelling
-- texturing and shading
-- character design
-- environment design
-- concept art
-- level design
-- gameplay mechanics
-- real-time rendering
-- procedural modelling
-- game engines (Unreal)
-- storyboarding
-- rigging
-- character animation
-- digital illustration
-- narrative design
-- life drawing
+- TIGA
+- The Rookies
+- Unreal Engine学术合作伙伴（金牌）
 
-## Tags
+## 重要排名
+
+- 全英动画与游戏设计第1名（《卫报》大学指南，2026年）
+- 全球游戏设计与开发制作卓越奖第1名（The Rookies，2020年）
+- 全英最佳教育机构（TIGA，2019年）
+- Unreal Engine金牌学术合作伙伴（Unreal学术合作计划，2025年）
+- 年度杰出毕业生：制作/企业奖得主（TIGA，2024年）
+
+## 课程模块
+
+### 第四级（第一学年）
+| 模块 | 学分 | 类型 |
+| --- | --- | --- |
+| CG入门 | 30 | 必修 |
+| CG应用 | 30 | 必修 |
+| 创意、概念与故事 | 30 | 必修 |
+| 动画思维 | 30 | 必修 |
+
+### 第五级（第二学年）
+| 模块 | 学分 | 类型 |
+| --- | --- | --- |
+| 游戏美术进阶 | 30 | 必修 |
+| 创意项目 | 30 | 必修 |
+| 游戏设计与专业实践 | 30 | 必修 |
+| 动态视觉 | 30 | 必修 |
+| 海外学年 | 0 | 选修 |
+
+### 第六级（第三学年）
+| 模块 | 学分 | 类型 |
+| --- | --- | --- |
+| 游戏前期制作 | 30 | 必修 |
+| 专业实践与毕业项目 | 60 | 必修 |
+| 动态中的概念：系统研究与实践写作 | 30 | 必修 |
+| 海外学年 | 0 | 选修 |
+| 海外学习（创意艺术） | 0 | 选修 |
+
+## 核心领域
+
+- 3D建模
+- 纹理与材质
+- 角色设计
+- 环境设计
+- 概念艺术
+- 关卡设计
+- 游戏机制
+- 实时渲染
+- 程序化建模
+- 游戏引擎（Unreal）
+- 分镜设计
+- 骨骼绑定
+- 角色动画
+- 数字插画
+- 叙事设计
+- 人体写生
+
+## 学习选项
+
+- 提供海外学习机会（合作伙伴大学和赫特福德大学均免学费）
+- 提供工作实习三明治学年（实习年免学费）
+
+## 校区
+
+College Lane校区——创意艺术、科学和健康相关学科的所在地。24/7学习资源中心、配备游戏和动画软件的专用PC实验室、动作捕捉工作室、数字摄影和电影制作设备。
+
+## 标签
 
 游戏设计, 数字媒体, 视觉传达

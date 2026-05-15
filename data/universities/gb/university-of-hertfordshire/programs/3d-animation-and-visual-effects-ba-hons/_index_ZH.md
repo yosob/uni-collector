@@ -2,61 +2,138 @@
 credits: 360
 credits_system: CATS
 degree: ba
-degree_title: Bachelor of Arts (Honours)
-department: School of Creative Arts
+degree_title: 文学士（荣誉）
+department: 创意艺术学院
 duration: 6
 language:
 - en
-name: 3D Animation and Visual Effects BA (Hons)
+name: 3D动画与视觉特效 BA (Hons)
 portfolio_required: true
 slug: 3d-animation-and-visual-effects-ba-hons
 tags:
 - 数字媒体
-- 视觉传达
-- 新媒体
+- 动态影像
+- 电影制作
 url: https://www.herts.ac.uk/courses/undergraduate/ba-hons-3d-animation-and-visual-effects
 ---
 
-# 3D Animation and Visual Effects BA (Hons)
+# 3D动画与视觉特效 BA (Hons)
 
-## Entry Requirements
+## 概述
 
-112–120 UCAS points. A Level: BBC–BBB (mandatory Art & Design or creative subject involving drawing). BTEC: DMM–DDM (Art & Design, Games Art, Games Art and Animation, Animation, Level 3 Extended Diploma in Games/Animation/VFX Skills (NextGen), or UAL Extended Level 3 Diploma in Creative Media Production). T Levels accepted in various subjects (grade M plus A Level in Art & Design or creative subject with drawing, grade B). Access Course: Diploma with 45 Level 3 credits at Merit. GCSE: Grade 4/C in English Language and Mathematics. Interview required.
+无论是故事片、动画系列、商业广告还是频道标识，本课程都将为你进入令人兴奋的3D动画和视觉特效领域做好职业准备。从角色动画、摄影和建模到绑定和合成，你将掌握在充满挑战和创意的行业中蓬勃发展所需的技能。
 
-## English Language Requirements
+你将加入由The Rookies Awards 2020评选的英国和欧洲排名第一、世界排名第三的动画学院的享有盛誉的课程。数字动画课程获得The Rookies、SideFX和CILECT认证，这意味着你将加入一个因培养未来动画师而获得国际认可的院系。该课程在全球制作卓越性方面排名第二，在欧洲3D动画课程中排名前七。赫特福德大学也是过去18年中唯一入围洛杉矶视觉特效协会奖项的英国大学。
 
-- english: IELTS 6.0 overall with no less than 5.5 in each band, or equivalent
+你将沉浸在配备了创作所需一切的动画工作室中。我们的学习资源中心复制了动画实验室的软件和硬件配置，因此你可以在深夜或周末继续你的动画学习。此外，你还可以使用动作捕捉套件、数码摄影和电影制作设备来完成自己的项目。
 
-## Portfolio Requirements
+在**第一年**，你将与更广泛的动画课程学生共享公共模块，获得数字媒体行业的宝贵知识。你将与漫画和概念艺术、2D动画和游戏方向的同学一起学习，从第一天起就拓展你的人脉。你将练习人体写生、角色和环境设计，探索动画和电影历史，为你的技艺注入文化背景。你将获得3D艺术家的经验，在建模、纹理和着色器方面建立信心，同时学习专业的VFX技能。在这一年结束时，如果你的兴趣发生了变化，你可以选择转读其他动画学位课程。
 
-Portfolio of creative work required for interview. Should demonstrate drawing ability, visual storytelling, character design, and creative flair. Advice available at: https://www.herts.ac.uk/courses/undergraduate-courses/animation-film-games-and-creative-media/animation,-games-and-visual-effects-applicants
+在**第二年**，你将从一系列选修项目中进行选择。这是你专注于自己兴趣的机会——无论是电影摄影还是角色概念艺术，你都将开始将热情转化为专业技能。你将开始丰富你的简历，获得包括数字绘景、绑定和编程在内的专业技能。你将深入了解FX模拟，学习破坏技术、刚体和软体碰撞以及烟火特效。无论你是想在将3D渲染合成到实拍画面方面精进技能，还是想拍摄真人实拍镜头，这都是你实验的一年。你将参与真实的行业项目，并作为团队项目制作你的第一部3D或VFX短片。
 
-## Tuition Fees
+在**第三年**，你将就一个与你感兴趣的3D动画和视觉特效相关的流行文化领域撰写论文。你将选择你的专业方向，沉浸在真实世界的实践中。你将投入到一个雄心勃勃的毕业电影项目中，将你的想法从制作的第一阶段引导到最后阶段，展示你的才华、技能和成功的潜力。你的毕业电影项目将在我们的Animation Exposé展映会上放映，你可以将其提交给由行业专家组成的评审团评选的不同奖项。我们还将鼓励你将作品提交到The Rookies等国际竞赛。你将带着作品集和专业网站毕业，开启你的职业生涯。
+
+## 入学要求
+
+112–120 UCAS积分。A Level：BBC–BBB（必须包含艺术与设计或涉及绘画的创意科目）。BTEC：DMM–DDM（艺术与设计、游戏美术、游戏美术与动画、动画、游戏/动画/VFX技能三级扩展文凭(NextGen)，或UAL创意媒体制作三级扩展文凭）。接受多种科目的T Level成绩（M等级加艺术与设计或涉及绘画的创意科目A Level，B等级）。Access课程：文凭含45个三级学分达到Merit。GCSE：英语语言和数学4/C级。需要面试。
+
+## 英语语言要求
+
+- IELTS 总分6.0，各单项不低于5.5，或同等水平
+- PTE Academic：最低51分
+- TOEFL iBT：最低72分
+
+## 作品集要求
+
+面试时需提交创意作品集。应展示绘画能力、视觉叙事、角色设计和创意天赋。建议可在以下网址获取指导：https://www.herts.ac.uk/courses/undergraduate-courses/animation-film-games-and-creative-media/animation,-games-and-visual-effects-applicants
+
+## 学费
 
 - tuition_free: False
 - amount: 9250
 - currency: GBP
 - period: year
-- notes: UK/Home students: £9,250 per year. International students: £15,965 per year (approximate). Sandwich/placement year: no tuition fee. Study abroad year: no tuition fee. Fees are subject to annual review.
+- notes: 英国/本地学生：每年£9,250。国际学生：每年约£15,965。三明治/实习年：无需学费。海外学习年：无需学费。费用可能每年调整。
 
-## Focus Areas
+## 专业认证
 
-- 3D animation
-- visual effects
-- character animation
-- 3D modelling
-- texturing and shading
-- rigging
-- compositing
-- lighting and rendering
-- FX simulation
-- matte painting
-- cinematography
-- motion capture
-- look development
-- storyboarding
-- concept art
+- The Rookies
+- SideFX
+- CILECT
 
-## Tags
+## 主要排名
 
-数字媒体, 视觉传达, 新媒体
+- 英国动画与游戏设计排名第1（卫报大学指南，2026）
+- 英国和欧洲排名第一、世界排名第三的动画学院（The Rookies Awards 2020）
+- 全球制作卓越性排名第2（The Rookies）
+- 欧洲3D动画课程排名前7
+- 过去18年中唯一入围洛杉矶视觉特效协会奖项的英国大学（截至2020年）
+
+## 模块
+
+### Level 4（第一年）
+| 模块 | 学分 | 类型 |
+| --- | --- | --- |
+| CG入门 | 30 | 必修 |
+| CG应用 | 30 | 必修 |
+| 创意、概念与故事 | 30 | 必修 |
+| 动画思维 | 30 | 必修 |
+
+### Level 5（第二年）
+| 模块 | 学分 | 类型 |
+| --- | --- | --- |
+| 3D与视觉特效进阶 | 30 | 必修 |
+| 创意项目 | 30 | 必修 |
+| 设计、交互与专业实践 | 30 | 必修 |
+| 移动视觉 | 30 | 必修 |
+| 海外学习年 | 0 | 选修 |
+
+### Level 6（第三年）
+| 模块 | 学分 | 类型 |
+| --- | --- | --- |
+| 3D动画与视觉特效前期制作 | 30 | 必修 |
+| 专业实践与毕业项目 | 60 | 必修 |
+| 运动中的概念：阐述性研究与写作 | 30 | 必修 |
+| 海外学习年 | 0 | 选修 |
+| 就业体验（创意艺术） | 0 | 选修 |
+| 海外学习（创意艺术） | 0 | 选修 |
+
+## 重点领域
+
+- 3D动画
+- 视觉特效（VFX）
+- 3D建模与雕刻
+- 角色动画
+- 合成
+- FX模拟（破坏、烟火、流体动力学）
+- 数字绘景
+- 绑定
+- 电影摄影
+- 动作捕捉
+- 灯光与渲染
+- 纹理与着色
+- 外观开发
+- 故事板
+- 概念艺术
+
+## 就业前景
+
+数字动画课程为你准备了行业内广泛的职业选择。包括3D动画师、3D通才、FX技术总监、合成师、环境艺术家、角色艺术家、概念艺术家、2D动画师、数字绘景师、灯光技术总监、绑定师等多种角色。
+
+我们的毕业生已在工业光魔（ILM）参与《星球大战》系列制作，在Epic Games参与《堡垒之夜》开发，在Blue Zoo制作动画系列，在索尼担任概念艺术家。许多毕业生还在可视化行业工作，将他们的设计技能应用于建筑、产品设计和汽车设计领域。我们的动画毕业生受雇于Foster and Partners、Taylor James和迈凯伦F1车队等公司。许多毕业生创办了自己的公司，其中一些已成为行业领军者。
+
+知名毕业生参与的作品包括获得奥斯卡奖的电影和商业大片，如《星球大战》、《地心引力》、《奇幻森林》、《狮子王》、《盗梦空间》、《阿凡达》、《哈利·波特》系列、《纳尼亚传奇》、《权力的游戏》等。
+
+## 学习选择
+
+- 提供海外学习选项（合作大学和赫特福德大学均不收取学费）
+- 提供三明治实习年（实习年不收取学费）
+- 可在第一年结束时在不同动画学位课程之间转换
+
+## 校区
+
+College Lane校区——创意艺术、科学和健康相关学科的所在地。24/7开放的学习资源中心，配备行业标准动画软件的专用PC实验室（课后使用的动画实验室副本），动作捕捉套件，数码摄影和电影制作设备。免费班车通往de Havilland校区（步行15分钟）。
+
+## 标签
+
+数字媒体, 动态影像, 电影制作

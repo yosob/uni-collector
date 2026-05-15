@@ -1,23 +1,42 @@
 {
   "university_slug": "university-of-hertfordshire",
   "country": "gb",
-  "last_extraction": "2026-05-12T13:15:00+08:00",
+  "last_extraction": "2026-05-15T04:50:23.786773",
   "extracted_programs": [
+    {
+      "slug": "comics-and-concept-art-ba-hons",
+      "name_en": "Comics and Concept Art BA (Hons)",
+      "url": "https://www.herts.ac.uk/courses/undergraduate/ba-hons-comics-and-concept-art",
+      "extracted_at": "2026-05-15T01:10:00+08:00",
+      "status": "complete",
+      "data_file": "programs/comics-and-concept-art-ba-hons",
+      "notes": "Official course page blocked by Cloudflare (403). Data aggregated from Herts.ac.uk (cached), TheUniGuide, UniScholars, Complete University Guide, BachelorsPortal."
+    },
+    {
+      "slug": "character-and-creative-effects-ba-hons",
+      "name_en": "Character and Creative Effects BA (Hons)",
+      "url": "https://www.herts.ac.uk/courses/undergraduate/ba-hons-character-and-creative-effects",
+      "extracted_at": "2026-05-15T00:56:00+08:00",
+      "status": "complete",
+      "data_file": "programs/character-and-creative-effects-ba-hons",
+      "notes": "Official course page blocked by Cloudflare (403). Data aggregated from Complete University Guide, Emagister, UniScholars, Bachelorsportal."
+    },
     {
       "slug": "2d-digital-animation-ba-hons",
       "name_en": "2D Digital Animation BA (Hons)",
       "url": "https://www.herts.ac.uk/courses/undergraduate/ba-hons-2d-digital-animation",
-      "extracted_at": "2026-05-12T10:00:00+08:00",
+      "extracted_at": "2026-05-15T00:55:00+08:00",
       "status": "complete",
-      "data_file": "programs/2d-digital-animation-ba-hons.json"
+      "data_file": "programs/2d-digital-animation-ba-hons"
     },
     {
       "slug": "3d-animation-and-visual-effects-ba-hons",
       "name_en": "3D Animation and Visual Effects BA (Hons)",
       "url": "https://www.herts.ac.uk/courses/undergraduate/ba-hons-3d-animation-and-visual-effects",
-      "extracted_at": "2026-05-12T10:06:00+08:00",
+      "extracted_at": "2026-05-15T01:57:00+08:00",
       "status": "complete",
-      "data_file": "programs/3d-animation-and-visual-effects-ba-hons.json"
+      "data_file": "programs/3d-animation-and-visual-effects-ba-hons",
+      "notes": "Official page blocked by Cloudflare (403). Data aggregated from UniScholars, IDP, UniGuide, youapply, Complete University Guide."
     },
     {
       "slug": "3d-games-art-and-design-ba-hons",
@@ -157,6 +176,189 @@
       "extracted_at": "2026-05-12T14:00:00+08:00",
       "status": "complete",
       "data_file": "programs/audio-engineering-msc.json"
+    },
+    {
+      "slug": "film-and-television-production-ba-hons",
+      "name_en": "Film and Television Production BA (Hons)",
+      "url": "https://www.herts.ac.uk/courses/undergraduate/film-and-television-production",
+      "extracted_at": "2026-05-15T01:22:00+08:00",
+      "status": "complete",
+      "data_file": "programs/film-and-television-production-ba-hons",
+      "notes": "Official page accessible. Data aggregated from Herts.ac.uk, Web Archive, UniScholars, Complete University Guide."
+    },
+    {
+      "url": "https://www.herts.ac.uk/courses/undergraduate/bsc-hons-music-composition-and-sound-for-film-and-games",
+      "slug": "music-composition-and-sound-for-film-and-games-bsc-hons",
+      "name": "Music Composition and Sound for Film and Games BSc (Hons)",
+      "status": "extracted",
+      "extracted_at": "2026-05-15T01:43:02+08:00"
+    },
+    {
+      "url": "https://www.herts.ac.uk/courses/undergraduate/bsc-hons-music-production-and-promotion",
+      "slug": "music-production-and-promotion-bsc-hons",
+      "name": "Music Production and Promotion BSc (Hons)",
+      "status": "extracted",
+      "extracted_at": "2026-05-15T01:47:15.983446+08:00",
+      "data_file": "programs/music-production-and-promotion-bsc-hons",
+      "notes": "Official page accessible. Data aggregated from Herts.ac.uk, UniScholars, Complete University Guide."
+    },
+    {
+      "url": "https://www.herts.ac.uk/courses/postgraduate-masters/3d-modelling-and-vfx",
+      "slug": "3d-modelling-and-vfx-ma",
+      "name": "3D Modelling and VFX MA",
+      "status": "extracted",
+      "extracted_at": "2026-05-15T01:49:00+08:00",
+      "data_file": "programs/3d-modelling-and-vfx-ma",
+      "notes": "Official page blocked by Cloudflare (403). Data aggregated from TopUniversities, IDP, PostgraduateStudentships, Complete University Guide."
+    },
+    {
+      "slug": "live-sound-lighting-and-performance-technology-bsc-hons",
+      "url": "https://www.herts.ac.uk/courses/undergraduate/bsc-hons-live-sound-lighting-and-performance-technology",
+      "name": "Live Sound, Lighting and Performance Technology BSc (Hons)",
+      "extracted_at": "2026-05-15T02:20:00+08:00",
+      "status": "extracted"
+    },
+    {
+      "slug": "fashion-and-fashion-business-ba-hons",
+      "name_en": "Fashion and Fashion Business BA (Hons)",
+      "url": "https://www.herts.ac.uk/courses/undergraduate/ba-hons-fashion-and-fashion-business",
+      "extracted_at": "2026-05-15T02:29:00+08:00",
+      "status": "complete",
+      "data_file": "programs/fashion-and-fashion-business-ba-hons",
+      "notes": "Official page blocked by Cloudflare (403). Data aggregated from Herts.ac.uk (via Jina Reader), Complete University Guide, TheUniGuide, Herts Module Catalogue PDF, University Compare, Emagister."
+    },
+    {
+      "slug": "audio-engineering-bsc-hons",
+      "name_en": "Audio Engineering BSc (Hons)",
+      "url": "https://www.herts.ac.uk/courses/undergraduate/bsc-hons-audio-engineering",
+      "extracted_at": "2026-05-15T02:51:00+08:00",
+      "status": "complete",
+      "data_file": "programs/audio-engineering-bsc-hons",
+      "notes": "Official page blocked by Cloudflare. Data aggregated from Herts.ac.uk (via Jina Reader), Complete University Guide, TheUniGuide, University Compare. UCAS code: W374."
+    },
+    {
+      "slug": "mass-communications-ba-hons",
+      "name_en": "Mass Communications BA (Hons)",
+      "url": "https://www.herts.ac.uk/courses/undergraduate/mass-communications",
+      "extracted_at": "2026-05-15T03:16:00+08:00",
+      "status": "complete",
+      "data_file": "programs/mass-communications-ba-hons",
+      "notes": "Official page accessible (briefly via Jina Reader). Data aggregated from Herts.ac.uk, TopUniversities, educations.com. PRCA accredited. UCAS code: P300."
+    },
+    {
+      "slug": "journalism-and-media-ba-hons",
+      "name_en": "Journalism and Media BA (Hons)",
+      "url": "https://www.herts.ac.uk/courses/undergraduate/ba-hons-journalism-and-media",
+      "extracted_at": "2026-05-15T03:57:00+08:00",
+      "status": "complete",
+      "data_file": "programs/journalism-and-media-ba-hons",
+      "notes": "Official page returns 404 (course discontinued). Data aggregated from web.archive.org (archived Herts page), UniScholars, GyanDhan. PRCA & BSME accredited. UCAS code: P500."
+    },
+    {
+      "slug": "digital-marketing-and-advertising-ba-hons",
+      "name_en": "Digital Marketing and Advertising BA (Hons)",
+      "url": "https://www.herts.ac.uk/courses/undergraduate/ba-hons-digital-marketing-and-advertising",
+      "extracted_at": "2026-05-15T04:18:16.091695",
+      "status": "completed"
+    },
+    {
+      "slug": "games-art-and-design-ma",
+      "name_en": "Games Art and Design MA",
+      "url": "https://www.herts.ac.uk/courses/postgraduate-masters/ma-games-art-and-design",
+      "extracted_at": "2026-05-15T04:49:37.057758",
+      "status": "complete",
+      "data_file": "programs/games-art-and-design-ma",
+      "notes": "Official page blocked by Cloudflare. Data aggregated from Herts.ac.uk (via Jina Reader), Complete University Guide."
+    },
+    {
+      "slug": "concept-art-ma",
+      "name_en": "Concept Art MA",
+      "url": "https://www.herts.ac.uk/courses/postgraduate-masters/ma-concept-art",
+      "extracted_at": "2026-05-15T04:49:37.057777",
+      "status": "complete",
+      "data_file": "programs/concept-art-ma",
+      "notes": "Official page blocked by Cloudflare. Data aggregated from Herts.ac.uk (via Jina Reader), search results. 1st in UK for Best Concept Art School (The Rookies 2024)."
+    },
+    {
+      "slug": "editing-and-post-production-ma",
+      "name_en": "Editing and Post Production MA",
+      "url": "https://www.herts.ac.uk/courses/postgraduate-masters/ma-editing-and-post-production",
+      "extracted_at": "2026-05-15T04:49:37.057780",
+      "status": "complete",
+      "data_file": "programs/editing-and-post-production-ma",
+      "notes": "Official page blocked by Cloudflare. Data aggregated from Herts.ac.uk (via Jina Reader), Complete University Guide."
+    },
+    {
+      "slug": "creative-ai-for-screen-ma",
+      "name_en": "Creative AI for Screen MA",
+      "url": "https://www.herts.ac.uk/courses/postgraduate-masters/creative-ai-for-screen",
+      "extracted_at": "2026-05-15T04:49:37.057782",
+      "status": "complete",
+      "data_file": "programs/creative-ai-for-screen-ma",
+      "notes": "Official page blocked by Cloudflare. Data aggregated from Herts.ac.uk (via Jina Reader), Complete University Guide."
+    },
+    {
+      "slug": "immersive-media-ma",
+      "name_en": "Immersive Media MA",
+      "url": "https://www.herts.ac.uk/courses/postgraduate-masters/ma-immersive-media",
+      "extracted_at": "2026-05-15T04:49:37.057784",
+      "status": "complete",
+      "data_file": "programs/immersive-media-ma",
+      "notes": "Official page blocked by Cloudflare. Data aggregated from Herts.ac.uk (via Jina Reader), Prospects.ac.uk."
+    },
+    {
+      "slug": "interior-architecture-and-design-ma",
+      "name_en": "Interior Architecture and Design MA",
+      "url": "https://www.herts.ac.uk/courses/postgraduate-masters/ma-interior-architecture-and-design",
+      "extracted_at": "2026-05-15T04:49:37.057786",
+      "status": "complete",
+      "data_file": "programs/interior-architecture-and-design-ma",
+      "notes": "Official page blocked by Cloudflare. Data aggregated from Herts.ac.uk (via Jina Reader), Complete University Guide."
+    },
+    {
+      "slug": "digital-media-arts-ma",
+      "name_en": "Digital Media Arts MA",
+      "url": "https://www.herts.ac.uk/courses/postgraduate-masters/digital-media-arts2",
+      "extracted_at": "2026-05-15T04:49:37.057788",
+      "status": "complete",
+      "data_file": "programs/digital-media-arts-ma",
+      "notes": "Official page blocked by Cloudflare. Data aggregated from Herts.ac.uk (via Jina Reader)."
+    },
+    {
+      "slug": "march-architecture-and-urbanism",
+      "name_en": "MArch Architecture and Urbanism",
+      "url": "https://www.herts.ac.uk/courses/postgraduate-masters/march-architecture-and-urbanism2",
+      "extracted_at": "2026-05-15T04:49:37.057793",
+      "status": "complete",
+      "data_file": "programs/march-architecture-and-urbanism",
+      "notes": "Official page blocked by Cloudflare. Data aggregated from Herts.ac.uk (via Jina Reader), Complete University Guide. ARB/RIBA Part 2 prescribed."
+    },
+    {
+      "slug": "music-production-and-artist-development-ma",
+      "name_en": "Music Production and Artist Development MA",
+      "url": "https://www.herts.ac.uk/courses/postgraduate-masters/ma-music-production-and-artist-development",
+      "extracted_at": "2026-05-15T04:49:37.057795",
+      "status": "complete",
+      "data_file": "programs/music-production-and-artist-development-ma",
+      "notes": "Official page blocked by Cloudflare. Data aggregated from Herts.ac.uk (via Jina Reader)."
+    },
+    {
+      "slug": "global-film-and-television-online-ma",
+      "name_en": "Global Film and Television Online MA",
+      "url": "https://www.herts.ac.uk/courses/postgraduate-masters/ma-global-film-and-television-online",
+      "extracted_at": "2026-05-15T04:50:23.786743",
+      "status": "complete",
+      "data_file": "programs/global-film-and-television-online-ma",
+      "notes": "Previously extracted. Added to crawl_state retrospectively."
+    },
+    {
+      "slug": "photography-ba-hons",
+      "name_en": "Photography BA (Hons)",
+      "url": "https://www.herts.ac.uk/courses/undergraduate/photography",
+      "extracted_at": "2026-05-15T04:50:23.786766",
+      "status": "complete",
+      "data_file": "programs/photography-ba-hons",
+      "notes": "Previously extracted. Added to crawl_state retrospectively."
     }
   ],
   "discovered_subpages": [
@@ -219,6 +421,5 @@
       "title": "Black, African and Asian Therapy Network (BAATN)"
     }
   ],
-  "last_extraction": "2026-05-12T14:00:00+08:00",
   "last_crawl": "2026-05-12T14:00:00+08:00"
 }

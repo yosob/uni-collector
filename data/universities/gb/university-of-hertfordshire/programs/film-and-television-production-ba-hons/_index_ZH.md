@@ -1,52 +1,160 @@
 ---
-credits: null
+credits: 360
 credits_system: CATS
 degree: ba
-degree_title: Bachelor of Arts (Honours)
-department: School of Creative Arts
+degree_title: 文学士（荣誉）
+department: 创意艺术学院
 duration: 6
 language:
 - en
-name: Film and Television Production BA (Hons)
+name: 影视制作 文学士（荣誉）
 portfolio_required: false
 slug: film-and-television-production-ba-hons
 tags:
+- 电影制作
 - 数字媒体
 - 新媒体
+- 动态影像
 url: https://www.herts.ac.uk/courses/undergraduate/film-and-television-production
 ---
 
-# Film and Television Production BA (Hons)
+# 影视制作 文学士（荣誉）
 
-## Entry Requirements
+## 概述
 
-112 UCAS points from at least 2 A-levels (BBC at A-level preferred) or equivalent qualifications such as BTEC Extended Diploma (DMM), International Baccalaureate (28 points), or Access to HE Diploma (45 Level 3 credits at Merit). GCSE Mathematics and English Language at grade 4/C or above (or equivalent). Applicants with relevant professional experience may also be considered.
+本课程获ScreenSkills和CILECT认证，为学生成长为自信的影视从业者提供理想环境。《卫报》排名全英影视制作前20，向行业输送即战力毕业生。学生从入学之初便学习专业技能，自主管理并制作外景拍摄和演播室项目，体验从现场到后期制作的多种核心岗位。课程与华纳兄弟、制作协会、Halo后期制作公司及ENVY学院建立行业合作伙伴关系。UCAS代码：W602。
 
-## English Language Requirements
+## 入学要求
 
-- english: IELTS 6.0 (with no less than 5.5 in any band); TOEFL iBT 72 (Listening 17, Reading 18, Writing 17, Speaking 20); PTE Academic 59 (minimum 59 in each component)
+UCAS分数：112–120分。A Level：BBC–BBB。BTEC：DMM（扩展文凭）。IB：112–120分，至少2门高级课程达到H4及以上。Access课程：文凭+45个三级学分达到Merit。GCSE：英语语言和数学4/C级。
 
-## Tuition Fees
+## 英语语言要求
 
-- tuition_free: False
-- amount: 9250
-- currency: GBP
-- period: year
-- notes: UK/Home students: £9,250 per year. International students: £15,500 per year. Sandwich/placement year: no tuition fee. Fees are subject to annual review.
+- 雅思总分6.0，各单项不低于5.5
+- 托福iBT 72分
+- PTE学术 59分
 
-## Focus Areas
+## 学费
 
-- film production
-- television production
-- directing
-- cinematography
-- post-production
-- editing
-- screenwriting
-- location shooting
-- studio production
-- sound design
+- 英国/本土学生：每年£9,250
+- 国际学生：每年£15,500
+- 三明治/实习年：免学费
+- 海外学习年：免学费
+- 学费每年审核调整
 
-## Tags
+## 专业认证
 
-数字媒体, 新媒体
+- ScreenSkills认证
+- CILECT（国际影视学校协会）成员
+
+## 重要排名
+
+- 全英影视制作前20名（《卫报》大学指南）
+
+## 课程模块
+
+### 第四级（第一学年）
+| 模块 | 学分 | 类型 |
+| --- | --- | --- |
+| 影视制作技艺入门 | 30 | 必修 |
+| 影视研究入门 | 30 | 必修 |
+| 影视制作入门 | 30 | 必修 |
+| 影视：文化与美学 | 30 | 必修 |
+
+### 第五级（第二学年）
+| 模块 | 学分 | 类型 |
+| --- | --- | --- |
+| 影视媒体产业：专业发展1 | 30 | 必修 |
+| 单机拍摄制作 | 30 | 必修 |
+| 多机位演播室制作 | 30 | 必修 |
+| 影视：历史与理论 | 30 | 必修 |
+| 海外学年 | 0 | 选修 |
+
+### 第六级（第三学年）
+| 模块 | 学分 | 类型 |
+| --- | --- | --- |
+| 影视毕业项目 | 60 | 必修 |
+| 专业实践 | 30 | 必修 |
+| 影视：当代议题 | 30 | 必修 |
+| 海外学年 | 0 | 选修 |
+| 就业体验（创意艺术） | 0 | 选修 |
+| 海外学习（创意艺术） | 0 | 选修 |
+
+## 核心领域
+
+- 单机剧情片与纪录片制作
+- 多机位电视演播室制作
+- 电影摄影与灯光
+- 剪辑与后期制作
+- 声音设计与混音
+- 编剧
+- 制片与制作管理
+- 导演
+- 调色
+- 视觉特效
+- 广播技术
+
+## 设施
+
+- Mike Newall录音棚电视演播室——大型高清广播标准设施，配备导轨灯架、带提词器的 pedestal 摄像机、绿幕和视频切换台
+- Doug Milsome电影摄影实验室——技术培训和小型拍摄空间
+- 40座Walter Murch后期制作实验室——配备Avid Media Composer、Pro Tools、Baselight、DaVinci Resolve、Final Draft
+- 120TB EditShare共享存储——协作剪辑工作流（Broadcast Tech Awards 2021决赛入围）
+- 摄像机阵容：Blackmagic URSA 4.6K数字电影机、Canon C100、Canon XF305、Panasonic 371，搭配Zeiss和Samyang镜头
+- 灯光：Kino Flo和Arri灯具系统
+- 音频：Sennheiser、SQN和Zoom麦克风与录音机
+- 稳定器：Steadicam稳定器、摇臂、移动轨道
+- 专用调色室、ADR和配音录音棚
+- 音效素材库：23,000+音效和4,000+音乐曲目
+
+## 行业客座讲师
+
+- Jan Harlan——库布里克制片人的执行制片人（五部电影），与斯皮尔伯格合作《人工智能》。在赫特福德郡任教八年。
+- Mike Newall——《四个婚礼和一个葬礼》、《忠奸人》、《哈利·波特与火焰杯》导演。提供客座大师课。
+
+## 行业联系
+
+- 华纳兄弟创意人才合作
+- 制作协会
+- ENVY学院——毕业生可在伦敦ENVY后期制作公司工作（参与项目包括《The Chase》、《Gogglebox》）
+- Halo后期制作公司
+
+## 奖项
+
+- 皇家电视学会伦敦学生奖：多次获奖，包括2014年最佳剧情片（《Breach》）、2014年最佳声音工艺（《322》）、2018年最佳制作设计工艺（《Delirium》）、2022年最佳剧情片（《Bury the Hatchet》）、2022年最佳制作设计工艺（《Bury The Hatchet》）
+- RTS助学金：每年£1,000，连续三年，另加RTS和Hospital Club会员资格
+
+## 就业前景
+
+毕业生初始岗位包括：制作助理、初级研究员、助理制片人、助理导演、剪辑师、摄像助理和自由职业者。随后可晋升至高级岗位，如制片人、导演、高级剪辑师、部门主管。
+
+知名毕业生参与项目：
+- 档案管理员/剧本编辑，《EastEnders》（BBC）
+- 制片人，《The Grand Tour》（Amazon）
+- 制作助理，《神奇女侠》、《新木乃伊》、《古墓丽影》、《游侠索罗：星球大战外传》、《蜘蛛侠：英雄远征》
+- 后期制作助理，《Gogglebox》（Channel 4）
+- 制片人/导演，Jamie Oliver's FoodTube（YouTube）
+- 视频助理，《头号玩家》、《正义联盟》、《东方快车谋杀案》、《克里斯托弗·罗宾》、《欢乐满人间》
+- 视觉特效制作助理，《星球大战：最后的绝地武士》
+- 摄像师，《Victorian Bakery》（BBC）
+- 助理制片人，《舞动奇迹》（BBC）
+- 市场营销助理，华纳兄弟
+
+## 学习选项
+
+- 提供海外学习机会（合作伙伴大学和赫特福德大学均免学费）
+- 提供工作实习三明治学年（实习年免学费）
+
+## 校区
+
+College Lane校区——创意艺术、科学和健康相关学科的所在地。24/7学习资源中心。地址：Hatfield, Hertfordshire, AL10 9AB。
+
+## 申请方式
+
+- 通过UCAS申请。UCAS代码：W602
+- 机构代码：H36
+- 开学时间：每年9月
+
+## 标签
+
+电影制作, 数字媒体, 新媒体, 动态影像

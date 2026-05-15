@@ -1,0 +1,3197 @@
+{
+  "university": "birmingham-city-university",
+  "country": "gb",
+  "last_crawl": "2026-05-15T06:07:49.632124",
+  "urls": {
+    "https://www.bcu.ac.uk/courses/architectural-technology-bsc-hons-2026-27": {
+      "page_type": "program_overview",
+      "program": "architectural-technology-bsc-hons",
+      "last_crawled": "2026-05-12T00:59:00",
+      "status": "success",
+      "extracted_fields": [
+        "name_de",
+        "name_en",
+        "name_cn",
+        "degree",
+        "degree_title",
+        "language",
+        "duration_semesters",
+        "credits",
+        "credits_system",
+        "start_semester",
+        "url",
+        "url_en",
+        "department",
+        "faculty_url",
+        "city",
+        "state",
+        "country",
+        "focus_areas",
+        "admission_requirements",
+        "language_requirements",
+        "portfolio_required",
+        "application_process",
+        "application_portal",
+        "application_portal_url",
+        "application_deadlines",
+        "curriculum_summary",
+        "tuition",
+        "scholarship_info",
+        "additional_contacts",
+        "career_perspectives",
+        "tags",
+        "accreditation",
+        "ucas_code",
+        "ucas_institution_code",
+        "study_mode"
+      ],
+      "failed_fields": [
+        {
+          "field": "contact.name",
+          "reason": "No specific contact person listed on page"
+        },
+        {
+          "field": "contact.email",
+          "reason": "No direct course contact email found"
+        },
+        {
+          "field": "contact.phone",
+          "reason": "No direct course phone number found"
+        },
+        {
+          "field": "professors",
+          "reason": "No individual professor profiles linked from course page"
+        },
+        {
+          "field": "num_places",
+          "reason": "Number of places not listed"
+        },
+        {
+          "field": "portfolio_required",
+          "reason": "Portfolio not mentioned for this course"
+        }
+      ],
+      "supplementary_urls": [
+        "https://www.bcu.ac.uk/courses/architectural-technology-bsc-hons-2027-28"
+      ]
+    },
+    "https://www.bcu.ac.uk/courses/textile-design-ba-hons-2026-27": {
+      "page_type": "program_overview",
+      "program": "textile-design-ba-hons",
+      "last_crawled": "2026-05-12T01:16:00",
+      "status": "success",
+      "extracted_fields": [
+        "name_de",
+        "name_en",
+        "name_cn",
+        "degree",
+        "degree_title",
+        "language",
+        "duration_semesters",
+        "duration_years",
+        "credits",
+        "credits_system",
+        "start_semester",
+        "url",
+        "url_en",
+        "department",
+        "faculty",
+        "faculty_url",
+        "campus",
+        "city",
+        "state",
+        "country",
+        "focus_areas",
+        "admission_requirements",
+        "language_requirements",
+        "portfolio_required",
+        "portfolio_details",
+        "application_process",
+        "application_portal",
+        "application_portal_url",
+        "application_deadlines",
+        "curriculum_summary",
+        "modules",
+        "tuition",
+        "scholarship_info",
+        "career_perspectives",
+        "tags",
+        "ucas_code",
+        "professional_placement_year",
+        "industry_partners",
+        "competitions",
+        "facilities",
+        "notable_alumni"
+      ],
+      "failed_fields": [
+        {
+          "field": "contact.name",
+          "reason": "No specific contact person listed on course page"
+        },
+        {
+          "field": "contact.email",
+          "reason": "No direct course contact email found"
+        },
+        {
+          "field": "contact.phone",
+          "reason": "No direct course phone number found"
+        },
+        {
+          "field": "professors",
+          "reason": "No individual professor profiles linked from course page"
+        },
+        {
+          "field": "num_places",
+          "reason": "Number of places not listed"
+        }
+      ],
+      "discovered_subpages": [
+        {
+          "title": "Fashion and Textiles Subject Area",
+          "url": "https://www.bcu.ac.uk/subject-areas/fashion-and-textiles",
+          "type": "department_page",
+          "status": "active",
+          "note": "Parent subject area page for Fashion and Textiles programmes."
+        },
+        {
+          "title": "City Centre Campus",
+          "url": "https://www.bcu.ac.uk/about-us/maps-and-campuses/city-centre-campus",
+          "type": "campus_page",
+          "status": "active",
+          "note": "Campus information and maps."
+        },
+        {
+          "title": "BCU Portfolio Guidance",
+          "url": "https://www.bcu.ac.uk/student-info/how-to-apply/portfolio-guidance/",
+          "type": "application_page",
+          "status": "active",
+          "note": "Portfolio requirements and guidance for art and design applicants."
+        },
+        {
+          "title": "BCU Accelerate Scholarship 2026",
+          "url": "https://www.bcu.ac.uk/student-info/finance/financial-support/scholarships/accelerate-2026",
+          "type": "scholarship_page",
+          "status": "active",
+          "note": "BCU Accelerate scholarship with reduced entry requirements."
+        }
+      ],
+      "supplementary_urls": [
+        "https://www.bcu.ac.uk/courses/textile-design-ba-hons-2025-26"
+      ]
+    },
+    "https://www.bcu.ac.uk/courses/art-and-design-ba-hons-2026-27": {
+      "page_type": "program_overview",
+      "program": "art-and-design-ba-hons",
+      "last_crawled": "2026-05-12T01:07:00",
+      "status": "renamed",
+      "renamed_to": "Art and Design with Creative Technologies BA (Hons)",
+      "effective_url": "https://www.bcu.ac.uk/courses/art-and-design-with-creative-technologies-ba-hons-2026-27",
+      "original_url_status": "404 — page not found",
+      "seed_url_redirect": "https://www.bcu.ac.uk/courses/art-and-design-ba-hons-2025-26 redirects to the renamed course page",
+      "extracted_fields": [
+        "name_de",
+        "name_en",
+        "name_cn",
+        "degree",
+        "degree_title",
+        "language",
+        "duration_semesters",
+        "duration_years",
+        "credits",
+        "credits_system",
+        "start_semester",
+        "url",
+        "url_en",
+        "department",
+        "faculty",
+        "faculty_url",
+        "campus",
+        "city",
+        "state",
+        "country",
+        "focus_areas",
+        "admission_requirements",
+        "language_requirements",
+        "portfolio_required",
+        "portfolio_details",
+        "application_process",
+        "application_portal",
+        "application_portal_url",
+        "application_deadlines",
+        "curriculum_summary",
+        "modules",
+        "tuition",
+        "scholarship_info",
+        "career_perspectives",
+        "tags",
+        "ucas_code",
+        "ucas_code_foundation",
+        "foundation_year_available"
+      ],
+      "failed_fields": [
+        {
+          "field": "contact.name",
+          "reason": "No specific contact person listed on course page"
+        },
+        {
+          "field": "contact.email",
+          "reason": "No direct course contact email found"
+        },
+        {
+          "field": "contact.phone",
+          "reason": "No direct course phone number found"
+        },
+        {
+          "field": "professors",
+          "reason": "No individual professor profiles linked from course page"
+        },
+        {
+          "field": "num_places",
+          "reason": "Number of places not listed"
+        },
+        {
+          "field": "additional_contacts",
+          "reason": "No additional contacts found"
+        }
+      ],
+      "supplementary_urls": [
+        "https://unienrol.com/study-uk/birmingham-city-university-bcu/17560-art-and-design-ba-hons"
+      ]
+    },
+    "https://www.bcu.ac.uk/courses/fashion-design-ba-hons-2026-27": {
+      "type": "program",
+      "status": "extracted",
+      "program_slug": "fashion-design-ba-hons",
+      "program_title": "Fashion Design BA (Hons)",
+      "extracted_at": "2026-05-12T01:23:00+08:00",
+      "files": [
+        "data/universities/gb/birmingham-city-university/programs/fashion-design-ba-hons/program.json",
+        "data/universities/gb/birmingham-city-university/programs/fashion-design-ba-hons/tags.yaml",
+        "data/universities/gb/birmingham-city-university/programs/fashion-design-ba-hons/_index_EN.md",
+        "data/universities/gb/birmingham-city-university/programs/fashion-design-ba-hons/_index_ZH.md"
+      ],
+      "subpages_discovered": [
+        "https://www.bcu.ac.uk/arts-design-and-media/portfolio-guidance/fashion-and-textiles",
+        "https://www.bcu.ac.uk/subject-areas/fashion-and-textiles/facilities",
+        "https://www.bcu.ac.uk/subject-areas/fashion-and-textiles/working-in-industry",
+        "https://www.bcu.ac.uk/student-info/why-study-at-bcu/facilities-new/parkside",
+        "https://www.bcu.ac.uk/student-info/finance/financial-support/scholarships/accelerate-2026",
+        "https://www.bcu.ac.uk/courses/fashion-design-ba-hons-2027-28",
+        "https://www.bcu.ac.uk/blog/fashion-and-textiles/bcu-fashion-design-student-showcases-work-to-birmingham-commonwealth-association",
+        "https://www.bcu.ac.uk/blog/fashion-and-textiles/fashion-design-students-win-superdry-design-competition",
+        "https://www.bcu.ac.uk/news-events/news/fashion-design-students-kit-birmingham-first-netball-superleague-team",
+        "https://www.bcu.ac.uk/fashion-and-textiles/news-and-events/success-for-students-at-new-york-fashion-week",
+        "https://www.bcu.ac.uk/alumni/community/news-events/news/alumna-competes-in-major-amazon-prime-fashion-series"
+      ]
+    },
+    "https://www.bcu.ac.uk/courses/product-design-ba-hons-2026-27": {
+      "type": "program",
+      "status": "extracted",
+      "program_slug": "product-design-ba-hons",
+      "program_title": "Product Design BA (Hons)",
+      "former_title": "Product and Furniture Design BA (Hons)",
+      "extracted_at": "2026-05-12T01:44:00+08:00",
+      "files": [
+        "data/universities/gb/birmingham-city-university/programs/product-design-ba-hons/program.json",
+        "data/universities/gb/birmingham-city-university/programs/product-design-ba-hons/tags.yaml",
+        "data/universities/gb/birmingham-city-university/programs/product-design-ba-hons/_index_EN.md",
+        "data/universities/gb/birmingham-city-university/programs/product-design-ba-hons/_index_ZH.md"
+      ],
+      "subpages_discovered": [
+        "https://www.bcu.ac.uk/arts-design-and-media/portfolio-guidance",
+        "https://www.bcu.ac.uk/architecture-and-design/about-us/our-expertise/our-staff/jason-nicholson",
+        "https://www.bcu.ac.uk/architecture-and-design/about-us/our-expertise/our-staff/wayne-pottinger",
+        "https://www.bcu.ac.uk/architecture-and-design/about-us/our-expertise/our-staff/emma--jones",
+        "https://www.bcu.ac.uk/architecture-and-design/about-us/our-expertise/our-staff/andrew-trujillo",
+        "https://www.bcu.ac.uk/student-info/finance/fees-continuing-students/adm",
+        "https://www.bcu.ac.uk/student-info/finance/financial-support/scholarships/accelerate-2026",
+        "https://www.bcu.ac.uk/courses/product-design-ba-hons-2027-28"
+      ]
+    },
+    "https://www.bcu.ac.uk/courses/digital-animation-ba-hons-2026-27": {
+      "type": "program",
+      "status": "extracted",
+      "program_slug": "digital-animation-ba-hons",
+      "program_title": "Digital Animation BA (Hons)",
+      "former_title": "Animation BA (Hons)",
+      "extracted_at": "2026-05-12T02:54:00+08:00",
+      "files": [
+        "data/universities/gb/birmingham-city-university/programs/digital-animation-ba-hons/program.json",
+        "data/universities/gb/birmingham-city-university/programs/digital-animation-ba-hons/tags.yaml",
+        "data/universities/gb/birmingham-city-university/programs/digital-animation-ba-hons/_index_EN.md",
+        "data/universities/gb/birmingham-city-university/programs/digital-animation-ba-hons/_index_ZH.md"
+      ],
+      "subpages_discovered": [
+        "https://www.bcu.ac.uk/subject-areas/film-animation-and-photography",
+        "https://www.bcu.ac.uk/about-us/maps-and-campuses/city-centre-campus",
+        "https://www.bcu.ac.uk/student-info/how-to-apply/portfolio-guidance/",
+        "https://www.bcu.ac.uk/student-info/finance/financial-support/scholarships/accelerate-2026",
+        "https://www.bcu.ac.uk/courses/digital-animation-ba-hons-2027-28",
+        "https://www.bcu.ac.uk/subject-areas/film-animation-and-photography/staff"
+      ]
+    },
+    "https://www.bcu.ac.uk/courses/graphic-design-ba-hons-2026-27": {
+      "type": "program",
+      "status": "extracted",
+      "program_slug": "graphic-design-ba-hons",
+      "program_title": "Graphic Design BA (Hons)",
+      "former_title": "Graphic Communication BA (Hons)",
+      "extracted_at": "2026-05-12T02:15:00+08:00",
+      "files": [
+        "data/universities/gb/birmingham-city-university/programs/graphic-design-ba-hons/program.json",
+        "data/universities/gb/birmingham-city-university/programs/graphic-design-ba-hons/tags.yaml",
+        "data/universities/gb/birmingham-city-university/programs/graphic-design-ba-hons/_index_EN.md",
+        "data/universities/gb/birmingham-city-university/programs/graphic-design-ba-hons/_index_ZH.md"
+      ],
+      "subpages_discovered": [
+        "https://www.bcu.ac.uk/courses/graphic-design-ba-hons-2027-28",
+        "https://www.bcu.ac.uk/student-info/how-to-apply/portfolio-guidance/",
+        "https://www.bcu.ac.uk/arts-design-and-media/portfolio-guidance/art-and-design",
+        "https://www.bcu.ac.uk/subject-areas/art-and-design",
+        "https://www.bcu.ac.uk/about-us/maps-and-campuses/city-centre-campus",
+        "https://www.bcu.ac.uk/subject-areas/art-and-design/facilities",
+        "https://www.bcu.ac.uk/arts-design-and-media/staff/art-and-design/jane-anderson",
+        "https://www.bcu.ac.uk/arts-design-and-media/staff/art-and-design/jonathan-griffiths",
+        "https://www.bcu.ac.uk/arts-design-and-media/staff/art-and-design/martin-donnelly",
+        "https://www.bcu.ac.uk/arts-design-and-media/staff/art-and-design/william-parslow",
+        "https://www.bcu.ac.uk/arts-design-and-media/staff/art-and-design/gyeonghwa-lee",
+        "https://www.bcu.ac.uk/arts-design-and-media/staff/art-and-design/theo-inglis",
+        "https://www.bcu.ac.uk/student-info/finance/financial-support/scholarships/accelerate-2026",
+        "https://www.bcu.ac.uk/student-info/i-am-bcu/yasmina-frej",
+        "https://www.bcu.ac.uk/subject-areas/art-and-design/working-in-industry"
+      ]
+    },
+    "https://www.bcu.ac.uk/courses/game-design-ba-hons-2026-27": {
+      "page_type": "program_overview",
+      "program": "game-design-ba-hons",
+      "last_crawled": "2026-05-12T03:05:00",
+      "status": "success",
+      "extracted_fields": [
+        "name_en",
+        "name_cn",
+        "degree",
+        "degree_title",
+        "language",
+        "duration_semesters",
+        "credits",
+        "credits_system",
+        "start_semester",
+        "url",
+        "url_en",
+        "department",
+        "faculty_url",
+        "city",
+        "state",
+        "country",
+        "focus_areas",
+        "admission_requirements",
+        "language_requirements",
+        "portfolio_required",
+        "application_process",
+        "application_portal",
+        "application_portal_url",
+        "curriculum_summary",
+        "tuition",
+        "scholarship_info",
+        "career_perspectives",
+        "tags",
+        "accreditation",
+        "ucas_code",
+        "ucas_institution_code",
+        "study_mode",
+        "facilities",
+        "industry_links",
+        "student_testimonial",
+        "related_programs"
+      ],
+      "failed_fields": [
+        {
+          "field": "ucas_code",
+          "reason": "UCAS code not displayed on course page"
+        },
+        {
+          "field": "contact.name",
+          "reason": "No specific contact person listed on page"
+        },
+        {
+          "field": "contact.email",
+          "reason": "No direct course contact email found"
+        },
+        {
+          "field": "contact.phone",
+          "reason": "No direct course phone number found"
+        },
+        {
+          "field": "module_names",
+          "reason": "Module names loaded dynamically via JavaScript"
+        },
+        {
+          "field": "num_places",
+          "reason": "Number of places not listed"
+        }
+      ],
+      "supplementary_urls": [
+        "https://www.bcu.ac.uk/courses/game-design-ba-hons-2027-28",
+        "https://digital.ucas.com/coursedisplay/courses/e28e526f-ef8f-4abf-8aed-99f825aed9c9?academicYearId=2026"
+      ]
+    },
+    "https://www.bcu.ac.uk/courses/sound-engineering-bsc-hons-2026-27": {
+      "page_type": "program_overview",
+      "program": "sound-engineering-bsc-hons",
+      "last_crawled": "2026-05-12T03:33:00",
+      "status": "success",
+      "extracted_fields": [
+        "name_en",
+        "name_cn",
+        "degree",
+        "degree_title",
+        "language",
+        "duration_semesters",
+        "credits",
+        "credits_system",
+        "start_semester",
+        "url",
+        "url_en",
+        "department",
+        "faculty",
+        "faculty_url",
+        "campus",
+        "building",
+        "city",
+        "state",
+        "country",
+        "focus_areas",
+        "admission_requirements",
+        "language_requirements",
+        "ucas_tariff",
+        "ucas_code",
+        "ucas_institution_code",
+        "ucas_apply_url",
+        "tuition",
+        "scholarship_info",
+        "career_perspectives",
+        "tags",
+        "study_mode",
+        "facilities",
+        "industry_links",
+        "student_demographics",
+        "student_satisfaction",
+        "related_programs",
+        "rankings"
+      ],
+      "failed_fields": [
+        {
+          "field": "module_names",
+          "reason": "Module names loaded dynamically via JavaScript — inferred from course description topics"
+        },
+        {
+          "field": "contact.name",
+          "reason": "No specific contact person listed on page"
+        },
+        {
+          "field": "contact.email",
+          "reason": "No direct course contact email found"
+        },
+        {
+          "field": "contact.phone",
+          "reason": "No direct course phone number found"
+        },
+        {
+          "field": "professors",
+          "reason": "No individual professor profiles linked from course page"
+        },
+        {
+          "field": "num_places",
+          "reason": "Number of places not listed"
+        },
+        {
+          "field": "ielts",
+          "reason": "IELTS requirement inferred from similar BCU Computing programmes — requires confirmation"
+        },
+        {
+          "field": "ib",
+          "reason": "IB requirement inferred from similar BCU Computing programmes — requires confirmation"
+        }
+      ],
+      "discovered_subpages": [
+        {
+          "title": "Sound Engineering BSc (Hons) 2027-28 Entry",
+          "url": "https://www.bcu.ac.uk/courses/sound-engineering-bsc-hons-2027-28",
+          "type": "course_variant",
+          "status": "active",
+          "note": "Next year entry variant."
+        },
+        {
+          "title": "Sound Engineering with Foundation Year BSc (Hons)",
+          "url": "https://www.bcu.ac.uk/courses/sound-engineering-foundation-bsc-hons-2026-27",
+          "type": "course_variant",
+          "status": "active",
+          "note": "Foundation Year variant (4-year route)."
+        },
+        {
+          "title": "UCAS Course Page",
+          "url": "https://digital.ucas.com/coursedisplay/courses/171a1636-7ceb-4260-8449-cd30497984da?academicYearId=2026",
+          "type": "ucas",
+          "status": "active",
+          "note": "UCAS application page for this course."
+        },
+        {
+          "title": "Scholarships",
+          "url": "https://www.bcu.ac.uk/student-info/finance/financial-support/scholarships",
+          "type": "scholarship_page",
+          "status": "active",
+          "note": "BCU scholarships and financial support."
+        },
+        {
+          "title": "Faculty of Computing, Engineering and the Built Environment",
+          "url": "https://www.bcu.ac.uk/about-us/our-faculties/computing-engineering-and-the-built-environment",
+          "type": "faculty_page",
+          "status": "active",
+          "note": "Parent faculty page."
+        },
+        {
+          "title": "Computing Subject Area",
+          "url": "https://www.bcu.ac.uk/subject-areas/computing",
+          "type": "subject_area",
+          "status": "active",
+          "note": "Computing subject area listing all programmes."
+        }
+      ],
+      "supplementary_urls": [
+        "https://www.bcu.ac.uk/courses/sound-engineering-bsc-hons-2027-28",
+        "https://www.bcu.ac.uk/courses/sound-engineering-foundation-bsc-hons-2026-27",
+        "https://digital.ucas.com/coursedisplay/courses/171a1636-7ceb-4260-8449-cd30497984da?academicYearId=2026"
+      ]
+    },
+    "https://www.bcu.ac.uk/courses/fine-art-ma-2026-27": {
+      "page_type": "program_overview",
+      "program": "fine-art-ma",
+      "last_crawled": "2026-05-15T05:19:00",
+      "status": "success",
+      "extracted_fields": [
+        "name_de",
+        "name_en",
+        "name_cn",
+        "degree",
+        "degree_title",
+        "language",
+        "duration_years",
+        "duration_semesters",
+        "credits",
+        "credits_system",
+        "start_semester",
+        "url",
+        "url_en",
+        "department",
+        "department_url",
+        "faculty",
+        "city",
+        "campus",
+        "country",
+        "study_mode",
+        "focus_areas",
+        "portfolio_required",
+        "professional_placement_available",
+        "tags",
+        "tuition",
+        "language_requirements",
+        "admission_requirements",
+        "curriculum_summary",
+        "modules",
+        "career_perspectives",
+        "facilities",
+        "industry_partners",
+        "notable_staff",
+        "study_trips",
+        "scholarship_info"
+      ],
+      "failed_fields": [
+        {
+          "field": "contact.name",
+          "reason": "No specific contact person listed on page"
+        },
+        {
+          "field": "contact.email",
+          "reason": "No direct course contact email found"
+        },
+        {
+          "field": "contact.phone",
+          "reason": "No direct course phone number found"
+        },
+        {
+          "field": "ucas_code",
+          "reason": "No UCAS code - postgraduate direct application"
+        },
+        {
+          "field": "application_deadlines",
+          "reason": "No specific deadline listed on page"
+        }
+      ]
+    },
+    "https://www.bcu.ac.uk/courses/visual-communication-ma-2026-27": {
+      "page_type": "program_overview",
+      "program": "visual-communication-ma",
+      "last_crawled": "2026-05-12T03:48:00",
+      "status": "success",
+      "extracted_fields": [
+        "name_en",
+        "name_zh",
+        "degree",
+        "degree_level",
+        "language",
+        "duration",
+        "duration_semesters",
+        "credits",
+        "start_date",
+        "url",
+        "department",
+        "faculty",
+        "campus",
+        "city",
+        "state",
+        "country",
+        "focus_areas",
+        "admission_requirements",
+        "language_requirements",
+        "portfolio_required",
+        "curriculum_summary",
+        "modules",
+        "tuition",
+        "career_perspectives",
+        "tags",
+        "study_mode",
+        "specialisations",
+        "employability",
+        "facilities",
+        "staff",
+        "notable_alumni",
+        "professional_placement"
+      ],
+      "failed_fields": [
+        {
+          "field": "ucas_code",
+          "reason": "UCAS code not displayed on course page - postgraduate course may not use UCAS"
+        },
+        {
+          "field": "contact.name",
+          "reason": "No specific contact person listed on course page"
+        },
+        {
+          "field": "contact.email",
+          "reason": "No direct course contact email found"
+        },
+        {
+          "field": "contact.phone",
+          "reason": "No direct course phone number found"
+        },
+        {
+          "field": "num_places",
+          "reason": "Number of places not listed"
+        }
+      ],
+      "discovered_subpages": [
+        {
+          "title": "Visual Communication MA 2027-28 Entry",
+          "url": "https://www.bcu.ac.uk/courses/visual-communication-ma-2027-28",
+          "type": "course_variant",
+          "status": "active",
+          "note": "Next academic year variant of this course."
+        },
+        {
+          "title": "Portfolio Guidance - Art and Design",
+          "url": "https://www.bcu.ac.uk/arts-design-and-media/portfolio-guidance/art-and-design",
+          "type": "application_page",
+          "status": "active",
+          "note": "Portfolio requirements and guidance for art and design applicants."
+        },
+        {
+          "title": "Andrew Kulman - Staff Profile",
+          "url": "https://www.bcu.ac.uk/arts-design-and-media/staff/art-and-design/andrew-kulman",
+          "type": "staff_profile",
+          "status": "active",
+          "note": "Staff member linked from course page."
+        },
+        {
+          "title": "Matt Tromans - Staff Profile",
+          "url": "https://www.bcu.ac.uk/arts-design-and-media/staff/film-animation-and-photography/matt-tromans",
+          "type": "staff_profile",
+          "status": "active",
+          "note": "Staff member linked from course page."
+        },
+        {
+          "title": "Naomi Kent - Staff Profile",
+          "url": "https://www.bcu.ac.uk/arts-design-and-media/staff/art-and-design/naomi-kent",
+          "type": "staff_profile",
+          "status": "active",
+          "note": "Staff member linked from course page."
+        },
+        {
+          "title": "Becky Howson - Staff Profile",
+          "url": "https://www.bcu.ac.uk/arts-design-and-media/staff/art-and-design/becky-howson",
+          "type": "staff_profile",
+          "status": "active",
+          "note": "Staff member linked from course page."
+        },
+        {
+          "title": "Robert Gibb - Staff Profile",
+          "url": "https://www.bcu.ac.uk/arts-design-and-media/staff/art-and-design/robert-gibb",
+          "type": "staff_profile",
+          "status": "active",
+          "note": "Staff member linked from course page."
+        }
+      ],
+      "supplementary_urls": [
+        "https://www.bcu.ac.uk/courses/visual-communication-ma-2027-28"
+      ]
+    },
+    "https://www.bcu.ac.uk/courses/architecture-march-2026-27": {
+      "status": "done",
+      "type": "program_overview",
+      "program_slug": "architecture-march",
+      "extracted_at": "2026-05-12",
+      "subpages_discovered": [
+        "https://www.bcu.ac.uk/architecture-and-design/about-us/our-expertise/our-staff/alessandro-columbano",
+        "https://www.bcu.ac.uk/arts-design-and-media/staff/architecture/jemma-browne",
+        "https://www.bcu.ac.uk/arts-design-and-media/staff/architecture/hannah-vowles",
+        "https://www.bcu.ac.uk/architecture-and-design/about-us/our-expertise/our-staff/professor-rachel-sara",
+        "https://www.bcu.ac.uk/architecture-and-design/about-us/our-expertise/our-staff/michael-dring",
+        "https://www.bcu.ac.uk/student-info/why-study-at-bcu/our-facilities/parkside"
+      ]
+    },
+    "https://www.bcu.ac.uk/courses/interior-architecture-and-design-ma-2026-27": {
+      "page_type": "program_overview",
+      "program": "interior-architecture-and-design-ma",
+      "last_crawled": "2026-05-12T04:05:00",
+      "status": "extracted",
+      "extracted_fields": [
+        "name_en",
+        "name_zh",
+        "degree_level",
+        "degree_type",
+        "language",
+        "duration_semesters",
+        "credits",
+        "start_semester",
+        "url",
+        "department",
+        "faculty",
+        "city",
+        "state",
+        "country",
+        "focus_areas",
+        "admission_requirements",
+        "language_requirements",
+        "portfolio_required",
+        "curriculum_summary",
+        "tuition",
+        "career_perspectives",
+        "tags",
+        "study_mode",
+        "facilities",
+        "staff",
+        "overview_en",
+        "overview_zh",
+        "highlights",
+        "employability",
+        "subpages_discovered",
+        "related_programs"
+      ],
+      "failed_fields": [
+        {
+          "field": "contact.name",
+          "reason": "No specific course contact email found on scraped pages"
+        },
+        {
+          "field": "ucas_code",
+          "reason": "No UCAS code for postgraduate programme"
+        },
+        {
+          "field": "module_details",
+          "reason": "BCU course page is JavaScript-rendered; exact module titles and credit allocations inferred from course structure description and cross-referenced with other BCU MA programmes"
+        }
+      ],
+      "sources": [
+        "https://www.bcu.ac.uk/courses/interior-architecture-and-design-ma-2026-27",
+        "https://universitycompare.com/universities/birmingham-city-university/postgraduate/interior-architecture-and-design-ma-1618619-2026",
+        "https://www.ahzassociates.com/nigeria/universities/birmingham-city-university/ma-interior-architecture-and-design-1223"
+      ]
+    },
+    "https://www.bcu.ac.uk/courses/fashion-communication-ba-hons-2026-27": {
+      "page_type": "program_overview",
+      "program": "fashion-communication-ba-hons",
+      "last_crawled": "2026-05-12T04:21:00",
+      "status": "success",
+      "extracted_fields": [
+        "name_en",
+        "name_zh",
+        "degree",
+        "duration_years",
+        "duration_semesters",
+        "start_date",
+        "start_semester",
+        "url",
+        "url_base",
+        "year_variant",
+        "department",
+        "college",
+        "faculty",
+        "campus",
+        "city",
+        "country",
+        "language",
+        "mode",
+        "has_sandwich_year",
+        "has_foundation_year",
+        "is_available_international",
+        "credits",
+        "credits_system",
+        "accreditations",
+        "overview_en",
+        "overview_zh",
+        "focus_areas",
+        "focus_areas_zh",
+        "admission",
+        "tuition",
+        "modules",
+        "placement_year",
+        "staff",
+        "facilities",
+        "industry_links",
+        "career_paths",
+        "career_paths_zh",
+        "satisfaction_stats",
+        "subpages_discovered"
+      ],
+      "failed_fields": [
+        {
+          "field": "ucas_course_code",
+          "reason": "No 4-character UCAS code displayed on page. Only UCAS institution code B25/BCITY and digital UCAS apply link with UUID found."
+        }
+      ],
+      "discovered_subpages": [
+        {
+          "title": "Fashion Communication BA (Hons) 2027/28",
+          "url": "https://www.bcu.ac.uk/courses/fashion-communication-ba-hons-2027-28",
+          "type": "year_variant",
+          "status": "active"
+        },
+        {
+          "title": "Fashion Communication BA (Hons) with Foundation Year",
+          "url": "https://www.bcu.ac.uk/courses/fashion-communication-ba-hons-with-foundation-2026-27",
+          "type": "foundation_variant",
+          "status": "active"
+        },
+        {
+          "title": "Portfolio Guidance - Fashion and Textiles",
+          "url": "https://www.bcu.ac.uk/arts-design-and-media/portfolio-guidance/fashion-and-textiles",
+          "type": "application_page",
+          "status": "active"
+        },
+        {
+          "title": "Adam Guy - Course Leader",
+          "url": "https://www.bcu.ac.uk/arts-design-and-media/staff/fashion-and-textiles/adam-guy",
+          "type": "staff_profile",
+          "status": "active"
+        },
+        {
+          "title": "Helen Grainger - Lecturer",
+          "url": "https://www.bcu.ac.uk/arts-design-and-media/staff/fashion-and-textiles/helen-grainger",
+          "type": "staff_profile",
+          "status": "active"
+        },
+        {
+          "title": "Adam Francis - Senior Lecturer",
+          "url": "https://www.bcu.ac.uk/arts-design-and-media/staff/fashion-and-textiles/adam-francis",
+          "type": "staff_profile",
+          "status": "active"
+        },
+        {
+          "title": "Fashion and Textiles Subject Area",
+          "url": "https://www.bcu.ac.uk/subject-areas/fashion-and-textiles",
+          "type": "department_page",
+          "status": "active"
+        },
+        {
+          "title": "Fashion and Textiles Facilities",
+          "url": "https://www.bcu.ac.uk/subject-areas/fashion-and-textiles/facilities",
+          "type": "facilities_page",
+          "status": "active"
+        }
+      ]
+    },
+    "https://www.bcu.ac.uk/courses/design-management-ma-2026-27": {
+      "page_type": "program_overview",
+      "program": "design-management-ma",
+      "last_crawled": "2026-05-12T04:35:00",
+      "status": "success",
+      "extracted_fields": [
+        "name_en",
+        "name_zh",
+        "degree",
+        "degree_type",
+        "language",
+        "duration",
+        "credits",
+        "start_date",
+        "school",
+        "faculty",
+        "campus",
+        "study_mode",
+        "entry_requirements",
+        "ielts",
+        "curriculum_modules",
+        "assessment",
+        "workload",
+        "career_paths",
+        "employment_sectors",
+        "highlights",
+        "course_codes",
+        "exit_awards",
+        "related_programs"
+      ],
+      "failed_fields": [
+        {
+          "field": "fees.uk_ft",
+          "reason": "BCU course page JS-rendered; fee section not accessible via static fetch"
+        },
+        {
+          "field": "fees.international_ft",
+          "reason": "BCU course page JS-rendered; fee section not accessible via static fetch"
+        },
+        {
+          "field": "portfolio_required",
+          "reason": "Not required for this programme"
+        },
+        {
+          "field": "staff",
+          "reason": "No individual staff profiles linked from course page"
+        },
+        {
+          "field": "ucas_code",
+          "reason": "Not applicable — postgraduate direct application"
+        }
+      ],
+      "supplementary_urls": [
+        "https://bcuassets.blob.core.windows.net/docs/pt1311-ma-design-management-133045305333398503.pdf"
+      ]
+    },
+    "https://www.bcu.ac.uk/courses/design-and-visualisation-ma-2026-27": {
+      "page_type": "program_overview",
+      "program": "design-and-visualisation-ma",
+      "last_crawled": "2026-05-12T04:45:00",
+      "status": "success",
+      "extracted_fields": [
+        "name_en",
+        "name_cn",
+        "degree",
+        "degree_title",
+        "language",
+        "duration_semesters",
+        "credits",
+        "credits_system",
+        "start_semester",
+        "url",
+        "url_en",
+        "department",
+        "faculty",
+        "campus",
+        "city",
+        "state",
+        "country",
+        "focus_areas",
+        "admission_requirements",
+        "language_requirements",
+        "portfolio_required",
+        "curriculum_summary",
+        "modules",
+        "tuition",
+        "career_perspectives",
+        "tags",
+        "study_mode",
+        "highlights",
+        "facilities"
+      ],
+      "failed_fields": [
+        {
+          "field": "ucas_code",
+          "reason": "Postgraduate programme — UCAS code not applicable"
+        },
+        {
+          "field": "contact.name",
+          "reason": "Course page JS-rendered; course director from 2017-18 guide may be outdated"
+        },
+        {
+          "field": "contact.email",
+          "reason": "No direct course contact email found"
+        },
+        {
+          "field": "contact.phone",
+          "reason": "No direct course phone number found"
+        },
+        {
+          "field": "professors",
+          "reason": "No individual professor profiles linked from accessible course page content"
+        },
+        {
+          "field": "num_places",
+          "reason": "Exact number not confirmed; ~15 FT students estimated from 2017-18 guide"
+        },
+        {
+          "field": "tuition_exact",
+          "reason": "BCU course page JS-rendered; fees estimated from BCU standard MA fee structure for 2026/27"
+        }
+      ],
+      "supplementary_urls": [
+        "https://unischolars.com/universities/uk/birmingham-city-university/courses/ma-design-visualisation",
+        "https://bcuassets.blob.core.windows.net/docs/student-guide-2017-18-131449301055922453.pdf",
+        "https://www.bcu.ac.uk/courses/design-and-visualisation-ma-2027-28"
+      ],
+      "discovered_subpages": [
+        {
+          "title": "Design and Visualisation MA 2027-28 Entry",
+          "url": "https://www.bcu.ac.uk/courses/design-and-visualisation-ma-2027-28",
+          "type": "course-variant",
+          "status": "active"
+        },
+        {
+          "title": "MA Design and Visualisation Course Guide (PDF)",
+          "url": "https://bcuassets.blob.core.windows.net/docs/student-guide-2017-18-131449301055922453.pdf",
+          "type": "course-guide",
+          "status": "active"
+        },
+        {
+          "title": "Portfolio Guidance - Art and Design",
+          "url": "https://www.bcu.ac.uk/arts-design-and-media/portfolio-guidance/art-and-design",
+          "type": "application_page",
+          "status": "active"
+        },
+        {
+          "title": "Architecture and Design Subject Area",
+          "url": "https://www.bcu.ac.uk/subject-areas/architecture-and-design",
+          "type": "department_page",
+          "status": "active"
+        },
+        {
+          "title": "City Centre Campus",
+          "url": "https://www.bcu.ac.uk/about-us/maps-and-campuses/city-centre-campus",
+          "type": "campus_page",
+          "status": "active"
+        },
+        {
+          "title": "How to Apply - BCU",
+          "url": "https://www.bcu.ac.uk/student-info/how-to-apply/",
+          "type": "application_page",
+          "status": "active"
+        }
+      ]
+    },
+    "https://www.bcu.ac.uk/courses/fashion-communication-ma-2026-27": {
+      "page_type": "program_overview",
+      "program": "fashion-communication-ma",
+      "last_crawled": "2026-05-12T05:00:00",
+      "status": "success",
+      "extracted_fields": [
+        "name_en",
+        "name_cn",
+        "degree",
+        "degree_title",
+        "language",
+        "duration_semesters",
+        "start_semester",
+        "url_en",
+        "department",
+        "faculty_url",
+        "city",
+        "state",
+        "country",
+        "focus_areas",
+        "admission_requirements",
+        "tuition_fees",
+        "program_description",
+        "program_description_cn",
+        "curriculum",
+        "career_outcomes",
+        "facilities",
+        "highlights",
+        "specialisms"
+      ],
+      "subpages": {
+        "discovered": [
+          {
+            "url": "https://www.bcu.ac.uk/courses/fashion-communication-ma-2027-28",
+            "type": "course-variant"
+          },
+          {
+            "url": "https://www.bcu.ac.uk/subject-areas/fashion-and-textiles",
+            "type": "subject-area"
+          },
+          {
+            "url": "https://www.bcu.ac.uk/about-us/maps-and-campuses/city-centre-campus",
+            "type": "campus"
+          },
+          {
+            "url": "https://www.bcu.ac.uk/student-info/how-to-apply/",
+            "type": "application"
+          },
+          {
+            "url": "https://www.bcu.ac.uk/international/your-application/english-language-and-english-tests",
+            "type": "entry-requirements"
+          }
+        ],
+        "new_count": 5
+      }
+    },
+    "https://www.bcu.ac.uk/courses/fashion-and-textile-design-ma-2026-27": {
+      "page_type": "program_overview",
+      "program": "fashion-and-textile-design-ma",
+      "last_crawled": "2026-05-15T04:40:00",
+      "status": "success",
+      "extracted_fields": [
+        "name_en",
+        "name_cn",
+        "degree",
+        "degree_title",
+        "language",
+        "duration_semesters",
+        "duration_years",
+        "credits",
+        "credits_system",
+        "start_semester",
+        "url",
+        "url_en",
+        "department",
+        "faculty",
+        "campus",
+        "city",
+        "country",
+        "focus_areas",
+        "admission_requirements",
+        "language_requirements",
+        "portfolio_required",
+        "portfolio_details",
+        "curriculum_summary",
+        "modules",
+        "tuition",
+        "career_perspectives",
+        "tags",
+        "study_mode",
+        "professional_placement_year",
+        "specialisms"
+      ],
+      "failed_fields": [
+        {
+          "field": "contact.name",
+          "reason": "No specific contact person listed on course page"
+        },
+        {
+          "field": "contact.email",
+          "reason": "No direct course contact email found"
+        },
+        {
+          "field": "ucas_code",
+          "reason": "Not applicable for postgraduate programme"
+        }
+      ]
+    },
+    "https://www.bcu.ac.uk/courses/horology-ba-hons-2026-27": {
+      "page_type": "program_overview",
+      "program": "horology-ba-hons",
+      "last_crawled": "2026-05-12T05:25:00",
+      "status": "success",
+      "extracted_fields": [
+        "name_en",
+        "name_cn",
+        "degree",
+        "degree_title",
+        "language",
+        "duration_semesters",
+        "credits",
+        "credits_system",
+        "start_semester",
+        "url",
+        "url_en",
+        "department",
+        "faculty",
+        "campus",
+        "city",
+        "state",
+        "country",
+        "focus_areas",
+        "admission_requirements",
+        "language_requirements",
+        "portfolio_required",
+        "portfolio_details",
+        "application_process",
+        "application_portal",
+        "application_portal_url",
+        "application_deadlines",
+        "curriculum_summary",
+        "modules",
+        "tuition",
+        "scholarship_info",
+        "career_perspectives",
+        "tags",
+        "ucas_code",
+        "ucas_institution_code",
+        "study_mode",
+        "professional_placement_year",
+        "industry_partners",
+        "facilities",
+        "notable_alumni",
+        "testimonials",
+        "employability_stats",
+        "student_experience",
+        "additional_costs"
+      ],
+      "failed_fields": [
+        {
+          "field": "contact.name",
+          "reason": "No specific contact person listed on course page"
+        },
+        {
+          "field": "contact.email",
+          "reason": "No direct course contact email found"
+        },
+        {
+          "field": "contact.phone",
+          "reason": "No direct course phone number found"
+        },
+        {
+          "field": "professors",
+          "reason": "No individual professor profiles linked from course page"
+        },
+        {
+          "field": "num_places",
+          "reason": "Number of places not listed"
+        }
+      ],
+      "discovered_subpages": [
+        {
+          "title": "Horology with Foundation Year BA (Hons) 2026-27",
+          "url": "https://www.bcu.ac.uk/courses/horology-ba-hons-with-foundation-2026-27",
+          "type": "course-variant",
+          "status": "active"
+        },
+        {
+          "title": "Jewellery Subject Area",
+          "url": "https://www.bcu.ac.uk/subject-areas/jewellery",
+          "type": "department_page",
+          "status": "active"
+        },
+        {
+          "title": "School of Jewellery Campus",
+          "url": "https://www.bcu.ac.uk/about-us/maps-and-campuses/school-of-jewellery",
+          "type": "campus_page",
+          "status": "active"
+        },
+        {
+          "title": "BA (Hons) Horology Course Specification",
+          "url": "https://bcuassets.blob.core.windows.net/docs/us0634f-ba-hons-horology-with-fy-v2-133071077776785974.pdf",
+          "type": "course-specification",
+          "status": "active"
+        }
+      ],
+      "supplementary_urls": [
+        "https://www.theuniguide.co.uk/birmingham-city-university-b25/courses/horology-ba-hons-full-time-3-years-2026-91a12ac52f00",
+        "https://bcuassets.blob.core.windows.net/docs/us0634f-ba-hons-horology-with-fy-v2-133071077776785974.pdf"
+      ]
+    },
+    "https://www.bcu.ac.uk/courses/film-and-screenwriting-ba-hons-2026-27": {
+      "page_type": "program_overview",
+      "program": "film-and-screenwriting-ba-hons",
+      "last_crawled": "2026-05-12T05:36:00",
+      "status": "success",
+      "extracted_fields": [
+        "name_de",
+        "name_en",
+        "name_cn",
+        "degree",
+        "degree_title",
+        "language",
+        "duration_semesters",
+        "duration_years",
+        "credits",
+        "credits_system",
+        "start_semester",
+        "url",
+        "url_en",
+        "department",
+        "faculty",
+        "faculty_url",
+        "campus",
+        "city",
+        "state",
+        "country",
+        "focus_areas",
+        "admission_requirements",
+        "language_requirements",
+        "portfolio_required",
+        "application_process",
+        "application_portal",
+        "application_portal_url",
+        "application_deadlines",
+        "curriculum_summary",
+        "modules",
+        "tuition",
+        "scholarship_info",
+        "career_perspectives",
+        "tags",
+        "ucas_code",
+        "ucas_institution_code",
+        "study_mode",
+        "professional_placement_year",
+        "industry_partners",
+        "ranking",
+        "employment_rate",
+        "software_tools",
+        "assessment",
+        "facilities",
+        "professors",
+        "teaching_and_learning"
+      ],
+      "failed_fields": [
+        {
+          "field": "contact.email",
+          "reason": "No direct course contact email found"
+        },
+        {
+          "field": "contact.phone",
+          "reason": "No direct course phone number found"
+        },
+        {
+          "field": "num_places",
+          "reason": "Number of places not listed"
+        },
+        {
+          "field": "notable_alumni",
+          "reason": "No notable alumni listed on course page"
+        }
+      ],
+      "supplementary_urls": [
+        "https://www.bcu.ac.uk/courses/film-and-screenwriting-ba-hons-2027-28",
+        "https://www.topuniversities.com/universities/birmingham-city-university/undergrad/ba-hons-film-screenwriting",
+        "https://www.thecompleteuniversityguide.co.uk/courses/details/film-and-screenwriting-ba/57097436",
+        "https://www.studentcrowd.com/birmingham-city-university/film-and-screenwriting-ba-hons-c86858"
+      ],
+      "discovered_subpages": [
+        {
+          "title": "School of Games, Film and Animation",
+          "url": "https://www.bcu.ac.uk/subject-areas/games-film-and-animation",
+          "type": "department_page",
+          "status": "active",
+          "note": "Parent school page for Film and Screenwriting programme."
+        },
+        {
+          "title": "Film Futures Subject Area",
+          "url": "https://www.bcu.ac.uk/subject-areas/film",
+          "type": "department_page",
+          "status": "active",
+          "note": "Film Futures suite of programmes including Film and Screenwriting."
+        },
+        {
+          "title": "City Centre Campus - Parkside Building",
+          "url": "https://www.bcu.ac.uk/about-us/maps-and-campuses/city-centre-campus",
+          "type": "campus_page",
+          "status": "active",
+          "note": "Campus information including Parkside Building facilities."
+        },
+        {
+          "title": "Film and Screenwriting BA with Foundation Year",
+          "url": "https://www.bcu.ac.uk/courses/film-and-screenwriting-ba-hons-with-foundation-2026-27",
+          "type": "program_variant",
+          "status": "active",
+          "note": "4-year variant with Foundation Year entry route."
+        },
+        {
+          "title": "Film and Screenwriting BA 2027-28",
+          "url": "https://www.bcu.ac.uk/courses/film-and-screenwriting-ba-hons-2027-28",
+          "type": "program_variant",
+          "status": "active",
+          "note": "Next year entry version with updated fees."
+        },
+        {
+          "title": "Professional Placement Year Info",
+          "url": "https://www.bcu.ac.uk/student-info/placement-year/",
+          "type": "info_page",
+          "status": "active",
+          "note": "Information about optional professional placement year."
+        },
+        {
+          "title": "BCU International Scholarships",
+          "url": "https://www.bcu.ac.uk/student-info/finance-and-funding/scholarships-for-international-students",
+          "type": "scholarship_page",
+          "status": "active",
+          "note": "Scholarship information for international students."
+        },
+        {
+          "title": "BCU How to Apply",
+          "url": "https://www.bcu.ac.uk/student-info/how-to-apply/",
+          "type": "application_page",
+          "status": "active",
+          "note": "Application guidance for undergraduate programmes."
+        }
+      ]
+    },
+    "https://www.bcu.ac.uk/courses/game-programming-bsc-hons-2026-27": {
+      "page_type": "program_overview",
+      "program": "game-programming-bsc-hons",
+      "last_crawled": "2026-05-12T05:55:00",
+      "status": "success",
+      "extracted_fields": [
+        "name_de",
+        "name_en",
+        "name_cn",
+        "degree",
+        "degree_title",
+        "language",
+        "duration_semesters",
+        "duration_years",
+        "credits",
+        "credits_system",
+        "start_semester",
+        "url",
+        "url_en",
+        "department",
+        "faculty_url",
+        "campus",
+        "city",
+        "state",
+        "country",
+        "focus_areas",
+        "tags",
+        "ucas_code",
+        "ucas_institution_code",
+        "study_mode",
+        "accreditation",
+        "admission_requirements",
+        "language_requirements",
+        "portfolio_required",
+        "application_process",
+        "application_portal",
+        "application_portal_url",
+        "application_deadlines",
+        "curriculum_summary",
+        "curriculum_modules",
+        "tuition",
+        "tuition_international",
+        "scholarship_info",
+        "career_perspectives",
+        "workshops",
+        "facilities_description",
+        "industry_links",
+        "ranking",
+        "placement_year"
+      ],
+      "failed_fields": [
+        {
+          "field": "contact.name",
+          "reason": "No specific contact person listed on page"
+        },
+        {
+          "field": "contact.email",
+          "reason": "No direct course contact email found"
+        },
+        {
+          "field": "contact.phone",
+          "reason": "No direct course phone number found"
+        },
+        {
+          "field": "professors",
+          "reason": "No individual professor profiles linked from course page"
+        },
+        {
+          "field": "num_places",
+          "reason": "Number of places not listed"
+        },
+        {
+          "field": "module_names_exact",
+          "reason": "BCU course page modules are dynamically loaded via JavaScript — some module names inferred from course description themes"
+        }
+      ],
+      "discovered_subpages": [
+        {
+          "title": "Game Programming BSc (Hons) 2027-28",
+          "url": "https://www.bcu.ac.uk/courses/game-programming-bsc-hons-2027-28",
+          "type": "course_variant",
+          "status": "active",
+          "note": "Next year entry variant."
+        },
+        {
+          "title": "Game Programming with Foundation Year BSc (Hons)",
+          "url": "https://www.bcu.ac.uk/courses/game-programming-bsc-hons-with-foundation-2026-27",
+          "type": "course_variant",
+          "status": "active",
+          "note": "Foundation Year variant (4-year route)."
+        },
+        {
+          "title": "Game Programming BSc (Hons) 2025-26",
+          "url": "https://www.bcu.ac.uk/courses/game-programming-bsc-hons-2025-26",
+          "type": "course_variant",
+          "status": "active",
+          "note": "Previous year entry variant (archived)."
+        },
+        {
+          "title": "Games Subject Area",
+          "url": "https://www.bcu.ac.uk/subject-areas/games",
+          "type": "subject_area",
+          "status": "active",
+          "note": "Games subject area listing all programmes."
+        },
+        {
+          "title": "Computing Subject Area",
+          "url": "https://www.bcu.ac.uk/subject-areas/computing",
+          "type": "subject_area",
+          "status": "active",
+          "note": "Computing subject area."
+        },
+        {
+          "title": "City Centre Campus",
+          "url": "https://www.bcu.ac.uk/about-us/maps-and-campuses/city-centre-campus",
+          "type": "campus_page",
+          "status": "active",
+          "note": "Campus information and maps."
+        },
+        {
+          "title": "MSc User Experience Design",
+          "url": "https://www.bcu.ac.uk/courses/user-experience-design-msc-2024-25",
+          "type": "related_program",
+          "status": "active",
+          "note": "Related postgraduate programme linked from course page."
+        },
+        {
+          "title": "Accelerate Scholarship 2026",
+          "url": "https://www.bcu.ac.uk/student-info/finance/financial-support/scholarships/accelerate-2026",
+          "type": "scholarship_page",
+          "status": "active",
+          "note": "BCU Accelerate scholarship."
+        },
+        {
+          "title": "Henderson Bursaries and Scholarships 2026",
+          "url": "https://www.bcu.ac.uk/student-info/finance/financial-support/scholarships/henderson-bursaries-and-scholarships-2026",
+          "type": "scholarship_page",
+          "status": "active",
+          "note": "Henderson scholarship."
+        },
+        {
+          "title": "Subject Scholarships",
+          "url": "https://www.bcu.ac.uk/student-info/finance/financial-support/scholarships/subject-scholarships",
+          "type": "scholarship_page",
+          "status": "active",
+          "note": "Subject scholarships."
+        },
+        {
+          "title": "Games Facilities",
+          "url": "https://www.bcu.ac.uk/subject-areas/games/facilities",
+          "type": "facilities_page",
+          "status": "active",
+          "note": "Games department facilities page."
+        },
+        {
+          "title": "Innovation Festival",
+          "url": "https://www.bcu.ac.uk/computing-engineering-and-the-built-environment/innovation-festival",
+          "type": "event_page",
+          "status": "active",
+          "note": "CEBE Innovation Festival."
+        },
+        {
+          "title": "Open Day 26 June 2026",
+          "url": "https://100976engagecms.campusnexus.cloud/undergraduate-open-day-friday-26-june-2026",
+          "type": "event_page",
+          "status": "active",
+          "note": "Open Day booking page."
+        },
+        {
+          "title": "Open Day 27 June 2026",
+          "url": "https://100976engagecms.campusnexus.cloud/undergraduate-open-day-saturday-27-june-2026",
+          "type": "event_page",
+          "status": "active",
+          "note": "Open Day booking page."
+        }
+      ],
+      "supplementary_urls": [
+        "https://www.bcu.ac.uk/courses/game-programming-bsc-hons-2027-28",
+        "https://www.bcu.ac.uk/courses/game-programming-bsc-hons-with-foundation-2026-27",
+        "https://www.bcu.ac.uk/courses/game-programming-bsc-hons-2025-26"
+      ]
+    },
+    "https://www.bcu.ac.uk/courses/active-practice-ma-2026-27": {
+      "page_type": "program_overview",
+      "program": "design-active-practice-ma",
+      "last_crawled": "2026-05-15T04:29:00",
+      "status": "success",
+      "extracted_fields": [
+        "name_en",
+        "name_cn",
+        "degree",
+        "duration",
+        "credits",
+        "start_semester",
+        "url",
+        "department",
+        "faculty",
+        "campus",
+        "study_mode",
+        "admission_requirements",
+        "language_requirements",
+        "portfolio_required",
+        "curriculum_summary",
+        "modules",
+        "tuition",
+        "career_perspectives",
+        "professional_placement",
+        "industry_connections"
+      ],
+      "failed_fields": [
+        {
+          "field": "ucas_code",
+          "reason": "Not listed - postgraduate course"
+        },
+        {
+          "field": "contact.email",
+          "reason": "No direct course contact email found"
+        },
+        {
+          "field": "num_places",
+          "reason": "Number of places not listed"
+        }
+      ],
+      "data_sources": [
+        "https://www.bcu.ac.uk/courses/active-practice-ma-2026-27",
+        "https://www.prospects.ac.uk/universities/birmingham-city-university-3699/birmingham-school-of-art-16191/courses/design-active-practice-147772",
+        "https://www.applyboard.com/schools/birmingham-city-university-bcu/programs/master-of-arts-design-active-practice",
+        "https://www.topuniversities.com/universities/birmingham-city-university/postgrad/ma-design-active-practice"
+      ]
+    },
+    "https://www.bcu.ac.uk/courses/photography-ma-2026-27": {
+      "page_type": "program_overview",
+      "program": "photography-ma",
+      "last_crawled": "2026-05-12T06:13:00",
+      "status": "dead_link_404",
+      "note": "Photography MA does not exist as a standalone program. Returns 404 on all year variants (2024-25, 2025-26, 2026-27). Photography at MA level is a specialization pathway within Visual Communication MA (entry #49, already extracted). Search confirmed no Photography MA course page on bcu.ac.uk.",
+      "alternative": {
+        "program": "visual-communication-ma",
+        "url": "https://www.bcu.ac.uk/courses/visual-communication-ma-2026-27",
+        "note": "MA Visual Communication includes photography as one of its specialist areas alongside graphic communication, illustration, film and animation."
+      },
+      "extracted_fields": [],
+      "failed_fields": [
+        {
+          "field": "ALL",
+          "reason": "Page returns 404 — course does not exist as standalone program"
+        }
+      ],
+      "supplementary_urls": [],
+      "discovered_subpages": []
+    },
+    "https://www.bcu.ac.uk/courses/future-media-ma-2026-27": {
+      "page_type": "program_overview",
+      "program": "future-media-ma",
+      "last_crawled": "2026-05-12T06:17:00",
+      "status": "success",
+      "extracted_fields": [
+        "name_en",
+        "name_zh",
+        "degree",
+        "degree_title",
+        "language",
+        "duration_semesters",
+        "credits",
+        "start_semester",
+        "url",
+        "department",
+        "faculty",
+        "campus",
+        "city",
+        "state",
+        "country",
+        "focus_areas",
+        "admission_requirements",
+        "language_requirements",
+        "portfolio_required",
+        "personal_statement",
+        "application_process",
+        "curriculum_summary",
+        "modules",
+        "tuition",
+        "career_perspectives",
+        "tags",
+        "study_mode",
+        "facilities",
+        "industry_links",
+        "employability",
+        "related_programs",
+        "subpages_discovered"
+      ],
+      "failed_fields": [
+        {
+          "field": "module_codes",
+          "reason": "Module codes not available on BCU course page (JS-rendered accordion content)"
+        },
+        {
+          "field": "module_credits",
+          "reason": "Individual module credit allocations not published on course page"
+        },
+        {
+          "field": "staff_profiles",
+          "reason": "No individual staff profiles linked from the Future Media MA course page"
+        },
+        {
+          "field": "contact.name",
+          "reason": "No specific contact person listed on course page"
+        },
+        {
+          "field": "contact.email",
+          "reason": "No direct course contact email found"
+        }
+      ],
+      "discovered_subpages": [
+        {
+          "title": "Future Media MSc 2026-27 Entry",
+          "url": "https://www.bcu.ac.uk/courses/future-media-msc-2026-27",
+          "type": "course-variant",
+          "status": "active",
+          "note": "MSc variant of the same programme with focus on tactical, planning and analytics roles."
+        },
+        {
+          "title": "City Centre Campus",
+          "url": "https://www.bcu.ac.uk/about-us/maps-and-campuses/city-centre-campus",
+          "type": "campus_page",
+          "status": "active",
+          "note": "Campus information and maps."
+        },
+        {
+          "title": "Media Subject Area",
+          "url": "https://www.bcu.ac.uk/subject-areas/media",
+          "type": "department_page",
+          "status": "active",
+          "note": "Parent subject area page for Media programmes."
+        },
+        {
+          "title": "How to Apply - BCU",
+          "url": "https://www.bcu.ac.uk/student-info/how-to-apply/",
+          "type": "application_page",
+          "status": "active",
+          "note": "Application guidance for prospective students."
+        },
+        {
+          "title": "Media and Communication MA",
+          "url": "https://www.bcu.ac.uk/courses/media-and-communication-ma-2026-27",
+          "type": "related_course",
+          "status": "active",
+          "note": "Related postgraduate programme in the School of Media."
+        }
+      ]
+    },
+    "https://www.bcu.ac.uk/courses/user-experience-design-msc-2026-27": {
+      "page_type": "program_overview",
+      "program": "user-experience-design-msc",
+      "last_crawled": "2026-05-12T06:31:00",
+      "status": "success",
+      "extracted_fields": [
+        "name_en",
+        "name_cn",
+        "degree",
+        "degree_title",
+        "language",
+        "duration_semesters",
+        "credits",
+        "credits_system",
+        "start_semester",
+        "url",
+        "department",
+        "faculty",
+        "campus",
+        "city",
+        "state",
+        "country",
+        "focus_areas",
+        "admission_requirements",
+        "language_requirements",
+        "portfolio_required",
+        "curriculum_summary",
+        "modules",
+        "tuition",
+        "career_perspectives",
+        "tags",
+        "study_mode",
+        "entry_requirements",
+        "employability",
+        "facilities",
+        "related_programs",
+        "subpages_discovered",
+        "professional_placement_year",
+        "exit_awards"
+      ],
+      "failed_fields": [
+        {
+          "field": "contact.name",
+          "reason": "No specific contact person listed on course page"
+        },
+        {
+          "field": "contact.email",
+          "reason": "No direct course contact email found"
+        },
+        {
+          "field": "contact.phone",
+          "reason": "No direct course phone number found"
+        },
+        {
+          "field": "professors",
+          "reason": "No individual professor profiles linked from course page"
+        },
+        {
+          "field": "num_places",
+          "reason": "Number of places not listed"
+        },
+        {
+          "field": "ucas_code",
+          "reason": "UCAS code not listed for this postgraduate programme"
+        }
+      ],
+      "discovered_subpages": [
+        {
+          "title": "User Experience Design MSc 2027-28 Entry",
+          "url": "https://www.bcu.ac.uk/courses/user-experience-design-msc-2027-28",
+          "type": "course_variant",
+          "status": "active"
+        },
+        {
+          "title": "City Centre Campus",
+          "url": "https://www.bcu.ac.uk/about-us/maps-and-campuses/city-centre-campus",
+          "type": "campus_page",
+          "status": "active"
+        },
+        {
+          "title": "Computing Subject Area",
+          "url": "https://www.bcu.ac.uk/subject-areas/computing",
+          "type": "department_page",
+          "status": "active"
+        },
+        {
+          "title": "How to Apply - BCU",
+          "url": "https://www.bcu.ac.uk/student-info/how-to-apply/",
+          "type": "application_page",
+          "status": "active"
+        },
+        {
+          "title": "Fees and Funding - BCU",
+          "url": "https://www.bcu.ac.uk/student-info/fees-and-funding/",
+          "type": "funding_page",
+          "status": "active"
+        },
+        {
+          "title": "Future Media MA",
+          "url": "https://www.bcu.ac.uk/courses/future-media-ma-2026-27",
+          "type": "related_course",
+          "status": "active"
+        },
+        {
+          "title": "Future Media MSc",
+          "url": "https://www.bcu.ac.uk/courses/future-media-msc-2026-27",
+          "type": "related_course",
+          "status": "active"
+        }
+      ]
+    },
+    "https://www.bcu.ac.uk/courses/arts-and-education-practices-ma-2026-27": {
+      "page_type": "program_overview",
+      "program": "arts-and-education-practices-ma",
+      "last_crawled": "2026-05-12T06:40:00",
+      "status": "success",
+      "extracted_fields": [
+        "name_de",
+        "name_en",
+        "name_cn",
+        "degree",
+        "degree_title",
+        "language",
+        "duration_semesters",
+        "credits",
+        "credits_system",
+        "start_semester",
+        "url",
+        "url_en",
+        "department",
+        "faculty",
+        "faculty_url",
+        "campus",
+        "city",
+        "state",
+        "country",
+        "focus_areas",
+        "admission_requirements",
+        "language_requirements",
+        "portfolio_required",
+        "portfolio_details",
+        "application_process",
+        "application_portal",
+        "application_portal_url",
+        "application_deadlines",
+        "curriculum_summary",
+        "modules",
+        "tuition",
+        "scholarship_info",
+        "career_perspectives",
+        "tags",
+        "study_mode",
+        "professional_placement",
+        "exit_awards",
+        "industry_partners",
+        "facilities",
+        "notable_alumni",
+        "unique_selling_points",
+        "assessment",
+        "teaching_schedule"
+      ],
+      "failed_fields": [
+        {
+          "field": "contact.name",
+          "reason": "No specific contact person listed on course page"
+        },
+        {
+          "field": "contact.email",
+          "reason": "No direct course contact email found"
+        },
+        {
+          "field": "contact.phone",
+          "reason": "No direct course phone number found"
+        },
+        {
+          "field": "professors",
+          "reason": "No individual professor/staff profiles linked from static page (JS-rendered)"
+        },
+        {
+          "field": "num_places",
+          "reason": "Number of places not listed"
+        },
+        {
+          "field": "ucas_code",
+          "reason": "No UCAS code listed (postgraduate direct application)"
+        }
+      ],
+      "discovered_subpages": [
+        {
+          "title": "Birmingham School of Art",
+          "url": "https://www.bcu.ac.uk/art",
+          "type": "department_page",
+          "status": "active",
+          "note": "Birmingham School of Art homepage with staff profiles and research information."
+        },
+        {
+          "title": "Ikon Gallery",
+          "url": "https://www.ikon-gallery.org",
+          "type": "industry_partner",
+          "status": "active",
+          "note": "Key partnership gallery for placements and collaborative projects."
+        },
+        {
+          "title": "Eastside Projects",
+          "url": "https://www.eastsideprojects.org",
+          "type": "industry_partner",
+          "status": "active",
+          "note": "Artist-run public gallery, course partner."
+        },
+        {
+          "title": "BCU How to Apply",
+          "url": "https://www.bcu.ac.uk/student-info/how-to-apply/",
+          "type": "application_page",
+          "status": "active",
+          "note": "Application guidance for postgraduate programmes."
+        },
+        {
+          "title": "BCU Finance and Scholarships",
+          "url": "https://www.bcu.ac.uk/student-info/finance",
+          "type": "finance_page",
+          "status": "active",
+          "note": "Tuition fees, funding and scholarship information."
+        },
+        {
+          "title": "STEAMhouse",
+          "url": "https://www.bcu.ac.uk/business/steamhouse",
+          "type": "industry_partner",
+          "status": "active",
+          "note": "Innovation and enterprise centre, course partner."
+        },
+        {
+          "title": "BCU Course Specification PT1149",
+          "url": "https://bcuassets.blob.core.windows.net/docs/pt1149-ma-arts-and-education-practices-133051298843793392.pdf",
+          "type": "course_specification",
+          "status": "active",
+          "note": "Official BCU course specification document with full module details and codes."
+        }
+      ],
+      "supplementary_urls": [
+        "https://www.bcu.ac.uk/courses/arts-and-education-practices-ma-2025-26"
+      ]
+    },
+    "https://www.bcu.ac.uk/courses/ma-in-creative-writing-2026-27": {
+      "page_type": "program_overview",
+      "program": "ma-in-creative-writing",
+      "last_crawled": "2026-05-12T06:49:00",
+      "status": "success",
+      "extracted_fields": [
+        "name_de",
+        "name_en",
+        "name_cn",
+        "degree",
+        "degree_title",
+        "language",
+        "duration_semesters",
+        "duration_years",
+        "credits",
+        "credits_system",
+        "start_semester",
+        "url",
+        "url_en",
+        "department",
+        "faculty",
+        "faculty_url",
+        "campus",
+        "city",
+        "state",
+        "country",
+        "focus_areas",
+        "admission_requirements",
+        "language_requirements",
+        "portfolio_required",
+        "portfolio_details",
+        "application_process",
+        "application_portal",
+        "application_portal_url",
+        "application_deadlines",
+        "curriculum_summary",
+        "modules",
+        "tuition",
+        "scholarship_info",
+        "career_perspectives",
+        "tags",
+        "ucas_code",
+        "ucas_institution_code",
+        "study_mode",
+        "exit_awards",
+        "assessment",
+        "unique_selling_points",
+        "facilities",
+        "industry_partners"
+      ],
+      "failed_fields": [
+        {
+          "field": "contact.name",
+          "reason": "No specific contact person listed on page"
+        },
+        {
+          "field": "contact.email",
+          "reason": "No direct course contact email found"
+        },
+        {
+          "field": "contact.phone",
+          "reason": "No direct course phone number found"
+        },
+        {
+          "field": "professors",
+          "reason": "No individual professor profiles linked from course page"
+        },
+        {
+          "field": "num_places",
+          "reason": "Number of places not listed"
+        },
+        {
+          "field": "notable_alumni.testimonials",
+          "reason": "No student testimonials on BCU course page (JS-rendered)"
+        }
+      ],
+      "discovered_subpages": [
+        {
+          "title": "Institute of Creative and Critical Writing (ICCW)",
+          "url": "https://www.bcu.ac.uk/english/institute-of-creative-and-critical-writing/",
+          "type": "department_page",
+          "status": "active",
+          "note": "ICCW home page — the research institute delivering the MA Creative Writing."
+        },
+        {
+          "title": "School of English",
+          "url": "https://www.bcu.ac.uk/english",
+          "type": "department_page",
+          "status": "active",
+          "note": "Parent school page for English and Creative Writing programmes."
+        },
+        {
+          "title": "City Centre Campus",
+          "url": "https://www.bcu.ac.uk/about-us/maps-and-campuses/city-centre-campus",
+          "type": "campus_page",
+          "status": "active",
+          "note": "Campus information and maps."
+        },
+        {
+          "title": "BCU Finance and Scholarships",
+          "url": "https://www.bcu.ac.uk/student-info/finance",
+          "type": "application_page",
+          "status": "active",
+          "note": "Fee information, funding and scholarship details for postgraduate students."
+        },
+        {
+          "title": "How to Apply - Postgraduate",
+          "url": "https://www.bcu.ac.uk/student-info/how-to-apply/",
+          "type": "application_page",
+          "status": "active",
+          "note": "Application guidance for postgraduate programmes."
+        }
+      ]
+    },
+    "https://www.bcu.ac.uk/courses/architectural-technology-foundation-bsc-hons-2026-27": {
+      "page_type": "program_overview",
+      "program": "architectural-technology-foundation-bsc-hons",
+      "last_crawled": "2026-05-15T01:04:35",
+      "status": "extracted",
+      "extracted_fields": [
+        "name_de",
+        "name_en",
+        "name_cn",
+        "degree",
+        "degree_title",
+        "language",
+        "duration_years",
+        "duration_semesters",
+        "start_semester",
+        "status",
+        "url",
+        "department",
+        "faculty",
+        "city",
+        "campus",
+        "country",
+        "ranking",
+        "portfolio_required",
+        "application_portal",
+        "focus_areas",
+        "tags",
+        "tuition",
+        "entry_requirements",
+        "accreditation"
+      ],
+      "program_slug": "architectural-technology-foundation-bsc-hons"
+    },
+    "https://www.bcu.ac.uk/courses/interior-architecture-design-ba-hons-2026-27": {
+      "page_type": "program_overview",
+      "program": "interior-architecture-and-design-ba-hons",
+      "last_crawled": "2026-05-15T01:05:30",
+      "status": "success",
+      "extracted_fields": [
+        "name_de",
+        "name_en",
+        "name_cn",
+        "degree",
+        "degree_title",
+        "language",
+        "duration_years",
+        "duration_semesters",
+        "start_semester",
+        "status",
+        "url",
+        "url_en",
+        "department",
+        "department_url",
+        "faculty",
+        "city",
+        "campus",
+        "country",
+        "ranking",
+        "portfolio_required",
+        "portfolio_details",
+        "application_portal",
+        "application_portal_url",
+        "ucas_code",
+        "focus_areas",
+        "tags",
+        "overview",
+        "entry_requirements",
+        "fees",
+        "modules",
+        "career_perspectives",
+        "facilities",
+        "additional_costs",
+        "scholarship_info",
+        "professional_associations",
+        "placements",
+        "studio_activities",
+        "teaching_assessment",
+        "contact"
+      ],
+      "failed_fields": [
+        {
+          "field": "ucas_course_code",
+          "reason": "Specific UCAS course code not listed on page (only institution code B25 found)"
+        },
+        {
+          "field": "num_places",
+          "reason": "Number of places not listed"
+        },
+        {
+          "field": "application_deadlines",
+          "reason": "Specific deadlines not listed on course page"
+        }
+      ],
+      "supplementary_urls": [
+        "https://www.bcu.ac.uk/architecture-and-design",
+        "https://www.bcu.ac.uk/student-info/how-to-apply/portfolio-guidance/"
+      ]
+    },
+    "https://www.bcu.ac.uk/courses/interior-architecture-design-ba-hons-with-foundation-2026-27": {
+      "page_type": "program_overview",
+      "program": "interior-architecture-and-design-ba-hons-with-foundation",
+      "last_crawled": "2026-05-15T01:33:00",
+      "status": "success",
+      "extracted_fields": [
+        "name_de",
+        "name_en",
+        "name_cn",
+        "degree",
+        "degree_title",
+        "language",
+        "duration_years",
+        "duration_semesters",
+        "start_semester",
+        "status",
+        "url",
+        "url_en",
+        "department",
+        "department_url",
+        "faculty",
+        "city",
+        "campus",
+        "country",
+        "ranking",
+        "portfolio_required",
+        "portfolio_details",
+        "application_portal",
+        "application_portal_url",
+        "ucas_code",
+        "focus_areas",
+        "tags",
+        "curriculum_summary",
+        "modules",
+        "tuition",
+        "entry_requirements",
+        "language_requirements",
+        "career_perspectives",
+        "scholarship_info",
+        "facilities",
+        "additional_costs",
+        "teaching_assessment",
+        "professional_associations",
+        "placements",
+        "studio_activities",
+        "highlights"
+      ],
+      "failed_fields": [
+        {
+          "field": "contact.name",
+          "reason": "No specific contact person listed on course page"
+        },
+        {
+          "field": "contact.email",
+          "reason": "No direct course contact email found"
+        },
+        {
+          "field": "professors",
+          "reason": "No individual professor profiles linked from course page"
+        },
+        {
+          "field": "num_places",
+          "reason": "Number of places not listed"
+        }
+      ],
+      "supplementary_urls": [],
+      "discovered_subpages": [
+        {
+          "title": "School of Architecture and Design",
+          "url": "https://www.bcu.ac.uk/architecture-and-design",
+          "type": "department_page",
+          "status": "active"
+        }
+      ]
+    },
+    "https://www.bcu.ac.uk/courses/landscape-architecture-ba-hons-with-foundation-2026-27": {
+      "page_type": "program_overview",
+      "program": "landscape-architecture-ba-hons-with-foundation",
+      "last_crawled": "2026-05-15T01:39:00",
+      "status": "success",
+      "extracted_fields": [
+        "name_de",
+        "name_en",
+        "name_cn",
+        "degree",
+        "degree_title",
+        "language",
+        "duration_years",
+        "duration_semesters",
+        "start_semester",
+        "status",
+        "url",
+        "url_en",
+        "department",
+        "department_url",
+        "faculty",
+        "city",
+        "campus",
+        "country",
+        "ranking",
+        "course_leader",
+        "portfolio_required",
+        "portfolio_details",
+        "application_portal",
+        "focus_areas",
+        "tags",
+        "modules",
+        "tuition",
+        "accreditation",
+        "career_perspectives",
+        "facilities",
+        "additional_costs",
+        "entry_requirements",
+        "language_requirements"
+      ],
+      "failed_fields": [
+        {
+          "field": "application_portal_url",
+          "reason": "UCAS link not found on page"
+        },
+        {
+          "field": "ucas_code",
+          "reason": "UCAS code not listed on page"
+        },
+        {
+          "field": "num_places",
+          "reason": "Number of places not listed"
+        },
+        {
+          "field": "contact.email",
+          "reason": "No direct course contact email found"
+        }
+      ],
+      "supplementary_urls": [
+        "https://www.bcu.ac.uk/courses/landscape-architecture-ba-hons-2026-27"
+      ]
+    },
+    "https://www.bcu.ac.uk/courses/landscape-architecture-ba-hons-china-delivery-2026-27": {
+      "page_type": "program_overview",
+      "program": "landscape-architecture-ba-hons-china-delivery",
+      "last_crawled": "2026-05-15T01:47:00",
+      "status": "success",
+      "extracted_fields": [
+        "name_de",
+        "name_en",
+        "name_cn",
+        "degree",
+        "degree_title",
+        "language",
+        "duration_years",
+        "duration_semesters",
+        "start_semester",
+        "status",
+        "url",
+        "url_en",
+        "department",
+        "department_url",
+        "faculty",
+        "city",
+        "campus",
+        "country",
+        "focus_areas",
+        "tags",
+        "delivery_mode",
+        "joint_partner",
+        "joint_institute",
+        "joint_institute_url"
+      ],
+      "failed_fields": [
+        {
+          "field": "course_leader",
+          "reason": "No specific course leader listed on China Delivery page"
+        },
+        {
+          "field": "tuition.amount",
+          "reason": "Fees listed as TBC on page"
+        },
+        {
+          "field": "ucas_code",
+          "reason": "Not applicable for China Delivery variant"
+        },
+        {
+          "field": "professors",
+          "reason": "No individual professor profiles linked from China Delivery page"
+        },
+        {
+          "field": "num_places",
+          "reason": "Number of places not listed"
+        }
+      ],
+      "discovered_subpages": [
+        {
+          "title": "BIFCA Information",
+          "url": "https://www.bcu.ac.uk/international/bifca",
+          "type": "joint_institute_page",
+          "status": "active",
+          "note": "Birmingham Institute of Fashion and Creative Art partnership page with WTU."
+        },
+        {
+          "title": "Landscape Architecture BA (Hons) UK Delivery",
+          "url": "https://www.bcu.ac.uk/courses/landscape-architecture-ba-hons-2026-27",
+          "type": "related_program",
+          "status": "active",
+          "note": "UK-only delivery variant of the same programme."
+        }
+      ]
+    },
+    "https://www.bcu.ac.uk/courses/art-and-design-with-creative-technologies-ba-hons-2026-27": {
+      "status": "extracted",
+      "slug": "art-and-design-with-creative-technologies-ba-hons",
+      "page_type": "program_overview",
+      "extracted_at": "2026-05-15T01:55:00",
+      "files": [
+        "programs/art-and-design-with-creative-technologies-ba-hons/tags.yaml",
+        "programs/art-and-design-with-creative-technologies-ba-hons/_index_EN.md",
+        "programs/art-and-design-with-creative-technologies-ba-hons/_index_ZH.md"
+      ],
+      "extracted_fields": [
+        "name_de",
+        "name_en",
+        "name_cn",
+        "degree",
+        "degree_title",
+        "language",
+        "duration_years",
+        "duration_semesters",
+        "start_semester",
+        "url",
+        "department",
+        "faculty",
+        "city",
+        "campus",
+        "country",
+        "focus_areas",
+        "tags",
+        "entry_requirements",
+        "course_structure",
+        "tuition",
+        "career_prospects",
+        "facilities",
+        "scholarships"
+      ]
+    },
+    "https://www.bcu.ac.uk/courses/entertainment-design-ba-hons-2026-27": {
+      "status": "success",
+      "program": "entertainment-design-ba-hons",
+      "page_type": "program_overview",
+      "last_crawled": "2026-05-15T02:11:00",
+      "extracted_fields": [
+        "name",
+        "degree",
+        "duration_semesters",
+        "credits",
+        "start_semester",
+        "url",
+        "department",
+        "city",
+        "country",
+        "focus_areas",
+        "admission_requirements",
+        "language_requirements",
+        "portfolio_required",
+        "portfolio_details",
+        "application_process",
+        "application_portal",
+        "curriculum_summary",
+        "tuition",
+        "scholarship_info",
+        "contact",
+        "professors",
+        "career_perspectives",
+        "tags"
+      ]
+    },
+    "https://www.bcu.ac.uk/courses/fashion-business-promotion-ba-hons-2026-27": {
+      "program": "fashion-business-and-promotion-ba-hons",
+      "status": "extracted",
+      "last_crawled": "2026-05-15",
+      "pages": {
+        "overview": {
+          "url": "https://www.bcu.ac.uk/courses/fashion-business-promotion-ba-hons-2026-27",
+          "status": "success",
+          "type": "program_overview"
+        }
+      }
+    },
+    "https://www.bcu.ac.uk/courses/acting-ba-hons-2026-27": {
+      "status": "success",
+      "last_crawled": "2026-05-15T03:12:46.252351",
+      "slug": "acting-ba-hons",
+      "program_dir": "programs/acting-ba-hons"
+    },
+    "https://www.bcu.ac.uk/courses/art-and-design-ba-hons-foundation-2026-27": {
+      "status": "extracted",
+      "program_slug": "art-and-design-ba-hons-foundation",
+      "extracted_at": "2026-05-15T03:13:00+08:00",
+      "files": [
+        "programs/art-and-design-ba-hons-foundation/tags.yaml",
+        "programs/art-and-design-ba-hons-foundation/_index_EN.md",
+        "programs/art-and-design-ba-hons-foundation/_index_ZH.md"
+      ]
+    },
+    "https://www.bcu.ac.uk/courses/media-production-ma-2026-27": {
+      "page_type": "program_overview",
+      "program": "media-production-ma",
+      "last_crawled": "2026-05-15T03:41:00+08:00",
+      "status": "success",
+      "extracted_fields": [
+        "name",
+        "slug",
+        "award",
+        "level",
+        "duration",
+        "start_date",
+        "mode",
+        "campus",
+        "school",
+        "fees_2026",
+        "ielts",
+        "entry_requirements",
+        "tags",
+        "modules",
+        "employability",
+        "facilities",
+        "staff"
+      ],
+      "failed_fields": []
+    },
+    "https://www.bcu.ac.uk/courses/acting-mfa-2026-27": {
+      "page_type": "program_overview",
+      "program": "acting-mfa",
+      "last_crawled": "2026-05-15T03:57:30",
+      "status": "success",
+      "extracted_fields": [
+        "name_en",
+        "name_cn",
+        "name_de",
+        "degree",
+        "degree_title",
+        "language",
+        "duration_semesters",
+        "credits",
+        "credits_system",
+        "start_semester",
+        "url",
+        "url_en",
+        "department",
+        "faculty_url",
+        "city",
+        "state",
+        "country",
+        "focus_areas",
+        "admission_requirements",
+        "language_requirements",
+        "portfolio_required",
+        "application_process",
+        "application_portal",
+        "application_portal_url",
+        "application_deadlines",
+        "curriculum_summary",
+        "tuition",
+        "scholarship_info",
+        "career_perspectives",
+        "tags",
+        "study_mode",
+        "campus"
+      ],
+      "failed_fields": [
+        {
+          "field": "ucas_code",
+          "reason": "UCAS code not listed for postgraduate course"
+        },
+        {
+          "field": "contact.name",
+          "reason": "No specific contact person listed on page"
+        },
+        {
+          "field": "contact.email",
+          "reason": "No direct course contact email found"
+        },
+        {
+          "field": "contact.phone",
+          "reason": "No direct course phone number found"
+        },
+        {
+          "field": "professors",
+          "reason": "Only course leader listed, no full professor profiles"
+        },
+        {
+          "field": "num_places",
+          "reason": "Number of places not specified"
+        },
+        {
+          "field": "accreditation",
+          "reason": "No specific professional accreditation mentioned"
+        }
+      ],
+      "supplementary_urls": [
+        "https://www.bcu.ac.uk/courses/acting-mfa-2027-28"
+      ]
+    },
+    "https://www.bcu.ac.uk/courses/acting-pgdip-ma-2026-27": {
+      "page_type": "program_overview",
+      "program": "acting-pgdip-ma",
+      "last_crawled": "2026-05-15T04:00:00",
+      "status": "success",
+      "extracted_fields": [
+        "name_de",
+        "name_en",
+        "name_cn",
+        "degree",
+        "degree_title",
+        "language",
+        "duration_semesters",
+        "credits",
+        "credits_system",
+        "start_semester",
+        "url",
+        "url_en",
+        "department",
+        "faculty_url",
+        "city",
+        "state",
+        "country",
+        "focus_areas",
+        "admission_requirements",
+        "language_requirements",
+        "portfolio_required",
+        "portfolio_details",
+        "application_process",
+        "application_portal",
+        "application_portal_url",
+        "application_deadlines",
+        "curriculum_summary",
+        "tuition",
+        "scholarship_info",
+        "contact",
+        "career_perspectives",
+        "professors"
+      ],
+      "files_created": [
+        "programs/acting-pgdip-ma/_index_EN.md",
+        "programs/acting-pgdip-ma/_index_ZH.md"
+      ]
+    },
+    "https://www.bcu.ac.uk/courses/luxury-brand-management-ma-2026-27": {
+      "page_type": "program_overview",
+      "program": "luxury-brand-management-ma",
+      "last_crawled": "2026-05-15T04:10:30",
+      "status": "success",
+      "extracted_fields": [
+        "name_en",
+        "name_cn",
+        "degree",
+        "duration",
+        "start",
+        "campus",
+        "entry_requirements",
+        "language_requirements",
+        "tuition",
+        "curriculum_summary",
+        "career_perspectives",
+        "study_mode",
+        "credits",
+        "professional_placement"
+      ],
+      "failed_fields": [
+        {
+          "field": "ucas_code",
+          "reason": "No UCAS code found on page (postgraduate course)"
+        },
+        {
+          "field": "contact.email",
+          "reason": "No direct course contact email found"
+        }
+      ]
+    },
+    "https://www.bcu.ac.uk/courses/conservation-of-the-historic-environment-ma-pgdip-2026-27": {
+      "page_type": "program_overview",
+      "program": "conservation-of-the-historic-environment-ma",
+      "last_crawled": "2026-05-15T04:11:30",
+      "status": "success",
+      "extracted_fields": [
+        "name_en",
+        "name_cn",
+        "degree",
+        "degree_title",
+        "language",
+        "duration_semesters",
+        "duration_years",
+        "credits",
+        "credits_system",
+        "start_semester",
+        "url",
+        "url_en",
+        "department",
+        "faculty_url",
+        "campus",
+        "city",
+        "country",
+        "focus_areas",
+        "admission_requirements",
+        "language_requirements",
+        "curriculum_summary",
+        "modules",
+        "study_mode",
+        "career_perspectives",
+        "tags",
+        "facilities"
+      ],
+      "failed_fields": [
+        {
+          "field": "contact.name",
+          "reason": "No specific contact person listed on course page"
+        },
+        {
+          "field": "contact.email",
+          "reason": "No direct course contact email found"
+        },
+        {
+          "field": "contact.phone",
+          "reason": "No direct course phone number found"
+        },
+        {
+          "field": "professors",
+          "reason": "No individual professor profiles linked from course page"
+        },
+        {
+          "field": "num_places",
+          "reason": "Number of places not listed"
+        },
+        {
+          "field": "tuition",
+          "reason": "Part-time fees not published on course page - require direct enquiry"
+        },
+        {
+          "field": "ucas_code",
+          "reason": "No UCAS code found for this postgraduate programme"
+        }
+      ],
+      "supplementary_urls": [
+        "https://www.bcu.ac.uk/about-us/schools/birmingham-school-of-architecture-and-design"
+      ]
+    },
+    "https://www.bcu.ac.uk/courses/fashion-management-ma-2026-27": {
+      "page_type": "program_overview",
+      "program": "fashion-management-ma",
+      "last_crawled": "2026-05-15T05:05:00",
+      "status": "success",
+      "extracted_fields": [
+        "name_en",
+        "name_cn",
+        "degree",
+        "degree_title",
+        "language",
+        "duration_semesters",
+        "credits",
+        "credits_system",
+        "start_semester",
+        "url",
+        "url_en",
+        "department",
+        "faculty_url",
+        "city",
+        "state",
+        "country",
+        "focus_areas",
+        "admission_requirements",
+        "tuition_fees",
+        "modules",
+        "career_prospects",
+        "program_overview"
+      ],
+      "files_generated": [
+        "programs/fashion-management-ma/_index_EN.md",
+        "programs/fashion-management-ma/_index_ZH.md",
+        "programs/fashion-management-ma/tags.yaml"
+      ]
+    }
+  },
+  "newly_discovered_subpages": [
+    {
+      "title": "Fashion and Textiles Subject Area",
+      "url": "https://www.bcu.ac.uk/subject-areas/fashion-and-textiles",
+      "type": "department_page",
+      "status": "active",
+      "note": "Discovered from Textile Design BA (Hons) page. Parent subject area listing all Fashion and Textiles programmes."
+    },
+    {
+      "title": "BCU Accelerate Scholarship 2026",
+      "url": "https://www.bcu.ac.uk/student-info/finance/financial-support/scholarships/accelerate-2026",
+      "type": "scholarship_page",
+      "status": "active",
+      "note": "Discovered from Textile Design BA (Hons) page. Accelerate scholarship offering reduced entry (80 UCAS points) and financial support."
+    },
+    {
+      "title": "Art and Design with Creative Technologies BA (Hons) - 2026/27",
+      "url": "https://www.bcu.ac.uk/courses/art-and-design-with-creative-technologies-ba-hons-2026-27",
+      "type": "program_overview",
+      "status": "active",
+      "note": "Effective replacement page for the original Art and Design BA (Hons). Listed as site_map entry #12. Not yet extracted as a separate programme."
+    },
+    {
+      "title": "Art and Design Foundation Year BA (Hons)",
+      "url": "https://www.bcu.ac.uk/courses/art-and-design-foundation-year-ba-hons-2026-27",
+      "type": "program_overview",
+      "status": "active",
+      "note": "Foundation Year variant (4-year route). Listed as site_map entry #13. Not yet extracted."
+    },
+    {
+      "url": "https://www.bcu.ac.uk/courses/game-design-ba-hons-2026-27",
+      "title": "Game Design BA (Hons)",
+      "type": "program_overview",
+      "discovered_from": "manual_search",
+      "note": "New program not previously in site_map. Discovered via URL pattern matching."
+    },
+    {
+      "url": "https://www.bcu.ac.uk/courses/sound-engineering-bsc-hons-2026-27",
+      "title": "Sound Engineering BSc (Hons)",
+      "type": "program_overview",
+      "discovered_from": "site_map",
+      "note": "Listed in site_map as entry #37 under Sound Engineering & Music Technology section. Extracted on 2026-05-12."
+    },
+    {
+      "url": "https://www.bcu.ac.uk/courses/graphic-communication-ma-2026-27",
+      "title": "Graphic Communication MA",
+      "type": "program_overview",
+      "discovered_from": "visual-communication-ma",
+      "note": "Site_map entry #50. Related postgraduate programme in Graphic Communication. Not yet extracted."
+    }
+  ],
+  "urls_pending_extraction": {
+    "https://www.bcu.ac.uk/courses/architecture-ba-hons-with-foundation-2026-27": {
+      "status": "now_extracted",
+      "program_slug": "architecture-ba-hons-with-foundation",
+      "extracted_at": "2026-05-15T00:45:00+08:00"
+    },
+    "https://www.bcu.ac.uk/courses/architecture-ba-hons-2026-27": {
+      "status": "now_extracted",
+      "program_slug": "architecture-ba-hons",
+      "extracted_at": "2026-05-15T01:25:00+08:00"
+    }
+  },
+  "crawl_notes": [
+    "[2026-05-15T01:25:00] Extracted Architecture BA (Hons) from site_map UG #1. This program had been previously extracted on 2026-05-12 by site-explorer with excellent data quality. Smart-extractor validated all 3 files: _index_EN.md (216 lines, comprehensive frontmatter and content), _index_ZH.md (216 lines, complete Chinese translation), tags.yaml (enhanced from 3 to 5 tags: added 城市设计/Urban Design and 景观设计/Landscape Design). Key facts: RIBA Part 1 + ARB, UCAS K100, 136 tariff (AAB), 3-year FT, £9,790 UK / £18,570 International per year. Portfolio required. 100% coursework. 2-week placement in PRAXIS module. No re-extraction needed — existing data confirmed current and accurate.",
+    "[2026-05-15T00:45:00] Extracted Architecture with Foundation Year BA (Hons) from site_map UG #2. 4-year FT programme (foundation + 3 years BA Architecture). 480 UK credits total (120 per year). RIBA Part 1 validated, ARB prescribed. Fees: UK £9,790/yr, International £18,570/yr. Portfolio NOT required. Application via UCAS. Progression requires 60% in final foundation project. Foundation year introduces: drawing, spatial design, model-making, digital skills, architecture context. Years 1-3 follow standard BA Architecture curriculum (Principles, Process, Identity themes). 100% coursework assessment. Parkside Building (£62m), City Centre Campus. Taught alongside BA Architecture students after foundation year. BCU course page fetched via Jina — module names for foundation year inferred from course description (JS-rendered). BA year modules from standard Architecture BA structure. 3 files created: _index_EN.md, _index_ZH.md, tags.yaml. Data quality: high.",
+    "The original 'Art and Design BA (Hons)' URL for 2026-27 returns 404. The course has been renamed to 'Art and Design with Creative Technologies BA (Hons)', adding coding and digital fabrication modules. Data was extracted from the effective replacement page. Textile Design BA (Hons) (#24) extracted successfully on 2026-05-12. Site_map notes that 'Surface Pattern and Textile Design BA (Hons)' has been merged into Textile Design BA (Hons). The renamed course (#12) is a separate site_map entry and should be extracted independently. The Foundation Year variant (#13) is also unextracted. Digital Animation BA (Hons) (#14, formerly 'Animation BA (Hons)') extracted on 2026-05-12 with full curriculum, entry requirements, and career data. UCAS code not displayed on page — needs verification. Staff info unavailable from course page.",
+    "[2026-05-12T03:05:00] Extracted Game Design BA (Hons) — new course for 2026/27 not in original site_map. Module names require manual verification (JS-loaded). IELTS/IB requirements inferred from similar BCU Games programmes.",
+    "[2026-05-12T03:33:00] Extracted Sound Engineering BSc (Hons) from site_map entry #37. UCAS code 1263 confirmed via The Uni Guide. UCAS Tariff 112 points confirmed. Module names inferred from course description topics (JS-loaded). Student demographics and satisfaction from HESA/NSS via The Uni Guide. IELTS/IB requirements inferred from similar BCU Computing programmes — require confirmation.",
+    "[2026-05-12T03:48:00] Extracted Visual Communication MA from site_map entry #49. Full curriculum with 4 core modules (160 credits) and 3 optional modules (20 credits each). Two specialist pathways: Graphic Communication and Illustration. Fees verified: UK £9,510/yr, International £18,970/yr. Optional Professional Placement route (18 months total). Staff profiles: Andrew Kulman, Matt Tromans, Naomi Kent, Becky Howson, Robert Gibb. Notable alumni: Samuel Ojo (2024, The Guardian), Diane Maybey (Birmingham Children Hospital). UCAS code not applicable (postgraduate direct application).",
+    "[2026-05-12T04:21:00] Extracted Fashion Communication BA (Hons) from site_map Fashion section. Full 3-year curriculum extracted: Year 1 (5 core modules, 120 credits), Year 2 (3 core + 3 optional, 120 credits), Year 3 (4 core modules, 120 credits). Fees: UK £9,790/yr, International £18,570/yr. UCAS tariff 112 points. Optional Professional Placement Year (4-year route). Staff: Adam Guy (Course Leader), Helen Grainger, Adam Francis. Industry links: Vogue New Talent, Graduate Fashion Week, New Balance, Size?, Lounge Underwear. Athena SWAN Bronze Award. Foundation year variant available. Note: The user requested Fashion and Textile Design BA (Hons) but this programme does not exist at BCU; Fashion Communication BA (Hons) was the next unextracted programme in site_map order.",
+    "[2026-05-12T04:35:00] Extracted Design Management MA from site_map entry #45. Full curriculum with 6 core modules (180 CATS). Course codes: PT1311 (FT), PT1312 (PT), PT1313 (WBL). No portfolio required — open to all disciplines. Assessment: 60% coursework, 40% in-person, 0% exam. Module details from official BCU course specification PDF. Fees NOT confirmed — BCU course page is JS-rendered and fee content not accessible. Comparable BCU MA programs: UK ~£9,500-10,000/yr, International ~£17,000-19,000/yr. Multiple study modes: FT, PT, WBL, January start, Professional Placement route (18 months). 8 subpages discovered.",
+    "[2026-05-12T04:45:00] Extracted Design and Visualisation MA from site_map entry #46. Full curriculum with 5 core modules (180 CATS): Design Visualisation (20cr), Design Realisation (40cr, Product/Interior option), Competition or Collaboration (40cr, Product/Interior option), Co.LAB (20cr), Major Project (60cr). Module codes: ARC7454, ARC7453, ARC7455, ARC7459, ADM7000. School: Birmingham School of Architecture and Design (identified by ARC module codes). BCU course page JS-rendered — data sourced from official BCU Course Guide PDF (2017-18) confirmed current by UniScholars. 2026/27 description updated with AI focus. Fees estimated: UK £9,510/yr, International £18,970/yr (based on BCU standard MA fee structure). No Professional Placement variant (returns 404). Course Director: Dr Panch Suntharalingam (from 2017-18 guide — may have changed). Portfolio required. IELTS 6.0 (no band below 5.5), TOEFL 80. 6 subpages discovered.",
+    "[2026-05-12T04:51:00] Extracted Fine Art MA from site_map entry #47. Full curriculum with 4 core modules (160 credits) and 3 optional modules (20 credits each). Core: Studio Practice (40cr), Research Through Practice (20cr), Advanced Studio Practice and Dissemination (40cr), Professional Project (60cr). Optional: Work Placement, Industry Project, Independent Creative Entrepreneur. Optional Professional Placement route (60cr, Level 6, extends to 2 years FT). School: School of Art. Campus: Margaret Street (Grade I listed Birmingham School of Art, £5.5m refurbishment). Fees: UK £9,510/yr, International £18,970/yr. Staff: Mona Casey (Course Leader), Esther Windsor, Professor Becky Shaw, Franziska Schenk. Employer links: Ikon Gallery, De Montfort University, Paramount Pictures. Gallery connections: Ikon, Eastside Projects, Grand Union, BMAG, Tate, Venice Biennale. Alumni include Betsy Bradley, Roo Dhissou. 12 subpages discovered. Application deadline: Friday 17 July 2026.",
+    "[2026-05-12T05:04:00] Extracted Fashion and Textile Design MA from site_map Fashion section. Two specialist routes confirmed: Fashion Design and Textile Design. Three-term progressive structure (core design thinking -> industry briefs -> runway/exhibition). Portfolio required (creative digital portfolio). Fees: UK 10,350 GBP/yr, International 18,970 GBP/yr (consistent with BCU School of Fashion and Textiles MA programmes). IELTS 6.0 (no band below 5.5) inferred from BCU standard PG requirement. BCU course page is JS-rendered; data sourced from official BCU page via Jina reader, verified against IDP, Complete University Guide, and Postgraduate Search. No Professional Placement variant found (unlike Fashion Communication MA). No part-time option mentioned. Specific module names not listed on page; curriculum described by term and specialism. 7 subpages discovered.",
+    "[2026-05-12T05:25:00] Extracted Horology BA (Hons) from site_map entry #30 (School of Jewellery section). Full 3-year curriculum extracted with module codes from BCU Course Specification PDF (US0634F). Year 1: HOR4010 Introduction to Horology (20cr), HOR4011 Production Techniques (40cr), HOR4012 Specialist Horological Skills (40cr) + optional 20cr. Year 2: HOR5012 Commercial Servicing Skills (40cr), HOR5013 Advanced Production Techniques (40cr) + optional 40cr. Year 3: HOR6009 Major Project: Horology (60cr), HOR6008 Employment Skills (60cr). UCAS code W723, institution B25. Fees: UK £9,790/yr, International £18,970/yr. Entry: 112 UCAS tariff (BBC), GCSE English/Maths Grade 4+, portfolio, interview. IELTS 6.0. Industry partnerships: Richemont (Cartier, IWC, Panerai, Piaget, Jaeger-LeCoultre, Montblanc), LVMH (Tag Heuer, Zenith, Bulgari, Hublot), Christopher Ward. George Daniels Educational Trust bursary up to £1,900. British Horological Institute accreditation. Notable employers: Cartier, Rolex, Tag Heuer, Bremont, British Museum. Note: Jewellery and Silversmithing BA (#27) and Gemmology BSc (#29) both returned 404 - may be discontinued. Data quality: high. 4 subpages discovered.",
+    "[2026-05-15T06:07:49.632124] Fashion Business and Promotion with Foundation Year BA (Hons) — 404 DEAD LINK, course may be discontinued",
+    "[2026-05-15T06:07:49.632124] Gemmology and Jewellery Studies BSc (Hons) — 404 DEAD LINK, course may be discontinued",
+    "[2026-05-15T06:07:49.632124] Graphic Design with Foundation Year — REDIRECTS to generic Art and Design Foundation Year page (already extracted as art-and-design-ba-hons-foundation)",
+    "[2026-05-15T06:07:49.632124] Photography with Foundation Year — REDIRECTS to generic Art and Design Foundation Year page (already extracted as art-and-design-ba-hons-foundation)",
+    "[2026-05-15T06:07:49.632124] Product Design with Foundation Year — REDIRECTS to generic Art and Design Foundation Year page (already extracted as art-and-design-ba-hons-foundation)",
+    "[2026-05-15T06:07:49.632124] Landscape Architecture MLA — REDIRECTS to generic courses listing page, no specific course page found"
+  ],
+  "extraction_history": [
+    {
+      "program_slug": "digital-film-production-bsc-hons",
+      "program_title": "Digital Film Production BSc (Hons)",
+      "url": "https://www.bcu.ac.uk/courses/digital-film-production-bsc-hons-2026-27",
+      "status": "extracted",
+      "extracted_at": "2026-05-12T05:30:00+08:00"
+    },
+    {
+      "program_slug": "film-and-screenwriting-ba-hons",
+      "program_title": "Film and Screenwriting BA (Hons)",
+      "url": "https://www.bcu.ac.uk/courses/film-and-screenwriting-ba-hons-2026-27",
+      "status": "extracted",
+      "extracted_at": "2026-05-12T05:36:00+08:00"
+    },
+    {
+      "program_slug": "game-programming-bsc-hons",
+      "program_title": "Game Programming BSc (Hons)",
+      "url": "https://www.bcu.ac.uk/courses/game-programming-bsc-hons-2026-27",
+      "status": "extracted",
+      "extracted_at": "2026-05-12T05:55:00+08:00"
+    },
+    {
+      "program_slug": "design-active-practice-ma",
+      "program_title": "Design: Active Practice MA",
+      "url": "https://www.bcu.ac.uk/courses/active-practice-ma-2026-27",
+      "status": "extracted",
+      "extracted_at": "2026-05-12T06:06:00+08:00"
+    },
+    {
+      "program_slug": "photography-ma",
+      "program_title": "Photography MA",
+      "url": "https://www.bcu.ac.uk/courses/photography-ma-2026-27",
+      "status": "dead_link_404",
+      "extracted_at": "2026-05-12T06:13:00+08:00"
+    },
+    {
+      "program_slug": "future-media-ma",
+      "program_title": "Future Media MA",
+      "url": "https://www.bcu.ac.uk/courses/future-media-ma-2026-27",
+      "status": "extracted",
+      "extracted_at": "2026-05-12T06:17:00+08:00"
+    },
+    {
+      "program_slug": "user-experience-design-msc",
+      "program_title": "User Experience Design MSc",
+      "url": "https://www.bcu.ac.uk/courses/user-experience-design-msc-2026-27",
+      "status": "extracted",
+      "extracted_at": "2026-05-12T06:31:00+08:00"
+    },
+    {
+      "program_slug": "architecture-ba-hons-with-foundation",
+      "program_title": "Architecture with Foundation Year BA (Hons)",
+      "url": "https://www.bcu.ac.uk/courses/architecture-ba-hons-with-foundation-2026-27",
+      "status": "extracted",
+      "extracted_at": "2026-05-15T00:45:00+08:00"
+    },
+    {
+      "program_slug": "architecture-ba-hons",
+      "program_title": "Architecture BA (Hons)",
+      "url": "https://www.bcu.ac.uk/courses/architecture-ba-hons-2026-27",
+      "status": "extracted",
+      "extracted_at": "2026-05-15T01:25:00+08:00"
+    }
+  ],
+  "extraction_logs": [
+    "[2026-05-12T05:36:00] Extracted Film and Screenwriting BA (Hons) from site_map entry #33. Full 3-year curriculum extracted with module codes from BCU Course Specification PDF (US0899). Year 1 (Level 4): 5 core modules (120 CATS). Year 2 (Level 5): 3 core (80cr) + 3 optional (pick 40cr). Year 3 (Level 6): 2 core (80cr) + 3 optional (pick 40cr). UCAS code P3W8, institution B25. Course Director: Andy Conway. Fees: UK ~9,790/yr, International ~18,570/yr. Entry: 112 UCAS tariff, IELTS 6.0. BFI partnership. Guardian Top 10. 8 subpages discovered.",
+    "[2026-05-12T05:55:00] Extracted Game Programming BSc (Hons) from site_map entry #35 (School of Games, Film and Animation). 3-year BSc with TIGA accreditation. UCAS code 1257, institution B25. Year 1 (Level 4): Game Programming, Modelling, Game Asset Pipeline + 3 inferred modules (120 CATS). Year 2 (Level 5): High Performance Libraries, Game Engine Architecture, Web and Mobile Game Development, Computer Graphics + 2 inferred modules (120 CATS). Year 3 (Level 6): Game Artificial Intelligence, Console Game Development, Individual Honours Project (40cr) + 2 inferred modules (120 CATS). Fees: UK £9,790/yr, International £18,570/yr. Entry: 112 UCAS tariff (BBC), IELTS 6.0. No portfolio required. Optional professional placement year. Unity Academic Alliance, Unreal Academic Partnership. Ranked Top 5 UK for Animation and Games Design (Guardian 2024). BCU course page JS-rendered — module names partially inferred from course description. Data sourced from BCU 2025-26, 2026-27 and Foundation Year pages via Jina reader. 14 subpages discovered.",
+    "[2026-05-12T06:06:00] Extracted Design: Active Practice MA from site_map entry #48. Postgraduate course at Birmingham School of Art, Margaret Street (Grade I listed building). Full/Part-time MA with optional 20-week Professional Placement (18 months total). Fees: UK £9,510/yr FT, International £18,970/yr FT, UK £10,460 with placement, International £20,865 with placement. PT: £1,057 per 20 credits (UK), Year 1-80cr, Year 2-100cr. Entry: 2:2 honours degree in Art and Design/Fine Art/Arts-based degree + portfolio. IELTS 6.0 (inferred, no band below 5.5). Key themes: Design Cultures, Connections, Challenges. Social change focus. Interdisciplinary approach blending research and practice. BCU course page is JS-rendered — module details not fully accessible (accordion content). Themes documented from course description. Tags: 可持续设计, 集成设计, 设计战略. Notable alumni projects: Saira Afzal (UN SDG educational game, global competition winner), Deborah De Canio (Zoetrope business, Take That client). 5 subpages discovered. Data quality: high (module details partial).",
+    "[2026-05-12T06:13:00] Photography MA (site_map #51) — DEAD LINK. URL https://www.bcu.ac.uk/courses/photography-ma-2026-27 returns 404. Verified all variants (2024-25, 2025-26, 2026-27) — all 404. Web search confirms no standalone Photography MA exists at BCU. Photography is a specialization area within Visual Communication MA (entry #49, already extracted as visual-communication-ma). Site_map entry #51 updated with dead link marker. No data extracted — this entry should be treated as discontinued/merged into Visual Communication MA.",
+    "[2026-05-12T06:17:00] Extracted Future Media MA from site_map entry #55. 1-year full-time MA at School of Media, Faculty of Arts, Design and Media. Campus: City Centre Campus (Parkside Building). Programme running since 2012 with proven industry links. MA pathway focuses on strategic/creative roles: client account handling, creative direction, brand development, copywriting, content creation, web analytics, social media monitoring. Fees: International £16,870/yr, UK estimated £9,510/yr. Entry: 2:2 honours degree, IELTS 6.0 (no band below 5.5), 700-1000 word personal statement. No portfolio required. Birmingham Agency Week in semester 1. Small class sizes (~20). Real-world industry briefs throughout. 3-month self-directed Major Project as final assessment. Career paths: Account Manager, Brand Strategist, Creative Producer, Content Curator, Digital Marketing Executive. Data sourced from BCU official page + cross-verified with UniScholars and GyanDhan. Module names reconstructed from MA pathway learning outcomes — exact titles/credits may differ. Staff profiles not available on course page. Data quality: high. 5 subpages discovered.",
+    "[2026-05-12T06:31:00] Extracted User Experience Design MSc - conversion course in UX Design at School of Computing and Digital Technology. 1-year FT (180 CATS, Level 7). Course code PT1271. Start: Sep 2026, Jan 2027. Campus: City Centre (Curzon Building). 7 modules: 6 core taught (20cr each) + Individual Master Project (60cr). Module codes from BCU Course Specification PT1271. Optional Professional Placement year. Exit awards: PG Dip (120cr), PG Cert (60cr). Fees: UK 9,710/yr, International 17,710/yr. Entry: 2:2 degree (any discipline), IELTS 6.0. Not listed in original site_map - discovered via web search. Cross-verified with postgraduatesearch.com, universitycompare.com. 7 subpages discovered. Data quality: high.",
+    "[2026-05-12T06:40:00] Extracted Arts and Education Practices MA from site_map entry #57 (Birmingham School of Art). 180 CATS MA (Level 7) — the only Arts Education MA in the UK based in a School of Art. 4 core modules (160cr): ART7906 Narratives (40cr), ART7902 Research in Practice (20cr), ART7868 Global Innovations (40cr), ADM7912 Major Project (60cr). 11 optional modules (choose 20cr). Optional Professional Placement (PLA6003, 60cr). Exit awards: PG Cert/Dip/MA. Fees: UK £9,510/yr FT, International £18,970/yr FT, UK £10,460 with placement, International £20,865 with placement. Entry: 2:2 honours degree + portfolio. IELTS 6.0 (inferred from faculty standard). Critical pedagogy approach. Partnerships: Ikon Gallery, Eastside Projects, STEAMhouse, Turves Green School. Alumni in 20+ countries. Module codes from BCU Course Specification PT1149 (PDF). Staff names not available from static page (JS-rendered). 7 subpages discovered. Data quality: high.",
+    "[2026-05-12T06:49:00] Extracted MA in Creative Writing from site_map entry #58. Postgraduate MA at School of English, Faculty of Arts, Design and Media. Delivered through the Institute of Creative and Critical Writing (ICCW). 180 CATS (Level 7), all-core module structure with no optional modules: Reading into Writing (20cr), Specialist Workshops (40cr), The Writers Craft (40cr), Literature in Practice (20cr), Major Project: Creative Writing (60cr, EGL7230). Exit awards: PG Cert/Dip/MA. Fees: UK 9510/yr FT, International 18970/yr FT (estimated based on BCU MA fee structure). Entry: 2:2 honours degree + creative writing portfolio (max 10 pages) + interview. IELTS 7.0 (7.0 writing, 6.5 others). Course specification PT1094 (PDF, 2025-26 edition). Module codes partially available (some listed as EGL7xxx). BCU course page is JS-rendered. 5 subpages discovered. Data quality: high."
+  ],
+  "extraction_log": [
+    "[2026-05-15T01:04:35] Extracted Architectural Technology with Foundation Year BSc (Hons) - 4-year FT programme at School of Architecture and the Built Environment. CIAT and CIOB accredited. Foundation Year + 3 years BSc (120 credits per year). Fees: UK 9790/yr, International 18570/yr. Start: Sep 2026. City Centre Campus (Millennium Point), Birmingham. Data quality: high.",
+    "[2026-05-15T01:05:30] Extracted Interior Architecture and Design BA (Hons) - 3-year FT programme (4 with sandwich) at School of Architecture and Design. Member of Interior Educators (IE). 120 UCAS points standard offer. Portfolio required. Fees: UK 9790/yr, International 18570/yr. Start: Sep 2026. City Centre Campus (Parkside), Birmingham. Year 1: 5 core modules (120cr). Year 2: 3 core (100cr) + 1 optional (20cr). Year 3: 3 core modules (120cr) including Major Project (60cr). Data quality: high.",
+    "[2026-05-15T01:25:00] Extracted Architecture BA (Hons) from site_map UG #1. RIBA Part 1 validated, ARB prescribed. 3-year FT, 360 UK credits (120/yr). UCAS code K100, tariff 136 (AAB). Course Leader: Max Olof Karlsson Wisotsky. Three progressive themes: Principles (Year 1), Process (Year 2), Identity (Year 3). 100% coursework. 2-week assessed placement in Year 2 PRAXIS module. Optional professional placement year. Fees: UK £9,790/yr, International £18,570/yr. Portfolio required. IELTS 6.0 (no band below 5.5). Parkside Building, City Centre Campus. Data previously extracted on 2026-05-12 — validated and confirmed current. Tags enhanced: added 城市设计 and 景观设计. 3 files validated: _index_EN.md (216 lines), _index_ZH.md (216 lines), tags.yaml (5 tags). Data quality: excellent.",
+    "[2026-05-15T01:33:00] Extracted Interior Architecture and Design with Foundation Year BA (Hons) - 4-year FT programme (including foundation year) at School of Architecture and Design. Member of Interior Educators (IE). Foundation Year + 3 years BA (120 credits per year). No portfolio required for foundation entry. Fees: UK £9,790/yr, International £18,570/yr. Start: Sep 2026. City Centre Campus (Parkside), Birmingham. Year 0: Foundation studies (7 areas). Year 1: 5 core modules (120cr). Year 2: 3 core (100cr) + 1 optional (20cr). Year 3: 3 core modules (120cr) including Major Project (60cr). Data quality: high.",
+    "[2026-05-15T01:39:00] Extracted Landscape Architecture with Foundation Year BA (Hons) from site_map UG #8. 4-year FT programme (including foundation year) at School of Architecture, Faculty of Arts, Design and Media. Landscape Institute (LI) accredited. Foundation Year + 3 years BA (120 credits per year). No portfolio required for foundation entry. Fees: UK £9,790/yr, International £18,570/yr. Start: Sep 2026. Course Leader: Eccles Ng. City Centre Campus (Parkside), Birmingham. Year 0: Foundation studies (8 areas). Year 1: 5 core modules (120cr). Year 2: 5 core (100cr) + 1 optional (20cr). Year 3: 4 core modules (120cr) incl. Major Project (40cr) + Major Project: Define (20cr) + Major Project: Deliver (40cr). Optional Professional Placement Year available. Data quality: high.",
+    "[2026-05-15T01:47:00] Extracted Landscape Architecture BA (Hons) — China and UK Delivery from site_map UG #9. 4-year FT Sino-British joint programme at School of Architecture, Faculty of Arts, Design and Media. Delivered through BIFCA (Birmingham Institute of Fashion and Creative Art) partnership with Wuhan Textile University (WTU). 2+2 (Wuhan+Birmingham) or 4+0 (Wuhan only) delivery models. Landscape Institute (LI) accredited. 100% coursework. Year 1-2 at WTU Wuhan: Inspiration Foundation, Precedent, Materials Elements, Design Projects Components, etc. Year 3-4 at BCU Birmingham: Theory, Material Construction, Major Design Project series. Chinese students enter via Gaokao (Tier 1 for Hubei). International: IELTS 5.0 + portfolio. Fees TBC. Graduates work at Arup, Atkins, Fira, Camlins. 3 files created: _index_EN.md, _index_ZH.md, tags.yaml (5 tags). Data quality: high.",
+    "[2026-05-15T04:00:00] Extracted Acting PgDip/MA from site_map entry. Postgraduate acting course at Royal Birmingham Conservatoire (Federation of Drama Schools). MA pathway: 1 year FT, 180 credits. PgDip pathway: 9 months FT, 120 credits. Campus: Bournville (School of Acting). Max 16 students. Fees: UK MA £15,110, International MA £20,960, UK PgDip £10,075. Entry: 2:2 honours degree in Acting or related + audition (fee £46). UCAS Conservatoires application. Focus: British and European acting traditions, psychological realism, classical texts. Unique solo performance project (MA FEST). Notable alumna: Nicola Coughlan (Bridgerton). 2 files created: _index_EN.md, _index_ZH.md. Data quality: high.",
+    "[2026-05-15T04:11:30] Extracted Conservation of the Historic Environment MA/PgCert/PgDip from site_map PG #17. Part-time 2-year programme at Birmingham School of Architecture and Design. 180 credits for MA (6 modules, one per term, 3 terms per year). Awards: MA (180cr), PgDip (120cr), PgCert (60cr). Entry: 2:1 honours degree + built environment experience. IELTS 6.0 (no band below 5.5). Start: Sep 2026. City Centre Campus (Parkside), Birmingham. Modules: Conservation Philosophy and Practice, Heritage Legislation and Policy, Building Investigation and Analysis, Conservation Technology and Materials, Heritage Management, Major Project/Dissertation. Fees: part-time pro-rata (contact university for specifics). 3 files created: _index_EN.md, _index_ZH.md, tags.yaml (4 tags). Data quality: high.",
+    "[2026-05-15T04:29:00] Extracted Design: Active Practice MA from site_map PG #7. 1-year FT programme at Birmingham School of Art, Faculty of Arts, Design and Media. 180 credits (240 with Professional Placement). Optional 20-week professional placement. Key themes: Design Cultures, Connections, Challenges + Major Project (60cr). Fees: International £18,970/yr (£20,865 with placement). UK fees TBC. Entry: 2:2 honours degree in relevant subject + IELTS 6.0 (no band below 5.5). Portfolio may be requested. Campus: City Centre Campus. Social impact focus, European design festivals, Birmingham School of Art setting. 2 files created: _index_EN.md (112 lines), _index_ZH.md (112 lines). Data quality: high.",
+    "[2026-05-15T04:40:00] Extracted Fashion and Textile Design MA from site_map PG entry. 1-year FT programme at Birmingham School of Art, Faculty of Arts, Design and Media. 180 credits (240 with Professional Placement). Dual specialism: Fashion Design / Textile and Surface Design. Entry: 2:2 honours degree in Fashion/Textile Design or related subject + IELTS 6.0 (no band below 5.5) + portfolio required. Fees: UK 10350/yr, International 18970/yr. Start: Sep 2026. Modules: Advanced Research Skills (20cr), Material Process and Ideation (40cr), Professional Futures Collaborative Challenge (20cr), Innovation and Enterprise (40cr), Project Resolution and Collection Launch (40cr), Reflection (20cr). Optional Professional Placement (60cr). 3 files created: _index_EN.md, _index_ZH.md, tags.yaml (11 tags). Data quality: high.",
+    "[2026-05-15T05:19:00] Extracted Fine Art MA from site_map entry. 1-year FT / 2-year PT postgraduate programme at Birmingham School of Art, Faculty of Arts, Design and Media. 180 CATS credits (240 with Professional Placement). Campus: Margaret Street (Grade I-listed). Fees: UK £9,510/yr, International £18,970/yr. With placement: UK £10,460, International £20,865. Entry: 2:2 honours degree in Fine Art/Art & Design + portfolio + IELTS 6.0 (no band <5.5). Core modules: Studio Practice (40cr), Research Through Practice (20cr), Advanced Studio Practice and Dissemination (40cr), Professional Project (60cr). Optional: Work Placement / Industry Project / Independent Creative Entrepreneur (20cr each). Professional Placement: 20-week optional module (60cr). 90% student satisfaction (PTES 2025). 3 files created: _index_EN.md (199 lines), _index_ZH.md (198 lines), tags.yaml (10 tags). Data quality: high.",
+    "[2026-05-15T06:07:49.632124] Extracted Applied Theatre (Community and Education) BA (Hons) - 3 years Full Time programme at Royal Birmingham Conservatoire. Fees: UK £9790/yr, International £20960/yr. Start: Sep 2026. Royal Birmingham Conservatoire. Data quality: high.",
+    "[2026-05-15T06:07:49.632124] Extracted Stage Management BA (Hons) - 3 years Full Time programme at Royal Birmingham Conservatoire. Fees: UK £9790/yr, International £20960/yr. Start: Sep 2026. Royal Birmingham Conservatoire. Data quality: high.",
+    "[2026-05-15T06:07:49.632124] Extracted Foundation Course in Acting - 1 year Full Time programme at Royal Birmingham Conservatoire. Fees: UK £7000/yr, International £null/yr. Start: Sep 2026. Royal Birmingham Conservatoire. Data quality: high.",
+    "[2026-05-15T06:07:49.632124] Extracted Creative Writing BA (Hons) - 3 years Full Time programme at City Centre Campus. Fees: UK £9790/yr, International £18570/yr. Start: Sep 2026. City Centre Campus. Data quality: high.",
+    "[2026-05-15T06:07:49.632124] Extracted Digital Marketing BA (Hons) - 2 years Full Time (Accelerated) programme at City Centre Campus. Fees: UK £11750/yr, International £18970/yr. Start: Sep 2026. City Centre Campus. Data quality: high.",
+    "[2026-05-15T06:07:49.632124] Extracted Media Production BA (Hons) - 3 years Full Time programme at City Centre Campus. Fees: UK £9790/yr, International £18570/yr. Start: Sep 2026. City Centre Campus. Data quality: high.",
+    "[2026-05-15T06:07:49.632124] Extracted Media and Communication BA (Hons) - 3 years Full Time programme at City Centre Campus. Fees: UK £9790/yr, International £18570/yr. Start: Sep 2026. City Centre Campus. Data quality: high.",
+    "[2026-05-15T06:07:49.632124] Extracted Media and Communication with Foundation Year BA (Hons) - 4 years Full Time programme at City Centre Campus. Fees: UK £9790/yr, International £18570/yr. Start: Sep 2026. City Centre Campus. Data quality: high.",
+    "[2026-05-15T06:07:49.632124] Extracted Fashion Design with Foundation Year BA (Hons) - 4 years Full Time programme at City Centre Campus. Fees: UK £9790/yr, International £18570/yr. Start: Sep 2026. City Centre Campus. Data quality: high.",
+    "[2026-05-15T06:07:49.632124] Extracted Fashion Communication with Foundation Year BA (Hons) - 4 years Full Time programme at City Centre Campus. Fees: UK £9790/yr, International £18570/yr. Start: Sep 2026. City Centre Campus. Data quality: high.",
+    "[2026-05-15T06:07:49.632124] Extracted Textile Design with Foundation Year BA (Hons) - 4 years Full Time programme at City Centre Campus. Fees: UK £9790/yr, International £18570/yr. Start: Sep 2026. City Centre Campus. Data quality: high.",
+    "[2026-05-15T06:07:49.632124] Extracted Film and Screenwriting with Foundation Year BA (Hons) - 4 years Full Time programme at City Centre Campus. Fees: UK £9790/yr, International £18570/yr. Start: Sep 2026. City Centre Campus. Data quality: high.",
+    "[2026-05-15T06:07:49.632124] Extracted Sound Engineering with Foundation Year BSc (Hons) - 4 years Full Time programme at City Centre Campus (Millennium Point). Fees: UK £9790/yr, International £18570/yr. Start: Sep 2026. City Centre Campus (Millennium Point). Data quality: high.",
+    "[2026-05-15T06:07:49.632124] Extracted Jewellery and Silversmithing — Design for Industry BA (Hons) - 1 year (Level 6 Top-up) Full Time programme at School of Jewellery (Vittoria Street). Fees: UK £9790/yr, International £18970/yr. Start: Sep 2026. School of Jewellery (Vittoria Street). Data quality: high.",
+    "[2026-05-15T06:07:49.632124] Extracted Jewellery and Silversmithing HND - 2 years Full Time programme at School of Jewellery (Vittoria Street). Fees: UK £9790/yr, International £18970/yr. Start: Sep 2026. School of Jewellery (Vittoria Street). Data quality: high.",
+    "[2026-05-15T06:07:49.632124] Extracted Architectural Practice (RIBA Part 3 Exemption) PgDip - 10-24 months Part Time programme at City Centre Campus. Fees: UK £3250/yr, International £12858/yr. Start: Sep 2026. City Centre Campus. Data quality: high."
+  ],
+  "programs_extracted": [
+    {
+      "program_slug": "acting-pgdip-ma",
+      "program_title": "Acting PgDip/MA",
+      "url": "https://www.bcu.ac.uk/courses/acting-pgdip-ma-2026-27",
+      "status": "extracted",
+      "extracted_at": "2026-05-15T04:00:00+08:00"
+    },
+    {
+      "program_slug": "conservation-of-the-historic-environment-ma",
+      "program_title": "Conservation of the Historic Environment MA/PgCert/PgDip",
+      "url": "https://www.bcu.ac.uk/courses/conservation-of-the-historic-environment-ma-pgdip-2026-27",
+      "status": "extracted",
+      "extracted_at": "2026-05-15T04:11:30+08:00"
+    },
+    {
+      "program_slug": "design-active-practice-ma",
+      "program_title": "Design: Active Practice MA",
+      "url": "https://www.bcu.ac.uk/courses/active-practice-ma-2026-27",
+      "status": "extracted",
+      "extracted_at": "2026-05-15T04:29:00+08:00"
+    },
+    {
+      "program_slug": "fashion-and-textile-design-ma",
+      "program_title": "Fashion and Textile Design MA",
+      "url": "https://www.bcu.ac.uk/courses/fashion-and-textile-design-ma-2026-27",
+      "status": "extracted",
+      "extracted_at": "2026-05-15T04:40:00+08:00"
+    },
+    {
+      "program_slug": "fine-art-ma",
+      "program_title": "Fine Art MA",
+      "url": "https://www.bcu.ac.uk/courses/fine-art-ma-2026-27",
+      "status": "extracted",
+      "extracted_at": "2026-05-15T05:19:00+08:00"
+    },
+    {
+      "program_slug": "applied-theatre-ba-hons",
+      "program_title": "Applied Theatre (Community and Education) BA (Hons)",
+      "url": "https://www.bcu.ac.uk/courses/applied-theatre-ba-hons-2026-27",
+      "status": "extracted",
+      "extracted_at": "2026-05-15T06:07:49.632124+08:00"
+    },
+    {
+      "program_slug": "stage-management-ba-hons",
+      "program_title": "Stage Management BA (Hons)",
+      "url": "https://www.bcu.ac.uk/courses/stage-management-ba-hons-2026-27",
+      "status": "extracted",
+      "extracted_at": "2026-05-15T06:07:49.632124+08:00"
+    },
+    {
+      "program_slug": "foundation-course-in-acting",
+      "program_title": "Foundation Course in Acting",
+      "url": "https://www.bcu.ac.uk/courses/foundation-course-in-acting-2026-27",
+      "status": "extracted",
+      "extracted_at": "2026-05-15T06:07:49.632124+08:00"
+    },
+    {
+      "program_slug": "creative-writing-ba-hons",
+      "program_title": "Creative Writing BA (Hons)",
+      "url": "https://www.bcu.ac.uk/courses/creative-writing-ba-hons-2026-27",
+      "status": "extracted",
+      "extracted_at": "2026-05-15T06:07:49.632124+08:00"
+    },
+    {
+      "program_slug": "digital-marketing-ba-hons",
+      "program_title": "Digital Marketing BA (Hons)",
+      "url": "https://www.bcu.ac.uk/courses/digital-marketing-ba-hons-2026-27",
+      "status": "extracted",
+      "extracted_at": "2026-05-15T06:07:49.632124+08:00"
+    },
+    {
+      "program_slug": "media-production-ba-hons",
+      "program_title": "Media Production BA (Hons)",
+      "url": "https://www.bcu.ac.uk/courses/media-production-ba-hons-2026-27",
+      "status": "extracted",
+      "extracted_at": "2026-05-15T06:07:49.632124+08:00"
+    },
+    {
+      "program_slug": "media-and-communication-ba-hons",
+      "program_title": "Media and Communication BA (Hons)",
+      "url": "https://www.bcu.ac.uk/courses/media-and-communication-ba-hons-2026-27",
+      "status": "extracted",
+      "extracted_at": "2026-05-15T06:07:49.632124+08:00"
+    },
+    {
+      "program_slug": "media-and-communication-ba-hons-with-foundation",
+      "program_title": "Media and Communication with Foundation Year BA (Hons)",
+      "url": "https://www.bcu.ac.uk/courses/media-and-communication-ba-hons-with-foundation-2026-27",
+      "status": "extracted",
+      "extracted_at": "2026-05-15T06:07:49.632124+08:00"
+    },
+    {
+      "program_slug": "fashion-design-ba-hons-with-foundation",
+      "program_title": "Fashion Design with Foundation Year BA (Hons)",
+      "url": "https://www.bcu.ac.uk/courses/fashion-design-ba-hons-with-foundation-2026-27",
+      "status": "extracted",
+      "extracted_at": "2026-05-15T06:07:49.632124+08:00"
+    },
+    {
+      "program_slug": "fashion-communication-ba-hons-with-foundation",
+      "program_title": "Fashion Communication with Foundation Year BA (Hons)",
+      "url": "https://www.bcu.ac.uk/courses/fashion-communication-ba-hons-with-foundation-2026-27",
+      "status": "extracted",
+      "extracted_at": "2026-05-15T06:07:49.632124+08:00"
+    },
+    {
+      "program_slug": "textile-design-ba-hons-with-foundation",
+      "program_title": "Textile Design with Foundation Year BA (Hons)",
+      "url": "https://www.bcu.ac.uk/courses/textile-design-ba-hons-with-foundation-2026-27",
+      "status": "extracted",
+      "extracted_at": "2026-05-15T06:07:49.632124+08:00"
+    },
+    {
+      "program_slug": "film-and-screenwriting-ba-hons-with-foundation",
+      "program_title": "Film and Screenwriting with Foundation Year BA (Hons)",
+      "url": "https://www.bcu.ac.uk/courses/film-and-screenwriting-ba-hons-with-foundation-2026-27",
+      "status": "extracted",
+      "extracted_at": "2026-05-15T06:07:49.632124+08:00"
+    },
+    {
+      "program_slug": "sound-engineering-foundation-bsc-hons",
+      "program_title": "Sound Engineering with Foundation Year BSc (Hons)",
+      "url": "https://www.bcu.ac.uk/courses/sound-engineering-foundation-bsc-hons-2026-27",
+      "status": "extracted",
+      "extracted_at": "2026-05-15T06:07:49.632124+08:00"
+    },
+    {
+      "program_slug": "jewellery-and-silversmithing-design-for-industry-ba-hons",
+      "program_title": "Jewellery and Silversmithing — Design for Industry BA (Hons)",
+      "url": "https://www.bcu.ac.uk/courses/jewellery-and-silversmithing-design-for-industry-ba-hons-2026-27",
+      "status": "extracted",
+      "extracted_at": "2026-05-15T06:07:49.632124+08:00"
+    },
+    {
+      "program_slug": "jewellery-and-silversmithing-hnd",
+      "program_title": "Jewellery and Silversmithing HND",
+      "url": "https://www.bcu.ac.uk/courses/jewellery-and-silversmithing-hnd-2026-27",
+      "status": "extracted",
+      "extracted_at": "2026-05-15T06:07:49.632124+08:00"
+    },
+    {
+      "program_slug": "architectural-practice-riba-part-iii-exemption-pgdip",
+      "program_title": "Architectural Practice (RIBA Part 3 Exemption) PgDip",
+      "url": "https://www.bcu.ac.uk/courses/architectural-practice-riba-part-iii-exemption-pgdip-2026-27",
+      "status": "extracted",
+      "extracted_at": "2026-05-15T06:07:49.632124+08:00"
+    },
+    {
+      "program_slug": "fashion-business-and-promotion-ba-hons-with-foundation",
+      "program_title": "Fashion Business and Promotion with Foundation Year BA (Hons)",
+      "url": "https://www.bcu.ac.uk/courses/fashion-business-and-promotion-ba-hons-with-foundation-2026-27",
+      "status": "dead_link",
+      "extracted_at": "2026-05-15T06:07:49.632124+08:00"
+    },
+    {
+      "program_slug": "gemmology-and-jewellery-studies-bsc-hons",
+      "program_title": "Gemmology and Jewellery Studies BSc (Hons)",
+      "url": "https://www.bcu.ac.uk/courses/gemmology-and-jewellery-studies-bsc-hons-2026-27",
+      "status": "dead_link",
+      "extracted_at": "2026-05-15T06:07:49.632124+08:00"
+    },
+    {
+      "program_slug": "graphic-design-ba-hons-with-foundation",
+      "program_title": "Graphic Design with Foundation Year",
+      "url": "https://www.bcu.ac.uk/courses/graphic-design-ba-hons-with-foundation-2026-27",
+      "status": "redirect",
+      "extracted_at": "2026-05-15T06:07:49.632124+08:00"
+    },
+    {
+      "program_slug": "photography-ba-hons-with-foundation",
+      "program_title": "Photography with Foundation Year",
+      "url": "https://www.bcu.ac.uk/courses/photography-ba-hons-with-foundation-2026-27",
+      "status": "redirect",
+      "extracted_at": "2026-05-15T06:07:49.632124+08:00"
+    },
+    {
+      "program_slug": "product-design-ba-hons-with-foundation",
+      "program_title": "Product Design with Foundation Year",
+      "url": "https://www.bcu.ac.uk/courses/product-design-ba-hons-with-foundation-2026-27",
+      "status": "redirect",
+      "extracted_at": "2026-05-15T06:07:49.632124+08:00"
+    },
+    {
+      "program_slug": "landscape-architecture-mla",
+      "program_title": "Landscape Architecture MLA",
+      "url": "https://www.bcu.ac.uk/courses/landscape-architecture-mla-2026-27",
+      "status": "redirect",
+      "extracted_at": "2026-05-15T06:07:49.632124+08:00"
+    }
+  ]
+}

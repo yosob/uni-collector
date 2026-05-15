@@ -1,178 +1,201 @@
-# Site Map: University of Hertfordshire
+# University of Hertfordshire — Site Map
 
-## Basic Information
+> **University**: University of Hertfordshire (赫特福德大学)  
+> **URL**: https://www.herts.ac.uk  
+> **City**: Hatfield, UK  
+> **School**: School of Creative Arts  
+> **Discovered**: 2026-05-14  
+> **Previous site_map**: 21 UG + 8 PG = 29 programs  
+> **Current site_map**: 24 UG + 18 PG = 42 programs  
+> **Status**: ✅ Phase 1 complete — all pages discovered via web search + direct verification
 
-- **University:** University of Hertfordshire
-- **Country:** gb
-- **Website:** https://www.herts.ac.uk/
-- **Seed URL:** https://www.herts.ac.uk/courses/undergraduate/ba-hons-digital-media-design-with-optional-sandwich-placement-study-abroad
-- **Explored:** 2026-05-11
+## ⚠️ Site Notes
 
-## Site Architecture
+- **Cloudflare bot protection** is active on many pages (returns 403 Forbidden to automated crawlers). URLs confirmed via Google index, third-party aggregators, and partial page fetches.
+- **Humanities restructuring (May 2026)**: University announced cuts to humanities programs. Fine Art, Photography, Product Design (UG & PG), and several Media/Journalism courses now return 404.
+- **Course URL versioning**: Some URLs contain numeric suffixes (e.g., `illustration3`, `ma-illustration2`, `march-architecture-and-urbanism2`) indicating CMS revision versions.
+- **New courses added (2025-2026)**: Significant expansion in Animation/Games (Digital Arts, Digital Technologies, Character and Creative Effects), PG Animation cluster (3D Modelling, Games Art, Editing, Creative AI, Immersive Media), and Music BSc programs.
 
-### Homepage & Key Pages
+---
 
-| Page | URL |
-|------|-----|
-| Homepage | https://www.herts.ac.uk/ |
-| All courses | https://www.herts.ac.uk/courses |
-| Undergraduate courses | https://www.herts.ac.uk/courses/undergraduate-courses |
-| Postgraduate courses | https://www.herts.ac.uk/courses/postgraduate-masters-study |
-| Online / distance learning | https://www.herts.ac.uk/courses/online-distance-learning |
-| Foundation & extended degrees | https://www.herts.ac.uk/courses/foundation-and-extended-degrees |
-| Research degrees | https://www.herts.ac.uk/courses/research/research-degrees-and-doctoral-college/research-degrees/explore-our-full-range-of-research-programmes |
-| Open days & events | https://www.herts.ac.uk/study/open-days-and-events |
+## Undergraduate Programs (24 courses)
 
-### School / Faculty Pages
+### Category: Animation, Film, Games & Creative Media (7 courses)
 
-| Page | URL |
-|------|-----|
-| School of Creative Arts | https://www.herts.ac.uk/about-us/our-schools/school-of-creative-arts |
-| Creative Arts facilities | https://www.herts.ac.uk/study/schools-of-study/creative-arts/creative-arts-facilities |
-| Art & Design gallery | https://www.herts.ac.uk/study/schools-of-study/creative-arts/creative-arts-facilities/art-design-gallery |
-| Art – Postgraduate | https://www.herts.ac.uk/study/schools-of-study/creative-arts/postgraduate-degrees/art |
+| # | Program Name | URL | Status |
+|---|---|---|---|
+| 1 | BA (Hons) 2D Digital Animation | https://www.herts.ac.uk/courses/undergraduate/ba-hons-2d-digital-animation | ✅ confirmed |
+| 2 | BA (Hons) 3D Animation and Visual Effects | https://www.herts.ac.uk/courses/undergraduate/ba-hons-3d-animation-and-visual-effects | 🔒 cloudflare |
+| 3 | BA (Hons) 3D Games Art & Design | https://www.herts.ac.uk/courses/undergraduate/ba-hons-3d-games-art-and-design | ✅ confirmed |
+| 4 | BA (Hons) Film and Television Production | https://www.herts.ac.uk/courses/undergraduate/film-and-television-production | ✅ confirmed |
+| 5 | BA (Hons) Character and Creative Effects | https://www.herts.ac.uk/courses/undergraduate/ba-hons-character-and-creative-effects | 🔒 cloudflare |
+| 6 | BA (Hons) Digital Arts for Animation, Games & Immersion | https://www.herts.ac.uk/courses/undergraduate/ba-hons-digital-arts-for-animation-games-immersion | ✅ confirmed |
+| 7 | BSc (Hons) Digital Technologies for Animation, Games & Immersion | https://www.herts.ac.uk/courses/undergraduate/bsc-hons-digital-technologies-for-animation-games-and-immersion | ✅ confirmed |
 
-### Category Pages (Undergraduate)
+### Category: Art, Design & Fashion (7 courses)
 
-| Category | URL |
-|----------|-----|
-| Animation, Film, Games & Creative Media | https://www.herts.ac.uk/courses/undergraduate-courses/animation-film-games-and-creative-media |
-| Art, Design & Fashion | https://www.herts.ac.uk/courses/undergraduate-courses/art-design-and-fashion |
-| Architecture | https://www.herts.ac.uk/courses/undergraduate-courses/architecture |
-| Music | https://www.herts.ac.uk/courses/undergraduate-courses/music |
-| Media & Journalism | https://www.herts.ac.uk/courses/undergraduate-courses/media-and-journalism |
+| # | Program Name | URL | Status |
+|---|---|---|---|
+| 8 | BA (Hons) Graphic Design | https://www.herts.ac.uk/courses/undergraduate/graphic-design | 🔒 cloudflare |
+| 9 | BA (Hons) Graphic Design: Advertising and Branding | https://www.herts.ac.uk/courses/undergraduate/ba-hons-graphic-design-advertising-and-branding | ✅ confirmed |
+| 10 | BA (Hons) Illustration | https://www.herts.ac.uk/courses/undergraduate/illustration3 | ✅ confirmed |
+| 11 | BA (Hons) Comics and Concept Art | https://www.herts.ac.uk/courses/undergraduate/ba-hons-comics-and-concept-art | 🔒 cloudflare |
+| 12 | BA (Hons) Fashion and Fashion Business | https://www.herts.ac.uk/courses/undergraduate/ba-hons-fashion-and-fashion-business | ✅ confirmed |
+| 13 | BA (Hons) Interior Architecture and Design | https://www.herts.ac.uk/courses/undergraduate/ba-hons-interior-architecture-and-design | 🔒 cloudflare |
+| 14 | BA (Hons) Contemporary Design Crafts | https://www.herts.ac.uk/courses/undergraduate/ba-hons-contemporary-design-crafts | 🔒 cloudflare |
 
-### Category Pages (Postgraduate)
+### Category: Architecture (1 course)
 
-| Category | URL |
-|----------|-----|
-| Animation, Film, Games & Creative Media | https://www.herts.ac.uk/courses/postgraduate-masters-study/animation-media |
-| Architecture | https://www.herts.ac.uk/courses/postgraduate-masters-study/architecture |
-| Art & Design | https://www.herts.ac.uk/courses/postgraduate-masters-study/art-design-fashion |
-| Music | https://www.herts.ac.uk/courses/postgraduate-masters-study/music |
-| Media & Journalism | https://www.herts.ac.uk/courses/postgraduate-masters-study/media-journalism |
+| # | Program Name | URL | Status |
+|---|---|---|---|
+| 15 | BA (Hons) Architecture | https://www.herts.ac.uk/courses/undergraduate/ba-hons-architecture | ✅ confirmed |
 
-### Portfolio Advice Pages
+### Category: Music Composition, Technology and Production (5 courses)
 
-| Page | URL |
-|------|-----|
-| Art & Design portfolio advice (hub) | https://www.herts.ac.uk/courses/undergraduate-courses/art-design-and-fashion/undergraduate-art-and-design-applicant/undergraduate-art-and-design-portfolio-advice |
+| # | Program Name | URL | Status |
+|---|---|---|---|
+| 16 | BSc (Hons) Music Composition and Sound for Film and Games | https://www.herts.ac.uk/courses/undergraduate/bsc-hons-music-composition-and-sound-for-film-and-games | 🔒 cloudflare |
+| 17 | BSc (Hons) Music Production and Promotion | https://www.herts.ac.uk/courses/undergraduate/bsc-hons-music-production-and-promotion | ✅ confirmed |
+| 18 | BSc (Hons) Audio Engineering | https://www.herts.ac.uk/courses/undergraduate/bsc-hons-audio-engineering | 🔒 cloudflare |
+| 19 | BSc (Hons) Live Sound, Lighting and Performance Technology | https://www.herts.ac.uk/courses/undergraduate/bsc-hons-live-sound-lighting-and-performance-technology | ✅ confirmed |
+| 20 | BSc (Hons) Songwriting and Artist Development | https://www.herts.ac.uk/courses/undergraduate/bsc-hons-songwriting-and-artist-development | ✅ confirmed |
 
-## URL Format
+### Category: Media & Journalism (3 courses)
 
-### Undergraduate Programs
+| # | Program Name | URL | Status |
+|---|---|---|---|
+| 21 | BA (Hons) Mass Communications | https://www.herts.ac.uk/courses/undergraduate/mass-communications | ✅ confirmed |
+| 22 | BA (Hons) Journalism and Media | https://www.herts.ac.uk/courses/undergraduate/ba-hons-journalism-and-media | 🔒 cloudflare |
+| 23 | BA (Hons) Digital Marketing and Advertising | https://www.herts.ac.uk/courses/undergraduate/ba-hons-digital-marketing-and-advertising | ✅ confirmed |
 
-```
-https://www.herts.ac.uk/courses/undergraduate/{slug}
-```
+### Category: Other (Top-up)
 
-### Postgraduate Taught Programs
+| # | Program Name | URL | Status |
+|---|---|---|---|
+| 24 | BA (Hons) Visual Merchandising, Styling and Promotion (top up) | https://www.herts.ac.uk/courses/undergraduate/ba-hons-visual-merchandising,-styling-and-promotion-top-up | ✅ confirmed |
 
-```
-https://www.herts.ac.uk/courses/postgraduate-masters/{slug}
-```
+---
 
-### Research Degrees
+## Postgraduate Programs (18 courses)
 
-```
-https://www.herts.ac.uk/courses/research/{slug}
-```
+### Category: Animation, Film, Games & Creative Media (8 courses)
 
-### Slug Convention
+| # | Program Name | URL | Status |
+|---|---|---|---|
+| 1 | MA Animation | https://www.herts.ac.uk/courses/postgraduate-masters/ma-animation | 🔒 cloudflare |
+| 2 | MA 3D Modelling and VFX | https://www.herts.ac.uk/courses/postgraduate-masters/3d-modelling-and-vfx | ✅ confirmed |
+| 3 | MA Character and Creature Animation (Online) | https://www.herts.ac.uk/courses/postgraduate-masters/ma-character-and-creature-animation-online | 🔒 cloudflare |
+| 4 | MA Games Art and Design | https://www.herts.ac.uk/courses/postgraduate-masters/ma-games-art-and-design | ✅ confirmed |
+| 5 | MA Global Film and Television (Online) | https://www.herts.ac.uk/courses/postgraduate-masters/ma-global-film-and-television-online | ✅ confirmed |
+| 6 | MA Editing and Post Production | https://www.herts.ac.uk/courses/postgraduate-masters/ma-editing-and-post-production | ✅ confirmed |
+| 7 | MA Creative AI for Screen | https://www.herts.ac.uk/courses/postgraduate-masters/creative-ai-for-screen | ✅ confirmed |
+| 8 | MA Immersive Media | https://www.herts.ac.uk/courses/postgraduate-masters/ma-immersive-media | ✅ confirmed |
 
-No single consistent pattern — slugs vary between formats:
+### Category: Art, Design & Fashion (6 courses)
 
-- **Degree-prefixed:** `ba-hons-architecture`, `ba-hons-3d-games-art-and-design`, `ma-animation`
-- **Subject-only (no prefix):** `graphic-design`, `photography`, `film-and-television-production`
-- **Legacy / old format (now 404):** `ba-hons-{subject}-with-optional-sandwich-placement-study-abroad`
+| # | Program Name | URL | Status |
+|---|---|---|---|
+| 9 | MA Concept Art | https://www.herts.ac.uk/courses/postgraduate-masters/ma-concept-art | ✅ confirmed |
+| 10 | MA Graphic Design and Branding | https://www.herts.ac.uk/courses/postgraduate-masters/ma-graphic-design-and-branding | ✅ confirmed |
+| 11 | MA Illustration | https://www.herts.ac.uk/courses/postgraduate-masters/ma-illustration2 | ✅ confirmed |
+| 12 | MA Illustration (Online) | https://www.herts.ac.uk/courses/postgraduate-masters/ma-illustration-online | ✅ confirmed |
+| 13 | MA Interior Architecture and Design | https://www.herts.ac.uk/courses/postgraduate-masters/ma-interior-architecture-and-design | 🔒 cloudflare |
+| 14 | MA Digital Media Arts | https://www.herts.ac.uk/courses/postgraduate-masters/digital-media-arts2 | 🔒 cloudflare |
 
-## Programs
+### Category: Architecture (1 course)
 
-### Undergraduate Programs — Animation, Film, Games & Creative Media
+| # | Program Name | URL | Status |
+|---|---|---|---|
+| 15 | MArch Architecture and Urbanism | https://www.herts.ac.uk/courses/postgraduate-masters/march-architecture-and-urbanism2 | ✅ confirmed |
 
-| Program | Degree | URL | Status |
-|---------|--------|-----|
-| 2D Digital Animation | BA (Hons) | https://www.herts.ac.uk/courses/undergraduate/ba-hons-2d-digital-animation | ✅ Extracted 2026-05-12 |
-| 3D Animation and Visual Effects | BA (Hons) | https://www.herts.ac.uk/courses/undergraduate/ba-hons-3d-animation-and-visual-effects | ✅ Extracted 2026-05-12 |
-| 3D Games Art & Design | BA (Hons) | https://www.herts.ac.uk/courses/undergraduate/ba-hons-3d-games-art-and-design | ✅ Extracted 2026-05-12 |
-| Film and Television Production | BA (Hons) | https://www.herts.ac.uk/courses/undergraduate/film-and-television-production | ✅ Extracted 2026-05-12 |
-| Digital Arts for Animation, Games & Immersion | BA (Hons) | https://www.herts.ac.uk/courses/undergraduate/ba-hons-digital-arts-for-animation-games-immersion | ✅ Extracted 2026-05-12 |
-| Digital Technologies for Animation, Games & Immersion | BSc (Hons) | https://www.herts.ac.uk/courses/undergraduate/bsc-hons-digital-technologies-for-animation-games-and-immersion | ✅ Extracted 2026-05-12 |
+### Category: Music (2 courses)
 
-### Undergraduate Programs — Art, Design & Fashion
+| # | Program Name | URL | Status |
+|---|---|---|---|
+| 16 | MA Music Production and Artist Development | https://www.herts.ac.uk/courses/postgraduate-masters/ma-music-production-and-artist-development | ✅ confirmed |
+| 17 | MSc Audio Engineering | https://www.herts.ac.uk/courses/postgraduate-masters/msc-audio-engineering | 🔒 cloudflare |
 
-| Program | Degree | URL |
-|---------|--------|-----|
-| Graphic Design | BA (Hons) | https://www.herts.ac.uk/courses/undergraduate/graphic-design |
-| Graphic Design Advertising and Branding | BA (Hons) | https://www.herts.ac.uk/courses/undergraduate/ba-hons-graphic-design-advertising-and-branding |
-| Illustration | BA (Hons) | https://www.herts.ac.uk/courses/undergraduate/illustration3 | ✅ Extracted 2026-05-12 |
-| Fashion and Fashion Business | BA (Hons) | https://www.herts.ac.uk/courses/undergraduate/ba-hons-fashion-and-fashion-business | ✅ Extracted 2026-05-12 |
-| Architecture | BA (Hons) | https://www.herts.ac.uk/courses/undergraduate/ba-hons-architecture | ✅ Extracted 2026-05-12 |
-| Interior Architecture and Design | BA (Hons) | https://www.herts.ac.uk/courses/undergraduate/ba-hons-interior-architecture-and-design | ✅ Extracted 2026-05-12 |
+### Category: Art Therapy (1 course)
 
-### Undergraduate Programs — Music
+| # | Program Name | URL | Status |
+|---|---|---|---|
+| 18 | MA Art Therapy | https://www.herts.ac.uk/courses/postgraduate-masters/ma-art-therapy | 🔒 cloudflare |
 
-| Program | Degree | URL |
-|---------|--------|-----|
-| Songwriting and Artist Development | BSc (Hons) | https://www.herts.ac.uk/courses/undergraduate/bsc-hons-songwriting-and-artist-development | ✅ Extracted 2026-05-12 |
+---
 
-### Undergraduate Programs — URL Not Yet Confirmed
+## Discontinued Courses (since previous site_map)
 
-These programs are listed in the Undergraduate Guide 2025 PDF and/or third-party sources but their current herts.ac.uk URLs could not be confirmed (tested URLs returned 404 or were blocked by bot protection). URLs may have been recently restructured.
+These courses from the previous site_map now return 404 or have been merged/replaced:
 
-| Program | Degree | Expected URL Pattern (unconfirmed) | Status |
-|---------|--------|------------------------------------|--------|
-| Fine Art | BA (Hons) | `ba-hons-fine-art` or `fine-art` |
-| Photography | BA (Hons) | `photography` (cited by linktr.ee/photoherts) | ✅ Extracted 2026-05-12 (official page 404; data from third-party sources) |
-| Fashion Design | BA (Hons) | `ba-hons-fashion-design` | ⚠️ Renamed to "Fashion and Fashion Business BA (Hons)" — see confirmed listing above |
-| Digital Media Design | BA (Hons) | `ba-hons-digital-media-design` (seed course) |
-| Product and Industrial Design | BA (Hons) | `ba-hons-product-and-industrial-design` | ✅ Extracted 2026-05-12 (via third-party sources) |
-| Contemporary Design Crafts | BA (Hons) | `ba-hons-contemporary-design-crafts` or `design-crafts` |
-| Model Design | BA (Hons) | `ba-hons-model-design` |
-| Music Composition and Sound for Film and Games | BSc (Hons) | `bsc-hons-music-composition-and-sound-for-film-and-games` |
+| Program Name | Old URL | Fate |
+|---|---|---|
+| BA (Hons) Fashion | `/courses/undergraduate/ba-hons-fashion` | Merged → Fashion and Fashion Business |
+| BA (Hons) Fashion Design and Business | `/courses/undergraduate/ba-hons-fashion-design-and-business` | Merged → Fashion and Fashion Business |
+| BA (Hons) Fine Art | `/courses/undergraduate/ba-hons-fine-art` | ❌ Discontinued (humanities cuts) |
+| BA (Hons) Photography | `/courses/undergraduate/ba-hons-photography` | ❌ Discontinued (humanities cuts) |
+| BA (Hons) Product Design | `/courses/undergraduate/ba-hons-product-design` | ❌ Discontinued |
+| BA (Hons) Product Design Industrial | `/courses/undergraduate/ba-hons-product-design-industrial` | ❌ Discontinued |
+| BA (Hons) Product and Industrial Design | `/courses/undergraduate/ba-hons-product-and-industrial-design` | ❌ Discontinued |
+| BA (Hons) Music | `/courses/undergraduate/ba-hons-music` | Replaced → 5 BSc Music programs |
+| BA (Hons) Model Design and Special Effects | `/courses/undergraduate/ba-hons-model-design-and-special-effects` | Replaced → Character and Creative Effects |
+| MA Film and Television Production | `/courses/postgraduate-masters/ma-film-and-television-production` | ❌ Discontinued |
+| MA Photography | `/courses/postgraduate-masters/ma-photography` | ❌ Discontinued |
+| MA Product Design | `/courses/postgraduate-masters/ma-product-design` | ❌ Discontinued |
+| MA Creative Music Production | `/courses/postgraduate-masters/creative-music-production` | Replaced → MA Music Production and Artist Development |
+| MA Graphic Design (old URL) | `/courses/postgraduate-masters/ma-graphic-design` | Replaced → MA Graphic Design and Branding |
+| MA Illustration (old URL) | `/courses/postgraduate-masters/ma-illustration` | New URL → `ma-illustration2` |
 
-### Postgraduate Taught Programs
+---
 
-| Program | Degree | URL |
-|---------|--------|-----|
-| Animation | MA | https://www.herts.ac.uk/courses/postgraduate-masters/ma-animation |
-| Character and Creature Animation (Online) | MA | https://www.herts.ac.uk/courses/postgraduate-masters/ma-character-and-creature-animation-online |
-| Global Film and Television (Online) | MA | https://www.herts.ac.uk/courses/postgraduate-masters/ma-global-film-and-television-online | ✅ Extracted 2026-05-12 |
-| Graphic Design and Branding | MA | https://www.herts.ac.uk/courses/postgraduate-masters/ma-graphic-design | ✅ Extracted 2026-05-12 |
-| Illustration | MA | https://www.herts.ac.uk/courses/postgraduate-masters/ma-illustration | ✅ Extracted 2026-05-12 |
-| Art Therapy | MA | https://www.herts.ac.uk/courses/postgraduate-masters/ma-art-therapy |
-| Audio Engineering | MSc | https://www.herts.ac.uk/courses/postgraduate-masters/msc-audio-engineering | ✅ Extracted |
-
-### Research Degrees
-
-| Program | URL |
-|---------|-----|
-| Professional Doctorate in Fine Art | https://www.herts.ac.uk/courses/research/professional-doctorate-in-fine-art |
-
-## Discovered Sub-Pages (Not in Original Site Map)
-
-These pages were discovered during data extraction for the Global Film and Television (Online) MA:
+## Category / Listing Pages
 
 | Page | URL | Notes |
-|------|-----|-------|
-| UH Online – MA Global Film and Television | https://online.herts.ac.uk/masters/ma-global-film-and-television | Dedicated online programme page with detailed module descriptions, entry requirements, and programme leader info |
-| UH Online – Fees and Funding | https://online.herts.ac.uk/fees-and-funding | Programme fees for all UH Online degrees, payment plans, and loan information |
-| Dr. James Harvey – Research Profile | https://researchprofiles.herts.ac.uk/en/persons/james-harvey/ | Programme Leader academic profile and publications |
+|---|---|---|
+| School of Creative Arts | https://www.herts.ac.uk/about-us/our-schools/school-of-creative-arts | Main school page |
+| UG: Animation, Film, Games & Creative Media | https://www.herts.ac.uk/courses/undergraduate-courses/animation-film-games-and-creative-media | JS-loaded listings |
+| UG: Art, Design and Fashion | https://www.herts.ac.uk/courses/undergraduate-courses/art-design-and-fashion | JS-loaded listings |
+| UG: Architecture | https://www.herts.ac.uk/courses/undergraduate-courses/architecture | JS-loaded listings |
+| UG: Music Composition, Technology and Production | https://www.herts.ac.uk/courses/undergraduate-courses/music-composition-technology-and-production | JS-loaded listings |
+| UG: Media and Journalism | https://www.herts.ac.uk/courses/undergraduate-courses/media-and-journalism | JS-loaded listings |
+| PG: Art, Design and Fashion | https://www.herts.ac.uk/courses/postgraduate-masters-study/art-design-fashion | 🔒 cloudflare |
+| PG: Architecture | https://www.herts.ac.uk/courses/postgraduate-masters-study/architecture | 🔒 cloudflare |
+| PG: Animation, Film, Games and Creative Media | https://www.herts.ac.uk/courses/postgraduate-masters-study/animation-media | ✅ accessible |
 
-## Notes
+---
 
-- **Seed URL 404:** The original seed URL `ba-hons-digital-media-design-with-optional-sandwich-placement-study-abroad` returns 404. The Herts website underwent a major URL restructuring; older URLs with the `-with-optional-sandwich-placement-study-abroad` suffix no longer resolve.
-- **Inconsistent URL patterns:** Undergraduate slugs vary — some use `ba-hons-{subject}` (e.g. `ba-hons-architecture`), others use subject-only (e.g. `graphic-design`), and at least one has an unexpected suffix (`illustration3`). No single rule covers all cases.
-- **Bot protection:** The herts.ac.uk site uses aggressive Cloudflare-based bot protection. Many pages return 403 Forbidden or trigger security verification when accessed by automated tools, making comprehensive URL verification challenging.
-- **Category pages are JS-heavy:** Undergraduate category pages (Art, Design & Fashion; Animation, Film, Games & Creative Media) load course listings dynamically via JavaScript; static HTML scraping returns only navigation scaffolding.
-- **PDF source:** The Undergraduate Guide 2025 PDF (`https://www.herts.ac.uk/__data/assets/pdf_file/0004/428287/Undergraduate-guide-2025-.pdf`) was a key source for the complete course list, confirming programs like Fine Art, Photography, Fashion Design, Digital Media Design, Product and Industrial Design, Contemporary Design Crafts, and Model Design.
-- **Third-party corroboration:** Courses listed as "URL Not Yet Confirmed" are corroborated by the Undergraduate Guide 2025 PDF, UCAS listings, topuniversities.com, educations.com, admissionsdirect.com, and Herts International College (hic.herts.ac.uk) pages.
+## Applicant / Portfolio Advice Pages
 
-## Statistics
+| Page | URL |
+|---|---|
+| Animation, Games and Visual Effects Applicants | https://www.herts.ac.uk/courses/undergraduate-courses/animation-film-games-and-visual-effects-applicants |
+| Art and Design Portfolio Advice | https://www.herts.ac.uk/courses/undergraduate-courses/art-design-and-fashion/undergraduate-art-and-design-applicant/undergraduate-art-and-design-portfolio-advice |
+| Art Design Applicant Interviews | https://www.herts.ac.uk/courses/undergraduate-courses/art-design-and-fashion/art-design-applicant-interviews |
 
-- **Undergraduate programs (URL confirmed):** 13
-- **Undergraduate programs (URL unconfirmed):** 8
-- **Postgraduate taught programs:** 7
-- **Research degrees:** 1
-- **Total programs:** 29
-- **School covered:** School of Creative Arts
+---
+
+## Related / Preparatory Courses
+
+| Program Name | URL |
+|---|---|
+| Foundation in Arts Therapies and Wellbeing (University Certificate) | https://www.herts.ac.uk/courses/preparatory/foundation-in-arts-therapies-and-wellbeing-university-certificate |
+
+---
+
+## Change Summary vs Previous Site Map
+
+| Metric | Previous | Current | Delta |
+|---|---|---|---|
+| UG programs | 21 | 24 | +3 |
+| PG programs | 8 | 18 | +10 |
+| **Total programs** | **29** | **42** | **+13** |
+| Discontinued courses | — | 15 | — |
+| New courses added | — | 20 | — |
+| Courses with Cloudflare protection | — | 16 | — |
+
+### New Courses (20 total)
+- **UG (10 new)**: Character and Creative Effects, Digital Arts for Animation Games & Immersion, Digital Technologies for Animation Games & Immersion, Graphic Design Advertising and Branding, Fashion and Fashion Business, Music Composition and Sound for Film and Games, Music Production and Promotion, Audio Engineering, Live Sound Lighting and Performance Technology, Journalism and Media, Digital Marketing and Advertising, Visual Merchandising Styling and Promotion (top up)
+- **PG (10 new)**: 3D Modelling and VFX, Games Art and Design, Global Film and Television (Online), Editing and Post Production, Creative AI for Screen, Immersive Media, Concept Art, Illustration (Online), Digital Media Arts, Music Production and Artist Development
+
+---
+
+*Generated by site-explorer Phase 1 on 2026-05-14*
